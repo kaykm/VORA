@@ -1,0 +1,24 @@
+{
+  "utc": "2026-11-01T21:24:18.464765+00:00",
+  "moves": [
+    {
+      "from": "/tmp/vora-melhorias-iniciais",
+      "to": "/home/jp/Projects/Vora/.tmp/melhorias-iniciais",
+      "filesVerified": 1382,
+      "differences": []
+    },
+    {
+      "from": "/tmp/vora-auditoria",
+      "to": "/home/jp/Projects/Vora/.tmp/auditoria",
+      "filesVerified": 1194,
+      "differences": []
+    },
+    {
+      "from": "/tmp/vora-auditoria-base",
+      "to": "/home/jp/Projects/Vora/.tmp/auditoria-base",
+      "filesVerified": 220,
+      "differences": []
+    }
+  ],
+  "historicalRecordPathsPreserved": true
+}

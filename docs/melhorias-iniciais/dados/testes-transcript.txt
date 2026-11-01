@@ -1,0 +1,569 @@
+START testes-par-1-baseline
+{
+  "label": "testes-par-1-baseline",
+  "command": [
+    "node",
+    "--test",
+    "--test-concurrency=2",
+    "tests/piso-loja.test.mjs",
+    "tests/sombras.test.mjs",
+    "tests/carregamento.test.mjs"
+  ],
+  "cwd": "/tmp/vora-melhorias-iniciais/experimentos/baseline",
+  "startedAt": "2026-11-01T20:48:27.230221+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2395672,
+    "SwapFree": 19886484
+  },
+  "loadBefore": [
+    1.61767578125,
+    1.63134765625,
+    2.255859375
+  ],
+  "exitCode": 0,
+  "wallS": 41.55831714099622,
+  "userCpuS": 56.142428,
+  "systemCpuS": 3.696133,
+  "maxChildRssKiB": 403716,
+  "peakSampledTreeRssKiB": 683068,
+  "memoryAfterKiB": {
+    "MemAvailable": 2545764,
+    "SwapFree": 19617324
+  },
+  "loadAfter": [
+    2.07080078125,
+    1.75927734375,
+    2.2705078125
+  ],
+  "nodeTestDurationMs": 41402.588701
+}
+START testes-par-1-testes
+{
+  "label": "testes-par-1-testes",
+  "command": [
+    "node",
+    "--test",
+    "--test-concurrency=2",
+    "tests/piso-loja.test.mjs",
+    "tests/sombras.test.mjs",
+    "tests/carregamento.test.mjs"
+  ],
+  "cwd": "/tmp/vora-melhorias-iniciais/experimentos/testes",
+  "startedAt": "2026-11-01T20:49:08.819100+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2548544,
+    "SwapFree": 19617324
+  },
+  "loadBefore": [
+    2.07080078125,
+    1.75927734375,
+    2.2705078125
+  ],
+  "exitCode": 0,
+  "wallS": 33.54854345100466,
+  "userCpuS": 47.439467,
+  "systemCpuS": 2.401355,
+  "maxChildRssKiB": 455256,
+  "peakSampledTreeRssKiB": 743880,
+  "memoryAfterKiB": {
+    "MemAvailable": 2503184,
+    "SwapFree": 19544920
+  },
+  "loadAfter": [
+    2.48486328125,
+    1.89404296875,
+    2.29931640625
+  ],
+  "nodeTestDurationMs": 33328.548928
+}
+START testes-par-2-testes
+{
+  "label": "testes-par-2-testes",
+  "command": [
+    "node",
+    "--test",
+    "--test-concurrency=2",
+    "tests/piso-loja.test.mjs",
+    "tests/sombras.test.mjs",
+    "tests/carregamento.test.mjs"
+  ],
+  "cwd": "/tmp/vora-melhorias-iniciais/experimentos/testes",
+  "startedAt": "2026-11-01T20:49:42.397751+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2506540,
+    "SwapFree": 19544920
+  },
+  "loadBefore": [
+    2.48486328125,
+    1.89404296875,
+    2.29931640625
+  ],
+  "exitCode": 0,
+  "wallS": 33.548651060998964,
+  "userCpuS": 47.253661,
+  "systemCpuS": 2.3149699999999998,
+  "maxChildRssKiB": 520232,
+  "peakSampledTreeRssKiB": 768876,
+  "memoryAfterKiB": {
+    "MemAvailable": 2488316,
+    "SwapFree": 19505224
+  },
+  "loadAfter": [
+    3.275390625,
+    2.16015625,
+    2.37451171875
+  ],
+  "nodeTestDurationMs": 33288.822473
+}
+START testes-par-2-baseline
+{
+  "label": "testes-par-2-baseline",
+  "command": [
+    "node",
+    "--test",
+    "--test-concurrency=2",
+    "tests/piso-loja.test.mjs",
+    "tests/sombras.test.mjs",
+    "tests/carregamento.test.mjs"
+  ],
+  "cwd": "/tmp/vora-melhorias-iniciais/experimentos/baseline",
+  "startedAt": "2026-11-01T20:50:15.975288+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2495944,
+    "SwapFree": 19505224
+  },
+  "loadBefore": [
+    3.275390625,
+    2.16015625,
+    2.37451171875
+  ],
+  "exitCode": 0,
+  "wallS": 43.56482815500203,
+  "userCpuS": 58.412779,
+  "systemCpuS": 4.004425,
+  "maxChildRssKiB": 519912,
+  "peakSampledTreeRssKiB": 744524,
+  "memoryAfterKiB": {
+    "MemAvailable": 2178248,
+    "SwapFree": 19815924
+  },
+  "loadAfter": [
+    3.51806640625,
+    2.3857421875,
+    2.44091796875
+  ],
+  "nodeTestDurationMs": 43042.650675
+}
+START testes-par-3-baseline
+{
+  "label": "testes-par-3-baseline",
+  "command": [
+    "node",
+    "--test",
+    "--test-concurrency=2",
+    "tests/piso-loja.test.mjs",
+    "tests/sombras.test.mjs",
+    "tests/carregamento.test.mjs"
+  ],
+  "cwd": "/tmp/vora-melhorias-iniciais/experimentos/baseline",
+  "startedAt": "2026-11-01T20:50:59.569886+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2184560,
+    "SwapFree": 19815924
+  },
+  "loadBefore": [
+    3.51806640625,
+    2.3857421875,
+    2.44091796875
+  ],
+  "exitCode": 0,
+  "wallS": 43.06382127100369,
+  "userCpuS": 57.560017,
+  "systemCpuS": 3.900317,
+  "maxChildRssKiB": 515252,
+  "peakSampledTreeRssKiB": 727240,
+  "memoryAfterKiB": {
+    "MemAvailable": 2167996,
+    "SwapFree": 19830784
+  },
+  "loadAfter": [
+    3.79443359375,
+    2.591796875,
+    2.50830078125
+  ],
+  "nodeTestDurationMs": 42720.031152
+}
+START testes-par-3-testes
+{
+  "label": "testes-par-3-testes",
+  "command": [
+    "node",
+    "--test",
+    "--test-concurrency=2",
+    "tests/piso-loja.test.mjs",
+    "tests/sombras.test.mjs",
+    "tests/carregamento.test.mjs"
+  ],
+  "cwd": "/tmp/vora-melhorias-iniciais/experimentos/testes",
+  "startedAt": "2026-11-01T20:51:42.663318+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2182444,
+    "SwapFree": 19830792
+  },
+  "loadBefore": [
+    3.79443359375,
+    2.591796875,
+    2.50830078125
+  ],
+  "exitCode": 0,
+  "wallS": 34.05162111399841,
+  "userCpuS": 47.731689,
+  "systemCpuS": 2.512168,
+  "maxChildRssKiB": 520556,
+  "peakSampledTreeRssKiB": 738284,
+  "memoryAfterKiB": {
+    "MemAvailable": 2249480,
+    "SwapFree": 19837464
+  },
+  "loadAfter": [
+    3.6806640625,
+    2.71240234375,
+    2.55322265625
+  ],
+  "nodeTestDurationMs": 33708.20951
+}
+START testes-par-4-testes
+{
+  "label": "testes-par-4-testes",
+  "command": [
+    "node",
+    "--test",
+    "--test-concurrency=2",
+    "tests/piso-loja.test.mjs",
+    "tests/sombras.test.mjs",
+    "tests/carregamento.test.mjs"
+  ],
+  "cwd": "/tmp/vora-melhorias-iniciais/experimentos/testes",
+  "startedAt": "2026-11-01T20:52:16.745170+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2259592,
+    "SwapFree": 19837476
+  },
+  "loadBefore": [
+    3.6806640625,
+    2.71240234375,
+    2.55322265625
+  ],
+  "exitCode": 0,
+  "wallS": 34.050711469993985,
+  "userCpuS": 48.250803,
+  "systemCpuS": 2.392778,
+  "maxChildRssKiB": 416236,
+  "peakSampledTreeRssKiB": 774456,
+  "memoryAfterKiB": {
+    "MemAvailable": 2261512,
+    "SwapFree": 19901748
+  },
+  "loadAfter": [
+    3.716796875,
+    2.8369140625,
+    2.6015625
+  ],
+  "nodeTestDurationMs": 33760.146333
+}
+START testes-par-4-baseline
+{
+  "label": "testes-par-4-baseline",
+  "command": [
+    "node",
+    "--test",
+    "--test-concurrency=2",
+    "tests/piso-loja.test.mjs",
+    "tests/sombras.test.mjs",
+    "tests/carregamento.test.mjs"
+  ],
+  "cwd": "/tmp/vora-melhorias-iniciais/experimentos/baseline",
+  "startedAt": "2026-11-01T20:52:50.825675+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2257844,
+    "SwapFree": 19901748
+  },
+  "loadBefore": [
+    3.716796875,
+    2.8369140625,
+    2.6015625
+  ],
+  "exitCode": 0,
+  "wallS": 43.56528848300513,
+  "userCpuS": 58.150462,
+  "systemCpuS": 4.187344,
+  "maxChildRssKiB": 514612,
+  "peakSampledTreeRssKiB": 711708,
+  "memoryAfterKiB": {
+    "MemAvailable": 2253620,
+    "SwapFree": 19929440
+  },
+  "loadAfter": [
+    3.65478515625,
+    2.9404296875,
+    2.64892578125
+  ],
+  "nodeTestDurationMs": 43159.155787
+}
+START testes-par-5-baseline
+{
+  "label": "testes-par-5-baseline",
+  "command": [
+    "node",
+    "--test",
+    "--test-concurrency=2",
+    "tests/piso-loja.test.mjs",
+    "tests/sombras.test.mjs",
+    "tests/carregamento.test.mjs"
+  ],
+  "cwd": "/tmp/vora-melhorias-iniciais/experimentos/baseline",
+  "startedAt": "2026-11-01T20:53:34.419823+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2253400,
+    "SwapFree": 19929440
+  },
+  "loadBefore": [
+    3.65478515625,
+    2.9404296875,
+    2.64892578125
+  ],
+  "exitCode": 0,
+  "wallS": 43.062658647002536,
+  "userCpuS": 58.290876,
+  "systemCpuS": 3.941024,
+  "maxChildRssKiB": 452872,
+  "peakSampledTreeRssKiB": 728468,
+  "memoryAfterKiB": {
+    "MemAvailable": 2232392,
+    "SwapFree": 19951872
+  },
+  "loadAfter": [
+    4.09814453125,
+    3.16259765625,
+    2.73974609375
+  ],
+  "nodeTestDurationMs": 42883.123901
+}
+START testes-par-5-testes
+{
+  "label": "testes-par-5-testes",
+  "command": [
+    "node",
+    "--test",
+    "--test-concurrency=2",
+    "tests/piso-loja.test.mjs",
+    "tests/sombras.test.mjs",
+    "tests/carregamento.test.mjs"
+  ],
+  "cwd": "/tmp/vora-melhorias-iniciais/experimentos/testes",
+  "startedAt": "2026-11-01T20:54:17.510560+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2236292,
+    "SwapFree": 19951872
+  },
+  "loadBefore": [
+    4.09814453125,
+    3.16259765625,
+    2.73974609375
+  ],
+  "exitCode": 0,
+  "wallS": 33.04745207600354,
+  "userCpuS": 46.564244,
+  "systemCpuS": 2.249631,
+  "maxChildRssKiB": 517228,
+  "peakSampledTreeRssKiB": 774424,
+  "memoryAfterKiB": {
+    "MemAvailable": 2444112,
+    "SwapFree": 19960056
+  },
+  "loadAfter": [
+    3.568359375,
+    3.17822265625,
+    2.763671875
+  ],
+  "nodeTestDurationMs": 32889.089178
+}
+START isolado-piso-loja.test
+{
+  "label": "isolado-piso-loja.test",
+  "command": [
+    "node",
+    "tests/piso-loja.test.mjs"
+  ],
+  "cwd": "/tmp/vora-melhorias-iniciais/experimentos/testes",
+  "startedAt": "2026-11-01T20:54:50.583127+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2445652,
+    "SwapFree": 19960056
+  },
+  "loadBefore": [
+    3.568359375,
+    3.17822265625,
+    2.763671875
+  ],
+  "exitCode": 0,
+  "wallS": 0.5009649349958636,
+  "userCpuS": 0.219244,
+  "systemCpuS": 0.040378,
+  "maxChildRssKiB": 98768,
+  "peakSampledTreeRssKiB": 720,
+  "memoryAfterKiB": {
+    "MemAvailable": 2449224,
+    "SwapFree": 19960060
+  },
+  "loadAfter": [
+    3.568359375,
+    3.17822265625,
+    2.763671875
+  ],
+  "nodeTestDurationMs": 158.615549
+}
+START isolado-sombras.test
+{
+  "label": "isolado-sombras.test",
+  "command": [
+    "node",
+    "tests/sombras.test.mjs"
+  ],
+  "cwd": "/tmp/vora-melhorias-iniciais/experimentos/testes",
+  "startedAt": "2026-11-01T20:54:51.109759+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2449224,
+    "SwapFree": 19960060
+  },
+  "loadBefore": [
+    3.568359375,
+    3.17822265625,
+    2.763671875
+  ],
+  "exitCode": 0,
+  "wallS": 32.043015763003496,
+  "userCpuS": 33.992887,
+  "systemCpuS": 0.524431,
+  "maxChildRssKiB": 520744,
+  "peakSampledTreeRssKiB": 503436,
+  "memoryAfterKiB": {
+    "MemAvailable": 2584764,
+    "SwapFree": 20300316
+  },
+  "loadAfter": [
+    2.85205078125,
+    3.03369140625,
+    2.72802734375
+  ],
+  "nodeTestDurationMs": 31810.789717
+}
+START isolado-carregamento.test
+{
+  "label": "isolado-carregamento.test",
+  "command": [
+    "node",
+    "tests/carregamento.test.mjs"
+  ],
+  "cwd": "/tmp/vora-melhorias-iniciais/experimentos/testes",
+  "startedAt": "2026-11-01T20:55:23.183587+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2596368,
+    "SwapFree": 20300316
+  },
+  "loadBefore": [
+    2.85205078125,
+    3.03369140625,
+    2.72802734375
+  ],
+  "exitCode": 0,
+  "wallS": 12.015924494000501,
+  "userCpuS": 11.257765,
+  "systemCpuS": 1.7415919999999998,
+  "maxChildRssKiB": 377040,
+  "peakSampledTreeRssKiB": 368984,
+  "memoryAfterKiB": {
+    "MemAvailable": 2779932,
+    "SwapFree": 21111580
+  },
+  "loadAfter": [
+    3.0380859375,
+    3.064453125,
+    2.7431640625
+  ],
+  "nodeTestDurationMs": 11784.808258
+}
+START ordem-inversa
+{
+  "label": "ordem-inversa",
+  "command": [
+    "node",
+    "--test",
+    "--test-concurrency=1",
+    "tests/carregamento.test.mjs",
+    "tests/sombras.test.mjs",
+    "tests/piso-loja.test.mjs"
+  ],
+  "cwd": "/tmp/vora-melhorias-iniciais/experimentos/testes",
+  "startedAt": "2026-11-01T20:55:35.226633+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2781492,
+    "SwapFree": 21111580
+  },
+  "loadBefore": [
+    3.0380859375,
+    3.064453125,
+    2.7431640625
+  ],
+  "exitCode": 0,
+  "wallS": 45.06328706799832,
+  "userCpuS": 46.304147,
+  "systemCpuS": 2.218375,
+  "maxChildRssKiB": 471408,
+  "peakSampledTreeRssKiB": 523356,
+  "memoryAfterKiB": {
+    "MemAvailable": 2779764,
+    "SwapFree": 21121772
+  },
+  "loadAfter": [
+    2.66259765625,
+    2.9482421875,
+    2.71826171875
+  ],
+  "nodeTestDurationMs": 44586.686531
+}
+START suite-testes
+{
+  "label": "suite-testes",
+  "command": [
+    "node",
+    "scripts/verificar.mjs"
+  ],
+  "cwd": "/home/jp/Projects/Vora",
+  "startedAt": "2026-11-01T20:56:20.317325+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2784276,
+    "SwapFree": 21121772
+  },
+  "loadBefore": [
+    2.66259765625,
+    2.9482421875,
+    2.71826171875
+  ],
+  "exitCode": 0,
+  "wallS": 198.8250258879998,
+  "userCpuS": 404.311282,
+  "systemCpuS": 8.747202,
+  "maxChildRssKiB": 516868,
+  "peakSampledTreeRssKiB": 1005964,
+  "memoryAfterKiB": {
+    "MemAvailable": 2936652,
+    "SwapFree": 21162268
+  },
+  "loadAfter": [
+    3.5400390625,
+    3.41357421875,
+    2.9609375
+  ],
+  "nodeTestDurationMs": 198453.833829
+}

@@ -1,0 +1,25 @@
+Falha no carregamento do VORA: Error: Falha de preparação injetada pelo teste
+    at initSceneProgramIncremental (evalmachine.<anonymous>:1:47)
+    at initSceneProgramIncremental.next (<anonymous>)
+    at loadingPhase (VORA.js:6180:28)
+    at loadingPhase.next (<anonymous>)
+    at initializeVoraSteps (VORA.js:6280:9)
+    at initializeVoraSteps.next (<anonymous>)
+    at Object.next [as callback] (VORA.js:6338:57)
+    at Object.runAnimationFrame (file:///tmp/vora-melhorias-iniciais/experimentos/testes/tests/ambiente.mjs:122:9)
+    at TestContext.<anonymous> (file:///tmp/vora-melhorias-iniciais/experimentos/testes/tests/carregamento.test.mjs:80:23)
+    at async Test.run (node:internal/test_runner/test:1127:7)
+✔ boot avança por trabalho real, só conclui em 100% e não salva estado parcial (6856.280323ms)
+✔ driver real apresenta erro e preserva o save se a preparação falhar (104.293835ms)
+✔ render de vegetação e sombras solicita recursos sem bake síncrono ou tarefas duplicadas (4520.668544ms)
+✔ fila respeita orçamento, compartilha pedidos e cancela builders antigos (95.5485ms)
+✔ cache limita bytes, reutiliza recursos e preserva a malha visível (96.736249ms)
+✔ compilação adiada aguarda KHR em vez de bloquear o início do script (97.415364ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 11784.808258

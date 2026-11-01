@@ -1,0 +1,27 @@
+{
+  "baseline": {
+    "src/mundo/caminhos.js": "297d5231351f9b941210b5a186bdcacfe4193dde6b72b5f8c705a8034841a4fb",
+    "tests/carregamento.test.mjs": "eea93f13810998bbce0f90c74aae6943a3da6614ced906413ccc3168d10df5e1",
+    "dist/VORA.html": "547eebe5bdad827c9a518bc0e415651b54f84dad19f4e9f8a575de858d81d71c"
+  },
+  "testes": {
+    "src/mundo/caminhos.js": "297d5231351f9b941210b5a186bdcacfe4193dde6b72b5f8c705a8034841a4fb",
+    "tests/carregamento.test.mjs": "2ad052a8ead9d44d7b640b5fa103c065bce28922ee21e294d58f3c149efaeb9d",
+    "dist/VORA.html": "547eebe5bdad827c9a518bc0e415651b54f84dad19f4e9f8a575de858d81d71c"
+  },
+  "cache": {
+    "src/mundo/caminhos.js": "ae733147dd672ea873b53a5cf667358533c7ce8cbf41c28ee83e3103b1bf69d1",
+    "tests/carregamento.test.mjs": "b99c5189d6aa6c9afb675b43572424003ab19087f18134ad574bfa07256422b7",
+    "dist/VORA.html": "cf55300e83d3a2920bd0a5dfd79025bd83beaa6396786cfd57f32b177cead6ff"
+  },
+  "cache-limitado": {
+    "src/mundo/caminhos.js": "b648f0a431625dcdf63b581e6bbdc27b1a284d700023c3186781add872080b3b",
+    "tests/carregamento.test.mjs": "b99c5189d6aa6c9afb675b43572424003ab19087f18134ad574bfa07256422b7",
+    "dist/VORA.html": "78bd4236a301f642df3272f02e95e2c833bd57300d338948463932e821c0c2d9"
+  },
+  "cache-numerico": {
+    "src/mundo/caminhos.js": "5ae8594adba07919429c8541a3534508fdefc50ae9431ac391aa3ccd622c981e",
+    "tests/carregamento.test.mjs": "b99c5189d6aa6c9afb675b43572424003ab19087f18134ad574bfa07256422b7",
+    "dist/VORA.html": "5e4c31221d17da76cc7ce5994300b82aab3f639b48897e3139339bad23eff7c9"
+  }
+}

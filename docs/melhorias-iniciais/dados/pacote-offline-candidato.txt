@@ -1,0 +1,10 @@
+✔ tests/estrutura.test.mjs (151.444869ms)
+✔ tests/pages.test.mjs (52.848786ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 167.413072

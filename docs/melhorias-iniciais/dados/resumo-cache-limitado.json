@@ -1,0 +1,283 @@
+{
+  "tests": {
+    "pairs": [
+      {
+        "pair": 1,
+        "baselineMs": 41402.588701,
+        "candidateMs": 33328.548928,
+        "deltaPercent": -19.501292132501348
+      },
+      {
+        "pair": 2,
+        "baselineMs": 43042.650675,
+        "candidateMs": 33288.822473,
+        "deltaPercent": -22.660844648364574
+      },
+      {
+        "pair": 3,
+        "baselineMs": 42720.031152,
+        "candidateMs": 33708.20951,
+        "deltaPercent": -21.09507273048442
+      },
+      {
+        "pair": 4,
+        "baselineMs": 43159.155787,
+        "candidateMs": 33760.146333,
+        "deltaPercent": -21.777556308993162
+      },
+      {
+        "pair": 5,
+        "baselineMs": 42883.123901,
+        "candidateMs": 32889.089178,
+        "deltaPercent": -23.30528612158067
+      }
+    ],
+    "baselineMs": {
+      "n": 5,
+      "median": 42883.123901,
+      "min": 41402.588701,
+      "max": 43159.155787
+    },
+    "candidateMs": {
+      "n": 5,
+      "median": 33328.548928,
+      "min": 32889.089178,
+      "max": 33760.146333
+    },
+    "pairedDeltaPercent": {
+      "n": 5,
+      "median": -21.777556308993162,
+      "min": -23.30528612158067,
+      "max": -19.501292132501348
+    },
+    "improvedPairs": 5,
+    "performanceAccepted": true
+  },
+  "candidateDataset": "cache-limitado",
+  "cache": {
+    "new": {
+      "pairs": [
+        {
+          "pair": 1,
+          "baselineActiveMs": 4461.612744999997,
+          "candidateActiveMs": 3574.6943729999984,
+          "activeDeltaPercent": -19.878873911545615,
+          "baselineMaxRssBootKiB": 221032,
+          "candidateMaxRssBootKiB": 306280,
+          "baselineCallbacks": 871,
+          "candidateCallbacks": 775
+        },
+        {
+          "pair": 2,
+          "baselineActiveMs": 4465.221965000006,
+          "candidateActiveMs": 3598.2848370000015,
+          "activeDeltaPercent": -19.415319883207715,
+          "baselineMaxRssBootKiB": 222756,
+          "candidateMaxRssBootKiB": 302300,
+          "baselineCallbacks": 871,
+          "candidateCallbacks": 778
+        },
+        {
+          "pair": 3,
+          "baselineActiveMs": 4498.034018999995,
+          "candidateActiveMs": 3547.194602999998,
+          "activeDeltaPercent": -21.139000105014503,
+          "baselineMaxRssBootKiB": 217628,
+          "candidateMaxRssBootKiB": 304248,
+          "baselineCallbacks": 874,
+          "candidateCallbacks": 774
+        },
+        {
+          "pair": 4,
+          "baselineActiveMs": 4530.375816000001,
+          "candidateActiveMs": 3571.985202000001,
+          "activeDeltaPercent": -21.154770661966626,
+          "baselineMaxRssBootKiB": 221420,
+          "candidateMaxRssBootKiB": 282424,
+          "baselineCallbacks": 879,
+          "candidateCallbacks": 773
+        },
+        {
+          "pair": 5,
+          "baselineActiveMs": 4531.879492999998,
+          "candidateActiveMs": 3596.6751080000035,
+          "activeDeltaPercent": -20.63612649993283,
+          "baselineMaxRssBootKiB": 220660,
+          "candidateMaxRssBootKiB": 301796,
+          "baselineCallbacks": 881,
+          "candidateCallbacks": 780
+        }
+      ],
+      "baselineActiveMs": {
+        "n": 5,
+        "median": 4498.034018999995,
+        "min": 4461.612744999997,
+        "max": 4531.879492999998
+      },
+      "candidateActiveMs": {
+        "n": 5,
+        "median": 3574.6943729999984,
+        "min": 3547.194602999998,
+        "max": 3598.2848370000015
+      },
+      "activeDeltaPercent": {
+        "n": 5,
+        "median": -20.63612649993283,
+        "min": -21.154770661966626,
+        "max": -19.415319883207715
+      },
+      "baselineMaxRssBootKiB": {
+        "n": 5,
+        "median": 221032,
+        "min": 217628,
+        "max": 222756
+      },
+      "candidateMaxRssBootKiB": {
+        "n": 5,
+        "median": 302300,
+        "min": 282424,
+        "max": 306280
+      },
+      "baselineCallbacks": {
+        "n": 5,
+        "median": 874,
+        "min": 871,
+        "max": 881
+      },
+      "candidateCallbacks": {
+        "n": 5,
+        "median": 775,
+        "min": 773,
+        "max": 780
+      },
+      "medianActiveReductionPercent": 20.527627005481698,
+      "medianRssChangePercent": 36.76752687393681,
+      "nodeTimeAccepted": true,
+      "nodeMemoryAccepted": false
+    },
+    "advanced": {
+      "pairs": [
+        {
+          "pair": 1,
+          "baselineActiveMs": 4474.590914000003,
+          "candidateActiveMs": 3709.1814420000005,
+          "activeDeltaPercent": -17.10568601042849,
+          "baselineMaxRssBootKiB": 224252,
+          "candidateMaxRssBootKiB": 299536,
+          "baselineCallbacks": 874,
+          "candidateCallbacks": 792
+        },
+        {
+          "pair": 2,
+          "baselineActiveMs": 4501.633838999995,
+          "candidateActiveMs": 3569.1212190000065,
+          "activeDeltaPercent": -20.714981567828694,
+          "baselineMaxRssBootKiB": 222496,
+          "candidateMaxRssBootKiB": 290776,
+          "baselineCallbacks": 876,
+          "candidateCallbacks": 775
+        },
+        {
+          "pair": 3,
+          "baselineActiveMs": 4503.986168000004,
+          "candidateActiveMs": 3594.0355339999924,
+          "activeDeltaPercent": -20.203228874569913,
+          "baselineMaxRssBootKiB": 220912,
+          "candidateMaxRssBootKiB": 294008,
+          "baselineCallbacks": 874,
+          "candidateCallbacks": 777
+        },
+        {
+          "pair": 4,
+          "baselineActiveMs": 4506.514122000007,
+          "candidateActiveMs": 3610.5251260000045,
+          "activeDeltaPercent": -19.882085615263957,
+          "baselineMaxRssBootKiB": 221988,
+          "candidateMaxRssBootKiB": 288436,
+          "baselineCallbacks": 871,
+          "candidateCallbacks": 777
+        },
+        {
+          "pair": 5,
+          "baselineActiveMs": 4515.353736000001,
+          "candidateActiveMs": 3633.9063509999964,
+          "activeDeltaPercent": -19.521114768316007,
+          "baselineMaxRssBootKiB": 221432,
+          "candidateMaxRssBootKiB": 329660,
+          "baselineCallbacks": 878,
+          "candidateCallbacks": 780
+        }
+      ],
+      "baselineActiveMs": {
+        "n": 5,
+        "median": 4503.986168000004,
+        "min": 4474.590914000003,
+        "max": 4515.353736000001
+      },
+      "candidateActiveMs": {
+        "n": 5,
+        "median": 3610.5251260000045,
+        "min": 3569.1212190000065,
+        "max": 3709.1814420000005
+      },
+      "activeDeltaPercent": {
+        "n": 5,
+        "median": -19.882085615263957,
+        "min": -20.714981567828694,
+        "max": -17.10568601042849
+      },
+      "baselineMaxRssBootKiB": {
+        "n": 5,
+        "median": 221988,
+        "min": 220912,
+        "max": 224252
+      },
+      "candidateMaxRssBootKiB": {
+        "n": 5,
+        "median": 294008,
+        "min": 288436,
+        "max": 329660
+      },
+      "baselineCallbacks": {
+        "n": 5,
+        "median": 874,
+        "min": 871,
+        "max": 878
+      },
+      "candidateCallbacks": {
+        "n": 5,
+        "median": 777,
+        "min": 775,
+        "max": 792
+      },
+      "medianActiveReductionPercent": 19.83711780351095,
+      "medianRssChangePercent": 32.44319512766456,
+      "nodeTimeAccepted": true,
+      "nodeMemoryAccepted": false
+    }
+  },
+  "cacheIncorporation": {
+    "allowed": false,
+    "reason": "Real desktop browser matrix, candidate Pages preview, file://, browser memory and post-load p95 remain unmeasured. Thresholds unchanged."
+  },
+  "officialSuites": {
+    "suite-testes": {
+      "exitCode": 0,
+      "wallS": 198.8250258879998,
+      "userCpuS": 404.311282,
+      "systemCpuS": 8.747202,
+      "nodeTestDurationMs": 198453.833829,
+      "peakSampledTreeRssKiB": 1005964,
+      "files": 24
+    },
+    "suite-cache": {
+      "exitCode": 0,
+      "wallS": 171.27856054499716,
+      "userCpuS": 355.075233,
+      "systemCpuS": 9.470139,
+      "nodeTestDurationMs": 171167.262234,
+      "peakSampledTreeRssKiB": 991144,
+      "files": 25
+    }
+  }
+}

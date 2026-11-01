@@ -1,0 +1,1010 @@
+START cache-lifecycle
+{
+  "label": "cache-lifecycle",
+  "command": [
+    "node",
+    "tests/caminhos-cache.test.mjs"
+  ],
+  "cwd": "/tmp/vora-melhorias-iniciais/experimentos/cache-numerico",
+  "startedAt": "2026-11-01T21:11:00.244379+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2458636,
+    "SwapFree": 20826624
+  },
+  "loadBefore": [
+    3.35888671875,
+    3.1865234375,
+    3.0185546875
+  ],
+  "exitCode": 0,
+  "wallS": 3.5050584729979164,
+  "userCpuS": 3.156289,
+  "systemCpuS": 0.115857,
+  "maxChildRssKiB": 216868,
+  "peakSampledTreeRssKiB": 199376,
+  "memoryAfterKiB": {
+    "MemAvailable": 2436968,
+    "SwapFree": 20827140
+  },
+  "loadAfter": [
+    3.35888671875,
+    3.1865234375,
+    3.0185546875
+  ],
+  "nodeTestDurationMs": 2996.366725
+}
+START cache-par-1-new-testes
+{
+  "label": "cache-par-1-new-testes",
+  "command": [
+    "node",
+    "/tmp/vora-melhorias-iniciais/medir-candidato.mjs",
+    "/tmp/vora-melhorias-iniciais/experimentos/testes",
+    "new",
+    "/tmp/vora-melhorias-iniciais/dados/cache-numerico/synthetic-advanced.json",
+    "/tmp/vora-melhorias-iniciais/dados/cache-numerico/cache-par-1-new-testes-amostra.json"
+  ],
+  "cwd": "/tmp/vora-melhorias-iniciais/experimentos/testes",
+  "startedAt": "2026-11-01T21:11:03.774606+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2436968,
+    "SwapFree": 20827140
+  },
+  "loadBefore": [
+    3.35888671875,
+    3.1865234375,
+    3.0185546875
+  ],
+  "exitCode": 0,
+  "wallS": 5.006611150995013,
+  "userCpuS": 4.852996,
+  "systemCpuS": 0.160707,
+  "maxChildRssKiB": 219656,
+  "peakSampledTreeRssKiB": 212124,
+  "memoryAfterKiB": {
+    "MemAvailable": 2442692,
+    "SwapFree": 20829668
+  },
+  "loadAfter": [
+    3.330078125,
+    3.18310546875,
+    3.01806640625
+  ],
+  "nodeTestDurationMs": null
+}
+START cache-par-1-new-cache
+{
+  "label": "cache-par-1-new-cache",
+  "command": [
+    "node",
+    "/tmp/vora-melhorias-iniciais/medir-candidato.mjs",
+    "/tmp/vora-melhorias-iniciais/experimentos/cache-numerico",
+    "new",
+    "/tmp/vora-melhorias-iniciais/dados/cache-numerico/synthetic-advanced.json",
+    "/tmp/vora-melhorias-iniciais/dados/cache-numerico/cache-par-1-new-cache-amostra.json"
+  ],
+  "cwd": "/tmp/vora-melhorias-iniciais/experimentos/cache-numerico",
+  "startedAt": "2026-11-01T21:11:08.807231+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2444252,
+    "SwapFree": 20829668
+  },
+  "loadBefore": [
+    3.330078125,
+    3.18310546875,
+    3.01806640625
+  ],
+  "exitCode": 0,
+  "wallS": 4.005794426993816,
+  "userCpuS": 3.823946,
+  "systemCpuS": 0.15045799999999998,
+  "maxChildRssKiB": 228664,
+  "peakSampledTreeRssKiB": 216148,
+  "memoryAfterKiB": {
+    "MemAvailable": 2450552,
+    "SwapFree": 20831004
+  },
+  "loadAfter": [
+    3.30322265625,
+    3.1796875,
+    3.017578125
+  ],
+  "nodeTestDurationMs": null
+}
+START cache-par-1-advanced-testes
+{
+  "label": "cache-par-1-advanced-testes",
+  "command": [
+    "node",
+    "/tmp/vora-melhorias-iniciais/medir-candidato.mjs",
+    "/tmp/vora-melhorias-iniciais/experimentos/testes",
+    "advanced",
+    "/tmp/vora-melhorias-iniciais/dados/cache-numerico/synthetic-advanced.json",
+    "/tmp/vora-melhorias-iniciais/dados/cache-numerico/cache-par-1-advanced-testes-amostra.json"
+  ],
+  "cwd": "/tmp/vora-melhorias-iniciais/experimentos/testes",
+  "startedAt": "2026-11-01T21:11:12.838860+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2458520,
+    "SwapFree": 20831004
+  },
+  "loadBefore": [
+    3.30322265625,
+    3.1796875,
+    3.017578125
+  ],
+  "exitCode": 0,
+  "wallS": 5.006913409000845,
+  "userCpuS": 4.873714,
+  "systemCpuS": 0.151748,
+  "maxChildRssKiB": 224356,
+  "peakSampledTreeRssKiB": 212616,
+  "memoryAfterKiB": {
+    "MemAvailable": 2437804,
+    "SwapFree": 20831112
+  },
+  "loadAfter": [
+    3.19873046875,
+    3.15966796875,
+    3.01171875
+  ],
+  "nodeTestDurationMs": null
+}
+START cache-par-1-advanced-cache
+{
+  "label": "cache-par-1-advanced-cache",
+  "command": [
+    "node",
+    "/tmp/vora-melhorias-iniciais/medir-candidato.mjs",
+    "/tmp/vora-melhorias-iniciais/experimentos/cache-numerico",
+    "advanced",
+    "/tmp/vora-melhorias-iniciais/dados/cache-numerico/synthetic-advanced.json",
+    "/tmp/vora-melhorias-iniciais/dados/cache-numerico/cache-par-1-advanced-cache-amostra.json"
+  ],
+  "cwd": "/tmp/vora-melhorias-iniciais/experimentos/cache-numerico",
+  "startedAt": "2026-11-01T21:11:17.871581+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2438496,
+    "SwapFree": 20831112
+  },
+  "loadBefore": [
+    3.19873046875,
+    3.15966796875,
+    3.01171875
+  ],
+  "exitCode": 0,
+  "wallS": 4.005902937999053,
+  "userCpuS": 4.016468,
+  "systemCpuS": 0.144062,
+  "maxChildRssKiB": 225064,
+  "peakSampledTreeRssKiB": 215016,
+  "memoryAfterKiB": {
+    "MemAvailable": 2390172,
+    "SwapFree": 20831556
+  },
+  "loadAfter": [
+    3.0224609375,
+    3.12353515625,
+    3.00048828125
+  ],
+  "nodeTestDurationMs": null
+}
+START cache-par-2-new-cache
+{
+  "label": "cache-par-2-new-cache",
+  "command": [
+    "node",
+    "/tmp/vora-melhorias-iniciais/medir-candidato.mjs",
+    "/tmp/vora-melhorias-iniciais/experimentos/cache-numerico",
+    "new",
+    "/tmp/vora-melhorias-iniciais/dados/cache-numerico/synthetic-advanced.json",
+    "/tmp/vora-melhorias-iniciais/dados/cache-numerico/cache-par-2-new-cache-amostra.json"
+  ],
+  "cwd": "/tmp/vora-melhorias-iniciais/experimentos/cache-numerico",
+  "startedAt": "2026-11-01T21:11:21.903456+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2393756,
+    "SwapFree": 20831556
+  },
+  "loadBefore": [
+    3.0224609375,
+    3.12353515625,
+    3.00048828125
+  ],
+  "exitCode": 0,
+  "wallS": 4.005676125001628,
+  "userCpuS": 3.8898260000000002,
+  "systemCpuS": 0.137285,
+  "maxChildRssKiB": 223728,
+  "peakSampledTreeRssKiB": 214628,
+  "memoryAfterKiB": {
+    "MemAvailable": 2406928,
+    "SwapFree": 20831984
+  },
+  "loadAfter": [
+    2.8603515625,
+    3.087890625,
+    2.9892578125
+  ],
+  "nodeTestDurationMs": null
+}
+START cache-par-2-new-testes
+{
+  "label": "cache-par-2-new-testes",
+  "command": [
+    "node",
+    "/tmp/vora-melhorias-iniciais/medir-candidato.mjs",
+    "/tmp/vora-melhorias-iniciais/experimentos/testes",
+    "new",
+    "/tmp/vora-melhorias-iniciais/dados/cache-numerico/synthetic-advanced.json",
+    "/tmp/vora-melhorias-iniciais/dados/cache-numerico/cache-par-2-new-testes-amostra.json"
+  ],
+  "cwd": "/tmp/vora-melhorias-iniciais/experimentos/testes",
+  "startedAt": "2026-11-01T21:11:25.934323+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2410304,
+    "SwapFree": 20831984
+  },
+  "loadBefore": [
+    2.8603515625,
+    3.087890625,
+    2.9892578125
+  ],
+  "exitCode": 0,
+  "wallS": 5.007042307006486,
+  "userCpuS": 4.793011,
+  "systemCpuS": 0.155553,
+  "maxChildRssKiB": 228644,
+  "peakSampledTreeRssKiB": 214500,
+  "memoryAfterKiB": {
+    "MemAvailable": 2342108,
+    "SwapFree": 20832176
+  },
+  "loadAfter": [
+    2.7109375,
+    3.05322265625,
+    2.978515625
+  ],
+  "nodeTestDurationMs": null
+}
+START cache-par-2-advanced-cache
+{
+  "label": "cache-par-2-advanced-cache",
+  "command": [
+    "node",
+    "/tmp/vora-melhorias-iniciais/medir-candidato.mjs",
+    "/tmp/vora-melhorias-iniciais/experimentos/cache-numerico",
+    "advanced",
+    "/tmp/vora-melhorias-iniciais/dados/cache-numerico/synthetic-advanced.json",
+    "/tmp/vora-melhorias-iniciais/dados/cache-numerico/cache-par-2-advanced-cache-amostra.json"
+  ],
+  "cwd": "/tmp/vora-melhorias-iniciais/experimentos/cache-numerico",
+  "startedAt": "2026-11-01T21:11:30.967906+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2340540,
+    "SwapFree": 20832176
+  },
+  "loadBefore": [
+    2.7109375,
+    3.05322265625,
+    2.978515625
+  ],
+  "exitCode": 0,
+  "wallS": 4.005766146001406,
+  "userCpuS": 3.8956809999999997,
+  "systemCpuS": 0.114158,
+  "maxChildRssKiB": 223344,
+  "peakSampledTreeRssKiB": 211128,
+  "memoryAfterKiB": {
+    "MemAvailable": 2337756,
+    "SwapFree": 20832440
+  },
+  "loadAfter": [
+    2.57373046875,
+    3.01904296875,
+    2.9677734375
+  ],
+  "nodeTestDurationMs": null
+}
+START cache-par-2-advanced-testes
+{
+  "label": "cache-par-2-advanced-testes",
+  "command": [
+    "node",
+    "/tmp/vora-melhorias-iniciais/medir-candidato.mjs",
+    "/tmp/vora-melhorias-iniciais/experimentos/testes",
+    "advanced",
+    "/tmp/vora-melhorias-iniciais/dados/cache-numerico/synthetic-advanced.json",
+    "/tmp/vora-melhorias-iniciais/dados/cache-numerico/cache-par-2-advanced-testes-amostra.json"
+  ],
+  "cwd": "/tmp/vora-melhorias-iniciais/experimentos/testes",
+  "startedAt": "2026-11-01T21:11:34.999091+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2337756,
+    "SwapFree": 20832440
+  },
+  "loadBefore": [
+    2.57373046875,
+    3.01904296875,
+    2.9677734375
+  ],
+  "exitCode": 0,
+  "wallS": 5.007445563001966,
+  "userCpuS": 5.123121,
+  "systemCpuS": 0.193721,
+  "maxChildRssKiB": 222524,
+  "peakSampledTreeRssKiB": 220860,
+  "memoryAfterKiB": {
+    "MemAvailable": 2314004,
+    "SwapFree": 20835688
+  },
+  "loadAfter": [
+    2.60791015625,
+    3.0185546875,
+    2.96826171875
+  ],
+  "nodeTestDurationMs": null
+}
+START cache-par-3-new-testes
+{
+  "label": "cache-par-3-new-testes",
+  "command": [
+    "node",
+    "/tmp/vora-melhorias-iniciais/medir-candidato.mjs",
+    "/tmp/vora-melhorias-iniciais/experimentos/testes",
+    "new",
+    "/tmp/vora-melhorias-iniciais/dados/cache-numerico/synthetic-advanced.json",
+    "/tmp/vora-melhorias-iniciais/dados/cache-numerico/cache-par-3-new-testes-amostra.json"
+  ],
+  "cwd": "/tmp/vora-melhorias-iniciais/experimentos/testes",
+  "startedAt": "2026-11-01T21:11:40.035034+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2320752,
+    "SwapFree": 20835688
+  },
+  "loadBefore": [
+    2.60791015625,
+    3.0185546875,
+    2.96826171875
+  ],
+  "exitCode": 0,
+  "wallS": 5.00803400100267,
+  "userCpuS": 5.228363,
+  "systemCpuS": 0.149416,
+  "maxChildRssKiB": 231732,
+  "peakSampledTreeRssKiB": 197620,
+  "memoryAfterKiB": {
+    "MemAvailable": 2314732,
+    "SwapFree": 20842872
+  },
+  "loadAfter": [
+    2.6396484375,
+    3.01806640625,
+    2.96875
+  ],
+  "nodeTestDurationMs": null
+}
+START cache-par-3-new-cache
+{
+  "label": "cache-par-3-new-cache",
+  "command": [
+    "node",
+    "/tmp/vora-melhorias-iniciais/medir-candidato.mjs",
+    "/tmp/vora-melhorias-iniciais/experimentos/cache-numerico",
+    "new",
+    "/tmp/vora-melhorias-iniciais/dados/cache-numerico/synthetic-advanced.json",
+    "/tmp/vora-melhorias-iniciais/dados/cache-numerico/cache-par-3-new-cache-amostra.json"
+  ],
+  "cwd": "/tmp/vora-melhorias-iniciais/experimentos/cache-numerico",
+  "startedAt": "2026-11-01T21:11:45.071083+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2314508,
+    "SwapFree": 20842872
+  },
+  "loadBefore": [
+    2.6396484375,
+    3.01806640625,
+    2.96875
+  ],
+  "exitCode": 0,
+  "wallS": 4.006102659004682,
+  "userCpuS": 4.066664,
+  "systemCpuS": 0.156196,
+  "maxChildRssKiB": 223720,
+  "peakSampledTreeRssKiB": 214532,
+  "memoryAfterKiB": {
+    "MemAvailable": 2330036,
+    "SwapFree": 20843188
+  },
+  "loadAfter": [
+    2.50830078125,
+    2.984375,
+    2.9580078125
+  ],
+  "nodeTestDurationMs": null
+}
+START cache-par-3-advanced-testes
+{
+  "label": "cache-par-3-advanced-testes",
+  "command": [
+    "node",
+    "/tmp/vora-melhorias-iniciais/medir-candidato.mjs",
+    "/tmp/vora-melhorias-iniciais/experimentos/testes",
+    "advanced",
+    "/tmp/vora-melhorias-iniciais/dados/cache-numerico/synthetic-advanced.json",
+    "/tmp/vora-melhorias-iniciais/dados/cache-numerico/cache-par-3-advanced-testes-amostra.json"
+  ],
+  "cwd": "/tmp/vora-melhorias-iniciais/experimentos/testes",
+  "startedAt": "2026-11-01T21:11:49.105782+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2335292,
+    "SwapFree": 20843188
+  },
+  "loadBefore": [
+    2.50830078125,
+    2.984375,
+    2.9580078125
+  ],
+  "exitCode": 0,
+  "wallS": 5.007808954003849,
+  "userCpuS": 5.176243,
+  "systemCpuS": 0.152046,
+  "maxChildRssKiB": 225324,
+  "peakSampledTreeRssKiB": 197128,
+  "memoryAfterKiB": {
+    "MemAvailable": 2337708,
+    "SwapFree": 20847936
+  },
+  "loadAfter": [
+    2.7080078125,
+    3.01806640625,
+    2.96923828125
+  ],
+  "nodeTestDurationMs": null
+}
+START cache-par-3-advanced-cache
+{
+  "label": "cache-par-3-advanced-cache",
+  "command": [
+    "node",
+    "/tmp/vora-melhorias-iniciais/medir-candidato.mjs",
+    "/tmp/vora-melhorias-iniciais/experimentos/cache-numerico",
+    "advanced",
+    "/tmp/vora-melhorias-iniciais/dados/cache-numerico/synthetic-advanced.json",
+    "/tmp/vora-melhorias-iniciais/dados/cache-numerico/cache-par-3-advanced-cache-amostra.json"
+  ],
+  "cwd": "/tmp/vora-melhorias-iniciais/experimentos/cache-numerico",
+  "startedAt": "2026-11-01T21:11:54.139403+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2337708,
+    "SwapFree": 20847944
+  },
+  "loadBefore": [
+    2.7080078125,
+    3.01806640625,
+    2.96923828125
+  ],
+  "exitCode": 0,
+  "wallS": 4.005749794996518,
+  "userCpuS": 3.862558,
+  "systemCpuS": 0.15623099999999998,
+  "maxChildRssKiB": 220716,
+  "peakSampledTreeRssKiB": 210560,
+  "memoryAfterKiB": {
+    "MemAvailable": 2362176,
+    "SwapFree": 20848684
+  },
+  "loadAfter": [
+    2.7080078125,
+    3.01806640625,
+    2.96923828125
+  ],
+  "nodeTestDurationMs": null
+}
+START cache-par-4-new-cache
+{
+  "label": "cache-par-4-new-cache",
+  "command": [
+    "node",
+    "/tmp/vora-melhorias-iniciais/medir-candidato.mjs",
+    "/tmp/vora-melhorias-iniciais/experimentos/cache-numerico",
+    "new",
+    "/tmp/vora-melhorias-iniciais/dados/cache-numerico/synthetic-advanced.json",
+    "/tmp/vora-melhorias-iniciais/dados/cache-numerico/cache-par-4-new-cache-amostra.json"
+  ],
+  "cwd": "/tmp/vora-melhorias-iniciais/experimentos/cache-numerico",
+  "startedAt": "2026-11-01T21:11:58.171967+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2362176,
+    "SwapFree": 20848688
+  },
+  "loadBefore": [
+    2.7080078125,
+    3.01806640625,
+    2.96923828125
+  ],
+  "exitCode": 0,
+  "wallS": 4.005865683997399,
+  "userCpuS": 3.896835,
+  "systemCpuS": 0.15206999999999998,
+  "maxChildRssKiB": 223664,
+  "peakSampledTreeRssKiB": 215696,
+  "memoryAfterKiB": {
+    "MemAvailable": 2343836,
+    "SwapFree": 20850740
+  },
+  "loadAfter": [
+    2.57080078125,
+    2.984375,
+    2.95849609375
+  ],
+  "nodeTestDurationMs": null
+}
+START cache-par-4-new-testes
+{
+  "label": "cache-par-4-new-testes",
+  "command": [
+    "node",
+    "/tmp/vora-melhorias-iniciais/medir-candidato.mjs",
+    "/tmp/vora-melhorias-iniciais/experimentos/testes",
+    "new",
+    "/tmp/vora-melhorias-iniciais/dados/cache-numerico/synthetic-advanced.json",
+    "/tmp/vora-melhorias-iniciais/dados/cache-numerico/cache-par-4-new-testes-amostra.json"
+  ],
+  "cwd": "/tmp/vora-melhorias-iniciais/experimentos/testes",
+  "startedAt": "2026-11-01T21:12:02.204366+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2339996,
+    "SwapFree": 20850740
+  },
+  "loadBefore": [
+    2.57080078125,
+    2.984375,
+    2.95849609375
+  ],
+  "exitCode": 0,
+  "wallS": 5.0072455140034435,
+  "userCpuS": 4.896056,
+  "systemCpuS": 0.158407,
+  "maxChildRssKiB": 223620,
+  "peakSampledTreeRssKiB": 213636,
+  "memoryAfterKiB": {
+    "MemAvailable": 2339936,
+    "SwapFree": 20852040
+  },
+  "loadAfter": [
+    2.92578125,
+    3.05126953125,
+    2.98046875
+  ],
+  "nodeTestDurationMs": null
+}
+START cache-par-4-advanced-cache
+{
+  "label": "cache-par-4-advanced-cache",
+  "command": [
+    "node",
+    "/tmp/vora-melhorias-iniciais/medir-candidato.mjs",
+    "/tmp/vora-melhorias-iniciais/experimentos/cache-numerico",
+    "advanced",
+    "/tmp/vora-melhorias-iniciais/dados/cache-numerico/synthetic-advanced.json",
+    "/tmp/vora-melhorias-iniciais/dados/cache-numerico/cache-par-4-advanced-cache-amostra.json"
+  ],
+  "cwd": "/tmp/vora-melhorias-iniciais/experimentos/cache-numerico",
+  "startedAt": "2026-11-01T21:12:07.239541+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2334504,
+    "SwapFree": 20852048
+  },
+  "loadBefore": [
+    2.92578125,
+    3.05126953125,
+    2.98046875
+  ],
+  "exitCode": 0,
+  "wallS": 4.00546636999934,
+  "userCpuS": 3.844255,
+  "systemCpuS": 0.16186899999999999,
+  "maxChildRssKiB": 225592,
+  "peakSampledTreeRssKiB": 217468,
+  "memoryAfterKiB": {
+    "MemAvailable": 2317084,
+    "SwapFree": 20852476
+  },
+  "loadAfter": [
+    2.771484375,
+    3.01708984375,
+    2.9697265625
+  ],
+  "nodeTestDurationMs": null
+}
+START cache-par-4-advanced-testes
+{
+  "label": "cache-par-4-advanced-testes",
+  "command": [
+    "node",
+    "/tmp/vora-melhorias-iniciais/medir-candidato.mjs",
+    "/tmp/vora-melhorias-iniciais/experimentos/testes",
+    "advanced",
+    "/tmp/vora-melhorias-iniciais/dados/cache-numerico/synthetic-advanced.json",
+    "/tmp/vora-melhorias-iniciais/dados/cache-numerico/cache-par-4-advanced-testes-amostra.json"
+  ],
+  "cwd": "/tmp/vora-melhorias-iniciais/experimentos/testes",
+  "startedAt": "2026-11-01T21:12:11.271106+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2319508,
+    "SwapFree": 20852476
+  },
+  "loadBefore": [
+    2.771484375,
+    3.01708984375,
+    2.9697265625
+  ],
+  "exitCode": 0,
+  "wallS": 5.007398747999105,
+  "userCpuS": 5.051494,
+  "systemCpuS": 0.13496,
+  "maxChildRssKiB": 224212,
+  "peakSampledTreeRssKiB": 212936,
+  "memoryAfterKiB": {
+    "MemAvailable": 2244468,
+    "SwapFree": 20854204
+  },
+  "loadAfter": [
+    2.70947265625,
+    3.0,
+    2.96435546875
+  ],
+  "nodeTestDurationMs": null
+}
+START cache-par-5-new-testes
+{
+  "label": "cache-par-5-new-testes",
+  "command": [
+    "node",
+    "/tmp/vora-melhorias-iniciais/medir-candidato.mjs",
+    "/tmp/vora-melhorias-iniciais/experimentos/testes",
+    "new",
+    "/tmp/vora-melhorias-iniciais/dados/cache-numerico/synthetic-advanced.json",
+    "/tmp/vora-melhorias-iniciais/dados/cache-numerico/cache-par-5-new-testes-amostra.json"
+  ],
+  "cwd": "/tmp/vora-melhorias-iniciais/experimentos/testes",
+  "startedAt": "2026-11-01T21:12:16.306561+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2247776,
+    "SwapFree": 20854204
+  },
+  "loadBefore": [
+    2.70947265625,
+    3.0,
+    2.96435546875
+  ],
+  "exitCode": 0,
+  "wallS": 5.006851057005406,
+  "userCpuS": 4.967489,
+  "systemCpuS": 0.16942,
+  "maxChildRssKiB": 226968,
+  "peakSampledTreeRssKiB": 214880,
+  "memoryAfterKiB": {
+    "MemAvailable": 2227756,
+    "SwapFree": 20855484
+  },
+  "loadAfter": [
+    2.65234375,
+    2.9833984375,
+    2.958984375
+  ],
+  "nodeTestDurationMs": null
+}
+START cache-par-5-new-cache
+{
+  "label": "cache-par-5-new-cache",
+  "command": [
+    "node",
+    "/tmp/vora-melhorias-iniciais/medir-candidato.mjs",
+    "/tmp/vora-melhorias-iniciais/experimentos/cache-numerico",
+    "new",
+    "/tmp/vora-melhorias-iniciais/dados/cache-numerico/synthetic-advanced.json",
+    "/tmp/vora-melhorias-iniciais/dados/cache-numerico/cache-par-5-new-cache-amostra.json"
+  ],
+  "cwd": "/tmp/vora-melhorias-iniciais/experimentos/cache-numerico",
+  "startedAt": "2026-11-01T21:12:21.339987+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2233208,
+    "SwapFree": 20855484
+  },
+  "loadBefore": [
+    2.65234375,
+    2.9833984375,
+    2.958984375
+  ],
+  "exitCode": 0,
+  "wallS": 4.005422707996331,
+  "userCpuS": 3.909185,
+  "systemCpuS": 0.15004599999999998,
+  "maxChildRssKiB": 222068,
+  "peakSampledTreeRssKiB": 209444,
+  "memoryAfterKiB": {
+    "MemAvailable": 2274008,
+    "SwapFree": 20856328
+  },
+  "loadAfter": [
+    2.6806640625,
+    2.98388671875,
+    2.95947265625
+  ],
+  "nodeTestDurationMs": null
+}
+START cache-par-5-advanced-testes
+{
+  "label": "cache-par-5-advanced-testes",
+  "command": [
+    "node",
+    "/tmp/vora-melhorias-iniciais/medir-candidato.mjs",
+    "/tmp/vora-melhorias-iniciais/experimentos/testes",
+    "advanced",
+    "/tmp/vora-melhorias-iniciais/dados/cache-numerico/synthetic-advanced.json",
+    "/tmp/vora-melhorias-iniciais/dados/cache-numerico/cache-par-5-advanced-testes-amostra.json"
+  ],
+  "cwd": "/tmp/vora-melhorias-iniciais/experimentos/testes",
+  "startedAt": "2026-11-01T21:12:25.371432+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2270124,
+    "SwapFree": 20856328
+  },
+  "loadBefore": [
+    2.6806640625,
+    2.98388671875,
+    2.95947265625
+  ],
+  "exitCode": 0,
+  "wallS": 5.007384913005808,
+  "userCpuS": 4.9215160000000004,
+  "systemCpuS": 0.16158599999999998,
+  "maxChildRssKiB": 225056,
+  "peakSampledTreeRssKiB": 213884,
+  "memoryAfterKiB": {
+    "MemAvailable": 2276672,
+    "SwapFree": 20856624
+  },
+  "loadAfter": [
+    2.78662109375,
+    3.0009765625,
+    2.96533203125
+  ],
+  "nodeTestDurationMs": null
+}
+START cache-par-5-advanced-cache
+{
+  "label": "cache-par-5-advanced-cache",
+  "command": [
+    "node",
+    "/tmp/vora-melhorias-iniciais/medir-candidato.mjs",
+    "/tmp/vora-melhorias-iniciais/experimentos/cache-numerico",
+    "advanced",
+    "/tmp/vora-melhorias-iniciais/dados/cache-numerico/synthetic-advanced.json",
+    "/tmp/vora-melhorias-iniciais/dados/cache-numerico/cache-par-5-advanced-cache-amostra.json"
+  ],
+  "cwd": "/tmp/vora-melhorias-iniciais/experimentos/cache-numerico",
+  "startedAt": "2026-11-01T21:12:30.404792+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2276924,
+    "SwapFree": 20856624
+  },
+  "loadBefore": [
+    2.78662109375,
+    3.0009765625,
+    2.96533203125
+  ],
+  "exitCode": 0,
+  "wallS": 4.00543946599646,
+  "userCpuS": 3.904817,
+  "systemCpuS": 0.18023999999999998,
+  "maxChildRssKiB": 220268,
+  "peakSampledTreeRssKiB": 209616,
+  "memoryAfterKiB": {
+    "MemAvailable": 2185136,
+    "SwapFree": 20857840
+  },
+  "loadAfter": [
+    2.8837890625,
+    3.017578125,
+    2.97119140625
+  ],
+  "nodeTestDurationMs": null
+}
+START replay-new-testes
+{
+  "label": "replay-new-testes",
+  "command": [
+    "node",
+    "/tmp/vora-melhorias-iniciais/medir-candidato.mjs",
+    "/tmp/vora-melhorias-iniciais/experimentos/testes",
+    "new",
+    "/tmp/vora-melhorias-iniciais/dados/cache-numerico/synthetic-advanced.json",
+    "/tmp/vora-melhorias-iniciais/dados/cache-numerico/replay-new-testes-amostra.json",
+    "replay"
+  ],
+  "cwd": "/tmp/vora-melhorias-iniciais/experimentos/testes",
+  "startedAt": "2026-11-01T21:12:34.437411+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2184616,
+    "SwapFree": 20857840
+  },
+  "loadBefore": [
+    2.8837890625,
+    3.017578125,
+    2.97119140625
+  ],
+  "exitCode": 0,
+  "wallS": 12.017056959004549,
+  "userCpuS": 12.374298,
+  "systemCpuS": 0.27877399999999997,
+  "maxChildRssKiB": 386704,
+  "peakSampledTreeRssKiB": 376528,
+  "memoryAfterKiB": {
+    "MemAvailable": 2203940,
+    "SwapFree": 20858884
+  },
+  "loadAfter": [
+    2.82177734375,
+    3.0,
+    2.96630859375
+  ],
+  "nodeTestDurationMs": null
+}
+START replay-new-cache
+{
+  "label": "replay-new-cache",
+  "command": [
+    "node",
+    "/tmp/vora-melhorias-iniciais/medir-candidato.mjs",
+    "/tmp/vora-melhorias-iniciais/experimentos/cache-numerico",
+    "new",
+    "/tmp/vora-melhorias-iniciais/dados/cache-numerico/synthetic-advanced.json",
+    "/tmp/vora-melhorias-iniciais/dados/cache-numerico/replay-new-cache-amostra.json",
+    "replay"
+  ],
+  "cwd": "/tmp/vora-melhorias-iniciais/experimentos/cache-numerico",
+  "startedAt": "2026-11-01T21:12:46.483558+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2209692,
+    "SwapFree": 20858884
+  },
+  "loadBefore": [
+    2.82177734375,
+    3.0,
+    2.96630859375
+  ],
+  "exitCode": 0,
+  "wallS": 10.51490681800351,
+  "userCpuS": 10.965324,
+  "systemCpuS": 0.272966,
+  "maxChildRssKiB": 384520,
+  "peakSampledTreeRssKiB": 373888,
+  "memoryAfterKiB": {
+    "MemAvailable": 2199740,
+    "SwapFree": 20859892
+  },
+  "loadAfter": [
+    2.76904296875,
+    2.9833984375,
+    2.96142578125
+  ],
+  "nodeTestDurationMs": null
+}
+START replay-advanced-testes
+{
+  "label": "replay-advanced-testes",
+  "command": [
+    "node",
+    "/tmp/vora-melhorias-iniciais/medir-candidato.mjs",
+    "/tmp/vora-melhorias-iniciais/experimentos/testes",
+    "advanced",
+    "/tmp/vora-melhorias-iniciais/dados/cache-numerico/synthetic-advanced.json",
+    "/tmp/vora-melhorias-iniciais/dados/cache-numerico/replay-advanced-testes-amostra.json",
+    "replay"
+  ],
+  "cwd": "/tmp/vora-melhorias-iniciais/experimentos/testes",
+  "startedAt": "2026-11-01T21:12:57.025077+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2198896,
+    "SwapFree": 20859892
+  },
+  "loadBefore": [
+    2.76904296875,
+    2.9833984375,
+    2.96142578125
+  ],
+  "exitCode": 0,
+  "wallS": 12.516886315999727,
+  "userCpuS": 13.18267,
+  "systemCpuS": 0.370534,
+  "maxChildRssKiB": 519944,
+  "peakSampledTreeRssKiB": 500848,
+  "memoryAfterKiB": {
+    "MemAvailable": 2299088,
+    "SwapFree": 20860584
+  },
+  "loadAfter": [
+    2.59228515625,
+    2.93505859375,
+    2.94580078125
+  ],
+  "nodeTestDurationMs": null
+}
+START replay-advanced-cache
+{
+  "label": "replay-advanced-cache",
+  "command": [
+    "node",
+    "/tmp/vora-melhorias-iniciais/medir-candidato.mjs",
+    "/tmp/vora-melhorias-iniciais/experimentos/cache-numerico",
+    "advanced",
+    "/tmp/vora-melhorias-iniciais/dados/cache-numerico/synthetic-advanced.json",
+    "/tmp/vora-melhorias-iniciais/dados/cache-numerico/replay-advanced-cache-amostra.json",
+    "replay"
+  ],
+  "cwd": "/tmp/vora-melhorias-iniciais/experimentos/cache-numerico",
+  "startedAt": "2026-11-01T21:13:09.569001+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2297052,
+    "SwapFree": 20860584
+  },
+  "loadBefore": [
+    2.59228515625,
+    2.93505859375,
+    2.94580078125
+  ],
+  "exitCode": 0,
+  "wallS": 11.516538096002478,
+  "userCpuS": 12.027623,
+  "systemCpuS": 0.29331999999999997,
+  "maxChildRssKiB": 431708,
+  "peakSampledTreeRssKiB": 420552,
+  "memoryAfterKiB": {
+    "MemAvailable": 2238212,
+    "SwapFree": 20863436
+  },
+  "loadAfter": [
+    2.6611328125,
+    2.9375,
+    2.9462890625
+  ],
+  "nodeTestDurationMs": null
+}
+START suite-cache
+{
+  "label": "suite-cache",
+  "command": [
+    "node",
+    "scripts/verificar.mjs"
+  ],
+  "cwd": "/tmp/vora-melhorias-iniciais/experimentos/cache-numerico",
+  "startedAt": "2026-11-01T21:13:21.111298+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2237432,
+    "SwapFree": 20863436
+  },
+  "loadBefore": [
+    2.6611328125,
+    2.9375,
+    2.9462890625
+  ],
+  "exitCode": 0,
+  "wallS": 163.27323092200095,
+  "userCpuS": 334.871985,
+  "systemCpuS": 8.933188,
+  "maxChildRssKiB": 507728,
+  "peakSampledTreeRssKiB": 996028,
+  "memoryAfterKiB": {
+    "MemAvailable": 2376820,
+    "SwapFree": 20659908
+  },
+  "loadAfter": [
+    4.705078125,
+    3.705078125,
+    3.228515625
+  ],
+  "nodeTestDurationMs": 162966.659135
+}

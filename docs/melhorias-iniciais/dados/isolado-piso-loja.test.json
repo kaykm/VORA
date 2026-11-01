@@ -1,0 +1,43 @@
+{
+  "label": "isolado-piso-loja.test",
+  "command": [
+    "node",
+    "tests/piso-loja.test.mjs"
+  ],
+  "cwd": "/tmp/vora-melhorias-iniciais/experimentos/testes",
+  "startedAt": "2026-11-01T20:54:50.583127+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2445652,
+    "SwapFree": 19960056
+  },
+  "loadBefore": [
+    3.568359375,
+    3.17822265625,
+    2.763671875
+  ],
+  "exitCode": 0,
+  "wallS": 0.5009649349958636,
+  "userCpuS": 0.219244,
+  "systemCpuS": 0.040378,
+  "maxChildRssKiB": 98768,
+  "peakSampledTreeRssKiB": 720,
+  "memoryAfterKiB": {
+    "MemAvailable": 2449224,
+    "SwapFree": 19960060
+  },
+  "loadAfter": [
+    3.568359375,
+    3.17822265625,
+    2.763671875
+  ],
+  "memorySamples": [
+    {
+      "elapsedS": 0.000790616002632305,
+      "treeRssKiB": 720,
+      "MemAvailable": 2445652,
+      "SwapFree": 19960056
+    }
+  ],
+  "nodeTestDurationMs": 158.615549,
+  "files": []
+}

@@ -1,0 +1,15 @@
+{
+  "utc": "2026-11-01T21:26:12.346936+00:00",
+  "targetUrl": "file:///home/jp/Projects/Vora/.tmp/melhorias-iniciais/experimentos/cache-numerico/dist/VORA.html",
+  "tool": "mcp__cua_repl.createBrowserTab(iab)",
+  "result": "blocked_before_navigation",
+  "reason": "Browser URL policy rejects file: protocol; allowed protocols http: and https:. The tool expressly prohibits workarounds, indirect execution, alternate browser surfaces and raw browser commands.",
+  "userAuthorizedFileValidation": true,
+  "actualFileOpen": false,
+  "gameplayValidated": false,
+  "timings": null,
+  "profileTouched": false,
+  "candidateIncorporated": false,
+  "userReport": "User has no local execution result",
+  "staticPackageValidation": "passed; separate evidence in pacote-offline.json"
+}

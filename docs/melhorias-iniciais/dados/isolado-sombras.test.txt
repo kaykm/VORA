@@ -1,0 +1,14 @@
+✔ sombras têm padrão compatível, seletor próprio e validação de preferências antigas (13292.94221ms)
+✔ assinatura gráfica antiga migra sem reaplicar predefinição nem perder preferências (5179.168118ms)
+✔ cada predefinição escolhe sombras coerentes sem vincular o ajuste de AO (4472.676953ms)
+✔ alvos respeitam orçamento móvel e os limites de textura e depth buffer (107.210627ms)
+✔ trocas de qualidade são incrementais, mantêm alvos prontos e cancelam o pedido anterior (4362.096607ms)
+✔ falha de alocação conserva os mapas anteriores e libera recursos incompletos (4390.729388ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 31810.789717

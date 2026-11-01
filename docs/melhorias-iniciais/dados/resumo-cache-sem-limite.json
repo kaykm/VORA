@@ -1,0 +1,282 @@
+{
+  "tests": {
+    "pairs": [
+      {
+        "pair": 1,
+        "baselineMs": 41402.588701,
+        "candidateMs": 33328.548928,
+        "deltaPercent": -19.501292132501348
+      },
+      {
+        "pair": 2,
+        "baselineMs": 43042.650675,
+        "candidateMs": 33288.822473,
+        "deltaPercent": -22.660844648364574
+      },
+      {
+        "pair": 3,
+        "baselineMs": 42720.031152,
+        "candidateMs": 33708.20951,
+        "deltaPercent": -21.09507273048442
+      },
+      {
+        "pair": 4,
+        "baselineMs": 43159.155787,
+        "candidateMs": 33760.146333,
+        "deltaPercent": -21.777556308993162
+      },
+      {
+        "pair": 5,
+        "baselineMs": 42883.123901,
+        "candidateMs": 32889.089178,
+        "deltaPercent": -23.30528612158067
+      }
+    ],
+    "baselineMs": {
+      "n": 5,
+      "median": 42883.123901,
+      "min": 41402.588701,
+      "max": 43159.155787
+    },
+    "candidateMs": {
+      "n": 5,
+      "median": 33328.548928,
+      "min": 32889.089178,
+      "max": 33760.146333
+    },
+    "pairedDeltaPercent": {
+      "n": 5,
+      "median": -21.777556308993162,
+      "min": -23.30528612158067,
+      "max": -19.501292132501348
+    },
+    "improvedPairs": 5,
+    "performanceAccepted": true
+  },
+  "cache": {
+    "new": {
+      "pairs": [
+        {
+          "pair": 1,
+          "baselineActiveMs": 4573.848916999995,
+          "candidateActiveMs": 3659.615231000001,
+          "activeDeltaPercent": -19.988279075025574,
+          "baselineMaxRssBootKiB": 221044,
+          "candidateMaxRssBootKiB": 321104,
+          "baselineCallbacks": 885,
+          "candidateCallbacks": 782
+        },
+        {
+          "pair": 2,
+          "baselineActiveMs": 4338.431180000005,
+          "candidateActiveMs": 3500.2844079999995,
+          "activeDeltaPercent": -19.319121065324918,
+          "baselineMaxRssBootKiB": 222964,
+          "candidateMaxRssBootKiB": 323588,
+          "baselineCallbacks": 858,
+          "candidateCallbacks": 766
+        },
+        {
+          "pair": 3,
+          "baselineActiveMs": 4346.3087510000005,
+          "candidateActiveMs": 3516.9377279999944,
+          "activeDeltaPercent": -19.082192971430846,
+          "baselineMaxRssBootKiB": 215048,
+          "candidateMaxRssBootKiB": 326812,
+          "baselineCallbacks": 862,
+          "candidateCallbacks": 771
+        },
+        {
+          "pair": 4,
+          "baselineActiveMs": 4512.036389000003,
+          "candidateActiveMs": 3657.4875350000034,
+          "activeDeltaPercent": -18.939316537502304,
+          "baselineMaxRssBootKiB": 220036,
+          "candidateMaxRssBootKiB": 319816,
+          "baselineCallbacks": 873,
+          "candidateCallbacks": 787
+        },
+        {
+          "pair": 5,
+          "baselineActiveMs": 4489.301485999998,
+          "candidateActiveMs": 3728.233497999994,
+          "activeDeltaPercent": -16.952926649578192,
+          "baselineMaxRssBootKiB": 216820,
+          "candidateMaxRssBootKiB": 318016,
+          "baselineCallbacks": 874,
+          "candidateCallbacks": 790
+        }
+      ],
+      "baselineActiveMs": {
+        "n": 5,
+        "median": 4489.301485999998,
+        "min": 4338.431180000005,
+        "max": 4573.848916999995
+      },
+      "candidateActiveMs": {
+        "n": 5,
+        "median": 3657.4875350000034,
+        "min": 3500.2844079999995,
+        "max": 3728.233497999994
+      },
+      "activeDeltaPercent": {
+        "n": 5,
+        "median": -19.082192971430846,
+        "min": -19.988279075025574,
+        "max": -16.952926649578192
+      },
+      "baselineMaxRssBootKiB": {
+        "n": 5,
+        "median": 220036,
+        "min": 215048,
+        "max": 222964
+      },
+      "candidateMaxRssBootKiB": {
+        "n": 5,
+        "median": 321104,
+        "min": 318016,
+        "max": 326812
+      },
+      "baselineCallbacks": {
+        "n": 5,
+        "median": 873,
+        "min": 858,
+        "max": 885
+      },
+      "candidateCallbacks": {
+        "n": 5,
+        "median": 782,
+        "min": 766,
+        "max": 790
+      },
+      "medianActiveReductionPercent": 18.52880573055803,
+      "medianRssChangePercent": 45.93248377538222,
+      "nodeTimeAccepted": true,
+      "nodeMemoryAccepted": false
+    },
+    "advanced": {
+      "pairs": [
+        {
+          "pair": 1,
+          "baselineActiveMs": 4726.156175999994,
+          "candidateActiveMs": 3717.935349000003,
+          "activeDeltaPercent": -21.33278692989159,
+          "baselineMaxRssBootKiB": 222480,
+          "candidateMaxRssBootKiB": 319060,
+          "baselineCallbacks": 906,
+          "candidateCallbacks": 795
+        },
+        {
+          "pair": 2,
+          "baselineActiveMs": 4372.333828999999,
+          "candidateActiveMs": 3495.9823490000094,
+          "activeDeltaPercent": -20.043105450628897,
+          "baselineMaxRssBootKiB": 223128,
+          "candidateMaxRssBootKiB": 315784,
+          "baselineCallbacks": 863,
+          "candidateCallbacks": 761
+        },
+        {
+          "pair": 3,
+          "baselineActiveMs": 4345.77655400001,
+          "candidateActiveMs": 3513.0621080000064,
+          "activeDeltaPercent": -19.16146483034299,
+          "baselineMaxRssBootKiB": 222076,
+          "candidateMaxRssBootKiB": 312868,
+          "baselineCallbacks": 859,
+          "candidateCallbacks": 774
+        },
+        {
+          "pair": 4,
+          "baselineActiveMs": 4504.452232000007,
+          "candidateActiveMs": 3685.799694999995,
+          "activeDeltaPercent": -18.17429722495968,
+          "baselineMaxRssBootKiB": 223928,
+          "candidateMaxRssBootKiB": 320904,
+          "baselineCallbacks": 876,
+          "candidateCallbacks": 790
+        },
+        {
+          "pair": 5,
+          "baselineActiveMs": 4563.433357999997,
+          "candidateActiveMs": 3636.2399970000038,
+          "activeDeltaPercent": -20.317889804933,
+          "baselineMaxRssBootKiB": 211132,
+          "candidateMaxRssBootKiB": 317644,
+          "baselineCallbacks": 880,
+          "candidateCallbacks": 784
+        }
+      ],
+      "baselineActiveMs": {
+        "n": 5,
+        "median": 4504.452232000007,
+        "min": 4345.77655400001,
+        "max": 4726.156175999994
+      },
+      "candidateActiveMs": {
+        "n": 5,
+        "median": 3636.2399970000038,
+        "min": 3495.9823490000094,
+        "max": 3717.935349000003
+      },
+      "activeDeltaPercent": {
+        "n": 5,
+        "median": -20.043105450628897,
+        "min": -21.33278692989159,
+        "max": -18.17429722495968
+      },
+      "baselineMaxRssBootKiB": {
+        "n": 5,
+        "median": 222480,
+        "min": 211132,
+        "max": 223928
+      },
+      "candidateMaxRssBootKiB": {
+        "n": 5,
+        "median": 317644,
+        "min": 312868,
+        "max": 320904
+      },
+      "baselineCallbacks": {
+        "n": 5,
+        "median": 876,
+        "min": 859,
+        "max": 906
+      },
+      "candidateCallbacks": {
+        "n": 5,
+        "median": 784,
+        "min": 761,
+        "max": 795
+      },
+      "medianActiveReductionPercent": 19.274535288267693,
+      "medianRssChangePercent": 42.77418194893923,
+      "nodeTimeAccepted": true,
+      "nodeMemoryAccepted": false
+    }
+  },
+  "cacheIncorporation": {
+    "allowed": false,
+    "reason": "Real desktop browser matrix, candidate Pages preview, file://, browser memory and post-load p95 remain unmeasured. Thresholds unchanged."
+  },
+  "officialSuites": {
+    "suite-testes": {
+      "exitCode": 0,
+      "wallS": 198.8250258879998,
+      "userCpuS": 404.311282,
+      "systemCpuS": 8.747202,
+      "nodeTestDurationMs": 198453.833829,
+      "peakSampledTreeRssKiB": 1005964,
+      "files": 24
+    },
+    "suite-cache": {
+      "exitCode": 0,
+      "wallS": 167.78643760300474,
+      "userCpuS": 348.478442,
+      "systemCpuS": 9.39048,
+      "nodeTestDurationMs": 167183.625105,
+      "peakSampledTreeRssKiB": 1151820,
+      "files": 25
+    }
+  }
+}

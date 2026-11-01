@@ -29,9 +29,9 @@ test('boot avança por trabalho real, só conclui em 100% e não salva estado pa
  let previous=0,steps=0;
  for(;;){
   const result=game.nextBoot();
-  const progress=game.run('gameLoading.progress');
+  const {progress,ready}=game.run('({progress:gameLoading.progress,ready:gameLoading.ready})');
   assert.ok(Number.isFinite(progress)&&progress>=previous&&progress<100,'progresso deve ser monotônico e reservado abaixo de 100');
-  assert.equal(game.run('gameLoading.ready'),false);
+  assert.equal(ready,false);
   assert.equal(game.doc.getElementById('loadingScreen').hidden,false);
   assert.equal(game.storageWrites.length,0,'uma etapa não pode publicar um snapshot incompleto');
   previous=progress;

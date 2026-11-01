@@ -1,0 +1,56 @@
+{
+  "scenario": "advanced",
+  "mode": "replay",
+  "environment": "1200 deterministic steps, five CPU images; not 20 real browser seconds",
+  "metrics": {
+    "simulationMs": 1462.8669220000347,
+    "renders": [
+      1763.4657429999997,
+      911.7175139999999,
+      1417.607035000001,
+      1155.9408980000007,
+      823.0438410000006
+    ],
+    "maxQueueMs": 15.083212000000458
+  },
+  "frames": [
+    {
+      "step": 300,
+      "pixels": "0df060e03ada6b89d7c59d6aaa8cc458d31ddf1ce05d59fd4a590a9c0662cc8c"
+    },
+    {
+      "step": 600,
+      "pixels": "406290d31a01c75bde1ac75a4a8e1159db5769dfcc9569b87e37968151b8c593"
+    },
+    {
+      "step": 900,
+      "pixels": "00daa5e99dc103a5b65901eed7e8a4c12a4629bca216ea319a328bd66365df80"
+    },
+    {
+      "step": 1200,
+      "pixels": "f1cb327022012417ae927a1220817f50f8b256d6a585620098289cdc692eb793"
+    },
+    {
+      "step": 1200,
+      "afterPersist": true,
+      "pixels": "f1cb327022012417ae927a1220817f50f8b256d6a585620098289cdc692eb793"
+    }
+  ],
+  "snapshot": {
+    "state": "c9cd163afd0e7c518a5e26624064d3573a4c04008befed97dd06357eb7640e25",
+    "save": "84dd5a8fba036f935f1cba6a4b6489b067c6abfa108897a0cf19194645b13073",
+    "world": "5f9c29f53114f271c52bc550b24102832c7703c5cce5f1893c3bbdcc826e928b",
+    "camera": "f47167c64262078e3325de0e62c2c2ea3f2860e6facb216abf72b3cc2bdaddd5",
+    "paths": "0fa93bb05b691b9a302286d54649257a6814cc18456abb87683a576321cf9426",
+    "stats": "55568f481ecd9fe6d03bbb13313c6ebbbcbee9750fc7a4971bac4ab1a4378c6c",
+    "station": "37c82275657234236067f02cc3f9b464883df0f2260a96b16aa51726faaba42d",
+    "resourceCounts": {
+      "vegetationBytes": 12736548,
+      "jobs": 1
+    },
+    "ready": true,
+    "progress": 100,
+    "writes": 4
+  },
+  "browserP95FrameMs": null
+}

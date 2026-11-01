@@ -1,0 +1,1 @@
+{"scenario":"new","mode":"boot","activeMs":3598.2848370000015,"maxRssBootKiB":302300,"callbacks":778}

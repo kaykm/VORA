@@ -1,0 +1,36 @@
+--- a/tests/piso-loja.test.mjs
++++ b/tests/piso-loja.test.mjs
+@@ -3,7 +3,7 @@
+ import {assemble} from '../scripts/compilar.mjs';
+ import {createRuntime} from './ambiente.mjs';
+ test('fundação substitui a calçada coplanar apenas dentro da loja',()=>{
+- const g=createRuntime(assemble().html);
++ const g=createRuntime(assemble().html,null,{boot:'manual'});
+  assert.equal(g.run('walkSurfaceVisibleAt(base.x,base.y,STATION.deck)'),false);
+  assert.equal(g.run('walkSurfaceVisibleAt(base.x+100,base.y,STATION.deck)'),true);
+  assert.equal(g.run('walkSurfaceVisibleAt(base.x,base.y,STATION.deck+10)'),true);
+--- a/tests/sombras.test.mjs
++++ b/tests/sombras.test.mjs
+@@ -67,7 +67,7 @@
+ });
+ 
+ test('alvos respeitam orçamento móvel e os limites de textura e depth buffer',()=>{
+- const game=createRuntime(html);
++ const game=createRuntime(html,null,{boot:'manual'});
+  game.run(`
+   gl.MAX_TEXTURE_SIZE=3379;gl.MAX_RENDERBUFFER_SIZE=34024;
+   let testTextureLimit=8192,testDepthLimit=8192,testMobile=false;
+--- a/tests/carregamento.test.mjs
++++ b/tests/carregamento.test.mjs
+@@ -29,9 +29,9 @@
+  let previous=0,steps=0;
+  for(;;){
+   const result=game.nextBoot();
+-  const progress=game.run('gameLoading.progress');
++  const {progress,ready}=game.run('({progress:gameLoading.progress,ready:gameLoading.ready})');
+   assert.ok(Number.isFinite(progress)&&progress>=previous&&progress<100,'progresso deve ser monotônico e reservado abaixo de 100');
+-  assert.equal(game.run('gameLoading.ready'),false);
++  assert.equal(ready,false);
+   assert.equal(game.doc.getElementById('loadingScreen').hidden,false);
+   assert.equal(game.storageWrites.length,0,'uma etapa não pode publicar um snapshot incompleto');
+   previous=progress;

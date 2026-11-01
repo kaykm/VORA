@@ -1,0 +1,15 @@
+{
+  "collectedAt": "2026-11-01T21:47:56.917803+00:00",
+  "baseCommit": "f9fcbccdeaf4fc22f07862eb44f1c7c486926d22",
+  "branch": "perf/testes-carregamento-inicial",
+  "command": "node scripts/verificar.mjs",
+  "exitCode": 0,
+  "testFiles": 24,
+  "passed": 24,
+  "failed": 0,
+  "skipped": 0,
+  "durationMs": 193761.688335,
+  "purpose": "Functional pre-push verification; not a new performance comparison",
+  "cacheApplied": false,
+  "htmlSha256": "547eebe5bdad827c9a518bc0e415651b54f84dad19f4e9f8a575de858d81d71c"
+}

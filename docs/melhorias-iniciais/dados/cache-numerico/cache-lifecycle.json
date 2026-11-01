@@ -1,0 +1,79 @@
+{
+  "label": "cache-lifecycle",
+  "command": [
+    "node",
+    "tests/caminhos-cache.test.mjs"
+  ],
+  "cwd": "/tmp/vora-melhorias-iniciais/experimentos/cache-numerico",
+  "startedAt": "2026-11-01T21:11:00.244379+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2458636,
+    "SwapFree": 20826624
+  },
+  "loadBefore": [
+    3.35888671875,
+    3.1865234375,
+    3.0185546875
+  ],
+  "exitCode": 0,
+  "wallS": 3.5050584729979164,
+  "userCpuS": 3.156289,
+  "systemCpuS": 0.115857,
+  "maxChildRssKiB": 216868,
+  "peakSampledTreeRssKiB": 199376,
+  "memoryAfterKiB": {
+    "MemAvailable": 2436968,
+    "SwapFree": 20827140
+  },
+  "loadAfter": [
+    3.35888671875,
+    3.1865234375,
+    3.0185546875
+  ],
+  "memorySamples": [
+    {
+      "elapsedS": 0.000830315999337472,
+      "treeRssKiB": 928,
+      "MemAvailable": 2458636,
+      "SwapFree": 20826628
+    },
+    {
+      "elapsedS": 0.5015047179986141,
+      "treeRssKiB": 87084,
+      "MemAvailable": 2408924,
+      "SwapFree": 20826672
+    },
+    {
+      "elapsedS": 1.0022209309972823,
+      "treeRssKiB": 88236,
+      "MemAvailable": 2401260,
+      "SwapFree": 20826740
+    },
+    {
+      "elapsedS": 1.5029237540002214,
+      "treeRssKiB": 91276,
+      "MemAvailable": 2395716,
+      "SwapFree": 20827120
+    },
+    {
+      "elapsedS": 2.003528996996465,
+      "treeRssKiB": 128888,
+      "MemAvailable": 2355656,
+      "SwapFree": 20827124
+    },
+    {
+      "elapsedS": 2.504218239999318,
+      "treeRssKiB": 138704,
+      "MemAvailable": 2353408,
+      "SwapFree": 20827132
+    },
+    {
+      "elapsedS": 3.004870083001151,
+      "treeRssKiB": 199376,
+      "MemAvailable": 2297600,
+      "SwapFree": 20827132
+    }
+  ],
+  "nodeTestDurationMs": 2996.366725,
+  "files": []
+}

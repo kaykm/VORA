@@ -1,0 +1,8 @@
+[
+  {
+    "stage": "disposable candidate generation",
+    "initialResult": "duplicate cache declaration after preparing an already prepared copy; generation rejected before any cache benchmark",
+    "resolution": "preparer now reads the unchanged tests copy; candidate regenerated successfully",
+    "effectOnMeasurements": "no candidate samples used the rejected HTML"
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "utc": "2026-11-01T21:32:28.969249+00:00",
+  "script": "/home/jp/Projects/Vora/docs/melhorias-iniciais/coleta/reproduzir.py",
+  "reference": "/home/jp/Projects/Vora/.tmp/auditoria-base",
+  "generatedRoot": "/home/jp/Projects/Vora/.tmp/repro-melhorias-cp2pxzi4",
+  "allCopiesInsideProject": true,
+  "hashes": {
+    "baseline": "547eebe5bdad827c9a518bc0e415651b54f84dad19f4e9f8a575de858d81d71c",
+    "testes": "547eebe5bdad827c9a518bc0e415651b54f84dad19f4e9f8a575de858d81d71c",
+    "cache": "5e4c31221d17da76cc7ce5994300b82aab3f639b48897e3139339bad23eff7c9"
+  },
+  "preparationPassed": true,
+  "benchmarkExecuted": false,
+  "browserExecuted": false
+}

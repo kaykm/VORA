@@ -1,0 +1,283 @@
+{
+  "tests": {
+    "pairs": [
+      {
+        "pair": 1,
+        "baselineMs": 41402.588701,
+        "candidateMs": 33328.548928,
+        "deltaPercent": -19.501292132501348
+      },
+      {
+        "pair": 2,
+        "baselineMs": 43042.650675,
+        "candidateMs": 33288.822473,
+        "deltaPercent": -22.660844648364574
+      },
+      {
+        "pair": 3,
+        "baselineMs": 42720.031152,
+        "candidateMs": 33708.20951,
+        "deltaPercent": -21.09507273048442
+      },
+      {
+        "pair": 4,
+        "baselineMs": 43159.155787,
+        "candidateMs": 33760.146333,
+        "deltaPercent": -21.777556308993162
+      },
+      {
+        "pair": 5,
+        "baselineMs": 42883.123901,
+        "candidateMs": 32889.089178,
+        "deltaPercent": -23.30528612158067
+      }
+    ],
+    "baselineMs": {
+      "n": 5,
+      "median": 42883.123901,
+      "min": 41402.588701,
+      "max": 43159.155787
+    },
+    "candidateMs": {
+      "n": 5,
+      "median": 33328.548928,
+      "min": 32889.089178,
+      "max": 33760.146333
+    },
+    "pairedDeltaPercent": {
+      "n": 5,
+      "median": -21.777556308993162,
+      "min": -23.30528612158067,
+      "max": -19.501292132501348
+    },
+    "improvedPairs": 5,
+    "performanceAccepted": true
+  },
+  "candidateDataset": "cache-numerico",
+  "cache": {
+    "new": {
+      "pairs": [
+        {
+          "pair": 1,
+          "baselineActiveMs": 4371.010162999994,
+          "candidateActiveMs": 3332.7653030000033,
+          "activeDeltaPercent": -23.75297291204197,
+          "baselineMaxRssBootKiB": 219656,
+          "candidateMaxRssBootKiB": 221188,
+          "baselineCallbacks": 858,
+          "candidateCallbacks": 754
+        },
+        {
+          "pair": 2,
+          "baselineActiveMs": 4328.251966000003,
+          "candidateActiveMs": 3381.8935389999942,
+          "activeDeltaPercent": -21.864679654373166,
+          "baselineMaxRssBootKiB": 220672,
+          "candidateMaxRssBootKiB": 223728,
+          "baselineCallbacks": 856,
+          "candidateCallbacks": 762
+        },
+        {
+          "pair": 3,
+          "baselineActiveMs": 4692.208567999996,
+          "candidateActiveMs": 3521.9052489999995,
+          "activeDeltaPercent": -24.941417288678323,
+          "baselineMaxRssBootKiB": 220548,
+          "candidateMaxRssBootKiB": 223720,
+          "baselineCallbacks": 896,
+          "candidateCallbacks": 772
+        },
+        {
+          "pair": 4,
+          "baselineActiveMs": 4383.199053000009,
+          "candidateActiveMs": 3374.674456999994,
+          "activeDeltaPercent": -23.008870548777537,
+          "baselineMaxRssBootKiB": 223620,
+          "candidateMaxRssBootKiB": 223664,
+          "baselineCallbacks": 860,
+          "candidateCallbacks": 757
+        },
+        {
+          "pair": 5,
+          "baselineActiveMs": 4426.942497999993,
+          "candidateActiveMs": 3367.8946000000046,
+          "activeDeltaPercent": -23.922784144552267,
+          "baselineMaxRssBootKiB": 219708,
+          "candidateMaxRssBootKiB": 214316,
+          "baselineCallbacks": 868,
+          "candidateCallbacks": 760
+        }
+      ],
+      "baselineActiveMs": {
+        "n": 5,
+        "median": 4383.199053000009,
+        "min": 4328.251966000003,
+        "max": 4692.208567999996
+      },
+      "candidateActiveMs": {
+        "n": 5,
+        "median": 3374.674456999994,
+        "min": 3332.7653030000033,
+        "max": 3521.9052489999995
+      },
+      "activeDeltaPercent": {
+        "n": 5,
+        "median": -23.75297291204197,
+        "min": -24.941417288678323,
+        "max": -21.864679654373166
+      },
+      "baselineMaxRssBootKiB": {
+        "n": 5,
+        "median": 220548,
+        "min": 219656,
+        "max": 223620
+      },
+      "candidateMaxRssBootKiB": {
+        "n": 5,
+        "median": 223664,
+        "min": 214316,
+        "max": 223728
+      },
+      "baselineCallbacks": {
+        "n": 5,
+        "median": 860,
+        "min": 856,
+        "max": 896
+      },
+      "candidateCallbacks": {
+        "n": 5,
+        "median": 760,
+        "min": 754,
+        "max": 772
+      },
+      "medianActiveReductionPercent": 23.008870548777537,
+      "medianRssChangePercent": 1.41284436947966,
+      "nodeTimeAccepted": true,
+      "nodeMemoryAccepted": true
+    },
+    "advanced": {
+      "pairs": [
+        {
+          "pair": 1,
+          "baselineActiveMs": 4373.6958030000005,
+          "candidateActiveMs": 3524.8234949999996,
+          "activeDeltaPercent": -19.40858135167387,
+          "baselineMaxRssBootKiB": 216328,
+          "candidateMaxRssBootKiB": 225064,
+          "baselineCallbacks": 857,
+          "candidateCallbacks": 780
+        },
+        {
+          "pair": 2,
+          "baselineActiveMs": 4631.097217000012,
+          "candidateActiveMs": 3347.758234000001,
+          "activeDeltaPercent": -27.711337570048855,
+          "baselineMaxRssBootKiB": 222524,
+          "candidateMaxRssBootKiB": 211128,
+          "baselineCallbacks": 891,
+          "candidateCallbacks": 756
+        },
+        {
+          "pair": 3,
+          "baselineActiveMs": 4640.617882000004,
+          "candidateActiveMs": 3381.695500999995,
+          "activeDeltaPercent": -27.12833534265142,
+          "baselineMaxRssBootKiB": 212884,
+          "candidateMaxRssBootKiB": 220716,
+          "baselineCallbacks": 892,
+          "candidateCallbacks": 761
+        },
+        {
+          "pair": 4,
+          "baselineActiveMs": 4500.418355,
+          "candidateActiveMs": 3350.906361000007,
+          "activeDeltaPercent": -25.54233636352665,
+          "baselineMaxRssBootKiB": 224212,
+          "candidateMaxRssBootKiB": 222336,
+          "baselineCallbacks": 876,
+          "candidateCallbacks": 758
+        },
+        {
+          "pair": 5,
+          "baselineActiveMs": 4432.8093569999955,
+          "candidateActiveMs": 3434.466683999999,
+          "activeDeltaPercent": -22.521669501159135,
+          "baselineMaxRssBootKiB": 218852,
+          "candidateMaxRssBootKiB": 220268,
+          "baselineCallbacks": 867,
+          "candidateCallbacks": 767
+        }
+      ],
+      "baselineActiveMs": {
+        "n": 5,
+        "median": 4500.418355,
+        "min": 4373.6958030000005,
+        "max": 4640.617882000004
+      },
+      "candidateActiveMs": {
+        "n": 5,
+        "median": 3381.695500999995,
+        "min": 3347.758234000001,
+        "max": 3524.8234949999996
+      },
+      "activeDeltaPercent": {
+        "n": 5,
+        "median": -25.54233636352665,
+        "min": -27.711337570048855,
+        "max": -19.40858135167387
+      },
+      "baselineMaxRssBootKiB": {
+        "n": 5,
+        "median": 218852,
+        "min": 212884,
+        "max": 224212
+      },
+      "candidateMaxRssBootKiB": {
+        "n": 5,
+        "median": 220716,
+        "min": 211128,
+        "max": 225064
+      },
+      "baselineCallbacks": {
+        "n": 5,
+        "median": 876,
+        "min": 857,
+        "max": 892
+      },
+      "candidateCallbacks": {
+        "n": 5,
+        "median": 761,
+        "min": 756,
+        "max": 780
+      },
+      "medianActiveReductionPercent": 24.85819685534557,
+      "medianRssChangePercent": 0.8517171421782654,
+      "nodeTimeAccepted": true,
+      "nodeMemoryAccepted": true
+    }
+  },
+  "cacheIncorporation": {
+    "allowed": false,
+    "reason": "Real desktop browser matrix, candidate Pages preview, file://, browser memory and post-load p95 remain unmeasured. Thresholds unchanged."
+  },
+  "officialSuites": {
+    "suite-testes": {
+      "exitCode": 0,
+      "wallS": 198.8250258879998,
+      "userCpuS": 404.311282,
+      "systemCpuS": 8.747202,
+      "nodeTestDurationMs": 198453.833829,
+      "peakSampledTreeRssKiB": 1005964,
+      "files": 24
+    },
+    "suite-cache": {
+      "exitCode": 0,
+      "wallS": 163.27323092200095,
+      "userCpuS": 334.871985,
+      "systemCpuS": 8.933188,
+      "nodeTestDurationMs": 162966.659135,
+      "peakSampledTreeRssKiB": 996028,
+      "files": 25
+    }
+  }
+}

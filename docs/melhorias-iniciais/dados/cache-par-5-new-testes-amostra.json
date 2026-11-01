@@ -1,0 +1,43 @@
+{
+  "scenario": "new",
+  "mode": "boot",
+  "node": "v25.7.0",
+  "environment": "Node/DOM simulado/SoftwareGL, immediate RAF; isolated process",
+  "setupMs": 120.59874900000001,
+  "activeMs": 4489.301485999998,
+  "callbacks": 874,
+  "maxSliceMs": 171.60083799999995,
+  "steps": 31663,
+  "heapMaxSampled": 90652344,
+  "rssMaxSampled": 221761536,
+  "maxRssBootKiB": 216820,
+  "settings": {
+    "backend": "SoftwareGL",
+    "W": 320,
+    "H": 240,
+    "imageMode": "native",
+    "outputMode": "native",
+    "aaMode": "off",
+    "aoMode": "off",
+    "shadowQuality": "high",
+    "viewRange": "default"
+  },
+  "snapshot": {
+    "state": "1e91dd9d72fbb9fca7ac020a20429248b0c46cc4b8b2030914b28cd055bd506f",
+    "save": "c722677ef05a446ca8600d37c2196183ffb3fb982918ff0e0f7edad403c69f33",
+    "world": "b02ddd9f7e5e6ab48ff5b70ce16d7ef29cf59b640a40e648ef11602a8b0972b8",
+    "camera": "08647d206f871331f107711066e268b1fa941c411f72e748a28fb5d86a3b225b",
+    "paths": "0fa93bb05b691b9a302286d54649257a6814cc18456abb87683a576321cf9426",
+    "stats": "55568f481ecd9fe6d03bbb13313c6ebbbcbee9750fc7a4971bac4ab1a4378c6c",
+    "station": "37c82275657234236067f02cc3f9b464883df0f2260a96b16aa51726faaba42d",
+    "resourceCounts": {
+      "vegetationBytes": 7443684,
+      "jobs": 0
+    },
+    "ready": true,
+    "progress": 100,
+    "writes": 1
+  },
+  "browserFirstFrameMs": null,
+  "browserP95FrameMs": null
+}

@@ -1,0 +1,89 @@
+{
+  "label": "cache-par-4-new-cache",
+  "command": [
+    "node",
+    "/tmp/vora-melhorias-iniciais/medir-candidato.mjs",
+    "/tmp/vora-melhorias-iniciais/experimentos/cache-limitado",
+    "new",
+    "/tmp/vora-melhorias-iniciais/dados/cache-limitado/synthetic-advanced.json",
+    "/tmp/vora-melhorias-iniciais/dados/cache-limitado/cache-par-4-new-cache-amostra.json"
+  ],
+  "cwd": "/tmp/vora-melhorias-iniciais/experimentos/cache-limitado",
+  "startedAt": "2026-11-01T21:06:37.418160+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2486984,
+    "SwapFree": 21049512
+  },
+  "loadBefore": [
+    2.32421875,
+    2.80615234375,
+    2.8935546875
+  ],
+  "exitCode": 0,
+  "wallS": 4.0051505169976735,
+  "userCpuS": 4.069907,
+  "systemCpuS": 0.22183699999999998,
+  "maxChildRssKiB": 305096,
+  "peakSampledTreeRssKiB": 221168,
+  "memoryAfterKiB": {
+    "MemAvailable": 2443792,
+    "SwapFree": 21049996
+  },
+  "loadAfter": [
+    2.2177734375,
+    2.77587890625,
+    2.88330078125
+  ],
+  "memorySamples": [
+    {
+      "elapsedS": 0.0008061049957177602,
+      "treeRssKiB": 892,
+      "MemAvailable": 2486984,
+      "SwapFree": 21049512
+    },
+    {
+      "elapsedS": 0.5014628179997089,
+      "treeRssKiB": 97664,
+      "MemAvailable": 2451884,
+      "SwapFree": 21049516
+    },
+    {
+      "elapsedS": 1.0020866709965048,
+      "treeRssKiB": 102824,
+      "MemAvailable": 2447432,
+      "SwapFree": 21049524
+    },
+    {
+      "elapsedS": 1.5026391329956823,
+      "treeRssKiB": 150324,
+      "MemAvailable": 2398348,
+      "SwapFree": 21049524
+    },
+    {
+      "elapsedS": 2.003164645000652,
+      "treeRssKiB": 156592,
+      "MemAvailable": 2385300,
+      "SwapFree": 21049536
+    },
+    {
+      "elapsedS": 2.5038496990018757,
+      "treeRssKiB": 207032,
+      "MemAvailable": 2335480,
+      "SwapFree": 21049556
+    },
+    {
+      "elapsedS": 3.004476762995182,
+      "treeRssKiB": 203668,
+      "MemAvailable": 2326752,
+      "SwapFree": 21049560
+    },
+    {
+      "elapsedS": 3.5049881559971254,
+      "treeRssKiB": 221168,
+      "MemAvailable": 2309956,
+      "SwapFree": 21049620
+    }
+  ],
+  "nodeTestDurationMs": null,
+  "files": []
+}

@@ -1,0 +1,140 @@
+{
+  "status": "not_measured",
+  "reason": "Only IAB and MCP Apps surfaces; no disposable context/pre-navigation profiling API; previous file:// policy denial respected. No authorized preview of candidate was supplied or published.",
+  "plannedNavigationsPerVersion": 40,
+  "plannedNavigationsTotal": 80,
+  "versions": [
+    {
+      "version": "reference",
+      "sha256": "547eebe5bdad827c9a518bc0e415651b54f84dad19f4e9f8a575de858d81d71c",
+      "url": "https://kaykm.github.io/VORA/",
+      "cases": [
+        {
+          "mode": "pages",
+          "save": "new",
+          "opening": "first",
+          "plannedSamples": 5,
+          "samples": []
+        },
+        {
+          "mode": "pages",
+          "save": "new",
+          "opening": "reload",
+          "plannedSamples": 5,
+          "samples": []
+        },
+        {
+          "mode": "pages",
+          "save": "advanced",
+          "opening": "first",
+          "plannedSamples": 5,
+          "samples": []
+        },
+        {
+          "mode": "pages",
+          "save": "advanced",
+          "opening": "reload",
+          "plannedSamples": 5,
+          "samples": []
+        },
+        {
+          "mode": "file",
+          "save": "new",
+          "opening": "first",
+          "plannedSamples": 5,
+          "samples": []
+        },
+        {
+          "mode": "file",
+          "save": "new",
+          "opening": "reload",
+          "plannedSamples": 5,
+          "samples": []
+        },
+        {
+          "mode": "file",
+          "save": "advanced",
+          "opening": "first",
+          "plannedSamples": 5,
+          "samples": []
+        },
+        {
+          "mode": "file",
+          "save": "advanced",
+          "opening": "reload",
+          "plannedSamples": 5,
+          "samples": []
+        }
+      ]
+    },
+    {
+      "version": "candidate",
+      "sha256": "5e4c31221d17da76cc7ce5994300b82aab3f639b48897e3139339bad23eff7c9",
+      "url": null,
+      "cases": [
+        {
+          "mode": "pages",
+          "save": "new",
+          "opening": "first",
+          "plannedSamples": 5,
+          "samples": []
+        },
+        {
+          "mode": "pages",
+          "save": "new",
+          "opening": "reload",
+          "plannedSamples": 5,
+          "samples": []
+        },
+        {
+          "mode": "pages",
+          "save": "advanced",
+          "opening": "first",
+          "plannedSamples": 5,
+          "samples": []
+        },
+        {
+          "mode": "pages",
+          "save": "advanced",
+          "opening": "reload",
+          "plannedSamples": 5,
+          "samples": []
+        },
+        {
+          "mode": "file",
+          "save": "new",
+          "opening": "first",
+          "plannedSamples": 5,
+          "samples": []
+        },
+        {
+          "mode": "file",
+          "save": "new",
+          "opening": "reload",
+          "plannedSamples": 5,
+          "samples": []
+        },
+        {
+          "mode": "file",
+          "save": "advanced",
+          "opening": "first",
+          "plannedSamples": 5,
+          "samples": []
+        },
+        {
+          "mode": "file",
+          "save": "advanced",
+          "opening": "reload",
+          "plannedSamples": 5,
+          "samples": []
+        }
+      ]
+    }
+  ],
+  "browserMemory": null,
+  "postLoadP95FrameMs": null,
+  "cacheIncorporationAllowed": false,
+  "latestFileAttempt": "file-validation-attempt.json",
+  "staticPackagingEvidence": "pacote-offline.json",
+  "workingDirectory": "/home/jp/Projects/Vora/.tmp/melhorias-iniciais"
+}

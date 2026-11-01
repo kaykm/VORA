@@ -1,0 +1,450 @@
+{
+  "label": "testes-par-5-testes",
+  "command": [
+    "node",
+    "--test",
+    "--test-concurrency=2",
+    "tests/piso-loja.test.mjs",
+    "tests/sombras.test.mjs",
+    "tests/carregamento.test.mjs"
+  ],
+  "cwd": "/tmp/vora-melhorias-iniciais/experimentos/testes",
+  "startedAt": "2026-11-01T20:54:17.510560+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2236292,
+    "SwapFree": 19951872
+  },
+  "loadBefore": [
+    4.09814453125,
+    3.16259765625,
+    2.73974609375
+  ],
+  "exitCode": 0,
+  "wallS": 33.04745207600354,
+  "userCpuS": 46.564244,
+  "systemCpuS": 2.249631,
+  "maxChildRssKiB": 517228,
+  "peakSampledTreeRssKiB": 774424,
+  "memoryAfterKiB": {
+    "MemAvailable": 2444112,
+    "SwapFree": 19960056
+  },
+  "loadAfter": [
+    3.568359375,
+    3.17822265625,
+    2.763671875
+  ],
+  "memorySamples": [
+    {
+      "elapsedS": 0.000792256003478542,
+      "treeRssKiB": 440,
+      "MemAvailable": 2236812,
+      "SwapFree": 19951872
+    },
+    {
+      "elapsedS": 0.5014261020041886,
+      "treeRssKiB": 237368,
+      "MemAvailable": 2156524,
+      "SwapFree": 19955556
+    },
+    {
+      "elapsedS": 1.0020333569991635,
+      "treeRssKiB": 253496,
+      "MemAvailable": 2135288,
+      "SwapFree": 19955740
+    },
+    {
+      "elapsedS": 1.5028645640049945,
+      "treeRssKiB": 318176,
+      "MemAvailable": 2047536,
+      "SwapFree": 19956988
+    },
+    {
+      "elapsedS": 2.0037693720005336,
+      "treeRssKiB": 354544,
+      "MemAvailable": 2008752,
+      "SwapFree": 19957168
+    },
+    {
+      "elapsedS": 2.5044585680007003,
+      "treeRssKiB": 362500,
+      "MemAvailable": 1988712,
+      "SwapFree": 19957200
+    },
+    {
+      "elapsedS": 3.0054108149997774,
+      "treeRssKiB": 407336,
+      "MemAvailable": 1920376,
+      "SwapFree": 19957240
+    },
+    {
+      "elapsedS": 3.506099611004174,
+      "treeRssKiB": 439252,
+      "MemAvailable": 1901880,
+      "SwapFree": 19957256
+    },
+    {
+      "elapsedS": 4.006941457999346,
+      "treeRssKiB": 471384,
+      "MemAvailable": 1876664,
+      "SwapFree": 19957380
+    },
+    {
+      "elapsedS": 4.5077858549993834,
+      "treeRssKiB": 466016,
+      "MemAvailable": 1889256,
+      "SwapFree": 19957540
+    },
+    {
+      "elapsedS": 5.008706492000783,
+      "treeRssKiB": 496724,
+      "MemAvailable": 2096240,
+      "SwapFree": 19958172
+    },
+    {
+      "elapsedS": 5.509402888004843,
+      "treeRssKiB": 510892,
+      "MemAvailable": 2083296,
+      "SwapFree": 19958404
+    },
+    {
+      "elapsedS": 6.010137422999833,
+      "treeRssKiB": 537260,
+      "MemAvailable": 2060860,
+      "SwapFree": 19958460
+    },
+    {
+      "elapsedS": 6.510815478999575,
+      "treeRssKiB": 556468,
+      "MemAvailable": 2043956,
+      "SwapFree": 19958472
+    },
+    {
+      "elapsedS": 7.011396223002521,
+      "treeRssKiB": 576832,
+      "MemAvailable": 2050504,
+      "SwapFree": 19958484
+    },
+    {
+      "elapsedS": 7.512208979998832,
+      "treeRssKiB": 636012,
+      "MemAvailable": 1987136,
+      "SwapFree": 19958504
+    },
+    {
+      "elapsedS": 8.013047915999778,
+      "treeRssKiB": 668540,
+      "MemAvailable": 1963020,
+      "SwapFree": 19958588
+    },
+    {
+      "elapsedS": 8.51390028300375,
+      "treeRssKiB": 691912,
+      "MemAvailable": 1936276,
+      "SwapFree": 19958596
+    },
+    {
+      "elapsedS": 9.014699219005706,
+      "treeRssKiB": 696832,
+      "MemAvailable": 1929428,
+      "SwapFree": 19958596
+    },
+    {
+      "elapsedS": 9.51552197500132,
+      "treeRssKiB": 721612,
+      "MemAvailable": 1898136,
+      "SwapFree": 19958604
+    },
+    {
+      "elapsedS": 10.01617103999888,
+      "treeRssKiB": 739956,
+      "MemAvailable": 1874300,
+      "SwapFree": 19958612
+    },
+    {
+      "elapsedS": 10.517055595999409,
+      "treeRssKiB": 758264,
+      "MemAvailable": 1848316,
+      "SwapFree": 19958700
+    },
+    {
+      "elapsedS": 11.017799312001443,
+      "treeRssKiB": 774424,
+      "MemAvailable": 1820912,
+      "SwapFree": 19958712
+    },
+    {
+      "elapsedS": 11.518610288003401,
+      "treeRssKiB": 748140,
+      "MemAvailable": 1839212,
+      "SwapFree": 19958732
+    },
+    {
+      "elapsedS": 12.019357183002285,
+      "treeRssKiB": 701692,
+      "MemAvailable": 1859628,
+      "SwapFree": 19958736
+    },
+    {
+      "elapsedS": 12.520117639003729,
+      "treeRssKiB": 405852,
+      "MemAvailable": 2110120,
+      "SwapFree": 19958740
+    },
+    {
+      "elapsedS": 13.020798063000257,
+      "treeRssKiB": 415532,
+      "MemAvailable": 2121104,
+      "SwapFree": 19958756
+    },
+    {
+      "elapsedS": 13.521628359005263,
+      "treeRssKiB": 415660,
+      "MemAvailable": 2115488,
+      "SwapFree": 19958764
+    },
+    {
+      "elapsedS": 14.022304834004899,
+      "treeRssKiB": 438368,
+      "MemAvailable": 2091728,
+      "SwapFree": 19958776
+    },
+    {
+      "elapsedS": 14.523083059000783,
+      "treeRssKiB": 444144,
+      "MemAvailable": 2086504,
+      "SwapFree": 19958776
+    },
+    {
+      "elapsedS": 15.023846695003158,
+      "treeRssKiB": 450036,
+      "MemAvailable": 2086796,
+      "SwapFree": 19958780
+    },
+    {
+      "elapsedS": 15.524507879003068,
+      "treeRssKiB": 452308,
+      "MemAvailable": 2079600,
+      "SwapFree": 19958804
+    },
+    {
+      "elapsedS": 16.02516216300137,
+      "treeRssKiB": 455488,
+      "MemAvailable": 2079860,
+      "SwapFree": 19958816
+    },
+    {
+      "elapsedS": 16.52580253800261,
+      "treeRssKiB": 465108,
+      "MemAvailable": 2078112,
+      "SwapFree": 19958832
+    },
+    {
+      "elapsedS": 17.02646465200087,
+      "treeRssKiB": 471744,
+      "MemAvailable": 2078724,
+      "SwapFree": 19958840
+    },
+    {
+      "elapsedS": 17.527121145998535,
+      "treeRssKiB": 481920,
+      "MemAvailable": 2068676,
+      "SwapFree": 19958840
+    },
+    {
+      "elapsedS": 18.027990761998808,
+      "treeRssKiB": 483200,
+      "MemAvailable": 2069356,
+      "SwapFree": 19958852
+    },
+    {
+      "elapsedS": 18.528615856004762,
+      "treeRssKiB": 506284,
+      "MemAvailable": 2043788,
+      "SwapFree": 19958868
+    },
+    {
+      "elapsedS": 19.029264860000694,
+      "treeRssKiB": 507436,
+      "MemAvailable": 2055404,
+      "SwapFree": 19958872
+    },
+    {
+      "elapsedS": 19.529977304002387,
+      "treeRssKiB": 512992,
+      "MemAvailable": 2055832,
+      "SwapFree": 19958884
+    },
+    {
+      "elapsedS": 20.030540568004653,
+      "treeRssKiB": 514656,
+      "MemAvailable": 2057012,
+      "SwapFree": 19958896
+    },
+    {
+      "elapsedS": 20.531145901004493,
+      "treeRssKiB": 529108,
+      "MemAvailable": 2034308,
+      "SwapFree": 19958896
+    },
+    {
+      "elapsedS": 21.03186225600075,
+      "treeRssKiB": 532076,
+      "MemAvailable": 2034940,
+      "SwapFree": 19958908
+    },
+    {
+      "elapsedS": 21.532542720000492,
+      "treeRssKiB": 535984,
+      "MemAvailable": 2029788,
+      "SwapFree": 19958912
+    },
+    {
+      "elapsedS": 22.033362915004545,
+      "treeRssKiB": 541524,
+      "MemAvailable": 2021384,
+      "SwapFree": 19958932
+    },
+    {
+      "elapsedS": 22.534071459005645,
+      "treeRssKiB": 548264,
+      "MemAvailable": 1988684,
+      "SwapFree": 19958960
+    },
+    {
+      "elapsedS": 23.03481530299905,
+      "treeRssKiB": 558368,
+      "MemAvailable": 1952552,
+      "SwapFree": 19958972
+    },
+    {
+      "elapsedS": 23.53549208700133,
+      "treeRssKiB": 559264,
+      "MemAvailable": 1951292,
+      "SwapFree": 19958980
+    },
+    {
+      "elapsedS": 24.03618200100027,
+      "treeRssKiB": 466696,
+      "MemAvailable": 2093204,
+      "SwapFree": 19958988
+    },
+    {
+      "elapsedS": 24.536767814002815,
+      "treeRssKiB": 467028,
+      "MemAvailable": 2096212,
+      "SwapFree": 19959412
+    },
+    {
+      "elapsedS": 25.037458967999555,
+      "treeRssKiB": 468564,
+      "MemAvailable": 2091496,
+      "SwapFree": 19959428
+    },
+    {
+      "elapsedS": 25.53802976100269,
+      "treeRssKiB": 470220,
+      "MemAvailable": 2092096,
+      "SwapFree": 19959432
+    },
+    {
+      "elapsedS": 26.03862893400219,
+      "treeRssKiB": 470428,
+      "MemAvailable": 2093144,
+      "SwapFree": 19959460
+    },
+    {
+      "elapsedS": 26.53930227800447,
+      "treeRssKiB": 474932,
+      "MemAvailable": 2091360,
+      "SwapFree": 19959460
+    },
+    {
+      "elapsedS": 27.039953691004484,
+      "treeRssKiB": 485384,
+      "MemAvailable": 2078944,
+      "SwapFree": 19959464
+    },
+    {
+      "elapsedS": 27.540664355001354,
+      "treeRssKiB": 495064,
+      "MemAvailable": 2069740,
+      "SwapFree": 19959484
+    },
+    {
+      "elapsedS": 28.04130743800488,
+      "treeRssKiB": 495320,
+      "MemAvailable": 2065568,
+      "SwapFree": 19959500
+    },
+    {
+      "elapsedS": 28.541890170999977,
+      "treeRssKiB": 502120,
+      "MemAvailable": 2055132,
+      "SwapFree": 19959508
+    },
+    {
+      "elapsedS": 29.042476544003875,
+      "treeRssKiB": 501848,
+      "MemAvailable": 2053564,
+      "SwapFree": 19959524
+    },
+    {
+      "elapsedS": 29.54316566700436,
+      "treeRssKiB": 504936,
+      "MemAvailable": 2052316,
+      "SwapFree": 19959536
+    },
+    {
+      "elapsedS": 30.044047242001398,
+      "treeRssKiB": 505096,
+      "MemAvailable": 2055332,
+      "SwapFree": 19959556
+    },
+    {
+      "elapsedS": 30.544601884001167,
+      "treeRssKiB": 506528,
+      "MemAvailable": 2055072,
+      "SwapFree": 19959960
+    },
+    {
+      "elapsedS": 31.04532041800121,
+      "treeRssKiB": 513464,
+      "MemAvailable": 2050884,
+      "SwapFree": 19959968
+    },
+    {
+      "elapsedS": 31.545948371000122,
+      "treeRssKiB": 519712,
+      "MemAvailable": 2041012,
+      "SwapFree": 19960028
+    },
+    {
+      "elapsedS": 32.0465899539995,
+      "treeRssKiB": 463620,
+      "MemAvailable": 2083304,
+      "SwapFree": 19960028
+    },
+    {
+      "elapsedS": 32.547263247004594,
+      "treeRssKiB": 463876,
+      "MemAvailable": 2080568,
+      "SwapFree": 19960044
+    }
+  ],
+  "nodeTestDurationMs": 32889.089178,
+  "files": [
+    {
+      "file": "tests/carregamento.test.mjs",
+      "ms": 12051.655553
+    },
+    {
+      "file": "tests/piso-loja.test.mjs",
+      "ms": 234.777847
+    },
+    {
+      "file": "tests/sombras.test.mjs",
+      "ms": 32640.912572
+    }
+  ]
+}

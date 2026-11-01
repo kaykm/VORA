@@ -1,0 +1,44 @@
+{
+  "utc": "2026-11-01T21:30:15.269730+00:00",
+  "scope": "Static packaging/source tests only; not file:// browser execution",
+  "results": [
+    {
+      "variant": "principal",
+      "cwd": "/home/jp/Projects/Vora",
+      "command": [
+        "node",
+        "--test",
+        "--test-concurrency=2",
+        "tests/estrutura.test.mjs",
+        "tests/pages.test.mjs"
+      ],
+      "exitCode": 0,
+      "hashes": {
+        "dist/VORA.html": "547eebe5bdad827c9a518bc0e415651b54f84dad19f4e9f8a575de858d81d71c",
+        "dist/index.html": "547eebe5bdad827c9a518bc0e415651b54f84dad19f4e9f8a575de858d81d71c",
+        "dist/manifesto.json": "7695188a83f9ae3a30415c55dcdfd8f4b20d76e223fcdceb86cab30fb1a465f3"
+      },
+      "checks": "Deterministic build; embedded resources; absence of downloads/API requests; backup integrity; source order; local Pages entry",
+      "actualFileBrowserRun": false
+    },
+    {
+      "variant": "candidato",
+      "cwd": "/home/jp/Projects/Vora/.tmp/melhorias-iniciais/experimentos/cache-numerico",
+      "command": [
+        "node",
+        "--test",
+        "--test-concurrency=2",
+        "tests/estrutura.test.mjs",
+        "tests/pages.test.mjs"
+      ],
+      "exitCode": 0,
+      "hashes": {
+        "dist/VORA.html": "5e4c31221d17da76cc7ce5994300b82aab3f639b48897e3139339bad23eff7c9",
+        "dist/index.html": "5e4c31221d17da76cc7ce5994300b82aab3f639b48897e3139339bad23eff7c9",
+        "dist/manifesto.json": "edf99a815c0664c2c5a03b1c8fd833934178da353f17f42ec9c52b54bc00543b"
+      },
+      "checks": "Deterministic build; embedded resources; absence of downloads/API requests; backup integrity; source order; local Pages entry",
+      "actualFileBrowserRun": false
+    }
+  ]
+}

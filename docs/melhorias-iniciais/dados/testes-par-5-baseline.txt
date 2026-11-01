@@ -1,0 +1,11 @@
+✔ tests/carregamento.test.mjs (14510.707443ms)
+✔ tests/piso-loja.test.mjs (4941.971625ms)
+✔ tests/sombras.test.mjs (37925.898822ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 42883.123901

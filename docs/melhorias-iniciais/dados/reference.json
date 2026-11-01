@@ -1,0 +1,18 @@
+{
+  "commit": "f9fcbccdeaf4fc22f07862eb44f1c7c486926d22",
+  "utc": "2026-11-01T20:47:55.137311+00:00",
+  "matchesAudit": true,
+  "protectedCommonFiles": 184,
+  "baselineSuites": "Original audit: suite-1/2/3, same commit and identical protected common files. No new pre-change three-run requirement triggered.",
+  "productSourceUnchanged": true,
+  "browser": {
+    "surfaces": [
+      "MCP Apps",
+      "IAB"
+    ],
+    "disposableContext": false,
+    "file": "Previously denied; not retried or bypassed",
+    "authorizedCandidatePagesPreview": null,
+    "realMatrix": "pending"
+  }
+}
