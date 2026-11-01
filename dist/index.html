@@ -2197,7 +2197,10 @@ function* buildWalkMeshIncremental(){
  return yield* partitionStaticMeshIncremental(data,128);
 }
 function drawWalkways(){walkMesh??=buildWalkMesh();drawMesh(walkMesh,0,0,0,1,1,1,[1,1,1],13)}
-function walkSurfaceVisibleAt(x,z,y){return !(stationDistanceAt(x,z)<-.1&&y<=STATION.deck+.1)}
+function walkSurfaceVisibleAt(x,z,y){
+ const coveredByStation=stationDistanceAt(x,z)<-.1&&y<=STATION.deck+.1;
+ return !coveredByStation;
+}
 const TERRAIN_FIELD_GLSL="\nvec2 walkRoute(float t,float axis){float q=t+40.,e=smoothstep(axis>.5?100.:160.,axis>.5?320.:340.,abs(q));return vec2(-40.+e*(18.*sin(q*.0045+.4+axis*.8)+9.*sin(q*.009-1.)),45.+e*3.*sin(q*.006+1.2));}\nfloat roundWalk(float a,float b,float r){return min(-r,max(a,b))+length(max(vec2(r)+vec2(a,b),vec2(0.)));}\nvec2 walkDistances(vec2 p){vec2 a=walkRoute(p.y,0.),b=walkRoute(p.x,1.);return vec2(a.y-abs(p.x-a.x),b.y-abs(p.y-b.x));}\nfloat primaryWalkField(vec2 p){vec2 d=walkDistances(p);return roundWalk(d.x,d.y,30.);}\nfloat meadowWalkField(vec2 p){vec2 d=p+vec2(40.);if(d.x\u003c0.)return 36.-length(d-vec2(0.,500.));if(d.y\u003c0.)return 36.-length(d-vec2(620.,0.));float q=length(d/vec2(620.,500.)),g=length(d/vec2(384400.,250000.));return 36.-abs(q-1.)*q/max(g,.000001);}\nfloat outerWalkField(vec2 p){vec2 d=p+vec2(40.);float q=length(d/vec2(1700.,1500.)),g=length(d/vec2(2890000.,2250000.));return 30.-abs(q-1.)*q/max(g,.000001);}\nfloat walkField(vec2 p){float inner=roundWalk(primaryWalkField(p),meadowWalkField(p),24.);return max(abs(p.x),abs(p.y))\u003c900.?inner:roundWalk(inner,outerWalkField(p),20.);}\nbool walkSurfaceVisible(vec2 p,float y,vec2 part){return true;}\nvec2 regionFields(vec2 p){float n=(noise(p*.009+vec2(23.,-7.))-.5)*36.,m=(noise(p*.008+vec2(-17.,4.))-.5)*42.;vec2 core=vec2(100.-length(max(vec2(345.,220.)-p,vec2(0.)))+n,145.-length(max(vec2(405.,325.)+p,vec2(0.)))+m);float t=max(abs(p.x),abs(p.y))\u003c880.?0.:smoothstep(1240.,1550.,length(p)+n*2.);if(t==0.)return core;float dirt=max(max(260.-length(p-vec2(1460.,-980.)),280.-length(p-vec2(1430.,1220.))),210.-length(p-vec2(-1150.,1300.)))+n,sand=280.-length(p-vec2(-1400.,-1180.))+m;return mix(core,vec2(dirt,sand),t);}\nfloat trailWeight(vec2 p){float center=205.+32.*sin(p.y*.006-.2),width=5.+2.*sin(p.y*.013+.8),d=abs(p.x-center)-width;return (1.-smoothstep(-1.,2.,d))*smoothstep(25.,70.,p.y)*(1.-smoothstep(540.,620.,p.y));}\n";
 const TERRAIN_ALBEDO_GLSL="\n// Overlapping tapered fibers, with filtered edges and analytic blade normals.\nvec3 turfFibers(vec2 p){\n vec4 fiber=texture2D(u_turfMap,p/96.);\n gTurfGradient=(fiber.ba*2.-1.)*.70;\n return vec3(fiber.r,fiber.g,fiber.r*.70);\n}\nvec3 grassColor(vec2 p){\n float macro=noise(p*.0065+vec2(3.1,-7.4)),meso=noise(p*.026+vec2(-11.,5.));\n float clumps=filteredNoise(p,.13),grain=filteredNoise(p,.62);\n float dry=smoothstep(.53,.79,noise(p*.011+vec2(41.,9.)));\n // Fresh shaded greens and sunlit lime retain the broad patches of the turf.\n vec3 c=mix(vec3(.155,.335,.130),vec3(.37,.575,.235),smoothstep(.16,.83,meso*.64+macro*.36));\n c=mix(c,vec3(.54,.59,.28),dry*.22);\n float thatch=smoothstep(.58,.81,filteredNoise(p+vec2(71.,-3.),.18));\n float bare=smoothstep(.68,.85,noise(p*.075+vec2(17.,21.)))*smoothstep(.38,.70,meso);\n c=mix(c,vec3(.38,.27,.145),bare*.58);\n c*=.94+clumps*.14+(grain-.5)*.045;\n vec3 fibers=turfFibers(p);\n vec3 blade=mix(vec3(.29,.48,.16),vec3(.61,.71,.33),clamp(fibers.y*.65+dry*.28,0.,1.));\n c=mix(c,blade,fibers.x*.58*(1.-bare*.65));\n c=mix(c,vec3(.61,.49,.275),thatch*.10*(1.-fibers.x*.7));\n float mowed=.5+.5*smoothstep(.3,.6,noise(p*.004+vec2(13.,-5.)));\n float stripe=smoothstep(-.4,.4,sin(dot(p,vec2(.8,.6))/46.*3.14159));\n c*=1.+(stripe-.5)*.055*mowed;\n float foot=trailWeight(p)*(.25+.32*noise(p*.075))*smoothstep(.28,.68,noise(p*.032+vec2(11.,-3.)));\n c=mix(c,vec3(.48,.33,.19),foot);\n float contact=(1.-smoothstep(.2,3.,abs(materialWalk)))*.18+(1.-smoothstep(0.,13.,max(0.,-materialWalk)))*.07*step(materialWalk,0.);\n gMicroAO=clamp(1.-(1.-clumps)*.16-fibers.z*(1.-fibers.x)*.17-bare*.08-contact,.57,1.);\n return c*(1.-contact*.5);\n}\n// Sandstone slabs: recessed joints, small aggregate and subdued mineral grain.\nvec4 paveSlab(vec2 al,vec2 p,float cw,float L,float seed){\n float u=al.y/cw+.5,col=floor(u),fc=u-col;\n float v=al.x/L+mod(col,2.)*.5,row=floor(v),fr=v-row;\n float joint=min(min(fc,1.-fc)*cw,min(fr,1.-fr)*L);\n float cell=hash(vec2(col+seed,row+seed*1.7));\n float aa=max(.10,materialFootprint*.65),visible=1.-smoothstep(1.2,4.,materialFootprint);\n float seam=(1.-smoothstep(.16-aa*.4,.48+aa,joint))*visible;\n float bevel=(1.-smoothstep(.35,1.25,joint))*visible;\n float mineral=filteredNoise(p+vec2(cell*31.,seed),.18),grit=filteredNoise(p,.85);\n float flecks=smoothstep(.67,.84,grit)*detailVisibility(.85);\n float weather=noise(p*.014),vein=noise(vec2(al.x*.025+mineral*.25,al.y*.075));\n vec3 stone=mix(vec3(.735,.715,.640),vec3(.68,.53,.39),smoothstep(.84,.98,cell)*.22);\n stone*=1.+(cell-.5)*.065+(weather-.5)*.045+(mineral-.5)*.045+(vein-.5)*.025;\n stone=mix(stone,stone*vec3(.78,.80,.81),flecks*.18);\n stone=mix(stone,vec3(.43,.435,.385),seam*.56);stone*=1.-bevel*.045;\n float height=-.18*seam-.10*bevel+(mineral-.5)*.055+(grit-.5)*.045;\n return vec4(stone,height);\n}\nvec4 pavementCore(vec2 p){\n vec2 a=walkRoute(p.y,0.),b=walkRoute(p.x,1.);\n vec2 d=p+vec2(40.),e=d/vec2(620.,500.);float q=length(e),g=length(d/vec2(384400.,250000.));\n float fV=clamp(a.y-abs(p.x-a.x),-60.,60.),fH=clamp(b.y-abs(p.y-b.x),-60.,60.),fM=clamp(36.-abs(q-1.)*q/max(g,.000001),-60.,60.);\n float wV=exp(fV*.3),wH=exp(fH*.3),wM=exp(fM*.3),sum=wV+wH+wM;wV/=sum;wH/=sum;wM/=sum;\n vec4 c=vec4(0.);float ws=0.;\n if(wV>.01){float m=(walkRoute(p.y+1.,0.).x-walkRoute(p.y-1.,0.).x)*.5,x=p.x-a.x;c+=paveSlab(vec2(p.y+m*x,x*45./a.y),p,30.,64.,0.)*wV;ws+=wV;}\n if(wH>.01){float m=(walkRoute(p.x+1.,1.).x-walkRoute(p.x-1.,1.).x)*.5,x=p.y-b.x;c+=paveSlab(vec2(p.x+m*x,x*45./b.y),p,30.,64.,31.)*wH;ws+=wH;}\n if(wM>.01){float across=(q-1.)*q/max(g,.000001);c+=paveSlab(vec2(atan(e.y,e.x)*560.,across),p,24.,52.,67.)*wM;ws+=wM;}\n return c/max(ws,.001);\n}\nvec4 pavement(vec2 p){\n if(max(abs(p.x),abs(p.y))\u003c900.)return pavementCore(p);\n float o=outerWalkField(p),inner=roundWalk(primaryWalkField(p),meadowWalkField(p),24.),t=smoothstep(-12.,12.,o-inner);if(t\u003c.001)return pavementCore(p);\n vec2 d=p+vec2(40.),e=d/vec2(1700.,1500.);float q=length(e),g=max(length(d/vec2(2890000.,2250000.)),.000001);vec4 c=paveSlab(vec2(atan(e.y,e.x)*1600.,(q-1.)*q/g),p,24.,58.,109.);if(t>.999)return c;return mix(pavementCore(p),c,t);\n}\nvec3 groundMaterial(vec2 p,float b){\n gMaterialHeight=0.;\n if(b\u003c.5)return grassColor(p);\n if(b\u003c1.5){\n  vec4 surface=pavement(p);gMaterialHeight=surface.a;\n  float edge=1.-smoothstep(1.4,3.7,materialWalk);\n  return mix(surface.rgb,vec3(.80,.78,.69),edge*.38);\n }\n bool sand=b>2.5;\n float broad=noise(p*.035),grain=filteredNoise(p,.32),grit=filteredNoise(p,1.1);\n float drift=noise(vec2(p.x*.018+p.y*.007,p.y*.07));\n float pores=smoothstep(.70,.86,grit)*detailVisibility(1.1);\n vec3 lo=sand?vec3(.77,.655,.445):vec3(.46,.295,.185);\n vec3 hi=sand?vec3(.89,.79,.59):vec3(.65,.455,.295);\n vec3 color=mix(lo,hi,broad*.72+drift*.28)+(grain-.5)*.035;\n color*=1.-pores*(sand?.045:.10);\n gMaterialHeight=(grain-.5)*(sand?.10:.20)-pores*.07;\n return color;\n}\nvec4 topWeights(vec2 p){vec4 w=surfaceWeights(p);float aa=max(.16,materialFootprint*.55),paving=smoothstep(-aa,aa,materialWalk),sum=1.-w.y;if(sum>.00001){w.xzw=w.xzw/sum*(1.-paving);}else{w.xzw=vec3(1.-paving,0.,0.);}w.y=paving;return w;}\nvec3 ground(vec2 p){\n float foundation=stationWeight(vec3(p.x,0.,p.y));\n if(foundation>=1.)return stationSurface(p);\n vec4 w=topWeights(p);gGrass=w.x*(1.-foundation);\n vec3 color=vec3(0.);float height=0.;\n if(w.x>0.){color+=groundMaterial(p,0.)*w.x;height+=gMaterialHeight*w.x;}\n if(w.y>0.){color+=groundMaterial(p,1.)*w.y;height+=gMaterialHeight*w.y;}\n if(w.z>0.){color+=groundMaterial(p,2.)*w.z;height+=gMaterialHeight*w.z;}\n if(w.w>0.){color+=groundMaterial(p,3.)*w.w;height+=gMaterialHeight*w.w;}\n gMaterialHeight=height*(1.-foundation);gMicroAO=mix(1.,gMicroAO,gGrass);\n if(foundation>0.)color=mix(color,stationSurface(p),foundation);\n return color;\n}\n";
 
@@ -2236,18 +2239,20 @@ function buildStationMeshes(){
  for(let i=0;i<8;i++){const a=outline[i],b=outline[(i+1)%8],A=[a[0],-STATION.depth,a[1]],B=[b[0],-STATION.depth,b[1]],C=[b[0],-.7,b[1]],D=[a[0],-.7,a[1]],E=[b[0]*.985,.35,b[1]*.985],F=[a[0]*.985,.35,a[1]*.985];quad(foundation,A,B,C,D,[.49,.485,.425],true);quad(foundation,D,C,E,F,[.61,.59,.50],true);foundation.push(...triangle([0,.35,0],F,E,[.55,.545,.475],[0,1,0]));}
  // A low curb only behind the workbench; the receiving apron stays open.
  box(solid,0,-5,-50,99,8,3,[.49,.475,.40]);
+ // Heights in model space; metricMesh applies the station's vertical scale.
+ const weighbridgeEdgeY=.98,floorDetailY=1.05;
  box(floor,0,.55,-33,96,.12,32,[.57,.56,.47]);
  // Steel weighbridge, inset flush with the apron. Its cuts follow the hole.
  box(floor,0,.8,13,62,.32,44,dark);
  for(let i=0;i<7;i++)box(floor,-26.1+i*8.7,1.13,13,8.1,.22,40,[.36+i%2*.025,.46+i%2*.022,.43+i%2*.018]);
- for(const x of [-31.7,31.7])box(floor,x,.98,13,1.1,.45,45,edge);
- for(const z of [-9.6,35.6])box(floor,0,.98,z,65,.45,1.1,edge);
+ for(const x of [-31.7,31.7])box(floor,x,weighbridgeEdgeY,13,1.1,.45,45,edge);
+ for(const z of [-9.6,35.6])box(floor,0,weighbridgeEdgeY,z,65,.45,1.1,edge);
  // Four worn paint corners frame the loading space without a giant marker.
- for(const x of [-43,43])for(const z of [-9,40]){box(floor,x,1.05,z,8,.035,1.2,gold);box(floor,x+Math.sign(x)*3.4,1.05,z-Math.sign(z)*3,1.2,.035,7,gold)}
+ for(const x of [-43,43])for(const z of [-9,40]){box(floor,x,floorDetailY,z,8,.035,1.2,gold);box(floor,x+Math.sign(x)*3.4,floorDetailY,z-Math.sign(z)*3,1.2,.035,7,gold)}
  // Drain channels and three broad expansion joints, all stable in world space.
- for(let i=0;i<10;i++)box(floor,50,1.05,-9+i*4.5,3.6,.06,1.2,[.28,.31,.27]);
- for(const x of [-49,45])box(floor,x,1.05,2,.38,.025,91,[.39,.40,.34]);
- box(floor,0,1.05,-16,95,.025,.4,[.39,.40,.34]);
+ for(let i=0;i<10;i++)box(floor,50,floorDetailY,-9+i*4.5,3.6,.06,1.2,[.28,.31,.27]);
+ for(const x of [-49,45])box(floor,x,floorDetailY,2,.38,.025,91,[.39,.40,.34]);
+ box(floor,0,floorDetailY,-16,95,.025,.4,[.39,.40,.34]);
  // Rear work bay: two load-bearing piles stay embedded far below the slab.
  for(const x of [-44,44]){
   for(let i=0;i<18;i++){const y=-STATION.depth+i*40,v=(i%3-1)*.008;box(solid,x,y,-37,6,40,7,[.43+v,.435+v,.365+v])}
@@ -2324,7 +2329,7 @@ function buildStationMeshes(){
  details.box(0,plaque.y+.7,plaque.z+.46,50,.32,.12,gold,0,0);
  for(const x of [-25,25])details.box(x,plaque.y+plaque.height/2-.25,plaque.z+.48,.5,.5,.16,gold,0,0);
  // Broad scuffs on the approach, no tiny random flecks or floating decoration.
- for(const [x,z,w,l]of [[-16,44,3,5],[13,46,2,4],[-45,20,2,6],[40,31,3,4]])box(floor,x,1.05,z,w,.02,l,[.49,.49,.42],.15);
+ for(const [x,z,w,l]of [[-16,44,3,5],[13,46,2,4],[-45,20,2,6],[40,31,3,4]])box(floor,x,floorDetailY,z,w,.02,l,[.49,.49,.42],.15);
  function metricMesh(data,extra=[]){
   for(let i=0;i<data.length;i+=9)data[i+1]=stationHeight(data[i+1]);
   for(let i=0;i<data.length;i+=27){const ax=data[i+9]-data[i],ay=data[i+10]-data[i+1],az=data[i+11]-data[i+2],bx=data[i+18]-data[i],by=data[i+19]-data[i+1],bz=data[i+20]-data[i+2];let nx=ay*bz-az*by,ny=az*bx-ax*bz,nz=ax*by-ay*bx,l=Math.hypot(nx,ny,nz)||1;if(nx*data[i+3]+ny*data[i+4]+nz*data[i+5]<0)l=-l;for(let j=0;j<3;j++){data[i+j*9+3]=nx/l;data[i+j*9+4]=ny/l;data[i+j*9+5]=nz/l}}
@@ -3767,6 +3772,10 @@ float apertureRadiusAt(vec2 p){
 }
 float granularBiome(vec3 p){float d=max(0.,-p.y);float broad=noise(p.xz*.035),detail=noise(p.xz*.075),edge=(noise(p.xz*.14)-.5)*5.+(detail-.5)*1.0;float stone=materialWalk;vec2 regions=regionFields(p.xz);float dirt=regions.x;float sand=regions.y;float surface=0.;if(dirt+edge>0.)surface=2.;if(sand+edge>0.)surface=3.;if(stone+edge>0.)surface=1.;float boundary=2.4+(broad-.5)*.4+(detail-.5)*.2;if(surface==1.&&d<boundary)return 1.;float topsoil=surface==1.?20.:surface==3.?36.:19.;float clay=surface==3.?78.:60.;float rock=108.+(broad-.5)*23.+(noise(p.xz*.08)-.5)*9.;float relief=(broad-.5)*9.+(detail-.5)*1.2;if(d<topsoil+relief)return surface==3.?3.:0.;if(d<clay+relief)return 2.;if(d<rock){float inclusions=noise(p.xz*.055+vec2(17.3,-8.1));return inclusions>.70-(d-clay)/max(1.,rock-clay)*.4?1.:2.;}return 1.;}
 float stationDistance(vec2 p){vec2 q=abs(p-vec2(${base.x.toFixed(1)},${base.y.toFixed(1)}));return max(max(q.x-${STATION.halfX.toFixed(1)},q.y-${STATION.halfZ.toFixed(1)}),(q.x+q.y-${(STATION.halfX+STATION.halfZ-STATION.chamfer).toFixed(1)})/1.41421356);}
+// Shared by color and shadow passes; matches the CPU walkway visibility rule.
+bool stationCoversWalkway(vec3 p){
+ return stationDistance(p.xz)<-.1&&p.y<=${STATION.deck.toFixed(3)}+.1;
+}
 float stationWeight(vec3 p){return (1.-smoothstep(-.7,.7,stationDistance(p.xz)))*smoothstep(-${(STATION.depth+1).toFixed(1)},-${(STATION.depth-1).toFixed(1)},p.y);}
 vec3 stationSurface(vec2 p){float n=noise(p*.055),g=noise(p*.17);return vec3(.55,.545,.475)*(.94+n*.09+(g-.5)*.035);}
 vec3 chipColor(vec3 p){float b=granularBiome(p),q=hash(floor(p.xz*3.+p.y));vec3 c=b<.5?vec3(.40,.31,.18):b<1.5?vec3(.59,.60,.54):b<2.5?vec3(.52,.32,.17):vec3(.77,.65,.42);return c*(.83+q*.30);}
@@ -3875,7 +3884,7 @@ void main(){
 // otherwise alternate in the depth buffer as the camera pulls away.
 #ifndef VORA_OPAQUE_ONLY
 if(u_renderPass>.5){
- if(u_material==13.&&stationDistance(v_world.xz)<-.1&&v_world.y<=${STATION.deck.toFixed(3)}+.1)discard;
+ if(u_material==13.&&stationCoversWalkway(v_world))discard;
  if(u_material==6.||u_material==7.)discard;
  vec2 hd=v_world.xz-u_hole.xy;float hr=u_hole.z;
  if(length(hd)<hr*1.09+2.)hr=apertureRadiusAt(hd);
@@ -3907,7 +3916,7 @@ materialWalk=-100000.;
 materialWalk=(u_material==0.||u_material==6.||u_material==7.||u_material==11.||u_material==14.||u_material==15.)?-100000.:walkField(v_world.xz);
 #endif
 vec2 holeDelta=v_world.xz-u_hole.xy;float distanceToHole=length(holeDelta);float boundaryRadius=u_hole.z;if(distanceToHole>.00001&&distanceToHole<u_hole.z*1.09+2.)boundaryRadius=apertureRadiusAt(holeDelta);
-if(u_material==13.&&stationDistance(v_world.xz)<-.1&&v_world.y<=${STATION.deck.toFixed(3)}+.1)discard;
+if(u_material==13.&&stationCoversWalkway(v_world))discard;
 #ifndef VORA_OPAQUE_ONLY
 bool cut=u_material==1.||u_material==5.||u_material==6.||u_material==13.||u_material==15.;if(cut&&distanceToHole<boundaryRadius)discard;
 // The cavity meets the permanent block; its lip and lining never pass through it.
@@ -6010,11 +6019,89 @@ function rememberSceneFrame(vp){
  sceneFrameCache.vp=vp;sceneFrameCache.reusing=false;sceneFrameCache.rendered++;
 }
 document.addEventListener('visibilitychange',invalidateSceneFrame);
-let fpsWindowStart=null,fpsFrames=0;
-function resetFpsCounter(){fpsWindowStart=null;fpsFrames=0;$('fpsValue').textContent='—'}
-function recordFpsFrame(now,rendered){if(state.showFps!==true||document.hidden)return;if(fpsWindowStart===null){fpsWindowStart=now;fpsFrames=0;return}if(rendered)fpsFrames++;const elapsed=now-fpsWindowStart;if(elapsed>=600){$('fpsValue').textContent=(gl.isSoftware&&openMenu||sceneFrameCache.reusing)?'—':String(Math.round(fpsFrames*1000/elapsed));fpsWindowStart=now;fpsFrames=0}}
-document.addEventListener('visibilitychange',resetFpsCounter);
-function frame(now){if(!gameLoading.ready)return;if(!allowSceneFrame(now)){recordFpsFrame(now,false);requestAnimationFrame(frame);return}processResourceWork(gl.isSoftware?2:3);maintainVegetationResources(now);observeImageCadence(now-last);let dt=Math.min(.1,(now-last)/1000||.016);last=now;time+=dt;while(dt>0){const step=Math.min(dt,1/60);update(step);dt-=step}if((cargoPhysicsDirty||spawnDirty)&&now-cargoLastSave>1500){persist();cargoLastSave=now}if(insidePinned)drawInside(now);if(!shouldRenderSceneFrame()){if(sceneFrameCache.vp){drawSpawnDebug(sceneFrameCache.vp);updateObjectHighlight(sceneFrameCache.vp);}recordFpsFrame(now,false);requestAnimationFrame(frame);return;}const stamp=openMenu?state.r+':'+state.d+':'+spawnLevel()+':'+state.spawnInspector+':'+state.cargo.length+':'+state.depot.length+':'+depotPending.size+':'+viewYaw+':'+viewElevation+':'+viewDistance+':'+W+':'+H:'';if(gl.isSoftware&&stamp&&stamp===pausedRenderStamp&&!sceneMotionActive&&!saleGhosts.length){recordFpsFrame(now,false);requestAnimationFrame(frame);return}pausedRenderStamp=stamp;render();recordFpsFrame(now,true);requestAnimationFrame(frame)}
+let fpsWindowStart = null, fpsFrames = 0;
+
+function resetFpsCounter() {
+ fpsWindowStart = null;
+ fpsFrames = 0;
+ $('fpsValue').textContent = '—';
+}
+
+function recordFpsFrame(now, rendered) {
+ if (state.showFps !== true || document.hidden) return;
+ if (fpsWindowStart === null) {
+  fpsWindowStart = now;
+  fpsFrames = 0;
+  return;
+ }
+ if (rendered) fpsFrames++;
+
+ const elapsed = now - fpsWindowStart;
+ if (elapsed >= 600) {
+  $('fpsValue').textContent = (gl.isSoftware && openMenu || sceneFrameCache.reusing)
+   ? '—' : String(Math.round(fpsFrames * 1000 / elapsed));
+  fpsWindowStart = now;
+  fpsFrames = 0;
+ }
+}
+
+document.addEventListener('visibilitychange', resetFpsCounter);
+
+function advanceGameSimulation(now) {
+ processResourceWork(gl.isSoftware ? 2 : 3);
+ maintainVegetationResources(now);
+ observeImageCadence(now - last);
+
+ let dt = Math.min(.1, (now - last) / 1000 || .016);
+ last = now;
+ time += dt;
+ while (dt > 0) {
+  const step = Math.min(dt, 1 / 60);
+  update(step);
+  dt -= step;
+ }
+
+ if ((cargoPhysicsDirty || spawnDirty) && now - cargoLastSave > 1500) {
+  persist();
+  cargoLastSave = now;
+ }
+}
+
+function drawGameFrame(now) {
+ if (insidePinned) drawInside(now);
+ if (!shouldRenderSceneFrame()) {
+  if (sceneFrameCache.vp) {
+   drawSpawnDebug(sceneFrameCache.vp);
+   updateObjectHighlight(sceneFrameCache.vp);
+  }
+  return false;
+ }
+
+ const stamp = openMenu
+  ? state.r + ':' + state.d + ':' + spawnLevel() + ':' + state.spawnInspector + ':' +
+    state.cargo.length + ':' + state.depot.length + ':' + depotPending.size + ':' +
+    viewYaw + ':' + viewElevation + ':' + viewDistance + ':' + W + ':' + H
+  : '';
+ if (gl.isSoftware && stamp && stamp === pausedRenderStamp && !sceneMotionActive && !saleGhosts.length) {
+  return false;
+ }
+
+ pausedRenderStamp = stamp;
+ render();
+ return true;
+}
+
+function frame(now) {
+ if (!gameLoading.ready) return;
+
+ let rendered = false;
+ if (allowSceneFrame(now)) {
+  advanceGameSimulation(now);
+  rendered = drawGameFrame(now);
+ }
+ recordFpsFrame(now, rendered);
+ requestAnimationFrame(frame);
+}
 const FPS_CAPS=[60,75,90,120,144,180,0];
 const frameLimiter={next:null};
 function setFpsCap(value){
@@ -6953,89 +7040,192 @@ function initMenuInterface(){
  menuInterface.ready=true;syncCustomPickers();applyInterfaceScale();
 }
 
-function* loadingPhase(label,weight,iterator){
- const base=gameLoading.completed;updateLoadingScreen(label);
- let complete=false;
- try{
-  for(;;){
-   const result=iterator.next();if(result.done){complete=true;break}
-   const fraction=result.value?.loadingFraction;
-   if(Number.isFinite(fraction))gameLoading.progress=Math.max(gameLoading.progress,Math.min(99,(base+weight*Math.max(0,Math.min(1,fraction)))/gameLoading.total*100));
-   updateLoadingScreen(result.value?.label||label);yield result.value;
+function* loadingPhase(label, weight, iterator) {
+ const base = gameLoading.completed;
+ updateLoadingScreen(label);
+ let complete = false;
+ try {
+  for (;;) {
+   const result = iterator.next();
+   if (result.done) {
+    complete = true;
+    break;
+   }
+   const fraction = result.value?.loadingFraction;
+   if (Number.isFinite(fraction)) {
+    gameLoading.progress = Math.max(gameLoading.progress,
+     Math.min(99, (base + weight * Math.max(0, Math.min(1, fraction))) / gameLoading.total * 100));
+   }
+   updateLoadingScreen(result.value?.label || label);
+   yield result.value;
   }
- }finally{
-  if(!complete)iterator.return?.();
+ } finally {
+  if (!complete) iterator.return?.();
  }
- gameLoading.completed=base+weight;
- gameLoading.progress=Math.max(gameLoading.progress,Math.min(99,gameLoading.completed/gameLoading.total*100));
- updateLoadingScreen(label);yield {label};
+ gameLoading.completed = base + weight;
+ gameLoading.progress = Math.max(gameLoading.progress, Math.min(99, gameLoading.completed / gameLoading.total * 100));
+ updateLoadingScreen(label);
+ yield {label};
 }
-function* initializeVoraWorldIncremental(){
- initProgression();initDepot();seed=61;objects=[];fallingItems=[];cargoBodies=[];
+
+function* initializeVoraWorldIncremental() {
+ initProgression();
+ initDepot();
+ seed = 61;
+ objects = [];
+ fallingItems = [];
+ cargoBodies = [];
  yield* buildParkLayoutIncremental();
- initializeSpawns();yield* initializeWorldResourcesIncremental();yield {label:'Restaurando os objetos do parque'};
- restoreCargoPhysics();yield {label:'Restaurando a carga'};
+ initializeSpawns();
+ yield* initializeWorldResourcesIncremental();
+ yield {label: 'Restaurando os objetos do parque'};
+ restoreCargoPhysics();
+ yield {label: 'Restaurando a carga'};
 }
-function* warmVoraModelsIncremental(){
- const work=[];
- for(const detail of gl.isSoftware?[0]:[0,1]){
-  for(let t=0;t<TYPES.length;t++)for(let variant=0;variant<3;variant++)work.push(()=>prepareObjectInstances(getModelMesh(t,variant,detail)));
-  for(let variant=0;variant<TREE_VARIANTS;variant++)work.push(()=>prepareObjectInstances(getModelMesh('tree',variant,detail)));
-  for(let variant=0;variant<3;variant++)work.push(()=>prepareObjectInstances(getModelMesh('bench',variant,detail)));
+
+function* warmVoraModelsIncremental() {
+ const work = [];
+ for (const detail of gl.isSoftware ? [0] : [0, 1]) {
+  for (let t = 0; t < TYPES.length; t++) {
+   for (let variant = 0; variant < 3; variant++) {
+    work.push(() => prepareObjectInstances(getModelMesh(t, variant, detail)));
+   }
+  }
+  for (let variant = 0; variant < TREE_VARIANTS; variant++) {
+   work.push(() => prepareObjectInstances(getModelMesh('tree', variant, detail)));
+  }
+  for (let variant = 0; variant < 3; variant++) {
+   work.push(() => prepareObjectInstances(getModelMesh('bench', variant, detail)));
+  }
  }
- const plants=new Map();for(const p of environmentDetails)plants.set(p.kind+':'+p.variant,[p.kind,p.variant]);
- for(const [kind,variant]of plants.values())for(const detail of gl.isSoftware?[0]:[0,1])work.push(()=>getPlantMesh(kind,variant,detail));
- const props=new Set();
- for(const p of worldProps)if(p.type==='scenery'){
-  const key=p.kind+':'+(p.variant||0);
-  if(!props.has(key)){props.add(key);work.push(()=>{if(!parkPropMeshes.has(key))parkPropMeshes.set(key,makeParkProp(p.kind,p.variant||0));prepareObjectInstances(parkPropMeshes.get(key))})}
+
+ const plants = new Map();
+ for (const p of environmentDetails) plants.set(p.kind + ':' + p.variant, [p.kind, p.variant]);
+ for (const [kind, variant] of plants.values()) {
+  for (const detail of gl.isSoftware ? [0] : [0, 1]) work.push(() => getPlantMesh(kind, variant, detail));
  }
- for(let i=0;i<work.length;i++){work[i]();yield {label:'Preparando modelos · '+(i+1)+' de '+work.length,loadingFraction:(i+1)/work.length}}
+
+ const props = new Set();
+ for (const p of worldProps) {
+  if (p.type !== 'scenery') continue;
+  const key = p.kind + ':' + (p.variant || 0);
+  if (props.has(key)) continue;
+  props.add(key);
+  work.push(() => {
+   if (!parkPropMeshes.has(key)) parkPropMeshes.set(key, makeParkProp(p.kind, p.variant || 0));
+   prepareObjectInstances(parkPropMeshes.get(key));
+  });
+ }
+ for (let i = 0; i < work.length; i++) {
+  work[i]();
+  yield {label: 'Preparando modelos · ' + (i + 1) + ' de ' + work.length, loadingFraction: (i + 1) / work.length};
+ }
 }
-function* oneLoadingTask(callback){callback();yield;}
-function* initializeVoraSteps(){
- yield* loadingPhase('Preparando o renderizador',40,initSceneProgramIncremental());
+
+function* oneLoadingTask(callback) {
+ callback();
+ yield;
+}
+
+function initializeVoraControls() {
+ migrateWorldScale();
+ initMotionUI();
+ initSpawnControls();
+ initGameInput();
+}
+
+function restoreVoraInterface() {
+ resize();
+ updateUI();
+ initViewRange();
+ initShadowControls();
+ initGraphicsPresets();
+ initMenuInterface();
+ initInsideView();
+ initUIRedesign();
+}
+
+function* initializeVoraSteps() {
+ yield* loadingPhase('Preparando o renderizador', 40, initSceneProgramIncremental());
  yield* initOpaquePipelineIncremental();
- yield* loadingPhase('Preparando os controles',10,oneLoadingTask(()=>{migrateWorldScale();initMotionUI();initSpawnControls();initGameInput()}));
- yield* loadingPhase('Organizando o parque',160,initializeVoraWorldIncremental());
- yield* loadingPhase('Preparando modelos',120,warmVoraModelsIncremental());
- yield* loadingPhase('Preparando iluminação e imagem',140,initLightingIncremental());
- yield* loadingPhase('Restaurando suas configurações',30,oneLoadingTask(()=>{resize();updateUI();initViewRange();initShadowControls();initGraphicsPresets();initMenuInterface();initInsideView();initUIRedesign()}));
- yield* loadingPhase('Preparando os caminhos',140,(function*(){walkMesh=yield* buildWalkMeshIncremental()})());
- yield* loadingPhase('Preparando o horizonte',40,(function*(){parkBackdrop=yield* buildParkBackdropIncremental()})());
- yield* loadingPhase('Preparando a base',20,oneLoadingTask(()=>{stationMeshes??=buildStationMeshes();rebuildCavity()}));
- yield* loadingPhase('Preparando a vegetação',260,prepareVegetationInitial());
- yield* loadingPhase('Finalizando a cena',40,oneLoadingTask(()=>{if(!gl.isSoftware){render();gl.flush?.()}}));
+ yield* loadingPhase('Preparando os controles', 10, oneLoadingTask(initializeVoraControls));
+ yield* loadingPhase('Organizando o parque', 160, initializeVoraWorldIncremental());
+ yield* loadingPhase('Preparando modelos', 120, warmVoraModelsIncremental());
+ yield* loadingPhase('Preparando iluminação e imagem', 140, initLightingIncremental());
+ yield* loadingPhase('Restaurando suas configurações', 30, oneLoadingTask(restoreVoraInterface));
+ yield* loadingPhase('Preparando os caminhos', 140, (function* () {
+  walkMesh = yield* buildWalkMeshIncremental();
+ })());
+ yield* loadingPhase('Preparando o horizonte', 40, (function* () {
+  parkBackdrop = yield* buildParkBackdropIncremental();
+ })());
+ yield* loadingPhase('Preparando a base', 20, oneLoadingTask(() => {
+  stationMeshes ??= buildStationMeshes();
+  rebuildCavity();
+ }));
+ yield* loadingPhase('Preparando a vegetação', 260, prepareVegetationInitial());
+ yield* loadingPhase('Finalizando a cena', 40, oneLoadingTask(() => {
+  if (!gl.isSoftware) {
+   render();
+   gl.flush?.();
+  }
+ }));
 }
-function completeVoraLoading(){
- if(gameLoading.error||gameLoading.ready)return;
- gameLoading.ready=true;gameLoading.active=false;gameLoading.completed=gameLoading.total;gameLoading.progress=100;
+
+function completeVoraLoading() {
+ if (gameLoading.error || gameLoading.ready) return;
+ gameLoading.ready = true;
+ gameLoading.active = false;
+ gameLoading.completed = gameLoading.total;
+ gameLoading.progress = 100;
  updateLoadingScreen('Tudo pronto');
- for(const tile of groundDetailsBatches||[])tile.initialProtected=false;
- $('loadingScreen').hidden=true;document.documentElement.removeAttribute('data-loading');
- clearGameInput();focusGameScene();last=performance.now();resetFpsCounter();persist();requestAnimationFrame(frame);
+ for (const tile of groundDetailsBatches || []) tile.initialProtected = false;
+ $('loadingScreen').hidden = true;
+ document.documentElement.removeAttribute('data-loading');
+ clearGameInput();
+ focusGameScene();
+ last = performance.now();
+ resetFpsCounter();
+ persist();
+ requestAnimationFrame(frame);
 }
-function startVora(){
- if(gameLoading.promise)return gameLoading.promise;
- $('loadingScreen').hidden=false;const iterator=initializeVoraSteps();
- gameLoading.promise=new Promise((resolve,reject)=>{
-  const next=()=>{
-   try{
-    if(gameLoading.error){iterator.return?.();reject(gameLoading.error);return}
-    const deadline=performance.now()+5;
-    for(let count=0;count<64;count++){
-     const began=performance.now(),result=iterator.next();gameLoading.steps++;
-     gameLoading.maxStepMs=Math.max(gameLoading.maxStepMs,performance.now()-began);
-     if(result.done){completeVoraLoading();resolve();return}
-     if(result.value?.waiting||performance.now()>=deadline)break;
+
+function startVora() {
+ if (gameLoading.promise) return gameLoading.promise;
+ $('loadingScreen').hidden = false;
+ const iterator = initializeVoraSteps();
+ gameLoading.promise = new Promise((resolve, reject) => {
+  const next = () => {
+   try {
+    if (gameLoading.error) {
+     iterator.return?.();
+     reject(gameLoading.error);
+     return;
+    }
+    const deadline = performance.now() + 5;
+    for (let count = 0; count < 64; count++) {
+     const began = performance.now(), result = iterator.next();
+     gameLoading.steps++;
+     gameLoading.maxStepMs = Math.max(gameLoading.maxStepMs, performance.now() - began);
+     if (result.done) {
+      completeVoraLoading();
+      resolve();
+      return;
+     }
+     if (result.value?.waiting || performance.now() >= deadline) break;
     }
     requestAnimationFrame(next);
-   }catch(error){iterator.return?.();failVoraLoading(error);reject(error)}
+   } catch (error) {
+    iterator.return?.();
+    failVoraLoading(error);
+    reject(error);
+   }
   };
   // Yield two turns so the HTML overlay paints before expensive GPU work.
-  requestAnimationFrame(()=>requestAnimationFrame(next));
+  requestAnimationFrame(() => requestAnimationFrame(next));
  });
- gameLoading.promise.catch(()=>{});return gameLoading.promise;
+ gameLoading.promise.catch(() => {});
+ return gameLoading.promise;
 }
 startVora();
 </script></body>
