@@ -1,5 +1,5 @@
 {
-  "collectedAt": "2026-11-01T21:47:56.917803+00:00",
+  "collectedAt": "2026-11-01T21:47:56.917578+00:00",
   "baseCommit": "f9fcbccdeaf4fc22f07862eb44f1c7c486926d22",
   "branch": "perf/testes-carregamento-inicial",
   "command": "node scripts/verificar.mjs",
