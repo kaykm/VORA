@@ -47,9 +47,12 @@ export function assemble(){
 }
 export function build(){
  const {html,modules}=assemble();
- const dest=localPath('dist/VORA.html');fs.mkdirSync(path.dirname(dest),{recursive:true});
+ const directory=localPath('dist');fs.mkdirSync(directory,{recursive:true});
  // Só substitui a distribuição depois de toda a validação e gravação terminarem.
- fs.writeFileSync(dest+'.tmp',html);fs.renameSync(dest+'.tmp',dest);
+ for(const name of ['VORA.html','index.html']){
+  const dest=path.join(directory,name);
+  fs.writeFileSync(dest+'.tmp',html);fs.renameSync(dest+'.tmp',dest);
+ }
  const info={sha256:crypto.createHash('sha256').update(html).digest('hex'),bytes:Buffer.byteLength(html),javascriptFiles:modules.length};
  fs.writeFileSync(localPath('dist/manifesto.json'),JSON.stringify(info,null,2)+'\n');
  return info;

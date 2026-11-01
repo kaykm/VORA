@@ -1,6 +1,7 @@
 * text=auto eol=lf
 backup/VORA-original-17.html -text
 dist/VORA.html -text
+dist/index.html -text
 *.rgba -text
 *.woff -text
 *.png -text

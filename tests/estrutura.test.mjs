@@ -9,6 +9,7 @@ import {changedSources,newSources} from './contratos.mjs';
 test('geração determinística, sem downloads nem arquivos externos',()=>{
  const a=assemble(),b=assemble();assert.equal(a.html,b.html);
  build();assert.equal(read('dist/VORA.html'),a.html);
+ assert.equal(read('dist/index.html'),a.html,'a entrada do site e a versão offline devem conter o mesmo jogo');
  assert.equal((a.html.match(/<script>/g)||[]).length,1);
  assert.doesNotMatch(a.html,/<script[^>]+src=|<link[^>]+href=/i);
  assert.doesNotMatch(a.javascript,/\b(?:fetch|XMLHttpRequest|WebSocket)\s*\(/);
