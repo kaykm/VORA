@@ -1,0 +1,503 @@
+{
+  "source": "VORA (17).html",
+  "sha256": "3f1c416c7ad088dd1444b64c7ce7d6e55fde2ea6f2a341f2794b33286f0bc2df",
+  "files": [
+    {
+      "file": "src/graficos/compatibilidade.js",
+      "originalLines": [
+        607,
+        646
+      ]
+    },
+    {
+      "file": "src/jogo/medidas.js",
+      "originalLines": [
+        647,
+        669
+      ]
+    },
+    {
+      "file": "src/jogo/migracao-escala.js",
+      "originalLines": [
+        670,
+        682
+      ]
+    },
+    {
+      "file": "src/graficos/contexto.js",
+      "originalLines": [
+        683,
+        685
+      ]
+    },
+    {
+      "file": "src/jogo/tipos.js",
+      "originalLines": [
+        686,
+        686
+      ]
+    },
+    {
+      "file": "src/jogo/salvamento.js",
+      "originalLines": [
+        687,
+        693
+      ]
+    },
+    {
+      "file": "src/jogo/estado.js",
+      "originalLines": [
+        694,
+        695
+      ]
+    },
+    {
+      "file": "src/jogo/persistencia.js",
+      "originalLines": [
+        696,
+        696
+      ]
+    },
+    {
+      "file": "src/interface/feedback.js",
+      "originalLines": [
+        697,
+        698
+      ]
+    },
+    {
+      "file": "src/interface/hud.js",
+      "originalLines": [
+        699,
+        704
+      ]
+    },
+    {
+      "file": "src/jogo/melhorias.js",
+      "originalLines": [
+        705,
+        706
+      ]
+    },
+    {
+      "file": "src/interface/inventario.js",
+      "originalLines": [
+        707,
+        712
+      ]
+    },
+    {
+      "file": "src/jogo/nova-partida.js",
+      "originalLines": [
+        713,
+        713
+      ]
+    },
+    {
+      "file": "src/interface/menus.js",
+      "originalLines": [
+        714,
+        783
+      ]
+    },
+    {
+      "file": "src/jogo/joystick.js",
+      "originalLines": [
+        784,
+        786
+      ]
+    },
+    {
+      "file": "src/interface/animacoes.js",
+      "originalLines": [
+        787,
+        870
+      ]
+    },
+    {
+      "file": "src/interface/interior.js",
+      "originalLines": [
+        871,
+        1088
+      ]
+    },
+    {
+      "file": "src/fisica/carga.js",
+      "originalLines": [
+        1089,
+        1156
+      ]
+    },
+    {
+      "file": "src/graficos/carga.js",
+      "originalLines": [
+        1157,
+        1159
+      ]
+    },
+    {
+      "file": "src/mundo/parque-ampliado.js",
+      "originalLines": [
+        1160,
+        1392
+      ]
+    },
+    {
+      "file": "src/mundo/terreno.js",
+      "originalLines": [
+        1393,
+        1458
+      ]
+    },
+    {
+      "file": "src/mundo/caminhos.js",
+      "originalLines": [
+        1459,
+        1478
+      ]
+    },
+    {
+      "file": "src/graficos/shaders-terreno.js",
+      "originalLines": [
+        1479,
+        1557
+      ]
+    },
+    {
+      "file": "src/mundo/base.js",
+      "originalLines": [
+        1558,
+        1661
+      ]
+    },
+    {
+      "file": "src/fisica/base.js",
+      "originalLines": [
+        1662,
+        1687
+      ]
+    },
+    {
+      "file": "src/mundo/modelos.js",
+      "originalLines": [
+        1688,
+        1853
+      ]
+    },
+    {
+      "file": "src/mundo/folhas.js",
+      "originalLines": [
+        1854,
+        1865
+      ]
+    },
+    {
+      "file": "src/mundo/vegetacao.js",
+      "originalLines": [
+        1866,
+        1970
+      ]
+    },
+    {
+      "file": "src/interface/qualidade.js",
+      "originalLines": [
+        1971,
+        2034
+      ]
+    },
+    {
+      "file": "src/graficos/distancia.js",
+      "originalLines": [
+        2035,
+        2041
+      ]
+    },
+    {
+      "file": "src/mundo/vegetacao-render.js",
+      "originalLines": [
+        2042,
+        2060
+      ]
+    },
+    {
+      "file": "src/jogo/spawns.js",
+      "originalLines": [
+        2061,
+        2152
+      ]
+    },
+    {
+      "file": "src/interface/spawns.js",
+      "originalLines": [
+        2153,
+        2179
+      ]
+    },
+    {
+      "file": "src/jogo/teclado.js",
+      "originalLines": [
+        2180,
+        2210
+      ]
+    },
+    {
+      "file": "src/interface/administracao.js",
+      "originalLines": [
+        2211,
+        2237
+      ]
+    },
+    {
+      "file": "src/jogo/deposito.js",
+      "originalLines": [
+        2238,
+        2262
+      ]
+    },
+    {
+      "file": "src/mundo/deposito-modelo.js",
+      "originalLines": [
+        2263,
+        2267
+      ]
+    },
+    {
+      "file": "src/graficos/shaders-cena.js",
+      "originalLines": [
+        2268,
+        2535
+      ]
+    },
+    {
+      "file": "src/graficos/programa.js",
+      "originalLines": [
+        2536,
+        2552
+      ]
+    },
+    {
+      "file": "src/graficos/texturas.js",
+      "originalLines": [
+        2553,
+        2597
+      ]
+    },
+    {
+      "file": "src/graficos/shaders-pos.js",
+      "originalLines": [
+        2598,
+        2720
+      ]
+    },
+    {
+      "file": "src/graficos/iluminacao.js",
+      "originalLines": [
+        2721,
+        2856
+      ]
+    },
+    {
+      "file": "src/graficos/oclusao.js",
+      "originalLines": [
+        2857,
+        2919
+      ]
+    },
+    {
+      "file": "src/graficos/multiamostragem.js",
+      "originalLines": [
+        2920,
+        2933
+      ]
+    },
+    {
+      "file": "src/graficos/imagem.js",
+      "originalLines": [
+        2934,
+        3078
+      ]
+    },
+    {
+      "file": "src/graficos/smaa.js",
+      "originalLines": [
+        3079,
+        3112
+      ]
+    },
+    {
+      "file": "src/graficos/temporal.js",
+      "originalLines": [
+        3113,
+        3145
+      ]
+    },
+    {
+      "file": "src/graficos/temporizacao.js",
+      "originalLines": [
+        3146,
+        3163
+      ]
+    },
+    {
+      "file": "src/graficos/sombras.js",
+      "originalLines": [
+        3164,
+        3239
+      ]
+    },
+    {
+      "file": "src/graficos/composicao.js",
+      "originalLines": [
+        3240,
+        3282
+      ]
+    },
+    {
+      "file": "src/graficos/malhas.js",
+      "originalLines": [
+        3283,
+        3392
+      ]
+    },
+    {
+      "file": "src/mundo/primitivas.js",
+      "originalLines": [
+        3393,
+        3399
+      ]
+    },
+    {
+      "file": "src/graficos/animacao-cena.js",
+      "originalLines": [
+        3400,
+        3408
+      ]
+    },
+    {
+      "file": "src/mundo/ruido.js",
+      "originalLines": [
+        3409,
+        3415
+      ]
+    },
+    {
+      "file": "src/mundo/buraco.js",
+      "originalLines": [
+        3416,
+        3466
+      ]
+    },
+    {
+      "file": "src/graficos/malha-buraco.js",
+      "originalLines": [
+        3467,
+        3488
+      ]
+    },
+    {
+      "file": "src/graficos/matrizes.js",
+      "originalLines": [
+        3489,
+        3492
+      ]
+    },
+    {
+      "file": "src/mundo/materiais.js",
+      "originalLines": [
+        3493,
+        3543
+      ]
+    },
+    {
+      "file": "src/graficos/sombra-contato.js",
+      "originalLines": [
+        3544,
+        3544
+      ]
+    },
+    {
+      "file": "src/fisica/apoio.js",
+      "originalLines": [
+        3545,
+        3548
+      ]
+    },
+    {
+      "file": "src/graficos/resolucao.js",
+      "originalLines": [
+        3549,
+        3554
+      ]
+    },
+    {
+      "file": "src/jogo/geracao.js",
+      "originalLines": [
+        3555,
+        3555
+      ]
+    },
+    {
+      "file": "src/jogo/movimento.js",
+      "originalLines": [
+        3556,
+        3558
+      ]
+    },
+    {
+      "file": "src/jogo/coleta.js",
+      "originalLines": [
+        3559,
+        3560
+      ]
+    },
+    {
+      "file": "src/jogo/simulacao.js",
+      "originalLines": [
+        3561,
+        3564
+      ]
+    },
+    {
+      "file": "src/graficos/cena.js",
+      "originalLines": [
+        3565,
+        3606
+      ]
+    },
+    {
+      "file": "src/jogo/loop.js",
+      "originalLines": [
+        3607,
+        3611
+      ]
+    },
+    {
+      "file": "src/jogo/camera.js",
+      "originalLines": [
+        3612,
+        3623
+      ]
+    },
+    {
+      "file": "src/interface/layout.js",
+      "originalLines": [
+        3624,
+        3744
+      ]
+    },
+    {
+      "file": "src/interface/seletores.js",
+      "originalLines": [
+        3745,
+        3837
+      ]
+    },
+    {
+      "file": "src/jogo/iniciar.js",
+      "originalLines": [
+        3838,
+        3838
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+// Keyboard focus and movement are initialized by input.js.
+let joyId=null;function joystick(e){const r=$('joystick').getBoundingClientRect(),dx=e.clientX-r.left-r.width/2,dy=e.clientY-r.top-r.height/2,l=Math.hypot(dx,dy),max=r.width*.32,k=l>max?max/l:1;joy={x:dx*k/max,y:dy*k/max};$('stick').style.transform='translate('+dx*k+'px,'+dy*k+'px)'}$('joystick').addEventListener('pointerdown',e=>{joyId=e.pointerId;e.currentTarget.setPointerCapture(e.pointerId);joystick(e)});$('joystick').addEventListener('pointermove',e=>{if(e.pointerId===joyId)joystick(e)});function releaseJoy(e){if(e.pointerId===joyId){joyId=null;joy={x:0,y:0};$('stick').style.transform=''}}$('joystick').addEventListener('pointerup',releaseJoy);$('joystick').addEventListener('pointercancel',releaseJoy);
+

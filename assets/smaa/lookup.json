@@ -1,0 +1,12 @@
+{
+  "area": {
+    "width": 160,
+    "height": 560,
+    "data": "@base64 assets/smaa/area.rgba"
+  },
+  "search": {
+    "width": 64,
+    "height": 16,
+    "data": "@base64 assets/smaa/search.rgba"
+  }
+}

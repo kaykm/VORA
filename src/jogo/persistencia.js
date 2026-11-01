@@ -1,0 +1,1 @@
+function persist(){if(!gameLoading.ready)return;saveCargoPhysics();saveSpawnWorld();saveWorldResourceSpawns();try{localStorage.setItem('vora-v1',JSON.stringify(state))}catch(e){saveAvailable=false}$('saveStatus').textContent=saveAvailable?'Progresso salvo neste navegador.':'Progresso apenas nesta sessão.'}

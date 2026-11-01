@@ -1,0 +1,75 @@
+/* Every upgrade uses the same four rows and the original Raio dimensions. */
+#upgradePanel .upgrade > .upgrade-title {min-height:20px}
+#upgradePanel .upgrade-stat > .upgrade-current {display:inline-block}
+#upgradePanel .upgrade .level-ruler {width:108px;height:9px;flex:none}
+.area-progress {display:grid;gap:10px;margin-top:18px}
+.area-progress>div {padding:8px 0;border-bottom:1px solid #354638}
+.area-progress b {display:block;font-size:11px}
+.area-progress small {display:block;font-size:10px;line-height:1.5;color:#b4c1b7;margin-top:4px}
+.skill-tree-overlay[open] {display:block}
+.skill-tree-overlay {
+ position:fixed;inset:0;margin:0;width:100vw;height:100dvh;max-width:none;max-height:none;
+ border:0;padding:max(24px,env(safe-area-inset-top)) max(24px,env(safe-area-inset-right));
+ background:rgba(0,0,0,.8);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);z-index:200;
+ color:#edf2e9;overflow:hidden;
+}
+.skill-tree-overlay header {display:flex;align-items:center;justify-content:space-between;gap:16px}
+.skill-tree-overlay h2 {margin:0;font-size:24px;font-weight:750}
+.skill-tree-overlay .close {width:40px;height:40px;background:#263b2b;border-radius:8px}
+.inspection-effects {position:fixed;inset:0;width:100vw;height:100dvh;pointer-events:none;z-index:102}
+.inspection-effects[hidden],.inspection-hold-hint[hidden] {display:none}
+.inspection-hold-hint {
+ position:fixed;z-index:103;pointer-events:none;transform:translateX(-50%);display:flex;align-items:center;gap:8px;
+ padding:8px 12px;border:0;border-radius:30px;background:#15251de8;color:#edf5dc;
+ font-size:11px;box-shadow:0 4px 18px #10221930;font-variant-numeric:tabular-nums;
+}
+.inspection-hold-hint i {width:5px;height:5px;border-radius:50%;background:#d7efb3;box-shadow:0 0 9px #d7efb3}
+.inspection-hold-hint b {min-width:27px;color:#d1e9ac;font-weight:650}
+dialog.inspection-scene {
+ --inspection-scale:1;--inspection-reveal:1;
+ position:fixed;inset:0;margin:0;padding:0;width:100vw;height:100dvh;max-width:none;max-height:none;
+ border:0;border-radius:0;background:transparent;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none;
+ overflow:hidden;pointer-events:none;color:#eef5df;z-index:101;
+}
+.inspection-scene:not([open]) {display:none}
+.inspection-scene[open] {display:block}
+.inspection-shade {position:absolute;inset:0;background:radial-gradient(ellipse at 50% 43%,transparent 12%,#0c20142b 45%,#081a12b8 100%);opacity:var(--inspection-reveal)}
+.inspection-toolbar {position:absolute;inset:24px 28px auto;display:flex;justify-content:space-between;align-items:center;opacity:var(--inspection-reveal)}
+.inspection-toolbar>span {font-size:10px;font-weight:600;letter-spacing:.18em;color:#e3ebd8;text-shadow:0 1px 8px #08180a}
+.inspection-scene .close {pointer-events:auto;width:42px;height:42px;background:#14261ed9;color:#e1eed0;border:0}
+.inspection-scene .close:hover {background:#2c4533;transform:none}
+.inspection-scene .close svg {width:19px;height:19px}
+.inspection-callout {
+ position:absolute;margin:0;padding:calc(10px * var(--inspection-scale)) calc(14px * var(--inspection-scale));
+ border:0;background:linear-gradient(90deg,#102219cf,#10221960 65%,#10221900);
+ font-size:calc(12px * var(--inspection-scale));line-height:1.5;text-shadow:0 1px 5px #09190d80;
+ opacity:var(--inspection-reveal);transform:translateY(calc((1 - var(--inspection-reveal)) * 12px)) scale(calc(.96 + var(--inspection-reveal) * .04));
+ transform-origin:50% 50%;
+}
+.inspection-eyebrow,.inspection-callout dt {display:block;font-size:calc(9px * var(--inspection-scale));letter-spacing:.10em;text-transform:uppercase;color:#bfd2b5}
+.inspection-callout h2 {font-size:calc(25px * var(--inspection-scale));font-weight:700;line-height:1.15;letter-spacing:-.03em;margin:6px 0 8px;color:#f1f5e6}
+.inspection-callout p {margin:5px 0;color:#e0e8d4;font-size:calc(11px * var(--inspection-scale));line-height:1.5}
+.inspection-callout small {display:block;color:#bfcfb4;font-size:calc(10px * var(--inspection-scale));line-height:1.6}
+.inspection-callout dl {display:grid;gap:calc(14px * var(--inspection-scale));margin:0}
+.inspection-callout dd {margin:4px 0 0;font-size:calc(14px * var(--inspection-scale));font-weight:600;color:#f0f5e3;overflow-wrap:anywhere}
+.inspection-value strong {display:block;margin-top:6px;font-size:calc(26px * var(--inspection-scale));line-height:1.2;font-weight:650;letter-spacing:-.03em;color:#e4efbf}
+.inspection-fit>b {display:block;font-size:calc(13px * var(--inspection-scale));color:#ead1aa;font-weight:650}
+.inspection-scene[data-ready=true] .inspection-fit>b {color:#d3ebb3}
+.inspection-fit dl {margin-top:calc(13px * var(--inspection-scale))}
+.inspection-exit-hint {position:absolute;bottom:24px;left:50%;transform:translateX(-50%);white-space:nowrap;color:#d3dfc9;font-size:10px;opacity:var(--inspection-reveal);text-shadow:0 1px 6px #0b1b10}
+.inspection-exit-hint span {margin:0 7px}.inspection-exit-hint kbd {font:inherit;color:#f1f5e9}
+.inspection-scene[data-compact=true] .inspection-annotations {
+ position:absolute;left:14px;right:14px;bottom:24px;display:grid;grid-template-columns:1fr 1fr;align-items:start;
+ gap:8px 14px;max-height:46%;overflow:auto;pointer-events:auto;overscroll-behavior:contain;scrollbar-width:thin;
+ scrollbar-color:#bbd19a transparent;
+}
+.inspection-scene[data-compact=true] .inspection-callout {position:relative;min-width:0;padding:9px 10px}
+.inspection-scene[data-compact=true] .inspection-identity {grid-column:1;grid-row:1}
+.inspection-scene[data-compact=true] .inspection-value {grid-column:2;grid-row:1}
+.inspection-scene[data-compact=true] .inspection-load {grid-column:1;grid-row:2}
+.inspection-scene[data-compact=true] .inspection-fit {grid-column:2;grid-row:2}
+.inspection-scene[data-compact=true] .inspection-toolbar {inset:16px 18px auto}
+.inspection-scene[data-compact=true] .inspection-exit-hint {display:none}
+@media(prefers-reduced-motion:reduce){.inspection-callout {transform:none}}
+#skillTreeBtn {min-width:48px;gap:8px}
+@media(max-width:600px){#skillTreeBtn {width:46px;min-width:46px;padding:10px}#skillTreeBtn>span {display:none}.actions {gap:7px}}

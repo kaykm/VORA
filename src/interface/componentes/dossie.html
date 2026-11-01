@@ -1,0 +1,48 @@
+<dialog id="dossierModal" class="surface-menu" data-menu="cargo" aria-labelledby="dossierTitle">
+ <div class="menu-body">
+  <div class="modal-header">
+   <div class="menu-heading"><div class="menu-heading-copy"><h2 id="dossierTitle">Dossiê de itens</h2><p class="dossier-subtitle">Conheça o que o parque oferece.</p></div></div>
+   <button type="button" class="close" aria-label="Fechar dossiê" data-close><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-close"></use></svg></button>
+  </div>
+  <div class="dossier-hole" aria-label="Seu buraco atual"><span>Seu buraco</span><b id="dossierHole"></b><small id="dossierCapacity"></small></div>
+  <div class="dossier-tools">
+   <input type="search" id="dossierSearch" aria-label="Buscar item no dossiê" placeholder="Buscar item" autocomplete="off">
+   <div class="dossier-filters" role="group" aria-label="Filtrar itens">
+    <button type="button" id="dossierFilter-all" aria-pressed="true">Todos</button>
+    <button type="button" id="dossierFilter-ready" aria-pressed="false">Pode engolir</button>
+    <button type="button" id="dossierFilter-grow" aria-pressed="false">Precisa crescer</button>
+   </div>
+  </div>
+  <div class="dossier-layout">
+   <nav id="dossierCatalog" class="dossier-catalog" aria-label="Catálogo de itens"></nav>
+   <section id="dossierDetail" class="dossier-detail" aria-labelledby="dossierItemName">
+    <div class="dossier-item-heading"><span id="dossierCategory"></span><h3 id="dossierItemName"></h3></div>
+    <div class="dossier-stage">
+     <canvas id="dossierCanvas" width="800" height="460" tabindex="0" aria-label="Modelo do item. Arraste ou use as setas para girar; mais e menos ajustam o zoom."></canvas>
+     <small class="dossier-preview-note">Modelo do jogo · miniatura ajustada à janela</small>
+     <div class="dossier-view-controls" role="group" aria-label="Controles do modelo">
+      <button type="button" id="dossierTurn" aria-label="Girar modelo" title="Girar"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-rotate-right"></use></svg></button>
+      <button type="button" id="dossierZoomOut" aria-label="Afastar modelo" title="Afastar">−</button>
+      <button type="button" id="dossierZoomIn" aria-label="Aproximar modelo" title="Aproximar">+</button>
+      <button type="button" id="dossierReset" aria-label="Restaurar vista do modelo" title="Restaurar vista"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-home"></use></svg></button>
+     </div>
+    </div>
+    <div class="dossier-variants">
+     <button type="button" id="dossierPrevious" aria-label="Exemplar anterior">←</button>
+     <span id="dossierVariant"></span>
+     <button type="button" id="dossierNext" aria-label="Próximo exemplar">→</button>
+    </div>
+    <div class="dossier-verdict" id="dossierVerdict" role="status"><b id="dossierStatus"></b><p id="dossierReason"></p></div>
+    <dl class="dossier-facts">
+     <div><dt>Dimensões · L × A × P</dt><dd id="dossierDimensions"></dd></div>
+     <div><dt>Raio exigido</dt><dd id="dossierRadius"></dd></div>
+     <div><dt>Material obtido</dt><dd id="dossierMaterial"></dd></div>
+     <div><dt>Espaço necessário</dt><dd id="dossierVolume"></dd></div>
+     <div class="dossier-spawn-fact"><dt>Disponibilidade</dt><dd id="dossierSpawn"></dd></div>
+    </dl>
+   </section>
+   <p id="dossierEmpty" class="dossier-empty" hidden>Nenhum item corresponde a este filtro.</p>
+  </div>
+  <div class="dossier-footer"><button type="button" id="dossierBack">← Voltar à carga</button><small id="dossierCount" aria-live="polite"></small></div>
+ </div>
+</dialog>

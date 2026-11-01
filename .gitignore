@@ -1,0 +1,15 @@
+# Fontes, recursos, scripts e documentação devem ser versionados.
+node_modules/
+.tmp/
+tests/resultados/
+dist/
+backup/*
+!backup/VORA-original-17.html
+*.log
+*.tmp
+VORA-save*.json
+saves/
+__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db
