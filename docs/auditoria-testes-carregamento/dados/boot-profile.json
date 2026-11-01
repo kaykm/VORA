@@ -1,0 +1,2040 @@
+[
+  {
+    "scenario": "new",
+    "startupMs": 5115.29206,
+    "domSetupMs": 7.443073999999797,
+    "compileMs": 1.158968000000641,
+    "evaluateMs": 104.17365999999947,
+    "yieldedSteps": 31663,
+    "maxStepMs": 172.12441900000067,
+    "p50StepMs": 0.003329999999550637,
+    "p95StepMs": 0.8513960000000225,
+    "completeBootAndHarnessMs": 4.964432000246234,
+    "firstCpuRenderMs": 1838.4126489999999,
+    "settings": {
+      "backend": "SoftwareGL",
+      "W": 320,
+      "H": 240,
+      "canvasWidth": 320,
+      "canvasHeight": 240,
+      "imageMode": "native",
+      "outputMode": "native",
+      "aaMode": "off",
+      "aoMode": "off",
+      "shadowQuality": "high",
+      "viewRange": "default"
+    },
+    "profile": {
+      "phases": {
+        "Preparando o renderizador": {
+          "ms": 0.262683000000834,
+          "maxMs": 0.11421100000006845,
+          "steps": 6
+        },
+        "Preparando os controles": {
+          "ms": 5.610469999999623,
+          "maxMs": 5.600210000000516,
+          "steps": 3
+        },
+        "Organizando o parque": {
+          "ms": 1204.479822000052,
+          "maxMs": 172.1199489999999,
+          "steps": 1470
+        },
+        "Preparando modelos": {
+          "ms": 234.94843000000947,
+          "maxMs": 10.613946000000396,
+          "steps": 116
+        },
+        "Preparando iluminação e imagem": {
+          "ms": 0.026320999999370542,
+          "maxMs": 0.02610099999947124,
+          "steps": 2
+        },
+        "Restaurando suas configurações": {
+          "ms": 33.40512000000035,
+          "maxMs": 33.398479999999836,
+          "steps": 3
+        },
+        "Preparando os caminhos": {
+          "ms": 3202.865476999995,
+          "maxMs": 5.187996999999086,
+          "steps": 25875
+        },
+        "Preparando o horizonte": {
+          "ms": 20.305604999986826,
+          "maxMs": 0.6864650000006804,
+          "steps": 168
+        },
+        "Preparando a base": {
+          "ms": 16.667320000000473,
+          "maxMs": 16.662140000000363,
+          "steps": 3
+        },
+        "Preparando a vegetação": {
+          "ms": 257.04669399993327,
+          "maxMs": 2.0565950000000157,
+          "steps": 4024
+        },
+        "Finalizando a cena": {
+          "ms": 0.015609999998559942,
+          "maxMs": 0.01246999999966647,
+          "steps": 3
+        }
+      },
+      "progressCalls": 31674,
+      "progressDuplicates": 31281,
+      "progressMs": 61.966933999950015,
+      "steps": 0
+    },
+    "stepsByStage": {
+      "Preparando o cenário": {
+        "count": 3,
+        "ms": 0.186531999998806,
+        "maxMs": 0.1338609999993423
+      },
+      "Cenário preparado": {
+        "count": 1,
+        "ms": 0.11566100000072765,
+        "maxMs": 0.11566100000072765
+      },
+      "Preparando o renderizador": {
+        "count": 1,
+        "ms": 0.025329999999485153,
+        "maxMs": 0.025329999999485153
+      },
+      "(unlabelled)": {
+        "count": 5,
+        "ms": 55.773370000000796,
+        "maxMs": 33.40857000000051
+      },
+      "Preparando os controles": {
+        "count": 1,
+        "ms": 0.05276099999991857,
+        "maxMs": 0.05276099999991857
+      },
+      "park-benches": {
+        "count": 15,
+        "ms": 0.25643099999706465,
+        "maxMs": 0.12573100000008708
+      },
+      "park-trees": {
+        "count": 56,
+        "ms": 9.564288999997189,
+        "maxMs": 5.365348000000267
+      },
+      "park-clearings": {
+        "count": 52,
+        "ms": 9.524647999997796,
+        "maxMs": 1.7499130000005607
+      },
+      "park-understory": {
+        "count": 178,
+        "ms": 166.04082299999754,
+        "maxMs": 6.524766999999883
+      },
+      "park-drifts": {
+        "count": 144,
+        "ms": 78.32639399998789,
+        "maxMs": 1.5858220000000074
+      },
+      "park-lawns": {
+        "count": 62,
+        "ms": 83.2250589999976,
+        "maxMs": 2.054124999999658
+      },
+      "park-verges": {
+        "count": 142,
+        "ms": 40.690722000003916,
+        "maxMs": 0.8906360000000859
+      },
+      "park-cover": {
+        "count": 42,
+        "ms": 29.49883200000113,
+        "maxMs": 1.056058000000121
+      },
+      "park-districts": {
+        "count": 4,
+        "ms": 0.20526200000040262,
+        "maxMs": 0.1277410000002419
+      },
+      "park-flowers": {
+        "count": 6,
+        "ms": 0.12128099999972619,
+        "maxMs": 0.07005000000026484
+      },
+      "park-lamps": {
+        "count": 12,
+        "ms": 0.2659619999985807,
+        "maxMs": 0.08736099999987346
+      },
+      "park-props": {
+        "count": 3,
+        "ms": 0.2341519999999946,
+        "maxMs": 0.08289100000001781
+      },
+      "park-clusters": {
+        "count": 9,
+        "ms": 10.252023000000008,
+        "maxMs": 1.393619999999828
+      },
+      "park-gardens": {
+        "count": 22,
+        "ms": 50.058538000001136,
+        "maxMs": 3.746487000000343
+      },
+      "park-outer-plants": {
+        "count": 18,
+        "ms": 83.76345299999957,
+        "maxMs": 6.570996999999807
+      },
+      "outer-index": {
+        "count": 29,
+        "ms": 2.7905400000017835,
+        "maxMs": 0.7205050000002302
+      },
+      "outer-meadow": {
+        "count": 236,
+        "ms": 146.8506959999886,
+        "maxMs": 1.7217319999999745
+      },
+      "outer-islands": {
+        "count": 140,
+        "ms": 67.16053299999294,
+        "maxMs": 1.0727879999994911
+      },
+      "outer-understory": {
+        "count": 30,
+        "ms": 22.661293000000114,
+        "maxMs": 1.1976089999998294
+      },
+      "outer-verges": {
+        "count": 25,
+        "ms": 17.943600000002334,
+        "maxMs": 1.1145880000003672
+      },
+      "tree-clearings": {
+        "count": 26,
+        "ms": 7.913886000001185,
+        "maxMs": 5.237747000000127
+      },
+      "park-groves": {
+        "count": 31,
+        "ms": 73.03176600000006,
+        "maxMs": 4.159439999999449
+      },
+      "park-tree-groups": {
+        "count": 16,
+        "ms": 23.0706160000027,
+        "maxMs": 2.237696000000142
+      },
+      "Definindo pontos de descanso": {
+        "count": 16,
+        "ms": 11.873744999998962,
+        "maxMs": 10.964568999999756
+      },
+      "Definindo o circuito de descanso": {
+        "count": 16,
+        "ms": 0.5341340000022683,
+        "maxMs": 0.05679099999997561
+      },
+      "Definindo pedras em pontos permanentes": {
+        "count": 49,
+        "ms": 1.3018990000000485,
+        "maxMs": 0.056520000000091386
+      },
+      "Definindo as formações rochosas": {
+        "count": 4,
+        "ms": 0.5089440000001559,
+        "maxMs": 0.23559199999999691
+      },
+      "Definindo árvores e madeira nas bordas do bosque": {
+        "count": 32,
+        "ms": 1.1365380000015648,
+        "maxMs": 0.09779000000071392
+      },
+      "Definindo os pontos de apoio separados dos caminhos": {
+        "count": 30,
+        "ms": 0.8078859999977794,
+        "maxMs": 0.07201999999961117
+      },
+      "Preparando árvores e objetos coletáveis": {
+        "count": 21,
+        "ms": 258.6237799999999,
+        "maxMs": 172.12441900000067
+      },
+      "Restaurando os objetos do parque": {
+        "count": 1,
+        "ms": 8.700032999999166,
+        "maxMs": 8.700032999999166
+      },
+      "Restaurando a carga": {
+        "count": 1,
+        "ms": 0.02206000000023778,
+        "maxMs": 0.02206000000023778
+      },
+      "Organizando o parque": {
+        "count": 1,
+        "ms": 0.004249999999956344,
+        "maxMs": 0.004249999999956344
+      },
+      "Preparando modelos · 1 de 114": {
+        "count": 1,
+        "ms": 7.1892619999998715,
+        "maxMs": 7.1892619999998715
+      },
+      "Preparando modelos · 2 de 114": {
+        "count": 1,
+        "ms": 4.811075000000528,
+        "maxMs": 4.811075000000528
+      },
+      "Preparando modelos · 3 de 114": {
+        "count": 1,
+        "ms": 4.5170420000004015,
+        "maxMs": 4.5170420000004015
+      },
+      "Preparando modelos · 4 de 114": {
+        "count": 1,
+        "ms": 0.7350750000005064,
+        "maxMs": 0.7350750000005064
+      },
+      "Preparando modelos · 5 de 114": {
+        "count": 1,
+        "ms": 0.6594349999995757,
+        "maxMs": 0.6594349999995757
+      },
+      "Preparando modelos · 6 de 114": {
+        "count": 1,
+        "ms": 0.7283749999996871,
+        "maxMs": 0.7283749999996871
+      },
+      "Preparando modelos · 7 de 114": {
+        "count": 1,
+        "ms": 3.6331660000005286,
+        "maxMs": 3.6331660000005286
+      },
+      "Preparando modelos · 8 de 114": {
+        "count": 1,
+        "ms": 3.4307349999999133,
+        "maxMs": 3.4307349999999133
+      },
+      "Preparando modelos · 9 de 114": {
+        "count": 1,
+        "ms": 3.440144999999575,
+        "maxMs": 3.440144999999575
+      },
+      "Preparando modelos · 10 de 114": {
+        "count": 1,
+        "ms": 6.496737000000394,
+        "maxMs": 6.496737000000394
+      },
+      "Preparando modelos · 11 de 114": {
+        "count": 1,
+        "ms": 7.582214000000022,
+        "maxMs": 7.582214000000022
+      },
+      "Preparando modelos · 12 de 114": {
+        "count": 1,
+        "ms": 5.444808999999623,
+        "maxMs": 5.444808999999623
+      },
+      "Preparando modelos · 13 de 114": {
+        "count": 1,
+        "ms": 2.6019990000004327,
+        "maxMs": 2.6019990000004327
+      },
+      "Preparando modelos · 14 de 114": {
+        "count": 1,
+        "ms": 1.8945540000004257,
+        "maxMs": 1.8945540000004257
+      },
+      "Preparando modelos · 15 de 114": {
+        "count": 1,
+        "ms": 1.6314110000002984,
+        "maxMs": 1.6314110000002984
+      },
+      "Preparando modelos · 16 de 114": {
+        "count": 1,
+        "ms": 0.013320000000021537,
+        "maxMs": 0.013320000000021537
+      },
+      "Preparando modelos · 17 de 114": {
+        "count": 1,
+        "ms": 0.005239999999503198,
+        "maxMs": 0.005239999999503198
+      },
+      "Preparando modelos · 18 de 114": {
+        "count": 1,
+        "ms": 0.004609999999956926,
+        "maxMs": 0.004609999999956926
+      },
+      "Preparando modelos · 19 de 114": {
+        "count": 1,
+        "ms": 0.004160000000410946,
+        "maxMs": 0.004160000000410946
+      },
+      "Preparando modelos · 20 de 114": {
+        "count": 1,
+        "ms": 0.004071000000294589,
+        "maxMs": 0.004071000000294589
+      },
+      "Preparando modelos · 21 de 114": {
+        "count": 1,
+        "ms": 0.0044899999993504025,
+        "maxMs": 0.0044899999993504025
+      },
+      "Preparando modelos · 22 de 114": {
+        "count": 1,
+        "ms": 0.004710000000159198,
+        "maxMs": 0.004710000000159198
+      },
+      "Preparando modelos · 23 de 114": {
+        "count": 1,
+        "ms": 0.004009999999652791,
+        "maxMs": 0.004009999999652791
+      },
+      "Preparando modelos · 24 de 114": {
+        "count": 1,
+        "ms": 0.003960000000006403,
+        "maxMs": 0.003960000000006403
+      },
+      "Preparando modelos · 25 de 114": {
+        "count": 1,
+        "ms": 0.004140000000006694,
+        "maxMs": 0.004140000000006694
+      },
+      "Preparando modelos · 26 de 114": {
+        "count": 1,
+        "ms": 0.004100000000107684,
+        "maxMs": 0.004100000000107684
+      },
+      "Preparando modelos · 27 de 114": {
+        "count": 1,
+        "ms": 0.004179999999905704,
+        "maxMs": 0.004179999999905704
+      },
+      "Preparando modelos · 28 de 114": {
+        "count": 1,
+        "ms": 0.004050000000461296,
+        "maxMs": 0.004050000000461296
+      },
+      "Preparando modelos · 29 de 114": {
+        "count": 1,
+        "ms": 0.007309999999961292,
+        "maxMs": 0.007309999999961292
+      },
+      "Preparando modelos · 30 de 114": {
+        "count": 1,
+        "ms": 8.684612000000016,
+        "maxMs": 8.684612000000016
+      },
+      "Preparando modelos · 31 de 114": {
+        "count": 1,
+        "ms": 7.320263000000523,
+        "maxMs": 7.320263000000523
+      },
+      "Preparando modelos · 32 de 114": {
+        "count": 1,
+        "ms": 7.757505999999921,
+        "maxMs": 7.757505999999921
+      },
+      "Preparando modelos · 33 de 114": {
+        "count": 1,
+        "ms": 3.4991650000001755,
+        "maxMs": 3.4991650000001755
+      },
+      "Preparando modelos · 34 de 114": {
+        "count": 1,
+        "ms": 3.4394350000002305,
+        "maxMs": 3.4394350000002305
+      },
+      "Preparando modelos · 35 de 114": {
+        "count": 1,
+        "ms": 1.6101909999997588,
+        "maxMs": 1.6101909999997588
+      },
+      "Preparando modelos · 36 de 114": {
+        "count": 1,
+        "ms": 0.6621150000000853,
+        "maxMs": 0.6621150000000853
+      },
+      "Preparando modelos · 37 de 114": {
+        "count": 1,
+        "ms": 1.8181930000000648,
+        "maxMs": 1.8181930000000648
+      },
+      "Preparando modelos · 38 de 114": {
+        "count": 1,
+        "ms": 2.263046000000031,
+        "maxMs": 2.263046000000031
+      },
+      "Preparando modelos · 39 de 114": {
+        "count": 1,
+        "ms": 1.5277299999997922,
+        "maxMs": 1.5277299999997922
+      },
+      "Preparando modelos · 40 de 114": {
+        "count": 1,
+        "ms": 2.9594120000001567,
+        "maxMs": 2.9594120000001567
+      },
+      "Preparando modelos · 41 de 114": {
+        "count": 1,
+        "ms": 1.4859499999993204,
+        "maxMs": 1.4859499999993204
+      },
+      "Preparando modelos · 42 de 114": {
+        "count": 1,
+        "ms": 0.6742249999997512,
+        "maxMs": 0.6742249999997512
+      },
+      "Preparando modelos · 43 de 114": {
+        "count": 1,
+        "ms": 2.231336000000738,
+        "maxMs": 2.231336000000738
+      },
+      "Preparando modelos · 44 de 114": {
+        "count": 1,
+        "ms": 1.985435000000507,
+        "maxMs": 1.985435000000507
+      },
+      "Preparando modelos · 45 de 114": {
+        "count": 1,
+        "ms": 2.4240469999995184,
+        "maxMs": 2.4240469999995184
+      },
+      "Preparando modelos · 46 de 114": {
+        "count": 1,
+        "ms": 3.2707039999995686,
+        "maxMs": 3.2707039999995686
+      },
+      "Preparando modelos · 47 de 114": {
+        "count": 1,
+        "ms": 1.6554109999997308,
+        "maxMs": 1.6554109999997308
+      },
+      "Preparando modelos · 48 de 114": {
+        "count": 1,
+        "ms": 0.8070559999996476,
+        "maxMs": 0.8070559999996476
+      },
+      "Preparando modelos · 49 de 114": {
+        "count": 1,
+        "ms": 2.985902000000351,
+        "maxMs": 2.985902000000351
+      },
+      "Preparando modelos · 50 de 114": {
+        "count": 1,
+        "ms": 0.775934999999663,
+        "maxMs": 0.775934999999663
+      },
+      "Preparando modelos · 51 de 114": {
+        "count": 1,
+        "ms": 1.865114000000176,
+        "maxMs": 1.865114000000176
+      },
+      "Preparando modelos · 52 de 114": {
+        "count": 1,
+        "ms": 2.296415999999226,
+        "maxMs": 2.296415999999226
+      },
+      "Preparando modelos · 53 de 114": {
+        "count": 1,
+        "ms": 3.1267930000003616,
+        "maxMs": 3.1267930000003616
+      },
+      "Preparando modelos · 54 de 114": {
+        "count": 1,
+        "ms": 2.1349749999999403,
+        "maxMs": 2.1349749999999403
+      },
+      "Preparando modelos · 55 de 114": {
+        "count": 1,
+        "ms": 0.590544000000591,
+        "maxMs": 0.590544000000591
+      },
+      "Preparando modelos · 56 de 114": {
+        "count": 1,
+        "ms": 3.0793320000002495,
+        "maxMs": 3.0793320000002495
+      },
+      "Preparando modelos · 57 de 114": {
+        "count": 1,
+        "ms": 3.348914999999579,
+        "maxMs": 3.348914999999579
+      },
+      "Preparando modelos · 58 de 114": {
+        "count": 1,
+        "ms": 1.887732999999571,
+        "maxMs": 1.887732999999571
+      },
+      "Preparando modelos · 59 de 114": {
+        "count": 1,
+        "ms": 0.6668049999998402,
+        "maxMs": 0.6668049999998402
+      },
+      "Preparando modelos · 60 de 114": {
+        "count": 1,
+        "ms": 1.4400800000003073,
+        "maxMs": 1.4400800000003073
+      },
+      "Preparando modelos · 61 de 114": {
+        "count": 1,
+        "ms": 2.25345599999946,
+        "maxMs": 2.25345599999946
+      },
+      "Preparando modelos · 62 de 114": {
+        "count": 1,
+        "ms": 1.9315839999999298,
+        "maxMs": 1.9315839999999298
+      },
+      "Preparando modelos · 63 de 114": {
+        "count": 1,
+        "ms": 0.5709849999993821,
+        "maxMs": 0.5709849999993821
+      },
+      "Preparando modelos · 64 de 114": {
+        "count": 1,
+        "ms": 0.6026240000001053,
+        "maxMs": 0.6026240000001053
+      },
+      "Preparando modelos · 65 de 114": {
+        "count": 1,
+        "ms": 2.6706389999999374,
+        "maxMs": 2.6706389999999374
+      },
+      "Preparando modelos · 66 de 114": {
+        "count": 1,
+        "ms": 2.7683200000001307,
+        "maxMs": 2.7683200000001307
+      },
+      "Preparando modelos · 67 de 114": {
+        "count": 1,
+        "ms": 1.2393089999995937,
+        "maxMs": 1.2393089999995937
+      },
+      "Preparando modelos · 68 de 114": {
+        "count": 1,
+        "ms": 0.6647649999995338,
+        "maxMs": 0.6647649999995338
+      },
+      "Preparando modelos · 69 de 114": {
+        "count": 1,
+        "ms": 0.6408940000001166,
+        "maxMs": 0.6408940000001166
+      },
+      "Preparando modelos · 70 de 114": {
+        "count": 1,
+        "ms": 2.213775999999598,
+        "maxMs": 2.213775999999598
+      },
+      "Preparando modelos · 71 de 114": {
+        "count": 1,
+        "ms": 2.1596559999998135,
+        "maxMs": 2.1596559999998135
+      },
+      "Preparando modelos · 72 de 114": {
+        "count": 1,
+        "ms": 0.5933640000002924,
+        "maxMs": 0.5933640000002924
+      },
+      "Preparando modelos · 73 de 114": {
+        "count": 1,
+        "ms": 2.1049450000000434,
+        "maxMs": 2.1049450000000434
+      },
+      "Preparando modelos · 74 de 114": {
+        "count": 1,
+        "ms": 2.658169000000271,
+        "maxMs": 2.658169000000271
+      },
+      "Preparando modelos · 75 de 114": {
+        "count": 1,
+        "ms": 0.8124660000003132,
+        "maxMs": 0.8124660000003132
+      },
+      "Preparando modelos · 76 de 114": {
+        "count": 1,
+        "ms": 0.6661449999992328,
+        "maxMs": 0.6661449999992328
+      },
+      "Preparando modelos · 77 de 114": {
+        "count": 1,
+        "ms": 0.6444350000001577,
+        "maxMs": 0.6444350000001577
+      },
+      "Preparando modelos · 78 de 114": {
+        "count": 1,
+        "ms": 0.6570339999998396,
+        "maxMs": 0.6570339999998396
+      },
+      "Preparando modelos · 79 de 114": {
+        "count": 1,
+        "ms": 0.661525000000438,
+        "maxMs": 0.661525000000438
+      },
+      "Preparando modelos · 80 de 114": {
+        "count": 1,
+        "ms": 0.6206050000000687,
+        "maxMs": 0.6206050000000687
+      },
+      "Preparando modelos · 81 de 114": {
+        "count": 1,
+        "ms": 0.33901200000036624,
+        "maxMs": 0.33901200000036624
+      },
+      "Preparando modelos · 82 de 114": {
+        "count": 1,
+        "ms": 0.3259219999999914,
+        "maxMs": 0.3259219999999914
+      },
+      "Preparando modelos · 83 de 114": {
+        "count": 1,
+        "ms": 0.33444299999973737,
+        "maxMs": 0.33444299999973737
+      },
+      "Preparando modelos · 84 de 114": {
+        "count": 1,
+        "ms": 0.3608519999997952,
+        "maxMs": 0.3608519999997952
+      },
+      "Preparando modelos · 85 de 114": {
+        "count": 1,
+        "ms": 0.33660300000065035,
+        "maxMs": 0.33660300000065035
+      },
+      "Preparando modelos · 86 de 114": {
+        "count": 1,
+        "ms": 0.3551520000000892,
+        "maxMs": 0.3551520000000892
+      },
+      "Preparando modelos · 87 de 114": {
+        "count": 1,
+        "ms": 7.030840999999782,
+        "maxMs": 7.030840999999782
+      },
+      "Preparando modelos · 88 de 114": {
+        "count": 1,
+        "ms": 10.618966,
+        "maxMs": 10.618966
+      },
+      "Preparando modelos · 89 de 114": {
+        "count": 1,
+        "ms": 0.00984000000062224,
+        "maxMs": 0.00984000000062224
+      },
+      "Preparando modelos · 90 de 114": {
+        "count": 1,
+        "ms": 10.005962000000181,
+        "maxMs": 10.005962000000181
+      },
+      "Preparando modelos · 91 de 114": {
+        "count": 1,
+        "ms": 0.00930999999945925,
+        "maxMs": 0.00930999999945925
+      },
+      "Preparando modelos · 92 de 114": {
+        "count": 1,
+        "ms": 5.345178999999916,
+        "maxMs": 5.345178999999916
+      },
+      "Preparando modelos · 93 de 114": {
+        "count": 1,
+        "ms": 7.503953999999794,
+        "maxMs": 7.503953999999794
+      },
+      "Preparando modelos · 94 de 114": {
+        "count": 1,
+        "ms": 6.979910000000018,
+        "maxMs": 6.979910000000018
+      },
+      "Preparando modelos · 95 de 114": {
+        "count": 1,
+        "ms": 7.232522000000245,
+        "maxMs": 7.232522000000245
+      },
+      "Preparando modelos · 96 de 114": {
+        "count": 1,
+        "ms": 6.185654999999315,
+        "maxMs": 6.185654999999315
+      },
+      "Preparando modelos · 97 de 114": {
+        "count": 1,
+        "ms": 5.96642299999985,
+        "maxMs": 5.96642299999985
+      },
+      "Preparando modelos · 98 de 114": {
+        "count": 1,
+        "ms": 3.926328000000467,
+        "maxMs": 3.926328000000467
+      },
+      "Preparando modelos · 99 de 114": {
+        "count": 1,
+        "ms": 0.00927999999930762,
+        "maxMs": 0.00927999999930762
+      },
+      "Preparando modelos · 100 de 114": {
+        "count": 1,
+        "ms": 0.004930000000058499,
+        "maxMs": 0.004930000000058499
+      },
+      "Preparando modelos · 101 de 114": {
+        "count": 1,
+        "ms": 0.004429999999956635,
+        "maxMs": 0.004429999999956635
+      },
+      "Preparando modelos · 102 de 114": {
+        "count": 1,
+        "ms": 0.003929999999854772,
+        "maxMs": 0.003929999999854772
+      },
+      "Preparando modelos · 103 de 114": {
+        "count": 1,
+        "ms": 0.004100000000107684,
+        "maxMs": 0.004100000000107684
+      },
+      "Preparando modelos · 104 de 114": {
+        "count": 1,
+        "ms": 0.004050000000461296,
+        "maxMs": 0.004050000000461296
+      },
+      "Preparando modelos · 105 de 114": {
+        "count": 1,
+        "ms": 0.004219999999804713,
+        "maxMs": 0.004219999999804713
+      },
+      "Preparando modelos · 106 de 114": {
+        "count": 1,
+        "ms": 0.0038599999998041312,
+        "maxMs": 0.0038599999998041312
+      },
+      "Preparando modelos · 107 de 114": {
+        "count": 1,
+        "ms": 0.0038299999996525003,
+        "maxMs": 0.0038299999996525003
+      },
+      "Preparando modelos · 108 de 114": {
+        "count": 1,
+        "ms": 0.003920000000107393,
+        "maxMs": 0.003920000000107393
+      },
+      "Preparando modelos · 109 de 114": {
+        "count": 1,
+        "ms": 0.004090000000360305,
+        "maxMs": 0.004090000000360305
+      },
+      "Preparando modelos · 110 de 114": {
+        "count": 1,
+        "ms": 0.003949999999349529,
+        "maxMs": 0.003949999999349529
+      },
+      "Preparando modelos · 111 de 114": {
+        "count": 1,
+        "ms": 0.00405999999929918,
+        "maxMs": 0.00405999999929918
+      },
+      "Preparando modelos · 112 de 114": {
+        "count": 1,
+        "ms": 0.003980000000410655,
+        "maxMs": 0.003980000000410655
+      },
+      "Preparando modelos · 113 de 114": {
+        "count": 1,
+        "ms": 0.004079999999703432,
+        "maxMs": 0.004079999999703432
+      },
+      "Preparando modelos · 114 de 114": {
+        "count": 1,
+        "ms": 0.004020000000309665,
+        "maxMs": 0.004020000000309665
+      },
+      "Preparando modelos": {
+        "count": 1,
+        "ms": 0.009649999999965075,
+        "maxMs": 0.009649999999965075
+      },
+      "Preparando iluminação e imagem": {
+        "count": 1,
+        "ms": 0.04784099999960745,
+        "maxMs": 0.04784099999960745
+      },
+      "Restaurando suas configurações": {
+        "count": 1,
+        "ms": 0.008209999999962747,
+        "maxMs": 0.008209999999962747
+      },
+      "walk-samples": {
+        "count": 661,
+        "ms": 355.54769799999667,
+        "maxMs": 1.743561999999656
+      },
+      "walk-cells": {
+        "count": 21025,
+        "ms": 2456.6731769999396,
+        "maxMs": 5.189946999998938
+      },
+      "walk-junction": {
+        "count": 3152,
+        "ms": 322.45290499994735,
+        "maxMs": 2.1727759999994305
+      },
+      "walk-upload": {
+        "count": 1,
+        "ms": 0.10705100000086532,
+        "maxMs": 0.10705100000086532
+      },
+      "vertices": {
+        "count": 1376,
+        "ms": 15.269121999906929,
+        "maxMs": 0.2916819999991276
+      },
+      "bounds": {
+        "count": 1365,
+        "ms": 206.71572600001855,
+        "maxMs": 0.4660440000006929
+      },
+      "ready-upload": {
+        "count": 11,
+        "ms": 1.037187999996604,
+        "maxMs": 0.14497099999971397
+      },
+      "Preparando os caminhos": {
+        "count": 1,
+        "ms": 0.09014100000058534,
+        "maxMs": 0.09014100000058534
+      },
+      "backdrop-ridges": {
+        "count": 28,
+        "ms": 2.3835870000057184,
+        "maxMs": 0.2431319999996049
+      },
+      "backdrop-trees": {
+        "count": 44,
+        "ms": 10.652466000006825,
+        "maxMs": 0.6889149999988149
+      },
+      "Preparando o horizonte": {
+        "count": 1,
+        "ms": 0.020899999999528518,
+        "maxMs": 0.020899999999528518
+      },
+      "Preparando a base": {
+        "count": 1,
+        "ms": 0.006599999998798012,
+        "maxMs": 0.006599999998798012
+      },
+      "vegetation-index": {
+        "count": 92,
+        "ms": 4.407431999994515,
+        "maxMs": 0.11439100000097824
+      },
+      "vegetation-bounds": {
+        "count": 453,
+        "ms": 59.41808699995636,
+        "maxMs": 0.4315729999998439
+      },
+      "plant-templates": {
+        "count": 655,
+        "ms": 4.520193000011204,
+        "maxMs": 2.058405000001585
+      },
+      "plant-triangles": {
+        "count": 534,
+        "ms": 34.779936999982965,
+        "maxMs": 0.37476299999980256
+      },
+      "plants": {
+        "count": 655,
+        "ms": 24.75071000002208,
+        "maxMs": 1.3658289999984845
+      },
+      "Preparando o cenário · 1 de 9": {
+        "count": 1,
+        "ms": 0.0697600000003149,
+        "maxMs": 0.0697600000003149
+      },
+      "Preparando o cenário · 2 de 9": {
+        "count": 1,
+        "ms": 0.034900000000561704,
+        "maxMs": 0.034900000000561704
+      },
+      "Preparando o cenário · 3 de 9": {
+        "count": 1,
+        "ms": 0.030740000000150758,
+        "maxMs": 0.030740000000150758
+      },
+      "Preparando o cenário · 4 de 9": {
+        "count": 1,
+        "ms": 0.027149999999892316,
+        "maxMs": 0.027149999999892316
+      },
+      "Preparando o cenário · 5 de 9": {
+        "count": 1,
+        "ms": 0.027459999999337015,
+        "maxMs": 0.027459999999337015
+      },
+      "Preparando o cenário · 6 de 9": {
+        "count": 1,
+        "ms": 0.02599000000009255,
+        "maxMs": 0.02599000000009255
+      },
+      "Preparando o cenário · 7 de 9": {
+        "count": 1,
+        "ms": 0.027360999998563784,
+        "maxMs": 0.027360999998563784
+      },
+      "Preparando o cenário · 8 de 9": {
+        "count": 1,
+        "ms": 0.028890000001410954,
+        "maxMs": 0.028890000001410954
+      },
+      "Preparando o cenário · 9 de 9": {
+        "count": 1,
+        "ms": 0.04009100000075705,
+        "maxMs": 0.04009100000075705
+      },
+      "Preparando a vegetação": {
+        "count": 1,
+        "ms": 0.004479999999603024,
+        "maxMs": 0.004479999999603024
+      },
+      "Finalizando a cena": {
+        "count": 1,
+        "ms": 0.003700000001117587,
+        "maxMs": 0.003700000001117587
+      }
+    },
+    "snapshot": {
+      "state": "1e91dd9d72fbb9fca7ac020a20429248b0c46cc4b8b2030914b28cd055bd506f",
+      "save": "1e91dd9d72fbb9fca7ac020a20429248b0c46cc4b8b2030914b28cd055bd506f",
+      "world": "b02ddd9f7e5e6ab48ff5b70ce16d7ef29cf59b640a40e648ef11602a8b0972b8",
+      "meshes": "37c82275657234236067f02cc3f9b464883df0f2260a96b16aa51726faaba42d",
+      "ready": true,
+      "progress": 100,
+      "writes": 1,
+      "memoryCounters": {
+        "vegetationBytes": 7443684,
+        "jobs": 0
+      }
+    }
+  },
+  {
+    "scenario": "advanced",
+    "startupMs": 5227.894186999998,
+    "domSetupMs": 3.242772999999943,
+    "compileMs": 1.1127479999995558,
+    "evaluateMs": 104.49561100000028,
+    "yieldedSteps": 31663,
+    "maxStepMs": 186.73920200000066,
+    "p50StepMs": 0.0031899999994493555,
+    "p95StepMs": 0.8865470000000641,
+    "completeBootAndHarnessMs": 5.372561000151109,
+    "firstCpuRenderMs": 1859.995934999999,
+    "settings": {
+      "backend": "SoftwareGL",
+      "W": 320,
+      "H": 240,
+      "canvasWidth": 320,
+      "canvasHeight": 240,
+      "imageMode": "native",
+      "outputMode": "native",
+      "aaMode": "off",
+      "aoMode": "off",
+      "shadowQuality": "high",
+      "viewRange": "default"
+    },
+    "profile": {
+      "phases": {
+        "Preparando o renderizador": {
+          "ms": 0.2143530000012106,
+          "maxMs": 0.07133000000067113,
+          "steps": 6
+        },
+        "Preparando os controles": {
+          "ms": 6.164774000000762,
+          "maxMs": 6.156014000000141,
+          "steps": 3
+        },
+        "Organizando o parque": {
+          "ms": 1214.9208179999896,
+          "maxMs": 186.7352719999999,
+          "steps": 1470
+        },
+        "Preparando modelos": {
+          "ms": 239.09359800000675,
+          "maxMs": 11.499902999999904,
+          "steps": 116
+        },
+        "Preparando iluminação e imagem": {
+          "ms": 0.022371000000930508,
+          "maxMs": 0.022181000000273343,
+          "steps": 2
+        },
+        "Restaurando suas configurações": {
+          "ms": 18.820284999999785,
+          "maxMs": 18.81270500000028,
+          "steps": 3
+        },
+        "Preparando os caminhos": {
+          "ms": 3319.070858000052,
+          "maxMs": 14.528184000000692,
+          "steps": 25875
+        },
+        "Preparando o horizonte": {
+          "ms": 20.235006000013527,
+          "maxMs": 0.9172770000004675,
+          "steps": 168
+        },
+        "Preparando a base": {
+          "ms": 18.31586099999913,
+          "maxMs": 18.31032100000084,
+          "steps": 3
+        },
+        "Preparando a vegetação": {
+          "ms": 254.02173500004574,
+          "maxMs": 1.855133000000933,
+          "steps": 4024
+        },
+        "Finalizando a cena": {
+          "ms": 0.01177099999767961,
+          "maxMs": 0.00899099999878672,
+          "steps": 3
+        }
+      },
+      "progressCalls": 31674,
+      "progressDuplicates": 31281,
+      "progressMs": 63.560882999869136,
+      "steps": 0
+    },
+    "stepsByStage": {
+      "Preparando o cenário": {
+        "count": 3,
+        "ms": 0.20511200000146346,
+        "maxMs": 0.1105810000008205
+      },
+      "Cenário preparado": {
+        "count": 1,
+        "ms": 0.07299000000057276,
+        "maxMs": 0.07299000000057276
+      },
+      "Preparando o renderizador": {
+        "count": 1,
+        "ms": 0.042220999999699416,
+        "maxMs": 0.042220999999699416
+      },
+      "(unlabelled)": {
+        "count": 5,
+        "ms": 43.36919200000011,
+        "maxMs": 18.822195000000647
+      },
+      "Preparando os controles": {
+        "count": 1,
+        "ms": 0.010850000000573345,
+        "maxMs": 0.010850000000573345
+      },
+      "park-benches": {
+        "count": 15,
+        "ms": 0.5271029999967141,
+        "maxMs": 0.40826299999935145
+      },
+      "park-trees": {
+        "count": 56,
+        "ms": 11.34639199999765,
+        "maxMs": 5.320128999999724
+      },
+      "park-clearings": {
+        "count": 52,
+        "ms": 10.098502000008011,
+        "maxMs": 1.657522000001336
+      },
+      "park-understory": {
+        "count": 178,
+        "ms": 158.3310689999944,
+        "maxMs": 6.102304000000004
+      },
+      "park-drifts": {
+        "count": 144,
+        "ms": 79.59837300000072,
+        "maxMs": 1.211819000000105
+      },
+      "park-lawns": {
+        "count": 62,
+        "ms": 82.73919500000011,
+        "maxMs": 2.030134000000544
+      },
+      "park-verges": {
+        "count": 142,
+        "ms": 42.524086999992505,
+        "maxMs": 1.8882740000008198
+      },
+      "park-cover": {
+        "count": 42,
+        "ms": 27.409357000004093,
+        "maxMs": 1.0076370000006136
+      },
+      "park-districts": {
+        "count": 4,
+        "ms": 0.18745100000160164,
+        "maxMs": 0.13904100000036124
+      },
+      "park-flowers": {
+        "count": 6,
+        "ms": 0.16777100000035716,
+        "maxMs": 0.11764099999891187
+      },
+      "park-lamps": {
+        "count": 12,
+        "ms": 0.17241200000353274,
+        "maxMs": 0.036061000000700005
+      },
+      "park-props": {
+        "count": 3,
+        "ms": 0.20722200000091107,
+        "maxMs": 0.0820000000003347
+      },
+      "park-clusters": {
+        "count": 9,
+        "ms": 9.903290999998717,
+        "maxMs": 1.7805119999993622
+      },
+      "park-gardens": {
+        "count": 22,
+        "ms": 47.71260199999779,
+        "maxMs": 3.3080140000001848
+      },
+      "park-outer-plants": {
+        "count": 18,
+        "ms": 65.01508800000192,
+        "maxMs": 4.514461999999185
+      },
+      "outer-index": {
+        "count": 29,
+        "ms": 2.0594750000018394,
+        "maxMs": 0.6021339999988413
+      },
+      "outer-meadow": {
+        "count": 236,
+        "ms": 143.70010300002468,
+        "maxMs": 2.5306889999992563
+      },
+      "outer-islands": {
+        "count": 140,
+        "ms": 67.62183599998934,
+        "maxMs": 1.0587779999987106
+      },
+      "outer-understory": {
+        "count": 30,
+        "ms": 24.105953000002046,
+        "maxMs": 1.2540189999999711
+      },
+      "outer-verges": {
+        "count": 25,
+        "ms": 17.306183999993664,
+        "maxMs": 0.9039970000012545
+      },
+      "tree-clearings": {
+        "count": 26,
+        "ms": 7.863706000000093,
+        "maxMs": 4.603283000000374
+      },
+      "park-groves": {
+        "count": 31,
+        "ms": 80.1766960000059,
+        "maxMs": 4.291119999999864
+      },
+      "park-tree-groups": {
+        "count": 16,
+        "ms": 27.970021999999517,
+        "maxMs": 2.599337999999989
+      },
+      "Definindo pontos de descanso": {
+        "count": 16,
+        "ms": 15.721483000001172,
+        "maxMs": 14.537634000000253
+      },
+      "Definindo o circuito de descanso": {
+        "count": 16,
+        "ms": 0.6529439999994793,
+        "maxMs": 0.07166999999935797
+      },
+      "Definindo pedras em pontos permanentes": {
+        "count": 49,
+        "ms": 1.5708119999962946,
+        "maxMs": 0.07670099999995728
+      },
+      "Definindo as formações rochosas": {
+        "count": 4,
+        "ms": 0.5608539999993809,
+        "maxMs": 0.22903100000075938
+      },
+      "Definindo árvores e madeira nas bordas do bosque": {
+        "count": 32,
+        "ms": 1.0676970000022266,
+        "maxMs": 0.1318810000011581
+      },
+      "Definindo os pontos de apoio separados dos caminhos": {
+        "count": 30,
+        "ms": 0.6750349999983882,
+        "maxMs": 0.04326000000037311
+      },
+      "Preparando árvores e objetos coletáveis": {
+        "count": 21,
+        "ms": 279.19063700000515,
+        "maxMs": 186.73920200000066
+      },
+      "Restaurando os objetos do parque": {
+        "count": 1,
+        "ms": 11.315491999999722,
+        "maxMs": 11.315491999999722
+      },
+      "Restaurando a carga": {
+        "count": 1,
+        "ms": 0.23889100000087637,
+        "maxMs": 0.23889100000087637
+      },
+      "Organizando o parque": {
+        "count": 1,
+        "ms": 0.005010000000766013,
+        "maxMs": 0.005010000000766013
+      },
+      "Preparando modelos · 1 de 114": {
+        "count": 1,
+        "ms": 6.928550000000541,
+        "maxMs": 6.928550000000541
+      },
+      "Preparando modelos · 2 de 114": {
+        "count": 1,
+        "ms": 4.555702999999994,
+        "maxMs": 4.555702999999994
+      },
+      "Preparando modelos · 3 de 114": {
+        "count": 1,
+        "ms": 5.989782999999079,
+        "maxMs": 5.989782999999079
+      },
+      "Preparando modelos · 4 de 114": {
+        "count": 1,
+        "ms": 1.1079879999997502,
+        "maxMs": 1.1079879999997502
+      },
+      "Preparando modelos · 5 de 114": {
+        "count": 1,
+        "ms": 0.7877659999994648,
+        "maxMs": 0.7877659999994648
+      },
+      "Preparando modelos · 6 de 114": {
+        "count": 1,
+        "ms": 0.8056649999998626,
+        "maxMs": 0.8056649999998626
+      },
+      "Preparando modelos · 7 de 114": {
+        "count": 1,
+        "ms": 3.3584049999990384,
+        "maxMs": 3.3584049999990384
+      },
+      "Preparando modelos · 8 de 114": {
+        "count": 1,
+        "ms": 3.598134999998365,
+        "maxMs": 3.598134999998365
+      },
+      "Preparando modelos · 9 de 114": {
+        "count": 1,
+        "ms": 4.363342000000557,
+        "maxMs": 4.363342000000557
+      },
+      "Preparando modelos · 10 de 114": {
+        "count": 1,
+        "ms": 8.137778000000253,
+        "maxMs": 8.137778000000253
+      },
+      "Preparando modelos · 11 de 114": {
+        "count": 1,
+        "ms": 6.640798000000359,
+        "maxMs": 6.640798000000359
+      },
+      "Preparando modelos · 12 de 114": {
+        "count": 1,
+        "ms": 5.575509999998758,
+        "maxMs": 5.575509999998758
+      },
+      "Preparando modelos · 13 de 114": {
+        "count": 1,
+        "ms": 1.828682999999728,
+        "maxMs": 1.828682999999728
+      },
+      "Preparando modelos · 14 de 114": {
+        "count": 1,
+        "ms": 1.958543999999165,
+        "maxMs": 1.958543999999165
+      },
+      "Preparando modelos · 15 de 114": {
+        "count": 1,
+        "ms": 1.943753999999899,
+        "maxMs": 1.943753999999899
+      },
+      "Preparando modelos · 16 de 114": {
+        "count": 1,
+        "ms": 0.01751000000149361,
+        "maxMs": 0.01751000000149361
+      },
+      "Preparando modelos · 17 de 114": {
+        "count": 1,
+        "ms": 0.005600000000413274,
+        "maxMs": 0.005600000000413274
+      },
+      "Preparando modelos · 18 de 114": {
+        "count": 1,
+        "ms": 0.0056810000005498296,
+        "maxMs": 0.0056810000005498296
+      },
+      "Preparando modelos · 19 de 114": {
+        "count": 1,
+        "ms": 0.004100000000107684,
+        "maxMs": 0.004100000000107684
+      },
+      "Preparando modelos · 20 de 114": {
+        "count": 1,
+        "ms": 0.004100000000107684,
+        "maxMs": 0.004100000000107684
+      },
+      "Preparando modelos · 21 de 114": {
+        "count": 1,
+        "ms": 0.004310000000259606,
+        "maxMs": 0.004310000000259606
+      },
+      "Preparando modelos · 22 de 114": {
+        "count": 1,
+        "ms": 0.004160000000410946,
+        "maxMs": 0.004160000000410946
+      },
+      "Preparando modelos · 23 de 114": {
+        "count": 1,
+        "ms": 0.0038299999996525003,
+        "maxMs": 0.0038299999996525003
+      },
+      "Preparando modelos · 24 de 114": {
+        "count": 1,
+        "ms": 0.003930000000764267,
+        "maxMs": 0.003930000000764267
+      },
+      "Preparando modelos · 25 de 114": {
+        "count": 1,
+        "ms": 0.004339999999501742,
+        "maxMs": 0.004339999999501742
+      },
+      "Preparando modelos · 26 de 114": {
+        "count": 1,
+        "ms": 0.004109999999855063,
+        "maxMs": 0.004109999999855063
+      },
+      "Preparando modelos · 27 de 114": {
+        "count": 1,
+        "ms": 0.004060000001118169,
+        "maxMs": 0.004060000001118169
+      },
+      "Preparando modelos · 28 de 114": {
+        "count": 1,
+        "ms": 0.004109999999855063,
+        "maxMs": 0.004109999999855063
+      },
+      "Preparando modelos · 29 de 114": {
+        "count": 1,
+        "ms": 0.004429999999047141,
+        "maxMs": 0.004429999999047141
+      },
+      "Preparando modelos · 30 de 114": {
+        "count": 1,
+        "ms": 8.313539999999193,
+        "maxMs": 8.313539999999193
+      },
+      "Preparando modelos · 31 de 114": {
+        "count": 1,
+        "ms": 8.784223000000566,
+        "maxMs": 8.784223000000566
+      },
+      "Preparando modelos · 32 de 114": {
+        "count": 1,
+        "ms": 7.417813000000024,
+        "maxMs": 7.417813000000024
+      },
+      "Preparando modelos · 33 de 114": {
+        "count": 1,
+        "ms": 3.6045560000002297,
+        "maxMs": 3.6045560000002297
+      },
+      "Preparando modelos · 34 de 114": {
+        "count": 1,
+        "ms": 2.4193380000015168,
+        "maxMs": 2.4193380000015168
+      },
+      "Preparando modelos · 35 de 114": {
+        "count": 1,
+        "ms": 2.0756639999999607,
+        "maxMs": 2.0756639999999607
+      },
+      "Preparando modelos · 36 de 114": {
+        "count": 1,
+        "ms": 0.9048470000016096,
+        "maxMs": 0.9048470000016096
+      },
+      "Preparando modelos · 37 de 114": {
+        "count": 1,
+        "ms": 2.1794059999992896,
+        "maxMs": 2.1794059999992896
+      },
+      "Preparando modelos · 38 de 114": {
+        "count": 1,
+        "ms": 2.2445559999996476,
+        "maxMs": 2.2445559999996476
+      },
+      "Preparando modelos · 39 de 114": {
+        "count": 1,
+        "ms": 1.6296309999997902,
+        "maxMs": 1.6296309999997902
+      },
+      "Preparando modelos · 40 de 114": {
+        "count": 1,
+        "ms": 3.100623000000269,
+        "maxMs": 3.100623000000269
+      },
+      "Preparando modelos · 41 de 114": {
+        "count": 1,
+        "ms": 1.7266620000009425,
+        "maxMs": 1.7266620000009425
+      },
+      "Preparando modelos · 42 de 114": {
+        "count": 1,
+        "ms": 0.6924250000010943,
+        "maxMs": 0.6924250000010943
+      },
+      "Preparando modelos · 43 de 114": {
+        "count": 1,
+        "ms": 1.9417240000002494,
+        "maxMs": 1.9417240000002494
+      },
+      "Preparando modelos · 44 de 114": {
+        "count": 1,
+        "ms": 2.0006440000015573,
+        "maxMs": 2.0006440000015573
+      },
+      "Preparando modelos · 45 de 114": {
+        "count": 1,
+        "ms": 1.760933000001387,
+        "maxMs": 1.760933000001387
+      },
+      "Preparando modelos · 46 de 114": {
+        "count": 1,
+        "ms": 2.8712410000007367,
+        "maxMs": 2.8712410000007367
+      },
+      "Preparando modelos · 47 de 114": {
+        "count": 1,
+        "ms": 1.7714820000001055,
+        "maxMs": 1.7714820000001055
+      },
+      "Preparando modelos · 48 de 114": {
+        "count": 1,
+        "ms": 0.6120649999993475,
+        "maxMs": 0.6120649999993475
+      },
+      "Preparando modelos · 49 de 114": {
+        "count": 1,
+        "ms": 2.841280000000552,
+        "maxMs": 2.841280000000552
+      },
+      "Preparando modelos · 50 de 114": {
+        "count": 1,
+        "ms": 0.6007649999992282,
+        "maxMs": 0.6007649999992282
+      },
+      "Preparando modelos · 51 de 114": {
+        "count": 1,
+        "ms": 1.4110600000003615,
+        "maxMs": 1.4110600000003615
+      },
+      "Preparando modelos · 52 de 114": {
+        "count": 1,
+        "ms": 2.087005000001227,
+        "maxMs": 2.087005000001227
+      },
+      "Preparando modelos · 53 de 114": {
+        "count": 1,
+        "ms": 3.670985999999175,
+        "maxMs": 3.670985999999175
+      },
+      "Preparando modelos · 54 de 114": {
+        "count": 1,
+        "ms": 2.079024999999092,
+        "maxMs": 2.079024999999092
+      },
+      "Preparando modelos · 55 de 114": {
+        "count": 1,
+        "ms": 0.6817649999993591,
+        "maxMs": 0.6817649999993591
+      },
+      "Preparando modelos · 56 de 114": {
+        "count": 1,
+        "ms": 2.0266449999999168,
+        "maxMs": 2.0266449999999168
+      },
+      "Preparando modelos · 57 de 114": {
+        "count": 1,
+        "ms": 2.7744199999997363,
+        "maxMs": 2.7744199999997363
+      },
+      "Preparando modelos · 58 de 114": {
+        "count": 1,
+        "ms": 2.466776999999638,
+        "maxMs": 2.466776999999638
+      },
+      "Preparando modelos · 59 de 114": {
+        "count": 1,
+        "ms": 0.799645999999484,
+        "maxMs": 0.799645999999484
+      },
+      "Preparando modelos · 60 de 114": {
+        "count": 1,
+        "ms": 1.6212020000002667,
+        "maxMs": 1.6212020000002667
+      },
+      "Preparando modelos · 61 de 114": {
+        "count": 1,
+        "ms": 1.8509529999992083,
+        "maxMs": 1.8509529999992083
+      },
+      "Preparando modelos · 62 de 114": {
+        "count": 1,
+        "ms": 1.8100630000008096,
+        "maxMs": 1.8100630000008096
+      },
+      "Preparando modelos · 63 de 114": {
+        "count": 1,
+        "ms": 0.6500149999992573,
+        "maxMs": 0.6500149999992573
+      },
+      "Preparando modelos · 64 de 114": {
+        "count": 1,
+        "ms": 0.669434999999794,
+        "maxMs": 0.669434999999794
+      },
+      "Preparando modelos · 65 de 114": {
+        "count": 1,
+        "ms": 2.57195800000045,
+        "maxMs": 2.57195800000045
+      },
+      "Preparando modelos · 66 de 114": {
+        "count": 1,
+        "ms": 2.506658000000243,
+        "maxMs": 2.506658000000243
+      },
+      "Preparando modelos · 67 de 114": {
+        "count": 1,
+        "ms": 0.6550650000008318,
+        "maxMs": 0.6550650000008318
+      },
+      "Preparando modelos · 68 de 114": {
+        "count": 1,
+        "ms": 0.5983840000008058,
+        "maxMs": 0.5983840000008058
+      },
+      "Preparando modelos · 69 de 114": {
+        "count": 1,
+        "ms": 0.6611649999995279,
+        "maxMs": 0.6611649999995279
+      },
+      "Preparando modelos · 70 de 114": {
+        "count": 1,
+        "ms": 2.2759360000000015,
+        "maxMs": 2.2759360000000015
+      },
+      "Preparando modelos · 71 de 114": {
+        "count": 1,
+        "ms": 2.461648000000423,
+        "maxMs": 2.461648000000423
+      },
+      "Preparando modelos · 72 de 114": {
+        "count": 1,
+        "ms": 0.6664349999991828,
+        "maxMs": 0.6664349999991828
+      },
+      "Preparando modelos · 73 de 114": {
+        "count": 1,
+        "ms": 3.026411000000735,
+        "maxMs": 3.026411000000735
+      },
+      "Preparando modelos · 74 de 114": {
+        "count": 1,
+        "ms": 2.204146000000037,
+        "maxMs": 2.204146000000037
+      },
+      "Preparando modelos · 75 de 114": {
+        "count": 1,
+        "ms": 0.7531759999983478,
+        "maxMs": 0.7531759999983478
+      },
+      "Preparando modelos · 76 de 114": {
+        "count": 1,
+        "ms": 0.696604999999181,
+        "maxMs": 0.696604999999181
+      },
+      "Preparando modelos · 77 de 114": {
+        "count": 1,
+        "ms": 0.6623839999992924,
+        "maxMs": 0.6623839999992924
+      },
+      "Preparando modelos · 78 de 114": {
+        "count": 1,
+        "ms": 1.3976700000002893,
+        "maxMs": 1.3976700000002893
+      },
+      "Preparando modelos · 79 de 114": {
+        "count": 1,
+        "ms": 0.6101049999997485,
+        "maxMs": 0.6101049999997485
+      },
+      "Preparando modelos · 80 de 114": {
+        "count": 1,
+        "ms": 0.6269940000001952,
+        "maxMs": 0.6269940000001952
+      },
+      "Preparando modelos · 81 de 114": {
+        "count": 1,
+        "ms": 0.3440129999999044,
+        "maxMs": 0.3440129999999044
+      },
+      "Preparando modelos · 82 de 114": {
+        "count": 1,
+        "ms": 0.38035300000046846,
+        "maxMs": 0.38035300000046846
+      },
+      "Preparando modelos · 83 de 114": {
+        "count": 1,
+        "ms": 0.38359200000013516,
+        "maxMs": 0.38359200000013516
+      },
+      "Preparando modelos · 84 de 114": {
+        "count": 1,
+        "ms": 0.3722730000008596,
+        "maxMs": 0.3722730000008596
+      },
+      "Preparando modelos · 85 de 114": {
+        "count": 1,
+        "ms": 0.34384200000022247,
+        "maxMs": 0.34384200000022247
+      },
+      "Preparando modelos · 86 de 114": {
+        "count": 1,
+        "ms": 0.3152829999999085,
+        "maxMs": 0.3152829999999085
+      },
+      "Preparando modelos · 87 de 114": {
+        "count": 1,
+        "ms": 6.617177000000083,
+        "maxMs": 6.617177000000083
+      },
+      "Preparando modelos · 88 de 114": {
+        "count": 1,
+        "ms": 11.503923000000214,
+        "maxMs": 11.503923000000214
+      },
+      "Preparando modelos · 89 de 114": {
+        "count": 1,
+        "ms": 0.011059999998906278,
+        "maxMs": 0.011059999998906278
+      },
+      "Preparando modelos · 90 de 114": {
+        "count": 1,
+        "ms": 10.519325999999637,
+        "maxMs": 10.519325999999637
+      },
+      "Preparando modelos · 91 de 114": {
+        "count": 1,
+        "ms": 0.010350000000471482,
+        "maxMs": 0.010350000000471482
+      },
+      "Preparando modelos · 92 de 114": {
+        "count": 1,
+        "ms": 6.07831299999998,
+        "maxMs": 6.07831299999998
+      },
+      "Preparando modelos · 93 de 114": {
+        "count": 1,
+        "ms": 7.616845000000467,
+        "maxMs": 7.616845000000467
+      },
+      "Preparando modelos · 94 de 114": {
+        "count": 1,
+        "ms": 7.035550999999032,
+        "maxMs": 7.035550999999032
+      },
+      "Preparando modelos · 95 de 114": {
+        "count": 1,
+        "ms": 6.981620000000476,
+        "maxMs": 6.981620000000476
+      },
+      "Preparando modelos · 96 de 114": {
+        "count": 1,
+        "ms": 6.048142999999982,
+        "maxMs": 6.048142999999982
+      },
+      "Preparando modelos · 97 de 114": {
+        "count": 1,
+        "ms": 7.046500000000378,
+        "maxMs": 7.046500000000378
+      },
+      "Preparando modelos · 98 de 114": {
+        "count": 1,
+        "ms": 3.5606860000007146,
+        "maxMs": 3.5606860000007146
+      },
+      "Preparando modelos · 99 de 114": {
+        "count": 1,
+        "ms": 0.00886999999966065,
+        "maxMs": 0.00886999999966065
+      },
+      "Preparando modelos · 100 de 114": {
+        "count": 1,
+        "ms": 0.005599999998594285,
+        "maxMs": 0.005599999998594285
+      },
+      "Preparando modelos · 101 de 114": {
+        "count": 1,
+        "ms": 0.004510000000664149,
+        "maxMs": 0.004510000000664149
+      },
+      "Preparando modelos · 102 de 114": {
+        "count": 1,
+        "ms": 0.003930000000764267,
+        "maxMs": 0.003930000000764267
+      },
+      "Preparando modelos · 103 de 114": {
+        "count": 1,
+        "ms": 0.00413000000116881,
+        "maxMs": 0.00413000000116881
+      },
+      "Preparando modelos · 104 de 114": {
+        "count": 1,
+        "ms": 0.004170000000158325,
+        "maxMs": 0.004170000000158325
+      },
+      "Preparando modelos · 105 de 114": {
+        "count": 1,
+        "ms": 0.0046999999995023245,
+        "maxMs": 0.0046999999995023245
+      },
+      "Preparando modelos · 106 de 114": {
+        "count": 1,
+        "ms": 0.003919999999197898,
+        "maxMs": 0.003919999999197898
+      },
+      "Preparando modelos · 107 de 114": {
+        "count": 1,
+        "ms": 0.0037599999996018596,
+        "maxMs": 0.0037599999996018596
+      },
+      "Preparando modelos · 108 de 114": {
+        "count": 1,
+        "ms": 0.004360000000815489,
+        "maxMs": 0.004360000000815489
+      },
+      "Preparando modelos · 109 de 114": {
+        "count": 1,
+        "ms": 0.0040300000000570435,
+        "maxMs": 0.0040300000000570435
+      },
+      "Preparando modelos · 110 de 114": {
+        "count": 1,
+        "ms": 0.00390999999945052,
+        "maxMs": 0.00390999999945052
+      },
+      "Preparando modelos · 111 de 114": {
+        "count": 1,
+        "ms": 0.004800000000614091,
+        "maxMs": 0.004800000000614091
+      },
+      "Preparando modelos · 112 de 114": {
+        "count": 1,
+        "ms": 0.0038299999996525003,
+        "maxMs": 0.0038299999996525003
+      },
+      "Preparando modelos · 113 de 114": {
+        "count": 1,
+        "ms": 0.004090000000360305,
+        "maxMs": 0.004090000000360305
+      },
+      "Preparando modelos · 114 de 114": {
+        "count": 1,
+        "ms": 0.0038699999986420153,
+        "maxMs": 0.0038699999986420153
+      },
+      "Preparando modelos": {
+        "count": 1,
+        "ms": 0.00961999999890395,
+        "maxMs": 0.00961999999890395
+      },
+      "Preparando iluminação e imagem": {
+        "count": 1,
+        "ms": 0.04310099999929662,
+        "maxMs": 0.04310099999929662
+      },
+      "Restaurando suas configurações": {
+        "count": 1,
+        "ms": 0.009399999999004649,
+        "maxMs": 0.009399999999004649
+      },
+      "walk-samples": {
+        "count": 661,
+        "ms": 384.69178600005034,
+        "maxMs": 1.3442790000008245
+      },
+      "walk-cells": {
+        "count": 21025,
+        "ms": 2527.0918969999784,
+        "maxMs": 14.597504999999728
+      },
+      "walk-junction": {
+        "count": 3152,
+        "ms": 338.394046999867,
+        "maxMs": 2.5157380000000558
+      },
+      "walk-upload": {
+        "count": 1,
+        "ms": 0.18102100000032806,
+        "maxMs": 0.18102100000032806
+      },
+      "vertices": {
+        "count": 1376,
+        "ms": 12.974113999996916,
+        "maxMs": 0.3192330000019865
+      },
+      "bounds": {
+        "count": 1365,
+        "ms": 210.59239999996862,
+        "maxMs": 0.3696730000010575
+      },
+      "ready-upload": {
+        "count": 11,
+        "ms": 1.2466389999972307,
+        "maxMs": 0.3088529999986349
+      },
+      "Preparando os caminhos": {
+        "count": 1,
+        "ms": 0.055141000000730855,
+        "maxMs": 0.055141000000730855
+      },
+      "backdrop-ridges": {
+        "count": 28,
+        "ms": 2.068105000002106,
+        "maxMs": 0.20319199999721604
+      },
+      "backdrop-trees": {
+        "count": 44,
+        "ms": 11.029679000006581,
+        "maxMs": 0.9206969999977446
+      },
+      "Preparando o horizonte": {
+        "count": 1,
+        "ms": 0.030190000001312,
+        "maxMs": 0.030190000001312
+      },
+      "Preparando a base": {
+        "count": 1,
+        "ms": 0.0071299999981420115,
+        "maxMs": 0.0071299999981420115
+      },
+      "vegetation-index": {
+        "count": 92,
+        "ms": 4.30374099997789,
+        "maxMs": 0.16887100000167266
+      },
+      "vegetation-bounds": {
+        "count": 453,
+        "ms": 59.35756700003185,
+        "maxMs": 0.3967530000008992
+      },
+      "plant-templates": {
+        "count": 655,
+        "ms": 4.126767999961885,
+        "maxMs": 1.8560530000031576
+      },
+      "plant-triangles": {
+        "count": 534,
+        "ms": 33.1889259999989,
+        "maxMs": 0.6257640000003448
+      },
+      "plants": {
+        "count": 655,
+        "ms": 23.128576999981306,
+        "maxMs": 1.451030999996874
+      },
+      "Preparando o cenário · 1 de 9": {
+        "count": 1,
+        "ms": 0.06292100000064238,
+        "maxMs": 0.06292100000064238
+      },
+      "Preparando o cenário · 2 de 9": {
+        "count": 1,
+        "ms": 0.04827099999965867,
+        "maxMs": 0.04827099999965867
+      },
+      "Preparando o cenário · 3 de 9": {
+        "count": 1,
+        "ms": 0.02695999999923515,
+        "maxMs": 0.02695999999923515
+      },
+      "Preparando o cenário · 4 de 9": {
+        "count": 1,
+        "ms": 0.029920000000856817,
+        "maxMs": 0.029920000000856817
+      },
+      "Preparando o cenário · 5 de 9": {
+        "count": 1,
+        "ms": 0.02959000000191736,
+        "maxMs": 0.02959000000191736
+      },
+      "Preparando o cenário · 6 de 9": {
+        "count": 1,
+        "ms": 0.029140999999071937,
+        "maxMs": 0.029140999999071937
+      },
+      "Preparando o cenário · 7 de 9": {
+        "count": 1,
+        "ms": 0.030781000001297798,
+        "maxMs": 0.030781000001297798
+      },
+      "Preparando o cenário · 8 de 9": {
+        "count": 1,
+        "ms": 0.033140999999886844,
+        "maxMs": 0.033140999999886844
+      },
+      "Preparando o cenário · 9 de 9": {
+        "count": 1,
+        "ms": 0.03720000000248547,
+        "maxMs": 0.03720000000248547
+      },
+      "Preparando a vegetação": {
+        "count": 1,
+        "ms": 0.0032600000013189856,
+        "maxMs": 0.0032600000013189856
+      },
+      "Finalizando a cena": {
+        "count": 1,
+        "ms": 0.0031899999994493555,
+        "maxMs": 0.0031899999994493555
+      }
+    },
+    "snapshot": {
+      "state": "54725474d13e8e5f005ea4fb00e733c5fa1092cc6222a83ddd60c19edc83f253",
+      "save": "54725474d13e8e5f005ea4fb00e733c5fa1092cc6222a83ddd60c19edc83f253",
+      "world": "783da1fe8832f6136b1a3e1ed00aa510184341f06c8a33d839fc2fd50d5ab9db",
+      "meshes": "37c82275657234236067f02cc3f9b464883df0f2260a96b16aa51726faaba42d",
+      "ready": true,
+      "progress": 100,
+      "writes": 1,
+      "memoryCounters": {
+        "vegetationBytes": 7443684,
+        "jobs": 0
+      }
+    }
+  }
+]

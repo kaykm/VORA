@@ -1,0 +1,14 @@
+✔ segurar mostra análise imediatamente, progride e cancela ao soltar, arrastar ou usar dois dedos (4940.691752ms)
+✔ entrada e retorno são graduais; parallax é amortecido e todos os dados pertencem ao item real (4887.445944ms)
+✔ silhueta rasteriza a união da malha: preserva concavidade e não desenha diagonais internas (108.988145ms)
+✔ malhas de lata, banco e árvore geram contornos distintos e ancoram as linhas na superfície (4900.523812ms)
+✔ movimento reduzido mantém progresso e dados, sem parallax, partículas orbitais ou transição de câmera (4756.913805ms)
+✔ deslocamento da lente mantém terreno CPU e reconstrução espacial do AO alinhados (520.142199ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 20127.656945

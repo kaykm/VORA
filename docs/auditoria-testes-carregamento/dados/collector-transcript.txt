@@ -1,0 +1,1074 @@
+START profile-suite
+{
+  "label": "profile-suite",
+  "command": [
+    "node",
+    "scripts/verificar.mjs"
+  ],
+  "cwd": "/tmp/vora-auditoria/experimentos/profile",
+  "startedAt": "2026-11-01T19:56:00.117026+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2161668,
+    "SwapFree": 21201400
+  },
+  "loadBefore": [
+    5.60888671875,
+    6.83251953125,
+    5.212890625
+  ],
+  "exitCode": 0,
+  "wallS": 214.8722360190004,
+  "userCpuS": 430.41413,
+  "systemCpuS": 11.196081,
+  "maxChildRssKiB": 489660,
+  "peakSampledTreeRssKiB": 952376,
+  "memoryAfterKiB": {
+    "MemAvailable": 2411456,
+    "SwapFree": 20428680
+  },
+  "loadAfter": [
+    4.9501953125,
+    6.27099609375,
+    5.34521484375
+  ]
+}
+START profile-boot
+{
+  "label": "profile-boot",
+  "command": [
+    "node",
+    "--cpu-prof",
+    "--cpu-prof-dir=/tmp/vora-auditoria/dados",
+    "/tmp/vora-auditoria/boot-audit.mjs",
+    "/tmp/vora-auditoria-base",
+    "/tmp/vora-auditoria/dados",
+    "profile"
+  ],
+  "cwd": "/tmp/vora-auditoria-base",
+  "startedAt": "2026-11-01T19:59:35.018070+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2415348,
+    "SwapFree": 20428684
+  },
+  "loadBefore": [
+    4.9501953125,
+    6.27099609375,
+    5.34521484375
+  ],
+  "exitCode": 0,
+  "wallS": 19.526003189999756,
+  "userCpuS": 20.755605,
+  "systemCpuS": 0.558865,
+  "maxChildRssKiB": 436324,
+  "peakSampledTreeRssKiB": 426636,
+  "memoryAfterKiB": {
+    "MemAvailable": 2364944,
+    "SwapFree": 20431316
+  },
+  "loadAfter": [
+    4.03173828125,
+    5.9765625,
+    5.267578125
+  ]
+}
+START cached-1-baseline
+{
+  "label": "cached-1-baseline",
+  "command": [
+    "node",
+    "tests/jogo.test.mjs"
+  ],
+  "cwd": "/tmp/vora-auditoria-base",
+  "startedAt": "2026-11-01T19:59:54.570685+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2373092,
+    "SwapFree": 20431316
+  },
+  "loadBefore": [
+    4.03173828125,
+    5.9765625,
+    5.267578125
+  ],
+  "exitCode": 0,
+  "wallS": 38.55188636299863,
+  "userCpuS": 39.870029,
+  "systemCpuS": 0.578395,
+  "maxChildRssKiB": 400704,
+  "peakSampledTreeRssKiB": 393164,
+  "memoryAfterKiB": {
+    "MemAvailable": 2212112,
+    "SwapFree": 20036156
+  },
+  "loadAfter": [
+    4.48583984375,
+    5.8388671875,
+    5.25048828125
+  ]
+}
+START cached-1-cached
+{
+  "label": "cached-1-cached",
+  "command": [
+    "node",
+    "tests/jogo.test.mjs"
+  ],
+  "cwd": "/tmp/vora-auditoria/experimentos/cached",
+  "startedAt": "2026-11-01T20:00:33.150983+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2220256,
+    "SwapFree": 20036156
+  },
+  "loadBefore": [
+    4.48583984375,
+    5.8388671875,
+    5.25048828125
+  ],
+  "exitCode": 0,
+  "wallS": 39.05622244699771,
+  "userCpuS": 40.344001,
+  "systemCpuS": 0.5801149999999999,
+  "maxChildRssKiB": 439080,
+  "peakSampledTreeRssKiB": 432168,
+  "memoryAfterKiB": {
+    "MemAvailable": 2248248,
+    "SwapFree": 19910624
+  },
+  "loadAfter": [
+    5.92138671875,
+    6.072265625,
+    5.35107421875
+  ]
+}
+START cached-2-cached
+{
+  "label": "cached-2-cached",
+  "command": [
+    "node",
+    "tests/jogo.test.mjs"
+  ],
+  "cwd": "/tmp/vora-auditoria/experimentos/cached",
+  "startedAt": "2026-11-01T20:01:12.239727+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2247260,
+    "SwapFree": 19910624
+  },
+  "loadBefore": [
+    5.92138671875,
+    6.072265625,
+    5.35107421875
+  ],
+  "exitCode": 0,
+  "wallS": 40.05940004299919,
+  "userCpuS": 42.597186,
+  "systemCpuS": 0.669978,
+  "maxChildRssKiB": 455296,
+  "peakSampledTreeRssKiB": 455296,
+  "memoryAfterKiB": {
+    "MemAvailable": 2127576,
+    "SwapFree": 19893508
+  },
+  "loadAfter": [
+    6.54345703125,
+    6.18115234375,
+    5.4169921875
+  ]
+}
+START cached-2-baseline
+{
+  "label": "cached-2-baseline",
+  "command": [
+    "node",
+    "tests/jogo.test.mjs"
+  ],
+  "cwd": "/tmp/vora-auditoria-base",
+  "startedAt": "2026-11-01T20:01:52.345537+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2176556,
+    "SwapFree": 19893612
+  },
+  "loadBefore": [
+    6.54345703125,
+    6.18115234375,
+    5.4169921875
+  ],
+  "exitCode": 0,
+  "wallS": 41.56032966800194,
+  "userCpuS": 43.272866,
+  "systemCpuS": 0.562651,
+  "maxChildRssKiB": 395512,
+  "peakSampledTreeRssKiB": 392600,
+  "memoryAfterKiB": {
+    "MemAvailable": 2246344,
+    "SwapFree": 19855264
+  },
+  "loadAfter": [
+    5.32373046875,
+    5.91845703125,
+    5.36328125
+  ]
+}
+START cached-3-baseline
+{
+  "label": "cached-3-baseline",
+  "command": [
+    "node",
+    "tests/jogo.test.mjs"
+  ],
+  "cwd": "/tmp/vora-auditoria-base",
+  "startedAt": "2026-11-01T20:02:33.939143+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2240208,
+    "SwapFree": 19855264
+  },
+  "loadBefore": [
+    5.32373046875,
+    5.91845703125,
+    5.36328125
+  ],
+  "exitCode": 0,
+  "wallS": 39.05406741299885,
+  "userCpuS": 40.73728,
+  "systemCpuS": 0.6441319999999999,
+  "maxChildRssKiB": 412176,
+  "peakSampledTreeRssKiB": 407340,
+  "memoryAfterKiB": {
+    "MemAvailable": 2142948,
+    "SwapFree": 19896484
+  },
+  "loadAfter": [
+    5.13330078125,
+    5.80126953125,
+    5.3447265625
+  ]
+}
+START cached-3-cached
+{
+  "label": "cached-3-cached",
+  "command": [
+    "node",
+    "tests/jogo.test.mjs"
+  ],
+  "cwd": "/tmp/vora-auditoria/experimentos/cached",
+  "startedAt": "2026-11-01T20:03:13.023363+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2142948,
+    "SwapFree": 19896484
+  },
+  "loadBefore": [
+    5.13330078125,
+    5.80126953125,
+    5.3447265625
+  ],
+  "exitCode": 0,
+  "wallS": 38.55866656099897,
+  "userCpuS": 40.405244,
+  "systemCpuS": 0.608144,
+  "maxChildRssKiB": 386640,
+  "peakSampledTreeRssKiB": 378324,
+  "memoryAfterKiB": {
+    "MemAvailable": 2199480,
+    "SwapFree": 19882720
+  },
+  "loadAfter": [
+    4.94140625,
+    5.66845703125,
+    5.3193359375
+  ]
+}
+START cached-4-cached
+{
+  "label": "cached-4-cached",
+  "command": [
+    "node",
+    "tests/jogo.test.mjs"
+  ],
+  "cwd": "/tmp/vora-auditoria/experimentos/cached",
+  "startedAt": "2026-11-01T20:03:51.609206+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2199500,
+    "SwapFree": 19882720
+  },
+  "loadBefore": [
+    4.94140625,
+    5.66845703125,
+    5.3193359375
+  ],
+  "exitCode": 0,
+  "wallS": 38.05831845300054,
+  "userCpuS": 39.902415,
+  "systemCpuS": 0.593947,
+  "maxChildRssKiB": 437448,
+  "peakSampledTreeRssKiB": 429820,
+  "memoryAfterKiB": {
+    "MemAvailable": 2267632,
+    "SwapFree": 19805272
+  },
+  "loadAfter": [
+    4.06689453125,
+    5.3359375,
+    5.220703125
+  ]
+}
+START cached-4-baseline
+{
+  "label": "cached-4-baseline",
+  "command": [
+    "node",
+    "tests/jogo.test.mjs"
+  ],
+  "cwd": "/tmp/vora-auditoria-base",
+  "startedAt": "2026-11-01T20:04:29.693719+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2272312,
+    "SwapFree": 19805288
+  },
+  "loadBefore": [
+    4.06689453125,
+    5.3359375,
+    5.220703125
+  ],
+  "exitCode": 0,
+  "wallS": 39.553904930999124,
+  "userCpuS": 40.940637,
+  "systemCpuS": 0.628948,
+  "maxChildRssKiB": 398904,
+  "peakSampledTreeRssKiB": 397236,
+  "memoryAfterKiB": {
+    "MemAvailable": 2284176,
+    "SwapFree": 19786916
+  },
+  "loadAfter": [
+    3.666015625,
+    5.0849609375,
+    5.14111328125
+  ]
+}
+START cached-5-baseline
+{
+  "label": "cached-5-baseline",
+  "command": [
+    "node",
+    "tests/jogo.test.mjs"
+  ],
+  "cwd": "/tmp/vora-auditoria-base",
+  "startedAt": "2026-11-01T20:05:09.279300+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2290456,
+    "SwapFree": 19786936
+  },
+  "loadBefore": [
+    3.666015625,
+    5.0849609375,
+    5.14111328125
+  ],
+  "exitCode": 0,
+  "wallS": 39.5528192089987,
+  "userCpuS": 41.061146,
+  "systemCpuS": 0.675794,
+  "maxChildRssKiB": 438176,
+  "peakSampledTreeRssKiB": 435316,
+  "memoryAfterKiB": {
+    "MemAvailable": 2326148,
+    "SwapFree": 19796668
+  },
+  "loadAfter": [
+    3.6416015625,
+    4.888671875,
+    5.0703125
+  ]
+}
+START cached-5-cached
+{
+  "label": "cached-5-cached",
+  "command": [
+    "node",
+    "tests/jogo.test.mjs"
+  ],
+  "cwd": "/tmp/vora-auditoria/experimentos/cached",
+  "startedAt": "2026-11-01T20:05:48.862360+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2321744,
+    "SwapFree": 19796668
+  },
+  "loadBefore": [
+    3.6416015625,
+    4.888671875,
+    5.0703125
+  ],
+  "exitCode": 0,
+  "wallS": 38.55443324600128,
+  "userCpuS": 41.135608,
+  "systemCpuS": 0.586187,
+  "maxChildRssKiB": 393720,
+  "peakSampledTreeRssKiB": 384760,
+  "memoryAfterKiB": {
+    "MemAvailable": 2151996,
+    "SwapFree": 20141416
+  },
+  "loadAfter": [
+    4.439453125,
+    4.96142578125,
+    5.08837890625
+  ]
+}
+START minimal-1-baseline
+{
+  "label": "minimal-1-baseline",
+  "command": [
+    "node",
+    "tests/piso-loja.test.mjs"
+  ],
+  "cwd": "/tmp/vora-auditoria-base",
+  "startedAt": "2026-11-01T20:06:27.443453+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2146204,
+    "SwapFree": 20141416
+  },
+  "loadBefore": [
+    4.439453125,
+    4.96142578125,
+    5.08837890625
+  ],
+  "exitCode": 0,
+  "wallS": 5.0067266059995745,
+  "userCpuS": 5.103858,
+  "systemCpuS": 0.14851999999999999,
+  "maxChildRssKiB": 245260,
+  "peakSampledTreeRssKiB": 229516,
+  "memoryAfterKiB": {
+    "MemAvailable": 2069388,
+    "SwapFree": 20157752
+  },
+  "loadAfter": [
+    4.40380859375,
+    4.9453125,
+    5.08251953125
+  ]
+}
+START minimal-1-minimal
+{
+  "label": "minimal-1-minimal",
+  "command": [
+    "node",
+    "tests/piso-loja.test.mjs"
+  ],
+  "cwd": "/tmp/vora-auditoria/experimentos/minimal",
+  "startedAt": "2026-11-01T20:06:32.475337+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2065388,
+    "SwapFree": 20157752
+  },
+  "loadBefore": [
+    4.40380859375,
+    4.9453125,
+    5.08251953125
+  ],
+  "exitCode": 0,
+  "wallS": 0.5009835159980867,
+  "userCpuS": 0.22103599999999998,
+  "systemCpuS": 0.04008,
+  "maxChildRssKiB": 99352,
+  "peakSampledTreeRssKiB": 1012,
+  "memoryAfterKiB": {
+    "MemAvailable": 2050332,
+    "SwapFree": 20160384
+  },
+  "loadAfter": [
+    4.40380859375,
+    4.9453125,
+    5.08251953125
+  ]
+}
+START minimal-2-minimal
+{
+  "label": "minimal-2-minimal",
+  "command": [
+    "node",
+    "tests/piso-loja.test.mjs"
+  ],
+  "cwd": "/tmp/vora-auditoria/experimentos/minimal",
+  "startedAt": "2026-11-01T20:06:33.002720+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2044892,
+    "SwapFree": 20160384
+  },
+  "loadBefore": [
+    4.40380859375,
+    4.9453125,
+    5.08251953125
+  ],
+  "exitCode": 0,
+  "wallS": 0.500935975000175,
+  "userCpuS": 0.22566499999999998,
+  "systemCpuS": 0.034984,
+  "maxChildRssKiB": 99572,
+  "peakSampledTreeRssKiB": 888,
+  "memoryAfterKiB": {
+    "MemAvailable": 2021708,
+    "SwapFree": 20160572
+  },
+  "loadAfter": [
+    4.2109375,
+    4.89599609375,
+    5.06591796875
+  ]
+}
+START minimal-2-baseline
+{
+  "label": "minimal-2-baseline",
+  "command": [
+    "node",
+    "tests/piso-loja.test.mjs"
+  ],
+  "cwd": "/tmp/vora-auditoria-base",
+  "startedAt": "2026-11-01T20:06:33.528041+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2021708,
+    "SwapFree": 20160572
+  },
+  "loadBefore": [
+    4.2109375,
+    4.89599609375,
+    5.06591796875
+  ],
+  "exitCode": 0,
+  "wallS": 5.007069020000927,
+  "userCpuS": 5.031562,
+  "systemCpuS": 0.198661,
+  "maxChildRssKiB": 220236,
+  "peakSampledTreeRssKiB": 219980,
+  "memoryAfterKiB": {
+    "MemAvailable": 2049540,
+    "SwapFree": 20163256
+  },
+  "loadAfter": [
+    4.3544921875,
+    4.91455078125,
+    5.0712890625
+  ]
+}
+START minimal-3-baseline
+{
+  "label": "minimal-3-baseline",
+  "command": [
+    "node",
+    "tests/piso-loja.test.mjs"
+  ],
+  "cwd": "/tmp/vora-auditoria-base",
+  "startedAt": "2026-11-01T20:06:38.564150+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2045444,
+    "SwapFree": 20163256
+  },
+  "loadBefore": [
+    4.3544921875,
+    4.91455078125,
+    5.0712890625
+  ],
+  "exitCode": 0,
+  "wallS": 5.508168288000888,
+  "userCpuS": 5.211444,
+  "systemCpuS": 0.172598,
+  "maxChildRssKiB": 245980,
+  "peakSampledTreeRssKiB": 222468,
+  "memoryAfterKiB": {
+    "MemAvailable": 2027912,
+    "SwapFree": 20163536
+  },
+  "loadAfter": [
+    4.32568359375,
+    4.89892578125,
+    5.0654296875
+  ]
+}
+START minimal-3-minimal
+{
+  "label": "minimal-3-minimal",
+  "command": [
+    "node",
+    "tests/piso-loja.test.mjs"
+  ],
+  "cwd": "/tmp/vora-auditoria/experimentos/minimal",
+  "startedAt": "2026-11-01T20:06:44.100382+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2026872,
+    "SwapFree": 20163536
+  },
+  "loadBefore": [
+    4.32568359375,
+    4.89892578125,
+    5.0654296875
+  ],
+  "exitCode": 0,
+  "wallS": 0.5014821069999016,
+  "userCpuS": 0.23018799999999998,
+  "systemCpuS": 0.036904,
+  "maxChildRssKiB": 94732,
+  "peakSampledTreeRssKiB": 720,
+  "memoryAfterKiB": {
+    "MemAvailable": 2015884,
+    "SwapFree": 20163540
+  },
+  "loadAfter": [
+    4.32568359375,
+    4.89892578125,
+    5.0654296875
+  ]
+}
+START minimal-4-minimal
+{
+  "label": "minimal-4-minimal",
+  "command": [
+    "node",
+    "tests/piso-loja.test.mjs"
+  ],
+  "cwd": "/tmp/vora-auditoria/experimentos/minimal",
+  "startedAt": "2026-11-01T20:06:44.630765+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2012764,
+    "SwapFree": 20163540
+  },
+  "loadBefore": [
+    4.32568359375,
+    4.89892578125,
+    5.0654296875
+  ],
+  "exitCode": 0,
+  "wallS": 0.5010170230016229,
+  "userCpuS": 0.255718,
+  "systemCpuS": 0.041469,
+  "maxChildRssKiB": 92816,
+  "peakSampledTreeRssKiB": 620,
+  "memoryAfterKiB": {
+    "MemAvailable": 2008092,
+    "SwapFree": 20163636
+  },
+  "loadAfter": [
+    4.32568359375,
+    4.89892578125,
+    5.0654296875
+  ]
+}
+START minimal-4-baseline
+{
+  "label": "minimal-4-baseline",
+  "command": [
+    "node",
+    "tests/piso-loja.test.mjs"
+  ],
+  "cwd": "/tmp/vora-auditoria-base",
+  "startedAt": "2026-11-01T20:06:45.160279+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2008100,
+    "SwapFree": 20163636
+  },
+  "loadBefore": [
+    4.32568359375,
+    4.89892578125,
+    5.0654296875
+  ],
+  "exitCode": 0,
+  "wallS": 5.5084280199989735,
+  "userCpuS": 5.220879,
+  "systemCpuS": 0.177541,
+  "maxChildRssKiB": 247020,
+  "peakSampledTreeRssKiB": 245356,
+  "memoryAfterKiB": {
+    "MemAvailable": 1964888,
+    "SwapFree": 20163928
+  },
+  "loadAfter": [
+    4.13916015625,
+    4.8505859375,
+    5.048828125
+  ]
+}
+START minimal-5-baseline
+{
+  "label": "minimal-5-baseline",
+  "command": [
+    "node",
+    "tests/piso-loja.test.mjs"
+  ],
+  "cwd": "/tmp/vora-auditoria-base",
+  "startedAt": "2026-11-01T20:06:50.699101+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 1963156,
+    "SwapFree": 20163928
+  },
+  "loadBefore": [
+    4.13916015625,
+    4.8505859375,
+    5.048828125
+  ],
+  "exitCode": 0,
+  "wallS": 5.507388884001557,
+  "userCpuS": 5.287494,
+  "systemCpuS": 0.15370799999999998,
+  "maxChildRssKiB": 228416,
+  "peakSampledTreeRssKiB": 220736,
+  "memoryAfterKiB": {
+    "MemAvailable": 2045264,
+    "SwapFree": 20167580
+  },
+  "loadAfter": [
+    4.20849609375,
+    4.853515625,
+    5.04833984375
+  ]
+}
+START minimal-5-minimal
+{
+  "label": "minimal-5-minimal",
+  "command": [
+    "node",
+    "tests/piso-loja.test.mjs"
+  ],
+  "cwd": "/tmp/vora-auditoria/experimentos/minimal",
+  "startedAt": "2026-11-01T20:06:56.238463+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2045460,
+    "SwapFree": 20167580
+  },
+  "loadBefore": [
+    4.20849609375,
+    4.853515625,
+    5.04833984375
+  ],
+  "exitCode": 0,
+  "wallS": 0.5011142129988002,
+  "userCpuS": 0.242915,
+  "systemCpuS": 0.049574,
+  "maxChildRssKiB": 97692,
+  "peakSampledTreeRssKiB": 888,
+  "memoryAfterKiB": {
+    "MemAvailable": 2112816,
+    "SwapFree": 20167588
+  },
+  "loadAfter": [
+    4.20849609375,
+    4.853515625,
+    5.04833984375
+  ]
+}
+START concurrency-1-1
+{
+  "label": "concurrency-1-1",
+  "command": [
+    "node",
+    "--test",
+    "--test-concurrency=1",
+    "tests/expansao-economia.test.mjs",
+    "tests/sombras.test.mjs",
+    "tests/jogo.test.mjs",
+    "tests/equivalencia.test.mjs"
+  ],
+  "cwd": "/tmp/vora-auditoria-base",
+  "startedAt": "2026-11-01T20:06:56.768119+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2112832,
+    "SwapFree": 20167588
+  },
+  "loadBefore": [
+    4.20849609375,
+    4.853515625,
+    5.04833984375
+  ],
+  "exitCode": 0,
+  "wallS": 152.23110016000282,
+  "userCpuS": 160.737832,
+  "systemCpuS": 2.547817,
+  "maxChildRssKiB": 521332,
+  "peakSampledTreeRssKiB": 568152,
+  "memoryAfterKiB": {
+    "MemAvailable": 1960488,
+    "SwapFree": 20251668
+  },
+  "loadAfter": [
+    4.9521484375,
+    4.8330078125,
+    5.0029296875
+  ]
+}
+START concurrency-1-2
+{
+  "label": "concurrency-1-2",
+  "command": [
+    "node",
+    "--test",
+    "--test-concurrency=2",
+    "tests/expansao-economia.test.mjs",
+    "tests/sombras.test.mjs",
+    "tests/jogo.test.mjs",
+    "tests/equivalencia.test.mjs"
+  ],
+  "cwd": "/tmp/vora-auditoria-base",
+  "startedAt": "2026-11-01T20:09:29.029321+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 1959276,
+    "SwapFree": 20251668
+  },
+  "loadBefore": [
+    4.9521484375,
+    4.8330078125,
+    5.0029296875
+  ],
+  "exitCode": 0,
+  "wallS": 96.15421052099919,
+  "userCpuS": 162.757059,
+  "systemCpuS": 2.484266,
+  "maxChildRssKiB": 509932,
+  "peakSampledTreeRssKiB": 917048,
+  "memoryAfterKiB": {
+    "MemAvailable": 1895904,
+    "SwapFree": 20186908
+  },
+  "loadAfter": [
+    4.52392578125,
+    4.84130859375,
+    4.998046875
+  ],
+  "nodeTestDurationMs": 95950.555393
+}
+START concurrency-2-2
+{
+  "label": "concurrency-2-2",
+  "command": [
+    "node",
+    "--test",
+    "--test-concurrency=2",
+    "tests/expansao-economia.test.mjs",
+    "tests/sombras.test.mjs",
+    "tests/jogo.test.mjs",
+    "tests/equivalencia.test.mjs"
+  ],
+  "cwd": "/tmp/vora-auditoria-base",
+  "startedAt": "2026-11-01T20:11:05.212471+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 1895696,
+    "SwapFree": 20186924
+  },
+  "loadBefore": [
+    4.52392578125,
+    4.84130859375,
+    4.998046875
+  ],
+  "exitCode": 0,
+  "wallS": 96.15594390399929,
+  "userCpuS": 163.820454,
+  "systemCpuS": 2.630504,
+  "maxChildRssKiB": 520716,
+  "peakSampledTreeRssKiB": 884436,
+  "memoryAfterKiB": {
+    "MemAvailable": 2191840,
+    "SwapFree": 19738864
+  },
+  "loadAfter": [
+    5.1240234375,
+    5.0283203125,
+    5.052734375
+  ],
+  "nodeTestDurationMs": 96065.93761
+}
+START concurrency-2-1
+{
+  "label": "concurrency-2-1",
+  "command": [
+    "node",
+    "--test",
+    "--test-concurrency=1",
+    "tests/expansao-economia.test.mjs",
+    "tests/sombras.test.mjs",
+    "tests/jogo.test.mjs",
+    "tests/equivalencia.test.mjs"
+  ],
+  "cwd": "/tmp/vora-auditoria-base",
+  "startedAt": "2026-11-01T20:12:41.408203+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2197296,
+    "SwapFree": 19738864
+  },
+  "loadBefore": [
+    5.1240234375,
+    5.0283203125,
+    5.052734375
+  ],
+  "exitCode": 0,
+  "wallS": 151.2312909129978,
+  "userCpuS": 158.726019,
+  "systemCpuS": 2.450806,
+  "maxChildRssKiB": 516272,
+  "peakSampledTreeRssKiB": 557512,
+  "memoryAfterKiB": {
+    "MemAvailable": 2091780,
+    "SwapFree": 19878956
+  },
+  "loadAfter": [
+    3.67529296875,
+    4.39794921875,
+    4.80419921875
+  ],
+  "nodeTestDurationMs": 151086.889222
+}
+START models-boot
+{
+  "label": "models-boot",
+  "command": [
+    "node",
+    "/tmp/vora-auditoria/boot-audit.mjs",
+    "/tmp/vora-auditoria-base",
+    "/tmp/vora-auditoria/dados",
+    "models"
+  ],
+  "cwd": "/tmp/vora-auditoria-base",
+  "startedAt": "2026-11-01T20:15:12.673324+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2094668,
+    "SwapFree": 19878956
+  },
+  "loadBefore": [
+    3.67529296875,
+    4.39794921875,
+    4.80419921875
+  ],
+  "exitCode": 0,
+  "wallS": 203.83563219600182,
+  "userCpuS": 211.635886,
+  "systemCpuS": 4.49024,
+  "maxChildRssKiB": 480484,
+  "peakSampledTreeRssKiB": 478560,
+  "memoryAfterKiB": {
+    "MemAvailable": 2382356,
+    "SwapFree": 20240132
+  },
+  "loadAfter": [
+    4.53125,
+    4.818359375,
+    4.923828125
+  ],
+  "nodeTestDurationMs": null
+}
+START validate-loading
+{
+  "label": "validate-loading",
+  "command": [
+    "python3",
+    "/tmp/vora-auditoria/validate-loading.py",
+    "/tmp/vora-auditoria-base",
+    "/tmp/vora-auditoria/experimentos",
+    "/tmp/vora-auditoria/dados"
+  ],
+  "cwd": "/tmp/vora-auditoria-base",
+  "startedAt": "2026-11-01T20:18:36.585957+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2393204,
+    "SwapFree": 20245820
+  },
+  "loadBefore": [
+    4.53125,
+    4.818359375,
+    4.923828125
+  ],
+  "exitCode": 0,
+  "wallS": 60.1069335079992,
+  "userCpuS": 102.28828,
+  "systemCpuS": 8.81829,
+  "maxChildRssKiB": 432804,
+  "peakSampledTreeRssKiB": 861908,
+  "memoryAfterKiB": {
+    "MemAvailable": 2488944,
+    "SwapFree": 20240444
+  },
+  "loadAfter": [
+    4.47705078125,
+    4.75830078125,
+    4.89599609375
+  ],
+  "nodeTestDurationMs": null
+}
+START replay
+{
+  "label": "replay",
+  "command": [
+    "node",
+    "/tmp/vora-auditoria/replay.mjs",
+    "/tmp/vora-auditoria-base",
+    "/tmp/vora-auditoria/experimentos",
+    "/tmp/vora-auditoria/dados"
+  ],
+  "cwd": "/tmp/vora-auditoria-base",
+  "startedAt": "2026-11-01T20:19:36.722840+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2490164,
+    "SwapFree": 20240448
+  },
+  "loadBefore": [
+    4.47705078125,
+    4.75830078125,
+    4.89599609375
+  ],
+  "exitCode": 0,
+  "wallS": 80.1142298440027,
+  "userCpuS": 85.259692,
+  "systemCpuS": 0.984926,
+  "maxChildRssKiB": 613080,
+  "peakSampledTreeRssKiB": 604336,
+  "memoryAfterKiB": {
+    "MemAvailable": 2318988,
+    "SwapFree": 20462672
+  },
+  "loadAfter": [
+    3.97900390625,
+    4.5341796875,
+    4.80419921875
+  ],
+  "nodeTestDurationMs": null
+}
+START build-cost
+{
+  "label": "build-cost",
+  "command": [
+    "node",
+    "/tmp/vora-auditoria/build-cost.mjs",
+    "/tmp/vora-auditoria-base",
+    "/tmp/vora-auditoria/dados"
+  ],
+  "cwd": "/tmp/vora-auditoria-base",
+  "startedAt": "2026-11-01T20:20:56.877200+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2348324,
+    "SwapFree": 20457852
+  },
+  "loadBefore": [
+    3.97900390625,
+    4.5341796875,
+    4.80419921875
+  ],
+  "exitCode": 1,
+  "wallS": 18.529148183999496,
+  "userCpuS": 19.163603,
+  "systemCpuS": 0.685445,
+  "maxChildRssKiB": 417156,
+  "peakSampledTreeRssKiB": 511988,
+  "memoryAfterKiB": {
+    "MemAvailable": 2011736,
+    "SwapFree": 20625344
+  },
+  "loadAfter": [
+    3.83740234375,
+    4.466796875,
+    4.77685546875
+  ],
+  "nodeTestDurationMs": null
+}
+Traceback (most recent call last):
+  File "/tmp/vora-auditoria/post-audit.py", line 22, in <module>
+    run('build-cost',['node',str(here/'build-cost.mjs'),str(repo),str(out)])
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/vora-auditoria/post-audit.py", line 7, in run
+    subprocess.run([sys.executable,str(measure),str(cwd),str(out),label,*cmd],check=True,env=env)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jp/.local/share/mise/installs/python/3.15.1/lib/python3.15/subprocess.py", line 692, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command ['/home/jp/.local/share/mise/installs/python/latest/bin/python3', '/tmp/vora-auditoria/run-measure.py', '/tmp/vora-auditoria-base', '/tmp/vora-auditoria/dados', 'build-cost', 'node', '/tmp/vora-auditoria/build-cost.mjs', '/tmp/vora-auditoria-base', '/tmp/vora-auditoria/dados'] returned non-zero exit status 1.

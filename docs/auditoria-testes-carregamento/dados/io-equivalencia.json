@@ -1,0 +1,105 @@
+{
+  "environment": "Instrumented CPU I/O and host assertions; not browser transfer",
+  "assertions": {
+    "equal": {
+      "count": 45,
+      "ms": 0.14389099999527843
+    },
+    "deepEqual": {
+      "count": 16,
+      "ms": 10.788884999999084
+    },
+    "match": {
+      "count": 2,
+      "ms": 0.06066999999998757
+    },
+    "notEqual": {
+      "count": 5,
+      "ms": 0.07214000000203669
+    }
+  },
+  "rows": [
+    {
+      "operation": "readFileSync",
+      "file": "scripts/fontes.json",
+      "ms": 0.04802099999999854,
+      "bytes": 3411
+    },
+    {
+      "operation": "readFileSync",
+      "file": "backup/VORA-original-17.html",
+      "ms": 3.7552259999999933,
+      "bytes": 1073551
+    },
+    {
+      "operation": "readFileSync",
+      "file": "dist/VORA.html",
+      "ms": 3.1233919999999955,
+      "bytes": 1256442
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/interface/componentes/carregamento.html",
+      "ms": 0.07786000000000115,
+      "bytes": 911
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/interface/componentes/expansao.html",
+      "ms": 0.03287000000000262,
+      "bytes": 2195
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/interface/componentes/hud.html",
+      "ms": 0.024149999999998784,
+      "bytes": 3066
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/interface/componentes/dossie.html",
+      "ms": 0.02161000000000257,
+      "bytes": 3604
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/interface/componentes/carga.html",
+      "ms": 0.014679999999998472,
+      "bytes": 1761
+    },
+    {
+      "operation": "readFileSync",
+      "file": "assets/fontes/vora-ui.woff",
+      "ms": 0.08035000000000991,
+      "bytes": 35840
+    },
+    {
+      "operation": "deflateSync",
+      "ms": 9.116833000000042,
+      "bytes": 307440
+    },
+    {
+      "operation": "writeFileSync",
+      "file": "tests/resultados/original-cpu.png",
+      "ms": 0.21307200000228477,
+      "bytes": 133819
+    },
+    {
+      "operation": "deflateSync",
+      "ms": 8.413927999998123,
+      "bytes": 307440
+    },
+    {
+      "operation": "writeFileSync",
+      "file": "tests/resultados/vora-cpu.png",
+      "ms": 0.3320429999985208,
+      "bytes": 133819
+    },
+    {
+      "operation": "writeFileSync",
+      "file": "tests/resultados/comparacao.json",
+      "ms": 0.05002999999851454,
+      "bytes": null
+    }
+  ]
+}

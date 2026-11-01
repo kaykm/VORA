@@ -1,0 +1,72 @@
+{
+  "measurementStatus": "not_measured",
+  "reason": "Native UI unavailable; IAB has no disposable profile or pre-navigation profiling API; file URL previously denied. No fallback browser bypass attempted.",
+  "plannedPairsPerModeSave": 5,
+  "matrix": [
+    {
+      "mode": "pages",
+      "save": "new",
+      "opening": "first",
+      "plannedSamples": 5,
+      "samples": [],
+      "elapsedMs": null
+    },
+    {
+      "mode": "pages",
+      "save": "new",
+      "opening": "reload",
+      "plannedSamples": 5,
+      "samples": [],
+      "elapsedMs": null
+    },
+    {
+      "mode": "pages",
+      "save": "advanced",
+      "opening": "first",
+      "plannedSamples": 5,
+      "samples": [],
+      "elapsedMs": null
+    },
+    {
+      "mode": "pages",
+      "save": "advanced",
+      "opening": "reload",
+      "plannedSamples": 5,
+      "samples": [],
+      "elapsedMs": null
+    },
+    {
+      "mode": "file",
+      "save": "new",
+      "opening": "first",
+      "plannedSamples": 5,
+      "samples": [],
+      "elapsedMs": null
+    },
+    {
+      "mode": "file",
+      "save": "new",
+      "opening": "reload",
+      "plannedSamples": 5,
+      "samples": [],
+      "elapsedMs": null
+    },
+    {
+      "mode": "file",
+      "save": "advanced",
+      "opening": "first",
+      "plannedSamples": 5,
+      "samples": [],
+      "elapsedMs": null
+    },
+    {
+      "mode": "file",
+      "save": "advanced",
+      "opening": "reload",
+      "plannedSamples": 5,
+      "samples": [],
+      "elapsedMs": null
+    }
+  ],
+  "twentySecondsRealGameplay": null
+}

@@ -1,0 +1,12 @@
+✔ tests/equivalencia.test.mjs (17006.911501ms)
+✔ tests/expansao-economia.test.mjs (57060.894924ms)
+✔ tests/jogo.test.mjs (41038.468364ms)
+✔ tests/sombras.test.mjs (38990.059041ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 96065.93761

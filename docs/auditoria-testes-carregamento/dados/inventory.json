@@ -1,0 +1,1279 @@
+[
+  {
+    "file": "tests/borda-cheia.test.mjs",
+    "lines": 63,
+    "tests": [
+      {
+        "line": 7,
+        "text": "test('pilha apoiada acima da abertura bloqueia coleta e avisa mesmo com litros livres; libera ao baixar',()=>{"
+      },
+      {
+        "line": 35,
+        "text": "test('objeto entrando, salto transitório e pilha abaixo da calçada não produzem borda cheia',()=>{"
+      },
+      {
+        "line": 50,
+        "text": "test('bloqueio protege recursos do cenário e descarregar remove o limite sem perder lotes',()=>{"
+      }
+    ],
+    "runtimeSites": [
+      {
+        "line": 8,
+        "text": "const g=createRuntime(html);"
+      },
+      {
+        "line": 36,
+        "text": "const g=createRuntime(html);"
+      },
+      {
+        "line": 51,
+        "text": "const g=createRuntime(html);"
+      }
+    ],
+    "assertions": {
+      "equal": 21,
+      "deepEqual": 0,
+      "ok": 1,
+      "match": 2,
+      "notEqual": 0,
+      "throws": 0,
+      "doesNotMatch": 0
+    },
+    "sourceTransformations": [],
+    "readHtml": false,
+    "assembleHtml": true
+  },
+  {
+    "file": "tests/carga-recursos-fisica.test.mjs",
+    "lines": 56,
+    "tests": [
+      {
+        "line": 7,
+        "text": "test('recursos mantêm o modelo e a escala durante a queda e depois de pousar; pose restaura sem perder o objeto',()=>{"
+      },
+      {
+        "line": 40,
+        "text": "test('objetos com colisores maiores que a célula antiga ainda colidem entre si',()=>{"
+      },
+      {
+        "line": 49,
+        "text": "test('carga adormecida volta à física quando o deslocamento altera a forma do fundo',()=>{"
+      }
+    ],
+    "runtimeSites": [
+      {
+        "line": 8,
+        "text": "const g=createRuntime(html);"
+      },
+      {
+        "line": 31,
+        "text": "const restored=createRuntime(html,saved);"
+      },
+      {
+        "line": 41,
+        "text": "const g=createRuntime(html,null,{boot:'manual'});"
+      },
+      {
+        "line": 50,
+        "text": "const g=createRuntime(html);"
+      }
+    ],
+    "assertions": {
+      "equal": 11,
+      "deepEqual": 1,
+      "ok": 3,
+      "match": 0,
+      "notEqual": 0,
+      "throws": 0,
+      "doesNotMatch": 0
+    },
+    "sourceTransformations": [],
+    "readHtml": false,
+    "assembleHtml": true
+  },
+  {
+    "file": "tests/carregamento.test.mjs",
+    "lines": 171,
+    "tests": [
+      {
+        "line": 19,
+        "text": "test('boot avança por trabalho real, só conclui em 100% e não salva estado parcial',()=>{"
+      },
+      {
+        "line": 72,
+        "text": "test('driver real apresenta erro e preserva o save se a preparação falhar',async()=>{"
+      },
+      {
+        "line": 95,
+        "text": "test('render de vegetação e sombras solicita recursos sem bake síncrono ou tarefas duplicadas',()=>{"
+      },
+      {
+        "line": 115,
+        "text": "test('fila respeita orçamento, compartilha pedidos e cancela builders antigos',()=>{"
+      },
+      {
+        "line": 134,
+        "text": "test('cache limita bytes, reutiliza recursos e preserva a malha visível',()=>{"
+      },
+      {
+        "line": 158,
+        "text": "test('compilação adiada aguarda KHR em vez de bloquear o início do script',()=>{"
+      }
+    ],
+    "runtimeSites": [
+      {
+        "line": 20,
+        "text": "const game=createRuntime(html,saved,{boot:'manual'});"
+      },
+      {
+        "line": 73,
+        "text": "const game=createRuntime(html,saved,{boot:'manual',clockStep:1});"
+      },
+      {
+        "line": 96,
+        "text": "const game=createRuntime(html);"
+      },
+      {
+        "line": 116,
+        "text": "const game=createRuntime(html,null,{boot:'manual',clockStep:.25});"
+      },
+      {
+        "line": 135,
+        "text": "const game=createRuntime(html,null,{boot:'manual'});"
+      },
+      {
+        "line": 159,
+        "text": "const game=createRuntime(html,null,{boot:'manual'});"
+      }
+    ],
+    "assertions": {
+      "equal": 42,
+      "deepEqual": 2,
+      "ok": 10,
+      "match": 2,
+      "notEqual": 0,
+      "throws": 0,
+      "doesNotMatch": 0
+    },
+    "sourceTransformations": [],
+    "readHtml": true,
+    "assembleHtml": false
+  },
+  {
+    "file": "tests/crescimento-buraco.test.mjs",
+    "lines": 48,
+    "tests": [
+      {
+        "line": 8,
+        "text": "test('comprar raio amplia a abertura projetada sem afastar a câmera ou depender de movimento',()=>{"
+      },
+      {
+        "line": 36,
+        "text": "test('compra recusada preserva câmera e raio; crescimento sem animações e restauração conservam o nível',()=>{"
+      }
+    ],
+    "runtimeSites": [
+      {
+        "line": 9,
+        "text": "const g=createRuntime(html);"
+      },
+      {
+        "line": 37,
+        "text": "const g=createRuntime(html);"
+      },
+      {
+        "line": 45,
+        "text": "const restored=createRuntime(html,JSON.parse(g.store.get('vora-v1')));"
+      }
+    ],
+    "assertions": {
+      "equal": 9,
+      "deepEqual": 0,
+      "ok": 2,
+      "match": 0,
+      "notEqual": 0,
+      "throws": 0,
+      "doesNotMatch": 0
+    },
+    "sourceTransformations": [],
+    "readHtml": false,
+    "assembleHtml": true
+  },
+  {
+    "file": "tests/desempenho-avancado.test.mjs",
+    "lines": 114,
+    "tests": [
+      {
+        "line": 7,
+        "text": "test('índice de coleta conserva candidatos e ordem em bordas, tamanhos e alterações do mundo',()=>{"
+      },
+      {
+        "line": 25,
+        "text": "test('buraco low poly reduz triângulos e conserva amostras do perfil e o fundo físico',()=>{"
+      },
+      {
+        "line": 82,
+        "text": "for(const mode of ['native','angle'])test(`instancing ${mode} mantém todos os transforms, expande buffers e restaura desenho comum`,()=>{"
+      },
+      {
+        "line": 95,
+        "text": "test('sombras conservam emissores fora da câmera; TAA e corpos físicos mantêm caminhos próprios',()=>{"
+      },
+      {
+        "line": 109,
+        "text": "test('sem suporte a instancing e no fallback CPU o desenho individual continua disponível',()=>{"
+      }
+    ],
+    "runtimeSites": [
+      {
+        "line": 8,
+        "text": "const g=createRuntime(html,null,{boot:'manual'});"
+      },
+      {
+        "line": 26,
+        "text": "const g=createRuntime(html);"
+      },
+      {
+        "line": 53,
+        "text": "const g=createRuntime(html,null,{boot:'manual'});"
+      },
+      {
+        "line": 110,
+        "text": "const g=createRuntime(html,null,{boot:'manual'});g.run('initObjectInstancing()');"
+      }
+    ],
+    "assertions": {
+      "equal": 17,
+      "deepEqual": 4,
+      "ok": 4,
+      "match": 0,
+      "notEqual": 0,
+      "throws": 0,
+      "doesNotMatch": 0
+    },
+    "sourceTransformations": [],
+    "readHtml": false,
+    "assembleHtml": true
+  },
+  {
+    "file": "tests/desempenho.test.mjs",
+    "lines": 81,
+    "tests": [
+      {
+        "line": 28,
+        "text": "test('índice de spawns equivale à busca completa e acompanha regeneração e acréscimos',()=>{"
+      },
+      {
+        "line": 45,
+        "text": "test('vegetação e árvores preservam cada posição, normal e acabamento ao receber a nova paleta',()=>{"
+      },
+      {
+        "line": 69,
+        "text": "test('um corpo e vários corpos conservam resultados da física original',()=>{"
+      }
+    ],
+    "runtimeSites": [
+      {
+        "line": 7,
+        "text": "const runPair=()=>[createRuntime(original),createRuntime(current)];"
+      }
+    ],
+    "assertions": {
+      "equal": 4,
+      "deepEqual": 7,
+      "ok": 2,
+      "match": 0,
+      "notEqual": 0,
+      "throws": 0,
+      "doesNotMatch": 0
+    },
+    "sourceTransformations": [
+      {
+        "line": 6,
+        "text": "const original=read('backup/VORA-original-17.html'), current=read('dist/VORA.html').replaceAll('initializeWorldResources();','').replaceAll('yield* initializeWorldResourcesIncremental();','');"
+      }
+    ],
+    "readHtml": true,
+    "assembleHtml": false
+  },
+  {
+    "file": "tests/dossie-interior.test.mjs",
+    "lines": 107,
+    "tests": [
+      {
+        "line": 7,
+        "text": "test('interior fica no canto inferior esquerdo com escala, ampliação e área segura',()=>{"
+      },
+      {
+        "line": 24,
+        "text": "test('Carga abre o dossiê, volta à carga e fecha por Escape sem alterar progresso',()=>{"
+      },
+      {
+        "line": 44,
+        "text": "test('parecer usa a coleta real: raio, carga total, desbloqueio e reposição',()=>{"
+      },
+      {
+        "line": 66,
+        "text": "test('modelos do dossiê são as mesmas malhas, variantes e escalas usadas no mundo',()=>{"
+      },
+      {
+        "line": 82,
+        "text": "test('filtros mostram exemplares coerentes e prévia só desenha quando solicitada',()=>{"
+      }
+    ],
+    "runtimeSites": [
+      {
+        "line": 8,
+        "text": "const g=createRuntime(html,null,{width:1920,height:1080});"
+      },
+      {
+        "line": 25,
+        "text": "const g=createRuntime(html,null,{width:1440,height:900});"
+      },
+      {
+        "line": 45,
+        "text": "const g=createRuntime(html);"
+      },
+      {
+        "line": 67,
+        "text": "const g=createRuntime(html);"
+      },
+      {
+        "line": 83,
+        "text": "const g=createRuntime(html,null,{width:1440,height:900});"
+      }
+    ],
+    "assertions": {
+      "equal": 30,
+      "deepEqual": 1,
+      "ok": 7,
+      "match": 1,
+      "notEqual": 0,
+      "throws": 0,
+      "doesNotMatch": 0
+    },
+    "sourceTransformations": [],
+    "readHtml": false,
+    "assembleHtml": true
+  },
+  {
+    "file": "tests/equivalencia.test.mjs",
+    "lines": 101,
+    "tests": [
+      {
+        "line": 32,
+        "text": "test('HTML da interface, CSS, ícones e fontes preservados',()=>{"
+      },
+      {
+        "line": 45,
+        "text": "test('paridade de terreno, vegetação, física e quadro CPU fora da malha low poly autorizada',()=>{"
+      }
+    ],
+    "runtimeSites": [
+      {
+        "line": 48,
+        "text": "const historical=createRuntime(original,save),after=createRuntime(final,save);"
+      },
+      {
+        "line": 59,
+        "text": "const before=createRuntime(referenceWithApprovedPalette,save);"
+      }
+    ],
+    "assertions": {
+      "equal": 16,
+      "deepEqual": 9,
+      "ok": 0,
+      "match": 2,
+      "notEqual": 1,
+      "throws": 0,
+      "doesNotMatch": 0
+    },
+    "sourceTransformations": [
+      {
+        "line": 13,
+        "text": "const final=distribution.replaceAll('initializeWorldResources();','').replaceAll('yield* initializeWorldResourcesIncremental();','');"
+      },
+      {
+        "line": 20,
+        "text": "const withoutShadowField=html=>html.replace(/<div class=\"graphics-field\"><label class=\"graphics-label\" for=\"(?:shadowQuality|shadowDistance)\">[\\s\\S]*?<\\/div>/g,'');"
+      },
+      {
+        "line": 21,
+        "text": "const normalize=html=>withoutShadowField(html).replace(loadingComponent,'').replace(dossierComponent,'').replace(expansionComponent,'').replace(skillButton,'').replace(/<div class=\"graphics-field\" data-expansion-field=\"fps\">[\\s\\S]*?<\\/div>/,'').replace(dossierButton,'').replace(/(<html\\b[^>]*?) data-loading=\"true\"/,'$1').replace(/<script\\b[^>]*>[\\s\\S]*?<\\/script>/gi,'').replace(/<style\\b[^>]*>[\\s\\S]*?<\\/style>/gi,'').replace(/\\r\\n/g,'\\n').replace(/>\\s+</g,'><').trim();"
+      },
+      {
+        "line": 38,
+        "text": "const styles=h=>[...h.matchAll(/<style[^>]*>([\\s\\S]*?)<\\/style>/g)].map(m=>m[1].replace(/\\r\\n/g,'\\n').replace(/url\\(\"(data:[^\"\\n]+)\"\\)/g,'url($1)'));"
+      },
+      {
+        "line": 55,
+        "text": "const oldSource=historical.run(name+'.toString()'),newSource=after.run(name+'.toString()');"
+      },
+      {
+        "line": 57,
+        "text": "referenceWithApprovedPalette=referenceWithApprovedPalette.replace(oldSource,()=>newSource);"
+      },
+      {
+        "line": 65,
+        "text": "assert.equal(after.run(name+'.toString()'),historical.run(name+'.toString()'),name+' não faz parte da alteração de paleta');"
+      },
+      {
+        "line": 67,
+        "text": "assert.equal(after.run(name+'.toString()'),before.run(name+'.toString()'),name+' preservado fora da revisão dos modelos');"
+      },
+      {
+        "line": 71,
+        "text": "const withoutSign=source=>source.replace(\" if(kind==='barrel'||kind==='pallet'||kind==='crate'||kind==='gardenpot'||kind==='logpile')return makeResourceProp(kind,variant);\\n\",'').replace(/else if\\(kind==='sign'\\)\\{[\\s\\S]*?(?=\\}else if\\(kind==='picnic'\\))/,\"else if(kind==='sign'){\");"
+      },
+      {
+        "line": 72,
+        "text": "assert.equal(withoutSign(after.run('makeParkProp.toString()')),withoutSign(before.run('makeParkProp.toString()')),'os outros objetos do parque permanecem idênticos');"
+      },
+      {
+        "line": 74,
+        "text": "buildStationMeshes=${after.run('buildStationMeshes.toString()')};stationMeshes=buildStationMeshes();"
+      },
+      {
+        "line": 75,
+        "text": "buildDepotCrate=${after.run('buildDepotCrate.toString()')};depotCrates.clear();"
+      },
+      {
+        "line": 76,
+        "text": "const referenceParkProp=makeParkProp,approvedParkProp=${after.run('makeParkProp.toString()')};"
+      }
+    ],
+    "readHtml": true,
+    "assembleHtml": false
+  },
+  {
+    "file": "tests/estrutura.test.mjs",
+    "lines": 50,
+    "tests": [
+      {
+        "line": 9,
+        "text": "test('geração determinística, sem downloads nem arquivos externos',()=>{"
+      },
+      {
+        "line": 18,
+        "text": "test('backup íntegro e toda a sequência original de JavaScript coberta uma única vez',()=>{"
+      },
+      {
+        "line": 27,
+        "text": "test('todos os arquivos de fonte são incluídos; inclusões recusam ciclos e saídas da pasta',()=>{"
+      },
+      {
+        "line": 32,
+        "text": "test('lógica extraída permanece textual e shaders locais preservam os valores',()=>{"
+      }
+    ],
+    "runtimeSites": [],
+    "assertions": {
+      "equal": 10,
+      "deepEqual": 1,
+      "ok": 5,
+      "match": 0,
+      "notEqual": 0,
+      "throws": 2,
+      "doesNotMatch": 2
+    },
+    "sourceTransformations": [
+      {
+        "line": 28,
+        "text": "const listed=new Set(manifest.scripts);for(const entry of fs.readdirSync(path.join(ROOT,'src'),{recursive:true}))if(entry.endsWith('.js'))assert.ok(listed.has('src/'+entry.replaceAll('\\\\','/')),entry);"
+      },
+      {
+        "line": 35,
+        "text": "const source=read(file);let expected=lines.slice(start-1,end).join('\\n')+'\\n';if(start===607)expected=expected.replace(/^<script>/,'');"
+      },
+      {
+        "line": 38,
+        "text": "expected=expected.replace(defaultLine,\" // Partidas existentes mantêm suas escolhas; os inicializadores validam o suporte.\\n if(!validSave(saved)){state.imageMode='native';state.aaMode='off';state.outputMode='native';state.aoMode='off'}\\n state.nativeDisplayDefaultsV1=true;\");"
+      }
+    ],
+    "readHtml": true,
+    "assembleHtml": true
+  },
+  {
+    "file": "tests/expansao-economia.test.mjs",
+    "lines": 117,
+    "tests": [
+      {
+        "line": 7,
+        "text": "test('tamanho altera volume e valor; a medição atravessa coleta, save, caixa e venda',()=>{"
+      },
+      {
+        "line": 26,
+        "text": "test('migração preserva volume, cotações e poses da carga antiga sem alterar moedas',()=>{"
+      },
+      {
+        "line": 42,
+        "text": "test('seis novas melhorias têm efeito, preço crescente e limite; caixa tem oito níveis',()=>{"
+      },
+      {
+        "line": 58,
+        "text": "test('FPS limita a cadência sem deriva e preserva a preferência após reiniciar',()=>{"
+      },
+      {
+        "line": 70,
+        "text": "test('cada ponto mantém tipo, posição e rotação após consumo, espera e recarga',()=>{"
+      },
+      {
+        "line": 81,
+        "text": "test('dossiê agrupa rotações e cores e mantém somente portes úteis',()=>{"
+      },
+      {
+        "line": 91,
+        "text": "test('segurar por dois segundos seleciona a malha, mostra dados e restaura a câmera ao fechar',()=>{"
+      },
+      {
+        "line": 111,
+        "text": "test('skill tree abre somente uma tela vazia, fecha e pausa sem gastar progresso',()=>{"
+      }
+    ],
+    "runtimeSites": [
+      {
+        "line": 8,
+        "text": "const g=createRuntime(html);"
+      },
+      {
+        "line": 17,
+        "text": "const restored=createRuntime(html,JSON.parse(g.store.get('vora-v1')));"
+      },
+      {
+        "line": 30,
+        "text": "const g=createRuntime(html,save);"
+      },
+      {
+        "line": 37,
+        "text": "const again=createRuntime(html,JSON.parse(g.store.get('vora-v1')));"
+      },
+      {
+        "line": 43,
+        "text": "const g=createRuntime(html);g.run('state.developer=true');"
+      },
+      {
+        "line": 59,
+        "text": "const g=createRuntime(html);"
+      },
+      {
+        "line": 71,
+        "text": "const g=createRuntime(html);g.run(`globalThis.target=objects.find(o=>o.alive&&o.fixedSpawn&&o.t===0);"
+      },
+      {
+        "line": 76,
+        "text": "const restored=createRuntime(html,JSON.parse(g.store.get('vora-v1')));"
+      },
+      {
+        "line": 82,
+        "text": "const g=createRuntime(html);g.run('refreshDossier()');"
+      },
+      {
+        "line": 92,
+        "text": "const g=createRuntime(html,null,{width:1000,height:800});"
+      },
+      {
+        "line": 112,
+        "text": "const g=createRuntime(html),before=g.run('JSON.stringify(state)');g.doc.getElementById('skillTreeBtn').click();"
+      }
+    ],
+    "assertions": {
+      "equal": 46,
+      "deepEqual": 5,
+      "ok": 9,
+      "match": 2,
+      "notEqual": 0,
+      "throws": 0,
+      "doesNotMatch": 2
+    },
+    "sourceTransformations": [],
+    "readHtml": true,
+    "assembleHtml": true
+  },
+  {
+    "file": "tests/fluxo.test.mjs",
+    "lines": 158,
+    "tests": [
+      {
+        "line": 40,
+        "text": "test('loop bloqueado pelo carregamento ou limite de FPS não avança nem salva a partida', () => {"
+      },
+      {
+        "line": 55,
+        "text": "test('quadro atrasado limita o avanço e salva depois da simulação, antes de apresentar', () => {"
+      },
+      {
+        "line": 72,
+        "text": "test('cena reutilizada continua simulando e atualizando interior e inspeção', () => {"
+      },
+      {
+        "line": 82,
+        "text": "test('fallback reutiliza menu estático e redesenha quando câmera, animação ou venda mudam', () => {"
+      },
+      {
+        "line": 102,
+        "text": "test('contador mede somente desenhos e reinicia ao mudar a visibilidade', () => {"
+      },
+      {
+        "line": 125,
+        "text": "test('progresso das fases não recua, limita frações e reserva 100% para a conclusão do boot', () => {"
+      },
+      {
+        "line": 136,
+        "text": "test('interromper ou falhar uma fase libera o builder sem contabilizar trabalho incompleto', () => {"
+      }
+    ],
+    "runtimeSites": [],
+    "assertions": {
+      "equal": 23,
+      "deepEqual": 4,
+      "ok": 8,
+      "match": 0,
+      "notEqual": 0,
+      "throws": 1,
+      "doesNotMatch": 0
+    },
+    "sourceTransformations": [],
+    "readHtml": true,
+    "assembleHtml": false
+  },
+  {
+    "file": "tests/gpu-visibilidade.test.mjs",
+    "lines": 92,
+    "tests": [
+      {
+        "line": 7,
+        "text": "test('sombra usa o volume da luz: preserva emissor fora da câmera e elimina emissor fora do mapa',()=>{"
+      },
+      {
+        "line": 19,
+        "text": "test('seleção de pré-passe evita cenas leves e conserva especialização em aparelhos móveis',()=>{"
+      },
+      {
+        "line": 29,
+        "text": "test('pipeline compila durante o carregamento, fixa atributos compatíveis e libera programas em falha',()=>{"
+      },
+      {
+        "line": 56,
+        "text": "test('cache retém apresentação estática e invalida por câmera, objeto, qualidade, depósito e recursos',()=>{"
+      },
+      {
+        "line": 72,
+        "text": "test('animações, simulação e convergência temporal não são congeladas pelo cache',()=>{"
+      },
+      {
+        "line": 82,
+        "text": "test('loop continua simulando ao reutilizar a cena e apresenta mudança no mesmo quadro',()=>{"
+      }
+    ],
+    "runtimeSites": [
+      {
+        "line": 8,
+        "text": "const g=createRuntime(html,null,{boot:'manual'});"
+      },
+      {
+        "line": 20,
+        "text": "const g=createRuntime(html,null,{boot:'manual'});"
+      },
+      {
+        "line": 30,
+        "text": "const g=createRuntime(html,null,{boot:'manual'});"
+      },
+      {
+        "line": 50,
+        "text": "const g=createRuntime(html);g.run(`gl.isSoftware=false;sceneMotionActive=false;"
+      }
+    ],
+    "assertions": {
+      "equal": 24,
+      "deepEqual": 1,
+      "ok": 3,
+      "match": 0,
+      "notEqual": 2,
+      "throws": 0,
+      "doesNotMatch": 0
+    },
+    "sourceTransformations": [],
+    "readHtml": false,
+    "assembleHtml": true
+  },
+  {
+    "file": "tests/inspecao.test.mjs",
+    "lines": 177,
+    "tests": [
+      {
+        "line": 25,
+        "text": "test('segurar mostra análise imediatamente, progride e cancela ao soltar, arrastar ou usar dois dedos',()=>{"
+      },
+      {
+        "line": 53,
+        "text": "test('entrada e retorno são graduais; parallax é amortecido e todos os dados pertencem ao item real',()=>{"
+      },
+      {
+        "line": 92,
+        "text": "test('silhueta rasteriza a união da malha: preserva concavidade e não desenha diagonais internas',()=>{"
+      },
+      {
+        "line": 111,
+        "text": "test('malhas de lata, banco e árvore geram contornos distintos e ancoram as linhas na superfície',()=>{"
+      },
+      {
+        "line": 135,
+        "text": "test('movimento reduzido mantém progresso e dados, sem parallax, partículas orbitais ou transição de câmera',()=>{"
+      },
+      {
+        "line": 150,
+        "text": "test('deslocamento da lente mantém terreno CPU e reconstrução espacial do AO alinhados',()=>{"
+      }
+    ],
+    "runtimeSites": [
+      {
+        "line": 10,
+        "text": "const g=createRuntime(html,null,{width:1000,height:800});"
+      },
+      {
+        "line": 93,
+        "text": "const g=createRuntime(html,null,{boot:'manual'});"
+      },
+      {
+        "line": 151,
+        "text": "const g=createRuntime(html,null,{boot:'manual'});"
+      }
+    ],
+    "assertions": {
+      "equal": 48,
+      "deepEqual": 3,
+      "ok": 9,
+      "match": 0,
+      "notEqual": 1,
+      "throws": 0,
+      "doesNotMatch": 0
+    },
+    "sourceTransformations": [],
+    "readHtml": false,
+    "assembleHtml": true
+  },
+  {
+    "file": "tests/jogo.test.mjs",
+    "lines": 52,
+    "tests": [
+      {
+        "line": 7,
+        "text": "test('inicialização real, padrões de partida nova, oito qualidades e recursos offline',()=>{"
+      },
+      {
+        "line": 14,
+        "text": "test('save antigo mantém progresso e preferências válidas; persistência/restauração da carga',()=>{"
+      },
+      {
+        "line": 21,
+        "text": "test('save inválido e armazenamento bloqueado não impedem a inicialização',()=>{"
+      },
+      {
+        "line": 25,
+        "text": "test('coleta, capacidade, queda, depósito, venda e melhorias não duplicam valores',()=>{"
+      },
+      {
+        "line": 35,
+        "text": "test('teclado, pausa dos menus, joystick, câmera e limites do mundo',()=>{"
+      },
+      {
+        "line": 43,
+        "text": "test('escala 40–160%, interior em corte/X-ray, ADM e qualidade compatível',()=>{"
+      }
+    ],
+    "runtimeSites": [
+      {
+        "line": 8,
+        "text": "const g=createRuntime(html);assert.equal(g.run('gl.isSoftware'),true);"
+      },
+      {
+        "line": 15,
+        "text": "const g=createRuntime(html,legacy);for(const k of ['coins','r','d','imageMode','aaMode','outputMode','aoMode','viewRange','menuScale'])assert.equal(g.run('state.'+k),legacy[k],k);"
+      },
+      {
+        "line": 18,
+        "text": "const restored=createRuntime(html,saved);assert.deepEqual(restored.json('state.cargo'),legacy.cargo);assert.equal(restored.run('cargoBodies.length'),2);assert.equal(restored.run('state.coins'),1000);"
+      },
+      {
+        "line": 22,
+        "text": "const invalid=createRuntime(html,{...legacy,r:999});assert.equal(invalid.run('state.r'),0);assert.equal(invalid.run('state.coins'),120);"
+      },
+      {
+        "line": 23,
+        "text": "const blocked=createRuntime(html,null,{storageBlocked:true});assert.equal(blocked.run('saveAvailable'),false);assert.match(blocked.doc.getElementById('saveStatus').textContent,/sessão/);"
+      },
+      {
+        "line": 26,
+        "text": "const g=createRuntime(html);g.run(`state.particles=false;const target=objects.find(o=>o.alive&&o.t===0);collect(target);collect(target)`);"
+      },
+      {
+        "line": 36,
+        "text": "const g=createRuntime(html);const start=g.json('[player.x,player.y]');"
+      },
+      {
+        "line": 44,
+        "text": "const g=createRuntime(html);for(const scale of [40,100,160]){g.run('setInterfaceScale('+scale+')');assert.equal(g.run('interfaceScale()'),scale)}"
+      }
+    ],
+    "assertions": {
+      "equal": 37,
+      "deepEqual": 5,
+      "ok": 5,
+      "match": 1,
+      "notEqual": 0,
+      "throws": 0,
+      "doesNotMatch": 0
+    },
+    "sourceTransformations": [],
+    "readHtml": true,
+    "assembleHtml": false
+  },
+  {
+    "file": "tests/layout-spawns-distancia.test.mjs",
+    "lines": 86,
+    "tests": [
+      {
+        "line": 7,
+        "text": "test('objetos seguem regiões, orientação dos caminhos e circulação livre',()=>{"
+      },
+      {
+        "line": 20,
+        "text": "test('melhorias de spawn desbloqueiam estoques e aceleram também reposições pendentes',()=>{"
+      },
+      {
+        "line": 40,
+        "text": "test('save preserva contagem regressiva e migra recursos consumidos da versão anterior',()=>{"
+      },
+      {
+        "line": 54,
+        "text": "test('seis distâncias de sombras são independentes, persistem e migram assinaturas antigas',()=>{"
+      }
+    ],
+    "runtimeSites": [
+      {
+        "line": 8,
+        "text": "const g=createRuntime(html);"
+      },
+      {
+        "line": 21,
+        "text": "const g=createRuntime(html);"
+      },
+      {
+        "line": 41,
+        "text": "const g=createRuntime(html);"
+      },
+      {
+        "line": 46,
+        "text": "const save=JSON.parse(g.store.get('vora-v1')),restored=createRuntime(html,save);"
+      },
+      {
+        "line": 49,
+        "text": "const legacy=createRuntime(html,save);"
+      },
+      {
+        "line": 58,
+        "text": "const g=createRuntime(html,save),profiles=['very_low','low','medium','high','very_high','ultra'];"
+      }
+    ],
+    "assertions": {
+      "equal": 15,
+      "deepEqual": 3,
+      "ok": 10,
+      "match": 0,
+      "notEqual": 0,
+      "throws": 0,
+      "doesNotMatch": 0
+    },
+    "sourceTransformations": [],
+    "readHtml": true,
+    "assembleHtml": false
+  },
+  {
+    "file": "tests/melhorias-uniformes.test.mjs",
+    "lines": 41,
+    "tests": [
+      {
+        "line": 7,
+        "text": "test('todos os cartões mantêm a disposição compacta da referência e os botões já vinculados',()=>{"
+      },
+      {
+        "line": 26,
+        "text": "test('réguas iguais representam níveis diferentes por proporção e os estados de compra se mantêm',()=>{"
+      }
+    ],
+    "runtimeSites": [
+      {
+        "line": 8,
+        "text": "const g=createRuntime(html,null,{boot:'manual'});"
+      },
+      {
+        "line": 27,
+        "text": "const g=createRuntime(html);"
+      }
+    ],
+    "assertions": {
+      "equal": 16,
+      "deepEqual": 2,
+      "ok": 0,
+      "match": 0,
+      "notEqual": 0,
+      "throws": 0,
+      "doesNotMatch": 0
+    },
+    "sourceTransformations": [
+      {
+        "line": 15,
+        "text": "const shape=el=>[el.tagName,el.className.replace(/\\bis-earned\\b/g,'').trim(),...el.children.map(shape)];"
+      }
+    ],
+    "readHtml": false,
+    "assembleHtml": true
+  },
+  {
+    "file": "tests/mesh-incremental.test.mjs",
+    "lines": 103,
+    "tests": [
+      {
+        "line": 31,
+        "text": "test('builders de malhas preservam bytes, índices e ranges ao serem retomados',()=>{"
+      },
+      {
+        "line": 48,
+        "text": "test('bake incremental conserva recortes e geometria nos dois LODs',()=>{"
+      },
+      {
+        "line": 58,
+        "text": "test('cancelar um upload incremental libera os buffers já alocados',()=>{"
+      },
+      {
+        "line": 70,
+        "text": "test('cada retomada limita lotes inclusive na indexação WebGL',t=>{"
+      },
+      {
+        "line": 94,
+        "text": "test('geração incremental do parque conserva a distribuição e devolve controle',()=>{"
+      }
+    ],
+    "runtimeSites": [
+      {
+        "line": 9,
+        "text": "const game=createRuntime(read('backup/VORA-original-17.html'));"
+      }
+    ],
+    "assertions": {
+      "equal": 5,
+      "deepEqual": 3,
+      "ok": 7,
+      "match": 0,
+      "notEqual": 0,
+      "throws": 0,
+      "doesNotMatch": 0
+    },
+    "sourceTransformations": [],
+    "readHtml": true,
+    "assembleHtml": false
+  },
+  {
+    "file": "tests/pages.test.mjs",
+    "lines": 19,
+    "tests": [
+      {
+        "line": 6,
+        "text": "test('entrada do Pages abre o jogo dentro do caminho do repositório', () => {"
+      }
+    ],
+    "runtimeSites": [],
+    "assertions": {
+      "equal": 4,
+      "deepEqual": 0,
+      "ok": 2,
+      "match": 0,
+      "notEqual": 0,
+      "throws": 0,
+      "doesNotMatch": 0
+    },
+    "sourceTransformations": [],
+    "readHtml": true,
+    "assembleHtml": false
+  },
+  {
+    "file": "tests/piso-loja.test.mjs",
+    "lines": 20,
+    "tests": [
+      {
+        "line": 5,
+        "text": "test('fundação substitui a calçada coplanar apenas dentro da loja',()=>{"
+      }
+    ],
+    "runtimeSites": [
+      {
+        "line": 6,
+        "text": "const g=createRuntime(assemble().html);"
+      }
+    ],
+    "assertions": {
+      "equal": 9,
+      "deepEqual": 0,
+      "ok": 0,
+      "match": 1,
+      "notEqual": 0,
+      "throws": 0,
+      "doesNotMatch": 0
+    },
+    "sourceTransformations": [],
+    "readHtml": false,
+    "assembleHtml": true
+  },
+  {
+    "file": "tests/recursos-mundo.test.mjs",
+    "lines": 55,
+    "tests": [
+      {
+        "line": 7,
+        "text": "test('parque tem novos recursos, pedras de seixos a blocos enormes e todas as árvores coletáveis',()=>{"
+      },
+      {
+        "line": 22,
+        "text": "test('engolir árvore produz madeira uma vez, persiste a remoção e permite descarregar e vender',()=>{"
+      },
+      {
+        "line": 46,
+        "text": "test('carga cheia e buraco pequeno preservam o recurso inteiro; saves antigos continuam válidos',()=>{"
+      }
+    ],
+    "runtimeSites": [
+      {
+        "line": 8,
+        "text": "const g=createRuntime(html);"
+      },
+      {
+        "line": 23,
+        "text": "const g=createRuntime(html);"
+      },
+      {
+        "line": 34,
+        "text": "const restored=createRuntime(html,save);"
+      },
+      {
+        "line": 47,
+        "text": "const g=createRuntime(html,{coins:900,r:0,d:0,cargo:[0,1],collected:3,sold:1,worldScaleVersion:2});"
+      }
+    ],
+    "assertions": {
+      "equal": 19,
+      "deepEqual": 0,
+      "ok": 4,
+      "match": 0,
+      "notEqual": 0,
+      "throws": 0,
+      "doesNotMatch": 0
+    },
+    "sourceTransformations": [],
+    "readHtml": true,
+    "assembleHtml": false
+  },
+  {
+    "file": "tests/sombras-limites.test.mjs",
+    "lines": 117,
+    "tests": [
+      {
+        "line": 33,
+        "text": "test('cache de sombras tem orçamento limitado, usa amostragem exata e só aloca na preparação',()=>{"
+      },
+      {
+        "line": 54,
+        "text": "test('troca cancelada libera resumos e mapas novos sem substituir o par válido',()=>{"
+      },
+      {
+        "line": 68,
+        "text": "test('concluir novos mapas solicita apresentação mesmo com mundo e câmera parados',()=>{"
+      },
+      {
+        "line": 80,
+        "text": "test('resumo é reconstruído junto do mapa estático e preservado durante câmera e sombras móveis',()=>{"
+      },
+      {
+        "line": 101,
+        "text": "test('falta de suporte, compilação ou alvo opcional mantém as sombras completas',()=>{"
+      }
+    ],
+    "runtimeSites": [
+      {
+        "line": 8,
+        "text": "const g=createRuntime(html,null,{boot:'manual'});"
+      }
+    ],
+    "assertions": {
+      "equal": 33,
+      "deepEqual": 1,
+      "ok": 0,
+      "match": 0,
+      "notEqual": 0,
+      "throws": 0,
+      "doesNotMatch": 0
+    },
+    "sourceTransformations": [],
+    "readHtml": false,
+    "assembleHtml": true
+  },
+  {
+    "file": "tests/sombras-visuais.test.mjs",
+    "lines": 74,
+    "tests": [
+      {
+        "line": 7,
+        "text": "test('copa usa exatamente a mesma malha e escala na câmera e na sombra nos dois LODs',()=>{"
+      },
+      {
+        "line": 21,
+        "text": "test('troca real de LOD invalida a sombra, enquanto zoom dentro do mesmo LOD reutiliza o mapa',()=>{"
+      },
+      {
+        "line": 38,
+        "text": "test('grama baixa compartilha a geometria visível e seus bytes, sem bake extra de sombra',()=>{"
+      },
+      {
+        "line": 54,
+        "text": "test('calçada participa do mapa estático sem mudar sua geometria ou altura física',()=>{"
+      },
+      {
+        "line": 62,
+        "text": "test('preparação inicial reúne plantas baixas e não prepara o mesmo tile duas vezes',()=>{"
+      }
+    ],
+    "runtimeSites": [
+      {
+        "line": 8,
+        "text": "const g=createRuntime(html,null,{boot:'manual'});"
+      },
+      {
+        "line": 22,
+        "text": "const g=createRuntime(html,null,{boot:'manual'});"
+      },
+      {
+        "line": 39,
+        "text": "const g=createRuntime(html,null,{boot:'manual'});"
+      },
+      {
+        "line": 55,
+        "text": "const g=createRuntime(html,null,{boot:'manual'});"
+      },
+      {
+        "line": 63,
+        "text": "const g=createRuntime(html,null,{boot:'manual'});"
+      }
+    ],
+    "assertions": {
+      "equal": 11,
+      "deepEqual": 3,
+      "ok": 0,
+      "match": 0,
+      "notEqual": 0,
+      "throws": 0,
+      "doesNotMatch": 0
+    },
+    "sourceTransformations": [],
+    "readHtml": false,
+    "assembleHtml": true
+  },
+  {
+    "file": "tests/sombras.test.mjs",
+    "lines": 155,
+    "tests": [
+      {
+        "line": 14,
+        "text": "test('sombras têm padrão compatível, seletor próprio e validação de preferências antigas',()=>{"
+      },
+      {
+        "line": 37,
+        "text": "test('assinatura gráfica antiga migra sem reaplicar predefinição nem perder preferências',()=>{"
+      },
+      {
+        "line": 55,
+        "text": "test('cada predefinição escolhe sombras coerentes sem vincular o ajuste de AO',()=>{"
+      },
+      {
+        "line": 69,
+        "text": "test('alvos respeitam orçamento móvel e os limites de textura e depth buffer',()=>{"
+      },
+      {
+        "line": 112,
+        "text": "test('trocas de qualidade são incrementais, mantêm alvos prontos e cancelam o pedido anterior',()=>{"
+      },
+      {
+        "line": 145,
+        "text": "test('falha de alocação conserva os mapas anteriores e libera recursos incompletos',()=>{"
+      }
+    ],
+    "runtimeSites": [
+      {
+        "line": 15,
+        "text": "const fresh=createRuntime(html);"
+      },
+      {
+        "line": 24,
+        "text": "const game=createRuntime(html,{...saved,shadowQuality:'ultra'});"
+      },
+      {
+        "line": 33,
+        "text": "const invalid=createRuntime(html,{...saved,shadowQuality:'constructor'});"
+      },
+      {
+        "line": 39,
+        "text": "const game=createRuntime(html,{...saved,graphicsPreset:'default',graphicsPresetSignature:signature});"
+      },
+      {
+        "line": 56,
+        "text": "const game=createRuntime(html);"
+      },
+      {
+        "line": 70,
+        "text": "const game=createRuntime(html);"
+      },
+      {
+        "line": 92,
+        "text": "const game=createRuntime(html);"
+      }
+    ],
+    "assertions": {
+      "equal": 39,
+      "deepEqual": 18,
+      "ok": 2,
+      "match": 1,
+      "notEqual": 0,
+      "throws": 0,
+      "doesNotMatch": 0
+    },
+    "sourceTransformations": [],
+    "readHtml": false,
+    "assembleHtml": true
+  },
+  {
+    "file": "tests/textura-incremental.test.mjs",
+    "lines": 19,
+    "tests": [
+      {
+        "line": 6,
+        "text": "test('textura procedural parcelada mantém cada byte da versão anterior',()=>{"
+      }
+    ],
+    "runtimeSites": [
+      {
+        "line": 7,
+        "text": "const game=createRuntime(read('backup/VORA-original-17.html'));"
+      }
+    ],
+    "assertions": {
+      "equal": 0,
+      "deepEqual": 1,
+      "ok": 0,
+      "match": 0,
+      "notEqual": 0,
+      "throws": 0,
+      "doesNotMatch": 0
+    },
+    "sourceTransformations": [],
+    "readHtml": true,
+    "assembleHtml": false
+  }
+]

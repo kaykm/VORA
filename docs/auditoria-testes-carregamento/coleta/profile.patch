@@ -1,0 +1,63 @@
+--- a/tests/ambiente.mjs
++++ b/tests/ambiente.mjs
+@@ -1,6 +1,7 @@
+ // Ambiente determinístico para exercitar a lógica real sem navegador ou pacotes.
+ // Não substitui a validação de layout, shaders WebGL e entrada em um navegador real.
+ import vm from 'node:vm';
++import fs from 'node:fs';
+ import {performance} from 'node:perf_hooks';
+ const decode=s=>s.replace(/&(?:amp|lt|gt|quot|apos|#39);/g,m=>({'&amp;':'&','&lt;':'<','&gt;':'>','&quot;':'"','&apos;':"'",'&#39;':"'"}[m]));
+ const voids=new Set('area base br col embed hr img input link meta param source track wbr'.split(' '));
+@@ -62,13 +63,14 @@
+   }else stack.at(-1)._text+=decode(token);
+  }
+ }
+-export function createRuntime(html,save=null,{
++function actualRuntime(html,save=null,{
+  storageBlocked=false,width=320,height=240,instrument=[],boot='auto',clockStep=0
+ }={}){
+  const began=performance.now(),doc=new Events();doc.ids=new Map();doc.createElement=name=>new Element(name,doc);doc.createElementNS=(_,name)=>new Element(name,doc);
+  const container=doc.createElement('root');parse(html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi,'').replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi,''),container,doc);
+  doc.documentElement=container.querySelector('html');doc.body=container.querySelector('body');doc.activeElement=doc.body;doc.hidden=false;doc.hasFocus=()=>true;
+  doc.getElementById=id=>doc.ids.get(id)||null;doc.querySelectorAll=s=>doc.documentElement.querySelectorAll(s);doc.querySelector=s=>doc.querySelectorAll(s)[0]||null;
++ const auditDomMs=performance.now()-began;
+  const win=new Events(),store=new Map(save?[['vora-v1',JSON.stringify(save)]]:[]),raf=[];
+  const timers=new Map(),cancelledFrames=new Set(),storageWrites=[],bootSteps=[];
+  let random=12345,clock=1000,nextTask=1;
+@@ -97,8 +99,11 @@
+   if(incrementalBoot)js+='\n'+hook;
+   else js=js.replace('migrateWorldScale();warmModelMeshes();',()=>hook+'\nmigrateWorldScale();warmModelMeshes();');
+  }
+- vm.runInContext(js,context,{timeout:45000,filename:'VORA.js'});
+- const run=(code,timeout=45000)=>vm.runInContext(code,context,{timeout});
++ const auditCompileStart=performance.now(),auditScript=new vm.Script(js,{filename:"VORA.js"}),auditCompileMs=performance.now()-auditCompileStart,auditEvalStart=performance.now();auditScript.runInContext(context,{timeout:45000});const auditEvalMs=performance.now()-auditEvalStart;
++ const auditRunStats={calls:0,ms:0,queries:{}};
++ const run=(code,timeout=45000)=>{const began=performance.now();try{return vm.runInContext(code,context,{timeout})}finally{
++  auditRunStats.calls++;auditRunStats.ms+=performance.now()-began;const key=code.length<90?code:'(long code)';auditRunStats.queries[key]=(auditRunStats.queries[key]||0)+1;
++ }};
+  let iterator=null;
+  const nextBoot=()=>{
+   if(!incrementalBoot)throw Error('A referência histórica usa inicialização síncrona.');
+@@ -131,8 +136,21 @@
+  };
+  if(incrementalBoot&&boot!=='manual')drainBoot();
+  const startupMs=performance.now()-began;
+- return {context,doc,store,storageWrites,bootSteps,incrementalBoot,startupMs,run,
++ return {auditRunStats,auditDomMs,auditCompileMs,auditEvalMs,context,doc,store,storageWrites,bootSteps,incrementalBoot,startupMs,run,
+   json:code=>JSON.parse(run('JSON.stringify('+code+')')),
+   event:(type,props={})=>sandbox.dispatchEvent({type,target:doc.getElementById('world'),...props}),
+   advanceClock:ms=>clock+=ms,raf,timers,nextBoot,completeBoot,drainBoot,runAnimationFrame,runTimer};
+ }
++
++const auditRuntimeRecords=[];
++process.on('exit',()=>fs.appendFileSync(process.env.VORA_AUDIT_RUNTIME_LOG,auditRuntimeRecords.map(r=>JSON.stringify(r)+'\n').join('')));
++export function createRuntime(...args){
++ const began=performance.now(),stack=new Error().stack;let g;
++ try{return g=actualRuntime(...args)}finally{
++  const record={pid:process.pid,stack,success:!!g,elapsedMs:performance.now()-began,boot:args[2]?.boot||'auto',hasSave:!!args[1],
++   startupMs:g?.startupMs,domSetupMs:g?.auditDomMs,compileMs:g?.auditCompileMs,evaluateMs:g?.auditEvalMs,
++   incremental:g?.incrementalBoot,steps:g?.bootSteps.length,bootWorkMs:g?.bootSteps.reduce((sum,s)=>sum+s.ms,0),
++   maxStepMs:g?.bootSteps.reduce((max,s)=>Math.max(max,s.ms),0),rssBytes:process.memoryUsage().rss,runStats:g?.auditRunStats};
++  auditRuntimeRecords.push(record);
++ }
++}

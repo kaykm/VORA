@@ -1,0 +1,19 @@
+--- a/tests/ambiente.mjs
++++ b/tests/ambiente.mjs
+@@ -62,6 +62,7 @@
+   }else stack.at(-1)._text+=decode(token);
+  }
+ }
++const auditScripts=new Map();
+ export function createRuntime(html,save=null,{
+  storageBlocked=false,width=320,height=240,instrument=[],boot='auto',clockStep=0
+ }={}){
+@@ -97,7 +98,7 @@
+   if(incrementalBoot)js+='\n'+hook;
+   else js=js.replace('migrateWorldScale();warmModelMeshes();',()=>hook+'\nmigrateWorldScale();warmModelMeshes();');
+  }
+- vm.runInContext(js,context,{timeout:45000,filename:'VORA.js'});
++ let auditScript=auditScripts.get(js);if(!auditScript){auditScript=new vm.Script(js,{filename:'VORA.js'});auditScripts.set(js,auditScript)}auditScript.runInContext(context,{timeout:45000});
+  const run=(code,timeout=45000)=>vm.runInContext(code,context,{timeout});
+  let iterator=null;
+  const nextBoot=()=>{

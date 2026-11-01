@@ -1,0 +1,158 @@
+[
+  {
+    "scenario": "new",
+    "name": "baseline",
+    "environment": "1200 deterministic update steps, SoftwareGL; not 20 real browser seconds",
+    "metrics": {
+      "simulationMs": 862.1654560000197,
+      "renderMs": [
+        1811.1017970000003,
+        1030.3562160000001,
+        1195.2358380000005,
+        1030.211319,
+        775.5287359999984
+      ],
+      "maxQueueMs": 11.161842999999863
+    },
+    "snapshot": {
+      "save": "71e24b19e90a098331dc02d6f1734ca496d4bc810a197a9fca6815df472a2fa7",
+      "world": "1818f62660f55c175de295e1e6ab1da6f5a9052f811475575fe6dfca42ee9b56",
+      "stationMeshes": "37c82275657234236067f02cc3f9b464883df0f2260a96b16aa51726faaba42d",
+      "pixels": "5060245aed434b6f882e2006d3cad9e3ad9bfb6e4ef454f9edb3a94231716043",
+      "memory": {
+        "vegetationBytes": 10211292,
+        "jobs": 0
+      }
+    }
+  },
+  {
+    "scenario": "new",
+    "name": "cap1024",
+    "environment": "1200 deterministic update steps, SoftwareGL; not 20 real browser seconds",
+    "metrics": {
+      "simulationMs": 899.0356760000068,
+      "renderMs": [
+        1753.5527050000019,
+        1071.3220050000018,
+        1247.5928820000008,
+        1027.1232640000017,
+        806.4955200000004
+      ],
+      "maxQueueMs": 11.050020999999106
+    },
+    "snapshot": {
+      "save": "71e24b19e90a098331dc02d6f1734ca496d4bc810a197a9fca6815df472a2fa7",
+      "world": "1818f62660f55c175de295e1e6ab1da6f5a9052f811475575fe6dfca42ee9b56",
+      "stationMeshes": "37c82275657234236067f02cc3f9b464883df0f2260a96b16aa51726faaba42d",
+      "pixels": "5060245aed434b6f882e2006d3cad9e3ad9bfb6e4ef454f9edb3a94231716043",
+      "memory": {
+        "vegetationBytes": 10211292,
+        "jobs": 0
+      }
+    }
+  },
+  {
+    "scenario": "new",
+    "name": "walk-cache",
+    "environment": "1200 deterministic update steps, SoftwareGL; not 20 real browser seconds",
+    "metrics": {
+      "simulationMs": 922.4372650000332,
+      "renderMs": [
+        1810.5662860000011,
+        1064.7418289999987,
+        1274.1192469999987,
+        1066.907634999996,
+        836.0118890000012
+      ],
+      "maxQueueMs": 11.349713999999949
+    },
+    "snapshot": {
+      "save": "71e24b19e90a098331dc02d6f1734ca496d4bc810a197a9fca6815df472a2fa7",
+      "world": "1818f62660f55c175de295e1e6ab1da6f5a9052f811475575fe6dfca42ee9b56",
+      "stationMeshes": "37c82275657234236067f02cc3f9b464883df0f2260a96b16aa51726faaba42d",
+      "pixels": "5060245aed434b6f882e2006d3cad9e3ad9bfb6e4ef454f9edb3a94231716043",
+      "memory": {
+        "vegetationBytes": 10211292,
+        "jobs": 0
+      }
+    }
+  },
+  {
+    "scenario": "advanced",
+    "name": "baseline",
+    "environment": "1200 deterministic update steps, SoftwareGL; not 20 real browser seconds",
+    "metrics": {
+      "simulationMs": 1377.7069469998532,
+      "renderMs": [
+        1685.7652519999974,
+        1253.1759690000035,
+        1188.7859880000033,
+        1124.6850919999997,
+        950.0493579999966
+      ],
+      "maxQueueMs": 14.27400199999829
+    },
+    "snapshot": {
+      "save": "c9cd163afd0e7c518a5e26624064d3573a4c04008befed97dd06357eb7640e25",
+      "world": "5f9c29f53114f271c52bc550b24102832c7703c5cce5f1893c3bbdcc826e928b",
+      "stationMeshes": "37c82275657234236067f02cc3f9b464883df0f2260a96b16aa51726faaba42d",
+      "pixels": "f1cb327022012417ae927a1220817f50f8b256d6a585620098289cdc692eb793",
+      "memory": {
+        "vegetationBytes": 14146596,
+        "jobs": 1
+      }
+    }
+  },
+  {
+    "scenario": "advanced",
+    "name": "cap1024",
+    "environment": "1200 deterministic update steps, SoftwareGL; not 20 real browser seconds",
+    "metrics": {
+      "simulationMs": 1428.673364000002,
+      "renderMs": [
+        1678.975989999999,
+        1214.632660000003,
+        1181.739744999999,
+        1162.1542629999967,
+        1008.5551869999981
+      ],
+      "maxQueueMs": 13.633094999997411
+    },
+    "snapshot": {
+      "save": "c9cd163afd0e7c518a5e26624064d3573a4c04008befed97dd06357eb7640e25",
+      "world": "5f9c29f53114f271c52bc550b24102832c7703c5cce5f1893c3bbdcc826e928b",
+      "stationMeshes": "37c82275657234236067f02cc3f9b464883df0f2260a96b16aa51726faaba42d",
+      "pixels": "f1cb327022012417ae927a1220817f50f8b256d6a585620098289cdc692eb793",
+      "memory": {
+        "vegetationBytes": 14146596,
+        "jobs": 1
+      }
+    }
+  },
+  {
+    "scenario": "advanced",
+    "name": "walk-cache",
+    "environment": "1200 deterministic update steps, SoftwareGL; not 20 real browser seconds",
+    "metrics": {
+      "simulationMs": 1592.4336820000608,
+      "renderMs": [
+        1892.5253060000032,
+        1315.3577099999966,
+        1283.8705099999934,
+        1219.3265949999914,
+        1015.71731800001
+      ],
+      "maxQueueMs": 14.609723999994458
+    },
+    "snapshot": {
+      "save": "c9cd163afd0e7c518a5e26624064d3573a4c04008befed97dd06357eb7640e25",
+      "world": "5f9c29f53114f271c52bc550b24102832c7703c5cce5f1893c3bbdcc826e928b",
+      "stationMeshes": "37c82275657234236067f02cc3f9b464883df0f2260a96b16aa51726faaba42d",
+      "pixels": "f1cb327022012417ae927a1220817f50f8b256d6a585620098289cdc692eb793",
+      "memory": {
+        "vegetationBytes": 14146596,
+        "jobs": 1
+      }
+    }
+  }
+]

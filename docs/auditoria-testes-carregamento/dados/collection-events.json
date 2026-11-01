@@ -1,0 +1,22 @@
+[
+  {
+    "stage": "build-cost I/O profiling",
+    "initialStatus": "sandbox EPERM spawning Node child",
+    "resolution": "same measurement command repeated with reviewed escalation",
+    "finalExitCode": 0,
+    "scope": "disposable checkout only"
+  },
+  {
+    "stage": "build timing artifact names",
+    "initialStatus": "sample JSON name collided with collector metadata name",
+    "resolution": "40 exact samples recovered from first stdout log line into build-samples.json; producer now uses a distinct name",
+    "rerun": false
+  },
+  {
+    "stage": "replay artifact names",
+    "initialStatus": "sample JSON name collided with collector metadata name",
+    "resolution": "producer renamed sample output to replay-samples.json; replay collected again with all assertions; use only the final six samples",
+    "rerun": true,
+    "finalExitCode": 0
+  }
+]

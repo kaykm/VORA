@@ -1,0 +1,20 @@
+{
+  "workspace": {
+    "root": "/home/jp/Projects/Vora",
+    "checkedFiles": 198,
+    "mismatches": [],
+    "unexpectedProtectedFiles": []
+  },
+  "reference": {
+    "root": "/tmp/vora-auditoria-base",
+    "checkedFiles": 184,
+    "mismatches": [],
+    "unexpectedProtectedFiles": []
+  },
+  "referenceGitStatus": {
+    "exitCode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "utc": "2026-11-01T20:35:40.065718+00:00"
+}

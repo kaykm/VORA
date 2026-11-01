@@ -5,3 +5,6 @@ dist/index.html -text
 *.rgba -text
 *.woff -text
 *.png -text
+
+# Cabeçalhos HTTP são evidência bruta; preservar CRLF e hashes da coleta.
+docs/auditoria-testes-carregamento/dados/*.headers -text

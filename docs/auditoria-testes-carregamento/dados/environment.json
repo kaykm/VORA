@@ -1,0 +1,99 @@
+{
+  "utc": "2026-11-01T19:45:49.616338+00:00",
+  "commit": {
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "exitCode": 0,
+    "stdout": "f9fcbccdeaf4fc22f07862eb44f1c7c486926d22\n",
+    "stderr": ""
+  },
+  "system": {
+    "command": [
+      "uname",
+      "-a"
+    ],
+    "exitCode": 0,
+    "stdout": "Linux deskjp 7.2.8-9-omarchy #1 SMP PREEMPT_DYNAMIC Sat, 17 Oct 2026 22:09:33 +0000 x86_64 GNU/Linux\n",
+    "stderr": ""
+  },
+  "cpu": {
+    "command": [
+      "lscpu"
+    ],
+    "exitCode": 0,
+    "stdout": "Architecture:                            x86_64\nCPU op-mode(s):                          32-bit, 64-bit\nAddress sizes:                           48 bits physical, 48 bits virtual\nByte Order:                              Little Endian\nCPU(s):                                  12\nOn-line CPU(s) list:                     0-11\nVendor ID:                               AuthenticAMD\nModel name:                              AMD Ryzen 5 5500\nCPU family:                              25\nModel:                                   80\nThread(s) per core:                      2\nCore(s) per socket:                      6\nSocket(s):                               1\nStepping:                                0\nMicrocode version:                       0xa500014\nFrequency boost:                         enabled\nCPU(s) scaling MHz:                      94%\nCPU max MHz:                             4268.5718\nCPU min MHz:                             411.4290\nBogoMIPS:                                7200.14\nFlags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba ibrs ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local user_shstk clzero irperf xsaveerptr rdpru wbnoinvd cppc arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif v_spec_ctrl umip pku ospke vaes vpclmulqdq rdpid overflow_recov succor smca fsrm debug_swap\nVirtualization:                          AMD-V\nL1d cache:                               192 KiB (6 instances)\nL1i cache:                               192 KiB (6 instances)\nL2 cache:                                3 MiB (6 instances)\nL3 cache:                                16 MiB (1 instance)\nNUMA node(s):                            1\nNUMA node0 CPU(s):                       0-11\nVulnerability Gather data sampling:      Not affected\nVulnerability Ghostwrite:                Not affected\nVulnerability Indirect target selection: Not affected\nVulnerability Itlb multihit:             Not affected\nVulnerability L1tf:                      Not affected\nVulnerability Mds:                       Not affected\nVulnerability Meltdown:                  Not affected\nVulnerability Mmio stale data:           Not affected\nVulnerability Old microcode:             Not affected\nVulnerability Reg file data sampling:    Not affected\nVulnerability Retbleed:                  Not affected\nVulnerability Spec rstack overflow:      Mitigation; Safe RET\nVulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl\nVulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:                Mitigation; Retpolines; IBPB conditional; IBRS_FW; STIBP always-on; RSB filling; PBRSB-eIBRS Not affected; BHI Not affected\nVulnerability Srbds:                     Not affected\nVulnerability Tsa:                       Mitigation; Clear CPU buffers\nVulnerability Tsx async abort:           Not affected\nVulnerability Vmscape:                   Mitigation; IBPB before exit to userspace\n",
+    "stderr": ""
+  },
+  "memory": {
+    "command": [
+      "free",
+      "-b"
+    ],
+    "exitCode": 0,
+    "stdout": "               total        used        free      shared  buff/cache   available\nMem:     16618713088 14552477696   427139072    72916992  2255020032  2066235392\nSwap:    33245589504 12422742016 20822847488\n",
+    "stderr": ""
+  },
+  "node": {
+    "command": [
+      "node",
+      "--version"
+    ],
+    "exitCode": 0,
+    "stdout": "v25.7.0\n",
+    "stderr": ""
+  },
+  "chromiumInstalled": {
+    "command": [
+      "chromium",
+      "--version"
+    ],
+    "exitCode": 0,
+    "stdout": "Chromium 154.0.8037.97 Arch Linux\n",
+    "stderr": ""
+  },
+  "gpuPci": {
+    "command": [
+      "lspci"
+    ],
+    "exitCode": 0,
+    "stdout": "00:00.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Renoir/Cezanne Root Complex\n00:01.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Renoir PCIe Dummy Host Bridge\n00:01.1 PCI bridge: Advanced Micro Devices, Inc. [AMD] Renoir PCIe GPP Bridge\n00:02.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Renoir PCIe Dummy Host Bridge\n00:02.1 PCI bridge: Advanced Micro Devices, Inc. [AMD] Renoir/Cezanne PCIe GPP Bridge\n00:02.2 PCI bridge: Advanced Micro Devices, Inc. [AMD] Renoir/Cezanne PCIe GPP Bridge\n00:08.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Renoir PCIe Dummy Host Bridge\n00:08.1 PCI bridge: Advanced Micro Devices, Inc. [AMD] Renoir Internal PCIe GPP Bridge to Bus\n00:08.2 PCI bridge: Advanced Micro Devices, Inc. [AMD] Renoir Internal PCIe GPP Bridge to Bus\n00:14.0 SMBus: Advanced Micro Devices, Inc. [AMD] FCH SMBus Controller (rev 51)\n00:14.3 ISA bridge: Advanced Micro Devices, Inc. [AMD] FCH LPC Bridge (rev 51)\n00:18.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Cezanne Data Fabric; Function 0\n00:18.1 Host bridge: Advanced Micro Devices, Inc. [AMD] Cezanne Data Fabric; Function 1\n00:18.2 Host bridge: Advanced Micro Devices, Inc. [AMD] Cezanne Data Fabric; Function 2\n00:18.3 Host bridge: Advanced Micro Devices, Inc. [AMD] Cezanne Data Fabric; Function 3\n00:18.4 Host bridge: Advanced Micro Devices, Inc. [AMD] Cezanne Data Fabric; Function 4\n00:18.5 Host bridge: Advanced Micro Devices, Inc. [AMD] Cezanne Data Fabric; Function 5\n00:18.6 Host bridge: Advanced Micro Devices, Inc. [AMD] Cezanne Data Fabric; Function 6\n00:18.7 Host bridge: Advanced Micro Devices, Inc. [AMD] Cezanne Data Fabric; Function 7\n01:00.0 VGA compatible controller: NVIDIA Corporation TU117 [GeForce GTX 1650] (rev a1)\n01:00.1 Audio device: NVIDIA Corporation Device 10fa (rev a1)\n02:00.0 USB controller: Advanced Micro Devices, Inc. [AMD] A320 USB 3.1 XHCI Host Controller (rev 02)\n02:00.1 SATA controller: Advanced Micro Devices, Inc. [AMD] A320 Chipset SATA Controller [AHCI mode] (rev 02)\n02:00.2 PCI bridge: Advanced Micro Devices, Inc. [AMD] Device 43b3 (rev 02)\n03:04.0 PCI bridge: Advanced Micro Devices, Inc. [AMD] 300 Series Chipset PCIe Port (rev 02)\n03:06.0 PCI bridge: Advanced Micro Devices, Inc. [AMD] 300 Series Chipset PCIe Port (rev 02)\n03:07.0 PCI bridge: Advanced Micro Devices, Inc. [AMD] 300 Series Chipset PCIe Port (rev 02)\n06:00.0 Ethernet controller: Realtek Semiconductor Co., Ltd. RTL8111/8168/8211/8411 PCI Express Gigabit Ethernet Controller (rev 11)\n07:00.0 Non-Volatile memory controller: Kingston Technology Company, Inc. A2000 NVMe SSD [SM2263EN] (rev 03)\n08:00.0 Non-Essential Instrumentation [1300]: Advanced Micro Devices, Inc. [AMD] Zeppelin/Raven/Raven2 PCIe Dummy Function (rev c9)\n08:00.1 Audio device: Advanced Micro Devices, Inc. [AMD/ATI] Renoir/Cezanne HDMI/DP Audio Controller\n08:00.2 Encryption controller: Advanced Micro Devices, Inc. [AMD] Raven/Raven2/FireFlight/Renoir/Cezanne Platform Security Processor\n08:00.3 USB controller: Advanced Micro Devices, Inc. [AMD] Renoir/Cezanne USB 3.1\n08:00.4 USB controller: Advanced Micro Devices, Inc. [AMD] Renoir/Cezanne USB 3.1\n08:00.6 Audio device: Advanced Micro Devices, Inc. [AMD] Ryzen HD Audio Controller\n09:00.0 SATA controller: Advanced Micro Devices, Inc. [AMD] FCH SATA Controller [AHCI mode] (rev 81)\n09:00.1 SATA controller: Advanced Micro Devices, Inc. [AMD] FCH SATA Controller [AHCI mode] (rev 81)\n",
+    "stderr": ""
+  },
+  "gpuDriver": {
+    "command": [
+      "nvidia-smi",
+      "--query-gpu=name,driver_version,memory.total",
+      "--format=csv,noheader"
+    ],
+    "exitCode": 9,
+    "stdout": "NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.\n\n",
+    "stderr": ""
+  },
+  "governor": {
+    "command": [
+      "cat",
+      "/sys/devices/system/cpu/cpu0/cpufreq/scaling_governor"
+    ],
+    "exitCode": 0,
+    "stdout": "performance\n",
+    "stderr": ""
+  },
+  "browserMeasurement": {
+    "availableSurface": "IAB read-only DOM inspection",
+    "disposableProfileAPI": false,
+    "fileAccess": "Previously denied by URL policy; no bypass attempted",
+    "browserTimings": null,
+    "gpuExecution": null
+  },
+  "python": {
+    "command": [
+      "python3",
+      "--version"
+    ],
+    "stdout": "Python 3.15.1\n",
+    "observedAfterMeasurements": true
+  }
+}

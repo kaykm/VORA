@@ -1,0 +1,84 @@
+VORA gerado: dist/VORA.html (1.256.444 bytes, 88 arquivos JS).
+Pode abrir o HTML diretamente, sem servidor e sem internet.
+{
+  "label": "validate-cap1024",
+  "command": [
+    "node",
+    "--test",
+    "--test-concurrency=2",
+    "tests/carregamento.test.mjs",
+    "tests/fluxo.test.mjs",
+    "tests/mesh-incremental.test.mjs",
+    "tests/equivalencia.test.mjs",
+    "tests/piso-loja.test.mjs"
+  ],
+  "cwd": "/tmp/vora-auditoria/experimentos/cap1024",
+  "startedAt": "2026-11-01T20:18:36.919498+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2338608,
+    "SwapFree": 20247704
+  },
+  "loadBefore": [
+    4.53125,
+    4.818359375,
+    4.923828125
+  ],
+  "exitCode": 0,
+  "wallS": 30.549545374000445,
+  "userCpuS": 52.174112,
+  "systemCpuS": 4.3776720000000005,
+  "maxChildRssKiB": 422744,
+  "peakSampledTreeRssKiB": 818416,
+  "memoryAfterKiB": {
+    "MemAvailable": 2359404,
+    "SwapFree": 20150164
+  },
+  "loadAfter": [
+    4.4248046875,
+    4.77001953125,
+    4.90380859375
+  ],
+  "nodeTestDurationMs": 30233.30744
+}
+VORA gerado: dist/VORA.html (1.256.747 bytes, 88 arquivos JS).
+Pode abrir o HTML diretamente, sem servidor e sem internet.
+{
+  "label": "validate-walk-cache",
+  "command": [
+    "node",
+    "--test",
+    "--test-concurrency=2",
+    "tests/carregamento.test.mjs",
+    "tests/fluxo.test.mjs",
+    "tests/mesh-incremental.test.mjs",
+    "tests/equivalencia.test.mjs",
+    "tests/piso-loja.test.mjs"
+  ],
+  "cwd": "/tmp/vora-auditoria/experimentos/walk-cache",
+  "startedAt": "2026-11-01T20:19:07.627636+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2348504,
+    "SwapFree": 20155176
+  },
+  "loadBefore": [
+    4.4248046875,
+    4.77001953125,
+    4.90380859375
+  ],
+  "exitCode": 0,
+  "wallS": 28.555030012001225,
+  "userCpuS": 49.736905,
+  "systemCpuS": 4.286828,
+  "maxChildRssKiB": 432804,
+  "peakSampledTreeRssKiB": 812800,
+  "memoryAfterKiB": {
+    "MemAvailable": 2470204,
+    "SwapFree": 20240412
+  },
+  "loadAfter": [
+    4.47705078125,
+    4.75830078125,
+    4.89599609375
+  ],
+  "nodeTestDurationMs": 28203.343923
+}

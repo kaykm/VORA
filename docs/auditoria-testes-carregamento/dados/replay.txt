@@ -1,0 +1,7 @@
+new baseline matched
+new cap1024 matched
+new walk-cache matched
+advanced baseline matched
+advanced cap1024 matched
+advanced walk-cache matched
+Native preparation bytes, indices, ranges, stats and yield stages match

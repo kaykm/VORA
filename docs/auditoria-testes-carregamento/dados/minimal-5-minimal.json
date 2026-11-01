@@ -1,0 +1,42 @@
+{
+  "label": "minimal-5-minimal",
+  "command": [
+    "node",
+    "tests/piso-loja.test.mjs"
+  ],
+  "cwd": "/tmp/vora-auditoria/experimentos/minimal",
+  "startedAt": "2026-11-01T20:06:56.238463+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2045460,
+    "SwapFree": 20167580
+  },
+  "loadBefore": [
+    4.20849609375,
+    4.853515625,
+    5.04833984375
+  ],
+  "exitCode": 0,
+  "wallS": 0.5011142129988002,
+  "userCpuS": 0.242915,
+  "systemCpuS": 0.049574,
+  "maxChildRssKiB": 97692,
+  "peakSampledTreeRssKiB": 888,
+  "memoryAfterKiB": {
+    "MemAvailable": 2112816,
+    "SwapFree": 20167588
+  },
+  "loadAfter": [
+    4.20849609375,
+    4.853515625,
+    5.04833984375
+  ],
+  "memorySamples": [
+    {
+      "elapsedS": 0.000888735998159973,
+      "treeRssKiB": 888,
+      "MemAvailable": 2045460,
+      "SwapFree": 20167580
+    }
+  ],
+  "files": []
+}

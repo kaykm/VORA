@@ -1,0 +1,842 @@
+{
+  "environment": "Instrumented CPU I/O and host assertions; not browser transfer",
+  "assertions": {
+    "equal": {
+      "count": 55,
+      "ms": 0.13761100000192528
+    },
+    "ok": {
+      "count": 13,
+      "ms": 0.106471999995847
+    },
+    "notEqual": {
+      "count": 1,
+      "ms": 0.04459099999985483
+    },
+    "deepEqual": {
+      "count": 5,
+      "ms": 0.6394360000031156
+    }
+  },
+  "rows": [
+    {
+      "operation": "readFileSync",
+      "file": "scripts/fontes.json",
+      "ms": 0.05696100000000115,
+      "bytes": 3411
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/jogo/carregamento-estado.js",
+      "ms": 0.04126999999999725,
+      "bytes": 1996
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/graficos/compatibilidade.js",
+      "ms": 0.03622999999999621,
+      "bytes": 10781
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/jogo/medidas.js",
+      "ms": 0.02537099999999981,
+      "bytes": 1898
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/jogo/migracao-escala.js",
+      "ms": 0.015389999999996462,
+      "bytes": 609
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/graficos/contexto.js",
+      "ms": 0.013860000000001094,
+      "bytes": 362
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/graficos/recursos.js",
+      "ms": 0.015089999999993609,
+      "bytes": 2466
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/jogo/tipos.js",
+      "ms": 0.012979999999998881,
+      "bytes": 476
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/jogo/salvamento.js",
+      "ms": 0.013350000000002638,
+      "bytes": 1017
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/jogo/estado.js",
+      "ms": 0.021040000000006387,
+      "bytes": 685
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/jogo/progressao.js",
+      "ms": 0.02934999999999377,
+      "bytes": 4998
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/jogo/persistencia.js",
+      "ms": 0.017939999999995848,
+      "bytes": 309
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/interface/feedback.js",
+      "ms": 0.015380000000000393,
+      "bytes": 861
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/interface/hud.js",
+      "ms": 0.01808099999999513,
+      "bytes": 2973
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/jogo/melhorias.js",
+      "ms": 0.0240400000000065,
+      "bytes": 1410
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/interface/inventario.js",
+      "ms": 0.018079999999997654,
+      "bytes": 1147
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/jogo/nova-partida.js",
+      "ms": 0.013860000000001094,
+      "bytes": 856
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/interface/menus.js",
+      "ms": 0.01716000000000406,
+      "bytes": 8150
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/jogo/joystick.js",
+      "ms": 0.01238000000000028,
+      "bytes": 777
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/interface/animacoes.js",
+      "ms": 0.02330100000000357,
+      "bytes": 17920
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/interface/interior.js",
+      "ms": 0.0597800000000035,
+      "bytes": 29025
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/fisica/carga.js",
+      "ms": 0.5954139999999981,
+      "bytes": 12887
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/graficos/carga.js",
+      "ms": 0.017381000000000313,
+      "bytes": 606
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/mundo/parque-ampliado.js",
+      "ms": 0.060789999999997235,
+      "bytes": 23679
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/mundo/terreno.js",
+      "ms": 0.018229999999995528,
+      "bytes": 8349
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/mundo/caminhos.js",
+      "ms": 0.011980000000001212,
+      "bytes": 4630
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/graficos/shaders-terreno.js",
+      "ms": 0.009861000000000786,
+      "bytes": 160
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/graficos/shaders/terreno-campos.glsl",
+      "ms": 0.0171100000000024,
+      "bytes": 1889
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/graficos/shaders/terreno-albedo.glsl",
+      "ms": 0.01999999999999602,
+      "bytes": 5764
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/mundo/base.js",
+      "ms": 0.015740000000000975,
+      "bytes": 11709
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/fisica/base.js",
+      "ms": 0.010930000000001883,
+      "bytes": 1852
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/mundo/modelos.js",
+      "ms": 0.015280000000004179,
+      "bytes": 17134
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/mundo/folhas.js",
+      "ms": 0.009309999999999263,
+      "bytes": 1732
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/mundo/vegetacao.js",
+      "ms": 0.014300000000005753,
+      "bytes": 16393
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/interface/qualidade.js",
+      "ms": 0.016909999999995762,
+      "bytes": 6138
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/graficos/distancia.js",
+      "ms": 0.009520000000001971,
+      "bytes": 541
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/mundo/vegetacao-render.js",
+      "ms": 0.009180000000000632,
+      "bytes": 1690
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/mundo/preparacao.js",
+      "ms": 0.01313999999999993,
+      "bytes": 5223
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/jogo/spawns.js",
+      "ms": 0.024249999999994998,
+      "bytes": 14400
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/mundo/recursos-layout.js",
+      "ms": 0.020321000000002698,
+      "bytes": 8629
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/jogo/recursos-mundo.js",
+      "ms": 0.01687000000000438,
+      "bytes": 9374
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/interface/spawns.js",
+      "ms": 0.0146000000000015,
+      "bytes": 4602
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/jogo/teclado.js",
+      "ms": 0.010820000000002494,
+      "bytes": 2194
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/interface/administracao.js",
+      "ms": 0.009420000000005757,
+      "bytes": 1732
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/jogo/deposito.js",
+      "ms": 0.013640000000002317,
+      "bytes": 6447
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/mundo/deposito-modelo.js",
+      "ms": 0.018760000000000332,
+      "bytes": 3069
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/graficos/shaders-cena.js",
+      "ms": 0.01086000000000098,
+      "bytes": 446
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/graficos/shaders/nevoa.glsl",
+      "ms": 0.010359999999998593,
+      "bytes": 698
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/graficos/shaders/cena.vert",
+      "ms": 0.010919999999998709,
+      "bytes": 1105
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/graficos/shaders/sombras-limites.glsl",
+      "ms": 0.00981999999999772,
+      "bytes": 1266
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/graficos/shaders/superficies.glsl",
+      "ms": 0.018000000000000682,
+      "bytes": 1036
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/graficos/shaders/cena.frag",
+      "ms": 0.018250000000001876,
+      "bytes": 23675
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/graficos/programa.js",
+      "ms": 0.01238000000000028,
+      "bytes": 4844
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/graficos/texturas.js",
+      "ms": 0.01001099999999866,
+      "bytes": 4056
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/graficos/shaders-pos.js",
+      "ms": 0.009789999999995302,
+      "bytes": 3356
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/graficos/shaders/fsr-easu.glsl",
+      "ms": 0.010279999999994516,
+      "bytes": 2826
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/graficos/shaders/fsr-rcas.glsl",
+      "ms": 0.009920000000001039,
+      "bytes": 1389
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/graficos/shaders/apresentacao.glsl",
+      "ms": 0.009610000000002117,
+      "bytes": 268
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/graficos/shaders/reducao.glsl",
+      "ms": 0.00986999999999938,
+      "bytes": 514
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/graficos/shaders/temporal.glsl",
+      "ms": 0.010559999999998126,
+      "bytes": 2035
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/graficos/shaders/smaa.glsl",
+      "ms": 0.08470099999999547,
+      "bytes": 54572
+    },
+    {
+      "operation": "readFileSync",
+      "file": "assets/smaa/lookup.json",
+      "ms": 0.025199999999998113,
+      "bytes": 201
+    },
+    {
+      "operation": "readFileSync",
+      "file": "assets/smaa/area.rgba",
+      "ms": 0.20849199999999968,
+      "bytes": 358400
+    },
+    {
+      "operation": "readFileSync",
+      "file": "assets/smaa/search.rgba",
+      "ms": 0.03125,
+      "bytes": 4096
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/graficos/shaders/ao-superficie.glsl",
+      "ms": 0.02077099999999632,
+      "bytes": 3520
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/graficos/shaders/ao-horizonte.glsl",
+      "ms": 0.012180000000000746,
+      "bytes": 3896
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/graficos/shaders/ao-filtro.glsl",
+      "ms": 0.010979999999996437,
+      "bytes": 809
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/graficos/iluminacao.js",
+      "ms": 0.01502999999999588,
+      "bytes": 3891
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/graficos/shaders/tela.vert",
+      "ms": 0.010860999999998455,
+      "bytes": 114
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/graficos/shaders/composicao.frag",
+      "ms": 0.010459999999994807,
+      "bytes": 3869
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/graficos/oclusao.js",
+      "ms": 0.015090000000000714,
+      "bytes": 4940
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/graficos/multiamostragem.js",
+      "ms": 0.010219999999996787,
+      "bytes": 889
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/graficos/imagem.js",
+      "ms": 0.04166000000000025,
+      "bytes": 17121
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/graficos/smaa.js",
+      "ms": 0.010259999999995273,
+      "bytes": 3945
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/graficos/temporal.js",
+      "ms": 0.010100999999998805,
+      "bytes": 3092
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/graficos/temporizacao.js",
+      "ms": 0.009669999999999845,
+      "bytes": 1455
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/graficos/sombras.js",
+      "ms": 0.05194999999999794,
+      "bytes": 13360
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/graficos/sombras-lod.js",
+      "ms": 0.012230000000002406,
+      "bytes": 856
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/graficos/sombras-limites.js",
+      "ms": 0.014149999999993668,
+      "bytes": 3399
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/graficos/shaders/sombras-reducao.frag",
+      "ms": 0.011681000000002939,
+      "bytes": 792
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/graficos/composicao.js",
+      "ms": 0.019089999999998497,
+      "bytes": 3803
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/graficos/malhas.js",
+      "ms": 0.02494999999999692,
+      "bytes": 16375
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/graficos/instancias.js",
+      "ms": 0.013100000000001444,
+      "bytes": 5956
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/graficos/visibilidade-gpu.js",
+      "ms": 0.026429999999997733,
+      "bytes": 5172
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/graficos/shaders/profundidade.frag",
+      "ms": 0.01295000000000357,
+      "bytes": 221
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/mundo/primitivas.js",
+      "ms": 0.0171100000000024,
+      "bytes": 2612
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/graficos/animacao-cena.js",
+      "ms": 0.011969999999998038,
+      "bytes": 3560
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/mundo/ruido.js",
+      "ms": 0.009339999999994575,
+      "bytes": 1092
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/mundo/buraco.js",
+      "ms": 0.03213999999999828,
+      "bytes": 6520
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/graficos/malha-buraco.js",
+      "ms": 0.023310000000002162,
+      "bytes": 5409
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/graficos/matrizes.js",
+      "ms": 0.013700000000000045,
+      "bytes": 696
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/mundo/materiais.js",
+      "ms": 0.020189999999999486,
+      "bytes": 8101
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/graficos/sombra-contato.js",
+      "ms": 0.02164000000000499,
+      "bytes": 112
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/fisica/apoio.js",
+      "ms": 0.017050000000004673,
+      "bytes": 610
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/graficos/resolucao.js",
+      "ms": 0.01892999999999745,
+      "bytes": 606
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/jogo/geracao.js",
+      "ms": 0.01229099999999761,
+      "bytes": 187
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/jogo/movimento.js",
+      "ms": 0.011790000000004852,
+      "bytes": 256
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/jogo/coleta.js",
+      "ms": 0.011549999999999727,
+      "bytes": 870
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/jogo/indice-coleta.js",
+      "ms": 0.011490000000001999,
+      "bytes": 1666
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/jogo/simulacao.js",
+      "ms": 0.01143000000000427,
+      "bytes": 2385
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/graficos/cena.js",
+      "ms": 0.015570000000003859,
+      "bytes": 7997
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/graficos/cache-cena.js",
+      "ms": 0.010429999999999495,
+      "bytes": 2041
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/jogo/loop.js",
+      "ms": 0.013289999999997804,
+      "bytes": 2053
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/jogo/limite-fps.js",
+      "ms": 0.009610000000002117,
+      "bytes": 650
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/jogo/camera.js",
+      "ms": 0.09494100000000572,
+      "bytes": 3409
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/interface/dossie.js",
+      "ms": 0.04088000000000136,
+      "bytes": 15034
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/interface/inspecao.js",
+      "ms": 0.13040000000000163,
+      "bytes": 22049
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/interface/expansao.js",
+      "ms": 0.07648000000000366,
+      "bytes": 8474
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/interface/componentes/melhoria-card.html",
+      "ms": 0.0291300000000021,
+      "bytes": 691
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/interface/layout.js",
+      "ms": 0.07501999999999498,
+      "bytes": 10679
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/interface/seletores.js",
+      "ms": 0.03622000000000014,
+      "bytes": 9134
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/jogo/carregamento.js",
+      "ms": 0.08007999999999527,
+      "bytes": 5901
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/jogo/iniciar.js",
+      "ms": 0.019089999999998497,
+      "bytes": 13
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/index.template.html",
+      "ms": 0.043630000000007385,
+      "bytes": 2256
+    },
+    {
+      "operation": "readFileSync",
+      "file": "assets/licencas/interface.html",
+      "ms": 0.02436000000000149,
+      "bytes": 7724
+    },
+    {
+      "operation": "readFileSync",
+      "file": "assets/icones.svg",
+      "ms": 0.013299999999986767,
+      "bytes": 7510
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/interface/componentes/carregamento.html",
+      "ms": 0.013750000000001705,
+      "bytes": 911
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/interface/componentes/hud.html",
+      "ms": 0.02574999999998795,
+      "bytes": 3066
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/interface/componentes/melhorias.html",
+      "ms": 0.04832100000000139,
+      "bytes": 10618
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/interface/componentes/carga.html",
+      "ms": 0.01421999999999457,
+      "bytes": 1761
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/interface/componentes/dossie.html",
+      "ms": 0.01398999999999262,
+      "bytes": 3604
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/interface/componentes/expansao.html",
+      "ms": 0.011690000000001532,
+      "bytes": 2195
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/interface/componentes/configuracoes.html",
+      "ms": 0.023730000000000473,
+      "bytes": 11557
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/interface/componentes/administracao.html",
+      "ms": 0.012279999999989855,
+      "bytes": 1391
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/interface/componentes/interior.html",
+      "ms": 0.012421000000003346,
+      "bytes": 2994
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/interface/estilos/base.css",
+      "ms": 0.031440000000003465,
+      "bytes": 40916
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/interface/estilos/tema.css",
+      "ms": 0.02555000000000973,
+      "bytes": 31999
+    },
+    {
+      "operation": "readFileSync",
+      "file": "assets/fontes/vora-ui.woff",
+      "ms": 0.07533999999999708,
+      "bytes": 35840
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/interface/estilos/carregamento.css",
+      "ms": 0.04841000000000406,
+      "bytes": 2224
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/interface/estilos/dossie.css",
+      "ms": 0.029480000000006612,
+      "bytes": 5786
+    },
+    {
+      "operation": "readFileSync",
+      "file": "src/interface/estilos/expansao.css",
+      "ms": 0.019249999999999545,
+      "bytes": 6121
+    },
+    {
+      "operation": "deflateSync",
+      "ms": 3.143514999999752,
+      "bytes": 1049088
+    },
+    {
+      "operation": "writeFileSync",
+      "file": "tests/resultados/inspecao-silhueta-lata.png",
+      "ms": 0.08603000000039174,
+      "bytes": 3155
+    },
+    {
+      "operation": "deflateSync",
+      "ms": 3.0131839999994554,
+      "bytes": 1049088
+    },
+    {
+      "operation": "writeFileSync",
+      "file": "tests/resultados/inspecao-silhueta-banco.png",
+      "ms": 0.08456099999966682,
+      "bytes": 4740
+    },
+    {
+      "operation": "deflateSync",
+      "ms": 2.7079699999994773,
+      "bytes": 1049088
+    },
+    {
+      "operation": "writeFileSync",
+      "file": "tests/resultados/inspecao-silhueta-arvore.png",
+      "ms": 0.09589099999902828,
+      "bytes": 3481
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+✔ inicialização real, padrões de partida nova, oito qualidades e recursos offline (5071.461537ms)
+✔ save antigo mantém progresso e preferências válidas; persistência/restauração da carga (9749.595468ms)
+✔ save inválido e armazenamento bloqueado não impedem a inicialização (9416.225568ms)
+✔ coleta, capacidade, queda, depósito, venda e melhorias não duplicam valores (4687.080772ms)
+✔ teclado, pausa dos menus, joystick, câmera e limites do mundo (4559.916713ms)
+✔ escala 40–160%, interior em corte/X-ray, ADM e qualidade compatível (4847.512725ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 38347.678944

@@ -1,0 +1,96 @@
+{
+  "label": "minimal-1-baseline",
+  "command": [
+    "node",
+    "tests/piso-loja.test.mjs"
+  ],
+  "cwd": "/tmp/vora-auditoria-base",
+  "startedAt": "2026-11-01T20:06:27.443453+00:00",
+  "memoryBeforeKiB": {
+    "MemAvailable": 2146204,
+    "SwapFree": 20141416
+  },
+  "loadBefore": [
+    4.439453125,
+    4.96142578125,
+    5.08837890625
+  ],
+  "exitCode": 0,
+  "wallS": 5.0067266059995745,
+  "userCpuS": 5.103858,
+  "systemCpuS": 0.14851999999999999,
+  "maxChildRssKiB": 245260,
+  "peakSampledTreeRssKiB": 229516,
+  "memoryAfterKiB": {
+    "MemAvailable": 2069388,
+    "SwapFree": 20157752
+  },
+  "loadAfter": [
+    4.40380859375,
+    4.9453125,
+    5.08251953125
+  ],
+  "memorySamples": [
+    {
+      "elapsedS": 0.0008023159971344285,
+      "treeRssKiB": 720,
+      "MemAvailable": 2146204,
+      "SwapFree": 20141416
+    },
+    {
+      "elapsedS": 0.5014214990005712,
+      "treeRssKiB": 96000,
+      "MemAvailable": 2097796,
+      "SwapFree": 20146632
+    },
+    {
+      "elapsedS": 1.0019615620003606,
+      "treeRssKiB": 113024,
+      "MemAvailable": 2069212,
+      "SwapFree": 20149904
+    },
+    {
+      "elapsedS": 1.5025535649983794,
+      "treeRssKiB": 141652,
+      "MemAvailable": 2037892,
+      "SwapFree": 20151320
+    },
+    {
+      "elapsedS": 2.0034390709988656,
+      "treeRssKiB": 154292,
+      "MemAvailable": 2019516,
+      "SwapFree": 20151680
+    },
+    {
+      "elapsedS": 2.5040939139980765,
+      "treeRssKiB": 184756,
+      "MemAvailable": 1981092,
+      "SwapFree": 20152660
+    },
+    {
+      "elapsedS": 3.0047189869983413,
+      "treeRssKiB": 203284,
+      "MemAvailable": 1959504,
+      "SwapFree": 20152804
+    },
+    {
+      "elapsedS": 3.5052881999981764,
+      "treeRssKiB": 210308,
+      "MemAvailable": 1945420,
+      "SwapFree": 20153964
+    },
+    {
+      "elapsedS": 4.005934632998105,
+      "treeRssKiB": 220932,
+      "MemAvailable": 1927532,
+      "SwapFree": 20154568
+    },
+    {
+      "elapsedS": 4.5065454760006105,
+      "treeRssKiB": 229516,
+      "MemAvailable": 1911692,
+      "SwapFree": 20157312
+    }
+  ],
+  "files": []
+}

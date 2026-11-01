@@ -1,0 +1,1032 @@
+{
+  "coins": 900000,
+  "r": 5,
+  "d": 5,
+  "cargo": [
+    0,
+    1,
+    2
+  ],
+  "collected": 0,
+  "sold": 0,
+  "reward1": false,
+  "reward2": false,
+  "sound": false,
+  "particles": true,
+  "imageMode": "native",
+  "aaMode": "off",
+  "outputMode": "native",
+  "aoMode": "off",
+  "nativeDisplayDefaultsV1": true,
+  "worldScaleVersion": 2,
+  "adminEnabled": false,
+  "developer": false,
+  "spawnInspector": false,
+  "cargoMeta": [],
+  "upgrades": {
+    "storage": 0,
+    "compression": 0,
+    "regrowth": 0,
+    "trade": 0,
+    "unloading": 0,
+    "returning": 0
+  },
+  "economyVersion": 2,
+  "depotLevel": 1,
+  "depot": [
+    {
+      "t": 0,
+      "variant": 0
+    }
+  ],
+  "s": 3,
+  "consumedWorld": [
+    "bench-west"
+  ],
+  "viewRange": "default",
+  "shadowQuality": "high",
+  "shadowDistance": "high",
+  "graphicsPreset": "default",
+  "graphicsPresetSignature": "native|off|off|native|default|high|high",
+  "fpsCap": 60,
+  "cargoPoses": [
+    {
+      "t": 0,
+      "x": 0.47743849865715676,
+      "z": 0,
+      "y": -13.75643063682312,
+      "q": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "variant": 0
+    },
+    {
+      "t": 1,
+      "x": 0,
+      "z": 0,
+      "y": -10.118163955017023,
+      "q": [
+        0,
+        0.9320318386257295,
+        0,
+        0.3623763951859201
+      ],
+      "variant": 1
+    },
+    {
+      "t": 2,
+      "x": 0,
+      "z": 0,
+      "y": 0.12,
+      "q": [
+        0,
+        0.6754926757593941,
+        0,
+        -0.7373666964241157
+      ],
+      "variant": 0
+    }
+  ],
+  "spawnWorld": {
+    "version": 2,
+    "rng": 61,
+    "zones": [
+      {
+        "id": "lixo-gramado",
+        "remaining": null,
+        "objects": [
+          {
+            "slot": 0,
+            "t": 0,
+            "rot": 2.205890282604506
+          },
+          {
+            "slot": 1,
+            "t": 0,
+            "rot": 3.047971922184831
+          },
+          {
+            "slot": 2,
+            "t": 0,
+            "rot": 0.7303190777724498
+          },
+          {
+            "slot": 3,
+            "t": 0,
+            "rot": 3.697180569130839
+          },
+          {
+            "slot": 4,
+            "t": 0,
+            "rot": 5.554532990537285
+          }
+        ],
+        "slots": [
+          {
+            "slot": 0,
+            "remaining": null
+          },
+          {
+            "slot": 1,
+            "remaining": null
+          },
+          {
+            "slot": 2,
+            "remaining": null
+          },
+          {
+            "slot": 3,
+            "remaining": null
+          },
+          {
+            "slot": 4,
+            "remaining": null
+          }
+        ]
+      },
+      {
+        "id": "lixo-alameda",
+        "remaining": 18.400000000000002,
+        "objects": [
+          {
+            "slot": 0,
+            "t": 0,
+            "rot": 5.4132978257200515
+          },
+          {
+            "slot": 1,
+            "t": 0,
+            "rot": 5.508981464973406
+          },
+          {
+            "slot": 2,
+            "t": 0,
+            "rot": 2.556191504779343
+          },
+          {
+            "slot": 3,
+            "t": 0,
+            "rot": 4.659938377937994
+          }
+        ],
+        "slots": [
+          {
+            "slot": 0,
+            "remaining": null
+          },
+          {
+            "slot": 1,
+            "remaining": null
+          },
+          {
+            "slot": 2,
+            "remaining": null
+          },
+          {
+            "slot": 3,
+            "remaining": null
+          },
+          {
+            "slot": 4,
+            "remaining": 18.400000000000002
+          },
+          {
+            "slot": 5,
+            "remaining": 20.125
+          },
+          {
+            "slot": 6,
+            "remaining": 21.849999999999998
+          }
+        ]
+      },
+      {
+        "id": "pedras-talude-leste",
+        "remaining": null,
+        "objects": [
+          {
+            "slot": 0,
+            "t": 1,
+            "rot": 2.3661553696515276
+          },
+          {
+            "slot": 1,
+            "t": 1,
+            "rot": 5.040914091059933
+          }
+        ],
+        "slots": [
+          {
+            "slot": 0,
+            "remaining": null
+          },
+          {
+            "slot": 1,
+            "remaining": null
+          }
+        ]
+      },
+      {
+        "id": "vasos-entrada",
+        "remaining": 39.875,
+        "objects": [
+          {
+            "slot": 0,
+            "t": 3,
+            "rot": 0
+          },
+          {
+            "slot": 1,
+            "t": 3,
+            "rot": 0
+          },
+          {
+            "slot": 2,
+            "t": 3,
+            "rot": 0
+          }
+        ],
+        "slots": [
+          {
+            "slot": 0,
+            "remaining": null
+          },
+          {
+            "slot": 1,
+            "remaining": null
+          },
+          {
+            "slot": 2,
+            "remaining": null
+          },
+          {
+            "slot": 3,
+            "remaining": 39.875
+          }
+        ]
+      },
+      {
+        "id": "caixas-recebimento",
+        "remaining": 31.200000000000003,
+        "objects": [
+          {
+            "slot": 0,
+            "t": 2,
+            "rot": 1.5707963267948966
+          },
+          {
+            "slot": 1,
+            "t": 2,
+            "rot": 1.5707963267948966
+          }
+        ],
+        "slots": [
+          {
+            "slot": 0,
+            "remaining": null
+          },
+          {
+            "slot": 1,
+            "remaining": null
+          },
+          {
+            "slot": 2,
+            "remaining": 31.200000000000003
+          },
+          {
+            "slot": 3,
+            "remaining": 34.8
+          },
+          {
+            "slot": 4,
+            "remaining": 38.400000000000006
+          },
+          {
+            "slot": 5,
+            "remaining": 42
+          }
+        ]
+      },
+      {
+        "id": "pedras-areal",
+        "remaining": 29,
+        "objects": [
+          {
+            "slot": 0,
+            "t": 1,
+            "rot": 2.3372523525591378
+          },
+          {
+            "slot": 1,
+            "t": 1,
+            "rot": 4.948835477216071
+          },
+          {
+            "slot": 2,
+            "t": 1,
+            "rot": 0.595361913247699
+          }
+        ],
+        "slots": [
+          {
+            "slot": 0,
+            "remaining": null
+          },
+          {
+            "slot": 1,
+            "remaining": null
+          },
+          {
+            "slot": 2,
+            "remaining": null
+          },
+          {
+            "slot": 3,
+            "remaining": 29
+          },
+          {
+            "slot": 4,
+            "remaining": 32
+          }
+        ]
+      },
+      {
+        "id": "lixo-bancos",
+        "remaining": 10,
+        "objects": [],
+        "slots": [
+          {
+            "slot": 0,
+            "remaining": 10
+          },
+          {
+            "slot": 1,
+            "remaining": 11.5
+          },
+          {
+            "slot": 2,
+            "remaining": 13
+          },
+          {
+            "slot": 3,
+            "remaining": 14.5
+          },
+          {
+            "slot": 4,
+            "remaining": 16
+          },
+          {
+            "slot": 5,
+            "remaining": 17.5
+          }
+        ]
+      },
+      {
+        "id": "vasos-oeste",
+        "remaining": 29,
+        "objects": [],
+        "slots": [
+          {
+            "slot": 0,
+            "remaining": 29
+          },
+          {
+            "slot": 1,
+            "remaining": 33.349999999999994
+          },
+          {
+            "slot": 2,
+            "remaining": 37.7
+          }
+        ]
+      },
+      {
+        "id": "pedras-encosta",
+        "remaining": 15.5,
+        "objects": [],
+        "slots": [
+          {
+            "slot": 0,
+            "remaining": 15.5
+          },
+          {
+            "slot": 1,
+            "remaining": 17.825
+          },
+          {
+            "slot": 2,
+            "remaining": 20.150000000000002
+          },
+          {
+            "slot": 3,
+            "remaining": 22.474999999999998
+          },
+          {
+            "slot": 4,
+            "remaining": 24.8
+          },
+          {
+            "slot": 5,
+            "remaining": 27.125
+          }
+        ]
+      },
+      {
+        "id": "caixas-manutencao",
+        "remaining": 26,
+        "objects": [],
+        "slots": [
+          {
+            "slot": 0,
+            "remaining": 26
+          },
+          {
+            "slot": 1,
+            "remaining": 29.9
+          },
+          {
+            "slot": 2,
+            "remaining": 33.800000000000004
+          },
+          {
+            "slot": 3,
+            "remaining": 37.699999999999996
+          },
+          {
+            "slot": 4,
+            "remaining": 41.6
+          },
+          {
+            "slot": 5,
+            "remaining": 45.5
+          }
+        ]
+      },
+      {
+        "id": "lixo-areal",
+        "remaining": 10.5,
+        "objects": [],
+        "slots": [
+          {
+            "slot": 0,
+            "remaining": 10.5
+          },
+          {
+            "slot": 1,
+            "remaining": 12.075
+          },
+          {
+            "slot": 2,
+            "remaining": 13.65
+          },
+          {
+            "slot": 3,
+            "remaining": 15.225
+          },
+          {
+            "slot": 4,
+            "remaining": 16.8
+          },
+          {
+            "slot": 5,
+            "remaining": 18.375
+          },
+          {
+            "slot": 6,
+            "remaining": 19.95
+          },
+          {
+            "slot": 7,
+            "remaining": 21.525
+          }
+        ]
+      },
+      {
+        "id": "vasos-leste",
+        "remaining": 30,
+        "objects": [],
+        "slots": [
+          {
+            "slot": 0,
+            "remaining": 30
+          },
+          {
+            "slot": 1,
+            "remaining": 34.5
+          },
+          {
+            "slot": 2,
+            "remaining": 39
+          },
+          {
+            "slot": 3,
+            "remaining": 43.5
+          }
+        ]
+      },
+      {
+        "id": "pedras-oeste",
+        "remaining": 16.5,
+        "objects": [],
+        "slots": [
+          {
+            "slot": 0,
+            "remaining": 16.5
+          },
+          {
+            "slot": 1,
+            "remaining": 18.974999999999998
+          },
+          {
+            "slot": 2,
+            "remaining": 21.45
+          },
+          {
+            "slot": 3,
+            "remaining": 23.925
+          },
+          {
+            "slot": 4,
+            "remaining": 26.400000000000002
+          },
+          {
+            "slot": 5,
+            "remaining": 28.875
+          },
+          {
+            "slot": 6,
+            "remaining": 31.349999999999998
+          }
+        ]
+      },
+      {
+        "id": "lixo-sul",
+        "remaining": 9,
+        "objects": [],
+        "slots": [
+          {
+            "slot": 0,
+            "remaining": 9
+          },
+          {
+            "slot": 1,
+            "remaining": 10.35
+          },
+          {
+            "slot": 2,
+            "remaining": 11.700000000000001
+          },
+          {
+            "slot": 3,
+            "remaining": 13.049999999999999
+          },
+          {
+            "slot": 4,
+            "remaining": 14.4
+          },
+          {
+            "slot": 5,
+            "remaining": 15.75
+          },
+          {
+            "slot": 6,
+            "remaining": 17.099999999999998
+          },
+          {
+            "slot": 7,
+            "remaining": 18.45
+          }
+        ]
+      },
+      {
+        "id": "caixas-apoio",
+        "remaining": 27,
+        "objects": [],
+        "slots": [
+          {
+            "slot": 0,
+            "remaining": 27
+          },
+          {
+            "slot": 1,
+            "remaining": 31.049999999999997
+          },
+          {
+            "slot": 2,
+            "remaining": 35.1
+          },
+          {
+            "slot": 3,
+            "remaining": 39.15
+          },
+          {
+            "slot": 4,
+            "remaining": 43.2
+          },
+          {
+            "slot": 5,
+            "remaining": 47.25
+          }
+        ]
+      },
+      {
+        "id": "pedras-sul",
+        "remaining": 15,
+        "objects": [],
+        "slots": [
+          {
+            "slot": 0,
+            "remaining": 15
+          },
+          {
+            "slot": 1,
+            "remaining": 17.25
+          },
+          {
+            "slot": 2,
+            "remaining": 19.5
+          },
+          {
+            "slot": 3,
+            "remaining": 21.75
+          },
+          {
+            "slot": 4,
+            "remaining": 24
+          },
+          {
+            "slot": 5,
+            "remaining": 26.25
+          },
+          {
+            "slot": 6,
+            "remaining": 28.5
+          },
+          {
+            "slot": 7,
+            "remaining": 30.749999999999996
+          }
+        ]
+      },
+      {
+        "id": "vasos-norte",
+        "remaining": 27,
+        "objects": [],
+        "slots": [
+          {
+            "slot": 0,
+            "remaining": 27
+          },
+          {
+            "slot": 1,
+            "remaining": 31.049999999999997
+          },
+          {
+            "slot": 2,
+            "remaining": 35.1
+          },
+          {
+            "slot": 3,
+            "remaining": 39.15
+          }
+        ]
+      },
+      {
+        "id": "lixo-trilha-leste",
+        "remaining": 8.5,
+        "objects": [],
+        "slots": [
+          {
+            "slot": 0,
+            "remaining": 8.5
+          },
+          {
+            "slot": 1,
+            "remaining": 9.774999999999999
+          },
+          {
+            "slot": 2,
+            "remaining": 11.05
+          },
+          {
+            "slot": 3,
+            "remaining": 12.325
+          },
+          {
+            "slot": 4,
+            "remaining": 13.600000000000001
+          },
+          {
+            "slot": 5,
+            "remaining": 14.875
+          },
+          {
+            "slot": 6,
+            "remaining": 16.15
+          }
+        ]
+      },
+      {
+        "id": "exp-piquenique",
+        "remaining": null,
+        "objects": [
+          {
+            "slot": 0,
+            "t": 0,
+            "rot": 5.909897663348022
+          },
+          {
+            "slot": 1,
+            "t": 0,
+            "rot": 2.601215681268445
+          },
+          {
+            "slot": 2,
+            "t": 0,
+            "rot": 1.488507779462316
+          }
+        ],
+        "slots": [
+          {
+            "slot": 0,
+            "remaining": null
+          },
+          {
+            "slot": 1,
+            "remaining": null
+          },
+          {
+            "slot": 2,
+            "remaining": null
+          }
+        ]
+      },
+      {
+        "id": "exp-coreto",
+        "remaining": 21.75,
+        "objects": [
+          {
+            "slot": 0,
+            "t": 0,
+            "rot": 0.23904441704518598
+          },
+          {
+            "slot": 1,
+            "t": 0,
+            "rot": 3.8522093845547007
+          },
+          {
+            "slot": 2,
+            "t": 0,
+            "rot": 4.30325579397954
+          }
+        ],
+        "slots": [
+          {
+            "slot": 0,
+            "remaining": null
+          },
+          {
+            "slot": 1,
+            "remaining": null
+          },
+          {
+            "slot": 2,
+            "remaining": null
+          },
+          {
+            "slot": 3,
+            "remaining": 21.75
+          }
+        ]
+      },
+      {
+        "id": "exp-mirante",
+        "remaining": 29,
+        "objects": [
+          {
+            "slot": 0,
+            "t": 1,
+            "rot": 1.6147921572949748
+          },
+          {
+            "slot": 1,
+            "t": 1,
+            "rot": 0.7280568807771504
+          },
+          {
+            "slot": 2,
+            "t": 1,
+            "rot": 4.082022961418342
+          }
+        ],
+        "slots": [
+          {
+            "slot": 0,
+            "remaining": null
+          },
+          {
+            "slot": 1,
+            "remaining": null
+          },
+          {
+            "slot": 2,
+            "remaining": null
+          },
+          {
+            "slot": 3,
+            "remaining": 29
+          }
+        ]
+      },
+      {
+        "id": "exp-jardim",
+        "remaining": 39,
+        "objects": [
+          {
+            "slot": 0,
+            "t": 3,
+            "rot": 0
+          },
+          {
+            "slot": 1,
+            "t": 3,
+            "rot": 0
+          }
+        ],
+        "slots": [
+          {
+            "slot": 0,
+            "remaining": null
+          },
+          {
+            "slot": 1,
+            "remaining": null
+          },
+          {
+            "slot": 2,
+            "remaining": 39
+          },
+          {
+            "slot": 3,
+            "remaining": 43.5
+          }
+        ]
+      },
+      {
+        "id": "exp-apoio",
+        "remaining": 39,
+        "objects": [
+          {
+            "slot": 0,
+            "t": 2,
+            "rot": 0
+          },
+          {
+            "slot": 1,
+            "t": 2,
+            "rot": 0
+          }
+        ],
+        "slots": [
+          {
+            "slot": 0,
+            "remaining": null
+          },
+          {
+            "slot": 1,
+            "remaining": null
+          },
+          {
+            "slot": 2,
+            "remaining": 39
+          }
+        ]
+      },
+      {
+        "id": "exp-pedras-leste",
+        "remaining": 31.175,
+        "objects": [
+          {
+            "slot": 0,
+            "t": 1,
+            "rot": 4.9465470519054
+          },
+          {
+            "slot": 1,
+            "t": 1,
+            "rot": 5.161944322283438
+          },
+          {
+            "slot": 2,
+            "t": 1,
+            "rot": 2.539912510693897
+          }
+        ],
+        "slots": [
+          {
+            "slot": 0,
+            "remaining": null
+          },
+          {
+            "slot": 1,
+            "remaining": null
+          },
+          {
+            "slot": 2,
+            "remaining": null
+          },
+          {
+            "slot": 3,
+            "remaining": 31.175
+          },
+          {
+            "slot": 4,
+            "remaining": 34.4
+          }
+        ]
+      },
+      {
+        "id": "exp-alameda-norte",
+        "remaining": 21.45,
+        "objects": [
+          {
+            "slot": 0,
+            "t": 0,
+            "rot": 2.6124235808710226
+          },
+          {
+            "slot": 1,
+            "t": 0,
+            "rot": 6.2791646159530865
+          }
+        ],
+        "slots": [
+          {
+            "slot": 0,
+            "remaining": null
+          },
+          {
+            "slot": 1,
+            "remaining": null
+          },
+          {
+            "slot": 2,
+            "remaining": 21.45
+          },
+          {
+            "slot": 3,
+            "remaining": 23.925
+          }
+        ]
+      },
+      {
+        "id": "exp-jardim-sul",
+        "remaining": 41.6,
+        "objects": [
+          {
+            "slot": 0,
+            "t": 3,
+            "rot": 0
+          },
+          {
+            "slot": 1,
+            "t": 3,
+            "rot": 0
+          }
+        ],
+        "slots": [
+          {
+            "slot": 0,
+            "remaining": null
+          },
+          {
+            "slot": 1,
+            "remaining": null
+          },
+          {
+            "slot": 2,
+            "remaining": 41.6
+          },
+          {
+            "slot": 3,
+            "remaining": 46.4
+          }
+        ]
+      }
+    ]
+  },
+  "worldResourceSpawns": {
+    "version": 1,
+    "pending": [
+      {
+        "id": "bench-west",
+        "remaining": 70
+      }
+    ]
+  },
+  "v": 2
+}

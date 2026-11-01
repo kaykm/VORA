@@ -1,0 +1,37 @@
+{
+  "environment": "Instrumented CPU I/O and host assertions; not browser transfer",
+  "assertions": {
+    "deepEqual": {
+      "count": 21,
+      "ms": 16.167478999988816
+    },
+    "equal": {
+      "count": 2183845,
+      "ms": 83.15355199957412
+    },
+    "ok": {
+      "count": 935875,
+      "ms": 35.96960800062516
+    }
+  },
+  "rows": [
+    {
+      "operation": "readFileSync",
+      "file": "scripts/fontes.json",
+      "ms": 0.150230999999998,
+      "bytes": 3411
+    },
+    {
+      "operation": "readFileSync",
+      "file": "backup/VORA-original-17.html",
+      "ms": 3.554259000000002,
+      "bytes": 1073551
+    },
+    {
+      "operation": "readFileSync",
+      "file": "dist/VORA.html",
+      "ms": 4.388079000000005,
+      "bytes": 1256442
+    }
+  ]
+}

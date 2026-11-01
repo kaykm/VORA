@@ -1,0 +1,206 @@
+[
+  {
+    "scenario": "new",
+    "startupMs": 5115.29206,
+    "domSetupMs": 7.443073999999797,
+    "compileMs": 1.158968000000641,
+    "evaluateMs": 104.17365999999947,
+    "yieldedSteps": 31663,
+    "maxStepMs": 172.12441900000067,
+    "p50StepMs": 0.003329999999550637,
+    "p95StepMs": 0.8513960000000225,
+    "completeBootAndHarnessMs": 4.964432000246234,
+    "firstCpuRenderMs": 1838.4126489999999,
+    "settings": {
+      "backend": "SoftwareGL",
+      "W": 320,
+      "H": 240,
+      "canvasWidth": 320,
+      "canvasHeight": 240,
+      "imageMode": "native",
+      "outputMode": "native",
+      "aaMode": "off",
+      "aoMode": "off",
+      "shadowQuality": "high",
+      "viewRange": "default"
+    },
+    "profile": {
+      "phases": {
+        "Preparando o renderizador": {
+          "ms": 0.262683000000834,
+          "maxMs": 0.11421100000006845,
+          "steps": 6
+        },
+        "Preparando os controles": {
+          "ms": 5.610469999999623,
+          "maxMs": 5.600210000000516,
+          "steps": 3
+        },
+        "Organizando o parque": {
+          "ms": 1204.479822000052,
+          "maxMs": 172.1199489999999,
+          "steps": 1470
+        },
+        "Preparando modelos": {
+          "ms": 234.94843000000947,
+          "maxMs": 10.613946000000396,
+          "steps": 116
+        },
+        "Preparando iluminação e imagem": {
+          "ms": 0.026320999999370542,
+          "maxMs": 0.02610099999947124,
+          "steps": 2
+        },
+        "Restaurando suas configurações": {
+          "ms": 33.40512000000035,
+          "maxMs": 33.398479999999836,
+          "steps": 3
+        },
+        "Preparando os caminhos": {
+          "ms": 3202.865476999995,
+          "maxMs": 5.187996999999086,
+          "steps": 25875
+        },
+        "Preparando o horizonte": {
+          "ms": 20.305604999986826,
+          "maxMs": 0.6864650000006804,
+          "steps": 168
+        },
+        "Preparando a base": {
+          "ms": 16.667320000000473,
+          "maxMs": 16.662140000000363,
+          "steps": 3
+        },
+        "Preparando a vegetação": {
+          "ms": 257.04669399993327,
+          "maxMs": 2.0565950000000157,
+          "steps": 4024
+        },
+        "Finalizando a cena": {
+          "ms": 0.015609999998559942,
+          "maxMs": 0.01246999999966647,
+          "steps": 3
+        }
+      },
+      "progressCalls": 31674,
+      "progressDuplicates": 31281,
+      "progressMs": 61.966933999950015,
+      "steps": 0
+    },
+    "snapshot": {
+      "state": "1e91dd9d72fbb9fca7ac020a20429248b0c46cc4b8b2030914b28cd055bd506f",
+      "save": "1e91dd9d72fbb9fca7ac020a20429248b0c46cc4b8b2030914b28cd055bd506f",
+      "world": "b02ddd9f7e5e6ab48ff5b70ce16d7ef29cf59b640a40e648ef11602a8b0972b8",
+      "meshes": "37c82275657234236067f02cc3f9b464883df0f2260a96b16aa51726faaba42d",
+      "ready": true,
+      "progress": 100,
+      "writes": 1,
+      "memoryCounters": {
+        "vegetationBytes": 7443684,
+        "jobs": 0
+      }
+    }
+  },
+  {
+    "scenario": "advanced",
+    "startupMs": 5227.894186999998,
+    "domSetupMs": 3.242772999999943,
+    "compileMs": 1.1127479999995558,
+    "evaluateMs": 104.49561100000028,
+    "yieldedSteps": 31663,
+    "maxStepMs": 186.73920200000066,
+    "p50StepMs": 0.0031899999994493555,
+    "p95StepMs": 0.8865470000000641,
+    "completeBootAndHarnessMs": 5.372561000151109,
+    "firstCpuRenderMs": 1859.995934999999,
+    "settings": {
+      "backend": "SoftwareGL",
+      "W": 320,
+      "H": 240,
+      "canvasWidth": 320,
+      "canvasHeight": 240,
+      "imageMode": "native",
+      "outputMode": "native",
+      "aaMode": "off",
+      "aoMode": "off",
+      "shadowQuality": "high",
+      "viewRange": "default"
+    },
+    "profile": {
+      "phases": {
+        "Preparando o renderizador": {
+          "ms": 0.2143530000012106,
+          "maxMs": 0.07133000000067113,
+          "steps": 6
+        },
+        "Preparando os controles": {
+          "ms": 6.164774000000762,
+          "maxMs": 6.156014000000141,
+          "steps": 3
+        },
+        "Organizando o parque": {
+          "ms": 1214.9208179999896,
+          "maxMs": 186.7352719999999,
+          "steps": 1470
+        },
+        "Preparando modelos": {
+          "ms": 239.09359800000675,
+          "maxMs": 11.499902999999904,
+          "steps": 116
+        },
+        "Preparando iluminação e imagem": {
+          "ms": 0.022371000000930508,
+          "maxMs": 0.022181000000273343,
+          "steps": 2
+        },
+        "Restaurando suas configurações": {
+          "ms": 18.820284999999785,
+          "maxMs": 18.81270500000028,
+          "steps": 3
+        },
+        "Preparando os caminhos": {
+          "ms": 3319.070858000052,
+          "maxMs": 14.528184000000692,
+          "steps": 25875
+        },
+        "Preparando o horizonte": {
+          "ms": 20.235006000013527,
+          "maxMs": 0.9172770000004675,
+          "steps": 168
+        },
+        "Preparando a base": {
+          "ms": 18.31586099999913,
+          "maxMs": 18.31032100000084,
+          "steps": 3
+        },
+        "Preparando a vegetação": {
+          "ms": 254.02173500004574,
+          "maxMs": 1.855133000000933,
+          "steps": 4024
+        },
+        "Finalizando a cena": {
+          "ms": 0.01177099999767961,
+          "maxMs": 0.00899099999878672,
+          "steps": 3
+        }
+      },
+      "progressCalls": 31674,
+      "progressDuplicates": 31281,
+      "progressMs": 63.560882999869136,
+      "steps": 0
+    },
+    "snapshot": {
+      "state": "54725474d13e8e5f005ea4fb00e733c5fa1092cc6222a83ddd60c19edc83f253",
+      "save": "54725474d13e8e5f005ea4fb00e733c5fa1092cc6222a83ddd60c19edc83f253",
+      "world": "783da1fe8832f6136b1a3e1ed00aa510184341f06c8a33d839fc2fd50d5ab9db",
+      "meshes": "37c82275657234236067f02cc3f9b464883df0f2260a96b16aa51726faaba42d",
+      "ready": true,
+      "progress": 100,
+      "writes": 1,
+      "memoryCounters": {
+        "vegetationBytes": 7443684,
+        "jobs": 0
+      }
+    }
+  }
+]

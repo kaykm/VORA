@@ -1,0 +1,11 @@
+✔ índice de spawns equivale à busca completa e acompanha regeneração e acréscimos (17949.511679ms)
+✔ vegetação e árvores preservam cada posição, normal e acabamento ao receber a nova paleta (8947.567325ms)
+✔ um corpo e vários corpos conservam resultados da física original (7013.099922ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 33916.752318

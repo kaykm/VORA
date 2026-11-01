@@ -1,0 +1,13 @@
+✔ tests/carregamento.test.mjs (15501.851603ms)
+✔ tests/equivalencia.test.mjs (17170.033577ms)
+✔ tests/fluxo.test.mjs (74.893878ms)
+✔ tests/mesh-incremental.test.mjs (14645.474802ms)
+✔ tests/piso-loja.test.mjs (4947.293944ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 30233.30744
