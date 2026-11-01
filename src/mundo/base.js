@@ -33,18 +33,20 @@ function buildStationMeshes(){
  for(let i=0;i<8;i++){const a=outline[i],b=outline[(i+1)%8],A=[a[0],-STATION.depth,a[1]],B=[b[0],-STATION.depth,b[1]],C=[b[0],-.7,b[1]],D=[a[0],-.7,a[1]],E=[b[0]*.985,.35,b[1]*.985],F=[a[0]*.985,.35,a[1]*.985];quad(foundation,A,B,C,D,[.49,.485,.425],true);quad(foundation,D,C,E,F,[.61,.59,.50],true);foundation.push(...triangle([0,.35,0],F,E,[.55,.545,.475],[0,1,0]));}
  // A low curb only behind the workbench; the receiving apron stays open.
  box(solid,0,-5,-50,99,8,3,[.49,.475,.40]);
+ // Heights in model space; metricMesh applies the station's vertical scale.
+ const weighbridgeEdgeY=.98,floorDetailY=1.05;
  box(floor,0,.55,-33,96,.12,32,[.57,.56,.47]);
  // Steel weighbridge, inset flush with the apron. Its cuts follow the hole.
  box(floor,0,.8,13,62,.32,44,dark);
  for(let i=0;i<7;i++)box(floor,-26.1+i*8.7,1.13,13,8.1,.22,40,[.36+i%2*.025,.46+i%2*.022,.43+i%2*.018]);
- for(const x of [-31.7,31.7])box(floor,x,.98,13,1.1,.45,45,edge);
- for(const z of [-9.6,35.6])box(floor,0,.98,z,65,.45,1.1,edge);
+ for(const x of [-31.7,31.7])box(floor,x,weighbridgeEdgeY,13,1.1,.45,45,edge);
+ for(const z of [-9.6,35.6])box(floor,0,weighbridgeEdgeY,z,65,.45,1.1,edge);
  // Four worn paint corners frame the loading space without a giant marker.
- for(const x of [-43,43])for(const z of [-9,40]){box(floor,x,1.05,z,8,.035,1.2,gold);box(floor,x+Math.sign(x)*3.4,1.05,z-Math.sign(z)*3,1.2,.035,7,gold)}
+ for(const x of [-43,43])for(const z of [-9,40]){box(floor,x,floorDetailY,z,8,.035,1.2,gold);box(floor,x+Math.sign(x)*3.4,floorDetailY,z-Math.sign(z)*3,1.2,.035,7,gold)}
  // Drain channels and three broad expansion joints, all stable in world space.
- for(let i=0;i<10;i++)box(floor,50,1.05,-9+i*4.5,3.6,.06,1.2,[.28,.31,.27]);
- for(const x of [-49,45])box(floor,x,1.05,2,.38,.025,91,[.39,.40,.34]);
- box(floor,0,1.05,-16,95,.025,.4,[.39,.40,.34]);
+ for(let i=0;i<10;i++)box(floor,50,floorDetailY,-9+i*4.5,3.6,.06,1.2,[.28,.31,.27]);
+ for(const x of [-49,45])box(floor,x,floorDetailY,2,.38,.025,91,[.39,.40,.34]);
+ box(floor,0,floorDetailY,-16,95,.025,.4,[.39,.40,.34]);
  // Rear work bay: two load-bearing piles stay embedded far below the slab.
  for(const x of [-44,44]){
   for(let i=0;i<18;i++){const y=-STATION.depth+i*40,v=(i%3-1)*.008;box(solid,x,y,-37,6,40,7,[.43+v,.435+v,.365+v])}
@@ -121,7 +123,7 @@ function buildStationMeshes(){
  details.box(0,plaque.y+.7,plaque.z+.46,50,.32,.12,gold,0,0);
  for(const x of [-25,25])details.box(x,plaque.y+plaque.height/2-.25,plaque.z+.48,.5,.5,.16,gold,0,0);
  // Broad scuffs on the approach, no tiny random flecks or floating decoration.
- for(const [x,z,w,l]of [[-16,44,3,5],[13,46,2,4],[-45,20,2,6],[40,31,3,4]])box(floor,x,1.05,z,w,.02,l,[.49,.49,.42],.15);
+ for(const [x,z,w,l]of [[-16,44,3,5],[13,46,2,4],[-45,20,2,6],[40,31,3,4]])box(floor,x,floorDetailY,z,w,.02,l,[.49,.49,.42],.15);
  function metricMesh(data,extra=[]){
   for(let i=0;i<data.length;i+=9)data[i+1]=stationHeight(data[i+1]);
   for(let i=0;i<data.length;i+=27){const ax=data[i+9]-data[i],ay=data[i+10]-data[i+1],az=data[i+11]-data[i+2],bx=data[i+18]-data[i],by=data[i+19]-data[i+1],bz=data[i+20]-data[i+2];let nx=ay*bz-az*by,ny=az*bx-ax*bz,nz=ax*by-ay*bx,l=Math.hypot(nx,ny,nz)||1;if(nx*data[i+3]+ny*data[i+4]+nz*data[i+5]<0)l=-l;for(let j=0;j<3;j++){data[i+j*9+3]=nx/l;data[i+j*9+4]=ny/l;data[i+j*9+5]=nz/l}}

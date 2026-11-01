@@ -54,4 +54,7 @@ function* buildWalkMeshIncremental(){
  return yield* partitionStaticMeshIncremental(data,128);
 }
 function drawWalkways(){walkMesh??=buildWalkMesh();drawMesh(walkMesh,0,0,0,1,1,1,[1,1,1],13)}
-function walkSurfaceVisibleAt(x,z,y){return !(stationDistanceAt(x,z)<-.1&&y<=STATION.deck+.1)}
+function walkSurfaceVisibleAt(x,z,y){
+ const coveredByStation=stationDistanceAt(x,z)<-.1&&y<=STATION.deck+.1;
+ return !coveredByStation;
+}

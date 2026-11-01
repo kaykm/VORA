@@ -119,6 +119,10 @@ float apertureRadiusAt(vec2 p){
 }
 float granularBiome(vec3 p){float d=max(0.,-p.y);float broad=noise(p.xz*.035),detail=noise(p.xz*.075),edge=(noise(p.xz*.14)-.5)*5.+(detail-.5)*1.0;float stone=materialWalk;vec2 regions=regionFields(p.xz);float dirt=regions.x;float sand=regions.y;float surface=0.;if(dirt+edge>0.)surface=2.;if(sand+edge>0.)surface=3.;if(stone+edge>0.)surface=1.;float boundary=2.4+(broad-.5)*.4+(detail-.5)*.2;if(surface==1.&&d<boundary)return 1.;float topsoil=surface==1.?20.:surface==3.?36.:19.;float clay=surface==3.?78.:60.;float rock=108.+(broad-.5)*23.+(noise(p.xz*.08)-.5)*9.;float relief=(broad-.5)*9.+(detail-.5)*1.2;if(d<topsoil+relief)return surface==3.?3.:0.;if(d<clay+relief)return 2.;if(d<rock){float inclusions=noise(p.xz*.055+vec2(17.3,-8.1));return inclusions>.70-(d-clay)/max(1.,rock-clay)*.4?1.:2.;}return 1.;}
 float stationDistance(vec2 p){vec2 q=abs(p-vec2(${base.x.toFixed(1)},${base.y.toFixed(1)}));return max(max(q.x-${STATION.halfX.toFixed(1)},q.y-${STATION.halfZ.toFixed(1)}),(q.x+q.y-${(STATION.halfX+STATION.halfZ-STATION.chamfer).toFixed(1)})/1.41421356);}
+// Shared by color and shadow passes; matches the CPU walkway visibility rule.
+bool stationCoversWalkway(vec3 p){
+ return stationDistance(p.xz)<-.1&&p.y<=${STATION.deck.toFixed(3)}+.1;
+}
 float stationWeight(vec3 p){return (1.-smoothstep(-.7,.7,stationDistance(p.xz)))*smoothstep(-${(STATION.depth+1).toFixed(1)},-${(STATION.depth-1).toFixed(1)},p.y);}
 vec3 stationSurface(vec2 p){float n=noise(p*.055),g=noise(p*.17);return vec3(.55,.545,.475)*(.94+n*.09+(g-.5)*.035);}
 vec3 chipColor(vec3 p){float b=granularBiome(p),q=hash(floor(p.xz*3.+p.y));vec3 c=b<.5?vec3(.40,.31,.18):b<1.5?vec3(.59,.60,.54):b<2.5?vec3(.52,.32,.17):vec3(.77,.65,.42);return c*(.83+q*.30);}
@@ -227,7 +231,7 @@ void main(){
 // otherwise alternate in the depth buffer as the camera pulls away.
 #ifndef VORA_OPAQUE_ONLY
 if(u_renderPass>.5){
- if(u_material==13.&&stationDistance(v_world.xz)<-.1&&v_world.y<=${STATION.deck.toFixed(3)}+.1)discard;
+ if(u_material==13.&&stationCoversWalkway(v_world))discard;
  if(u_material==6.||u_material==7.)discard;
  vec2 hd=v_world.xz-u_hole.xy;float hr=u_hole.z;
  if(length(hd)<hr*1.09+2.)hr=apertureRadiusAt(hd);
@@ -259,7 +263,7 @@ materialWalk=-100000.;
 materialWalk=(u_material==0.||u_material==6.||u_material==7.||u_material==11.||u_material==14.||u_material==15.)?-100000.:walkField(v_world.xz);
 #endif
 vec2 holeDelta=v_world.xz-u_hole.xy;float distanceToHole=length(holeDelta);float boundaryRadius=u_hole.z;if(distanceToHole>.00001&&distanceToHole<u_hole.z*1.09+2.)boundaryRadius=apertureRadiusAt(holeDelta);
-if(u_material==13.&&stationDistance(v_world.xz)<-.1&&v_world.y<=${STATION.deck.toFixed(3)}+.1)discard;
+if(u_material==13.&&stationCoversWalkway(v_world))discard;
 #ifndef VORA_OPAQUE_ONLY
 bool cut=u_material==1.||u_material==5.||u_material==6.||u_material==13.||u_material==15.;if(cut&&distanceToHole<boundaryRadius)discard;
 // The cavity meets the permanent block; its lip and lining never pass through it.

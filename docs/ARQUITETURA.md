@@ -4,7 +4,7 @@
 
 O HTML recebido tinha um script clássico único com dependências de ordem, closures e estado compartilhado. A primeira reorganização separa responsabilidades físicas em arquivos, preservando o programa JavaScript e sua ordem. Não houve conversão para ES modules, engine diferente, framework ou nova física.
 
-O resultado contém **75 unidades JavaScript**, 15 arquivos de shaders, três estilos, sete componentes de interface, fonte, símbolos SVG e duas tabelas SMAA. As unidades pequenas isolam contratos específicos, como resolução, persistência e matrizes. Elas **não** são scripts que se carregam mutuamente.
+A revisão atual contém **88 unidades JavaScript**, 20 arquivos de shaders, cinco estilos, dez componentes de interface, fonte, símbolos SVG e duas tabelas SMAA. As unidades pequenas isolam contratos específicos, como resolução, persistência e matrizes. Elas **não** são scripts que se carregam mutuamente.
 
 `scripts/fontes.json` declara a sequência. O gerador concatena tudo em **um único `<script>`**, sem wrappers por arquivo, minificação ou transformação de funções. As declarações continuam no mesmo escopo lexical. Isso evita duplicação de estado e conserva tanto o acesso entre sistemas quanto a execução direta em `file://`.
 
@@ -21,10 +21,17 @@ flowchart LR
   S[Shaders GLSL] --> G
   A[Fontes, SVG, tabelas SMAA e licenças] --> G
   G --> D[dist/VORA.html]
+  G --> P[dist/index.html]
   G --> I[dist/manifesto.json]
 ```
 
 `gerar.cmd` encontra Node e executa `scripts/gerar.mjs`. O compilador resolve inclusões, embute os recursos, valida a sintaxe de cada unidade e do programa completo, verifica que não ficaram recursos externos e grava a distribuição. Só substitui o HTML anterior depois dessas validações. O manifesto registra tamanho, quantidade de fontes e hash do resultado. Não usa caminhos do arquivo original na geração.
+
+Dentro de `scripts/compilar.mjs`, `expand()` resolve os marcadores, com funções próprias para recursos binários e JSON. `assembleScripts()` monta e valida o programa; `assembleStyles()` insere os estilos na ordem do manifesto; `validateHtml()` verifica o HTML completo. A API pública continua sendo `localPath`, `read`, `expand`, `assemble` e `build`, além de `ROOT` e `manifest`. Os nomes, mensagens de erro, ordem das validações e formato da saída são preservados.
+
+`build()` grava o mesmo HTML em `dist/VORA.html` (uso offline pelo nome anterior) e `dist/index.html` (entrada do site), além de `dist/manifesto.json`. A montagem acontece uma vez; os dois HTMLs são idênticos e autossuficientes, com o hash comum registrado no manifesto. `tests/estrutura.test.mjs` verifica essa igualdade. `.gitattributes` preserva os bytes dos dois arquivos gerados.
+
+O Pages publica a raiz de `main`. O `index.html` dessa raiz é uma entrada estática pequena que abre `./dist/index.html`; `.nojekyll` dispensa o processamento do Jekyll. Esses arquivos são mantidos como fontes da publicação, enquanto o jogo completo continua sendo gerado em `dist/`. O prefixo do repositório é preservado pelo endereço relativo. Consulte [GITHUB-PAGES.md](GITHUB-PAGES.md) para configurar e atualizar a publicação.
 
 Marcadores suportados:
 
@@ -54,8 +61,6 @@ Marcadores suportados:
 
 O manifesto preserva as seguintes fases do original:
 
-A calçada é recortada sob a fundação permanente da loja no shader e no fallback CPU (`walkSurfaceVisibleAt`). Isso evita superfícies coplanares disputando profundidade ao afastar a câmera. Os detalhes finos do piso em `mundo/base.js` também têm alturas separadas da base e da plataforma; fundação e apoios físicos mantêm suas medidas.
-
 1. Define fallback CPU e medidas; cria canvas/contexto e carrega o save.
 2. Define estado, funções de jogo e UI; registra handlers que só usarão os sistemas após a inicialização.
 3. Define física, mundo, modelos, vegetação, presets, spawns, entrada, administração e depósito.
@@ -66,6 +71,20 @@ A calçada é recortada sob a fundação permanente da loja no shader e no fallb
 A sequência final é: migrar escala → preparar modelos → animações/controles → gerar mundo/carga → iluminação → resolução → HUD → distância/presets → menus/interior → persistir → solicitar o primeiro frame. O loop usa subpassos de até 1/60 s para atualizar a simulação. Alterar a ordem pode causar acesso a `const`/`let` antes da inicialização ou recursos ainda ausentes.
 
 Essa sequência descreve a entrada histórica. Atualmente `iniciar.js` chama `startVora()`: o programa principal da GPU, o mundo, os modelos, a iluminação, os menus e a geometria são preparados por generators em fases. `completeVoraLoading()` libera a partida e a persistência somente depois do sucesso. O mapa atual das fases, fila e cache está em [CARREGAMENTO.md](CARREGAMENTO.md).
+
+Os três fluxos centrais têm os seguintes pontos de entrada:
+
+| Fluxo | Coordenação | Etapas |
+| --- | --- | --- |
+| Geração | `scripts/compilar.mjs`: `assemble()` e `build()` | Expandir fontes → montar JS/CSS → validar HTML → gravar distribuição e manifesto |
+| Inicialização | `src/jogo/carregamento.js`: `initializeVoraSteps()` e `startVora()` | Consumir as fases na ordem declarada → concluir ou apresentar falha |
+| Partida | `src/jogo/loop.js`: `frame()` | Conferir liberação/cadência → avançar simulação → apresentar cena → contar desenhos → agendar próximo quadro |
+
+Na inicialização, `initializeVoraControls()` reúne a migração de escala e os controles; `restoreVoraInterface()` reúne a restauração dos ajustes e menus. Essas funções só executam quando sua fase é consumida. Pesos, retomadas dos generators, cancelamento e tratamento de falhas continuam no carregamento.
+
+No loop, `advanceGameSimulation()` processa a fila de recursos, mantém a vegetação, observa a cadência, avança os subpassos e persiste quando necessário, nessa ordem. `drawGameFrame()` atualiza o interior e a inspeção mesmo quando a cena 3D é reutilizada, e informa se desenhou. `frame()` concentra o contador de FPS e o agendamento em um único ponto. O limite de FPS continua sendo verificado antes da simulação, como na implementação anterior.
+
+A simplificação desses fluxos preserva a ordem do manifesto, o escopo compartilhado e o HTML único. `tests/fluxo.test.mjs` cobre os bloqueios do loop, os subpassos, a ordem da persistência, a reutilização da cena, o contador e a liberação de fases interrompidas; esses testes de coordenação não medem GPU ou layout.
 
 `persist()` chama `saveCargoPhysics()`, `saveSpawnWorld()` e `saveWorldResourceSpawns()` antes de gravar o único `state`. Não mantenha outro objeto de save em paralelo. O snapshot dos recursos do cenário só é gravado após sua preparação completa.
 
@@ -83,7 +102,7 @@ O conteúdo de todos os cartões de melhoria vem de `interface/componentes/melho
 
 Ao comprar raio, `upgrade('r')` preserva a distância pretendida da câmera ajustando o fator de zoom ao novo raio. Assim, o afastamento automático do enquadramento padrão não cancela o crescimento aparente da abertura nos níveis maiores. A interpolação de `cavityVisual`, a escala física e os níveis salvos permanecem os mesmos; zoom manual e reenquadramento por `resetCamera()` continuam disponíveis. `tests/crescimento-buraco.test.mjs` verifica a abertura projetada antes/depois da compra, com o jogador parado, em quatro faixas de nível, além de compra recusada e restauração do progresso.
 
-A expansão de recursos consumíveis está em `src/jogo/recursos-mundo.js`; consulte [MUNDO-CONSUMIVEL.md](MUNDO-CONSUMIVEL.md). Essa unidade liga o cenário a proxies de coleta, guarda IDs e contagens de reposição no estado canônico e reutiliza os fluxos de carga e venda. `src/mundo/recursos-layout.js`, incluído imediatamente antes dela, define as regiões, a colocação incremental, a orientação conforme os caminhos e os novos modelos de apoio. A etapa inicial do dossiê tinha 78 unidades JavaScript e quatro estilos; a lista histórica de 75 acima descreve a reorganização anterior. As regras anteriores de desbloqueio e reposição estão em [DISTRIBUICAO-SPAWNS-E-SOMBRAS.md](DISTRIBUICAO-SPAWNS-E-SOMBRAS.md).
+A expansão de recursos consumíveis está em `src/jogo/recursos-mundo.js`; consulte [MUNDO-CONSUMIVEL.md](MUNDO-CONSUMIVEL.md). Essa unidade liga o cenário a proxies de coleta, guarda IDs e contagens de reposição no estado canônico e reutiliza os fluxos de carga e venda. `src/mundo/recursos-layout.js`, incluído imediatamente antes dela, define as regiões, a colocação incremental, a orientação conforme os caminhos e os novos modelos de apoio. A etapa inicial do dossiê tinha 78 unidades JavaScript e quatro estilos; a reorganização inicial tinha 75 unidades. As regras anteriores de desbloqueio e reposição estão em [DISTRIBUICAO-SPAWNS-E-SOMBRAS.md](DISTRIBUICAO-SPAWNS-E-SOMBRAS.md).
 
 A carga de recursos preserva a malha do cenário até a descarga. `resourceCargoModel`/`resourceCargoShape` compartilham modelo, escala e dimensões com o corpo; `graficos/carga.js` e a vista interna usam essa representação. `cargoPoses[].resourceId` é opcional e validado contra os recursos gerados na restauração, preservando a leitura dos saves anteriores. A caixa continua representando os lotes portáteis. A física reativa corpos quando o relevo muda com o deslocamento e adapta o grid ao maior diâmetro de colisão.
 
@@ -136,6 +155,8 @@ O dossiê em Carga é definido por `src/interface/dossie.js`, `componentes/dossi
 A revisão visual da área de vendas e das placas está descrita em [MODELOS-VENDAS-E-PLACAS.md](MODELOS-VENDAS-E-PLACAS.md). Em `buildStationMeshes`, os detalhes de precisão usam unidades finais e são incorporados ao lote sólido após a conversão das peças estruturais por `stationHeight`.
 
 A paleta atual e o quiosque de vendas estão descritos em [PALETA-E-AREA-DE-VENDAS.md](PALETA-E-AREA-DE-VENDAS.md). Alterações de cor das árvores e plantas preservam posições, normais e tags de acabamento; cores procedurais do terreno têm versões correspondentes em `terreno.js` e `terreno-albedo.glsl`.
+
+A calçada é recortada sob a fundação permanente da loja no shader e no fallback CPU (`walkSurfaceVisibleAt`). Isso evita superfícies coplanares disputando profundidade ao afastar a câmera. Os detalhes finos do piso em `mundo/base.js` também têm alturas separadas da base e da plataforma; fundação e apoios físicos mantêm suas medidas. `stationCoversWalkway()` reúne a condição dos passes de cor e sombra sem antecipar o descarte em relação às derivadas. No modelo da loja, `weighbridgeEdgeY` e `floorDetailY` nomeiam as alturas compartilhadas antes da conversão por `stationHeight`. `tests/piso-loja.test.mjs` cobre o interior, a borda, o chanfro e a tolerância vertical do recorte.
 
 ## Imagem e compatibilidade
 
