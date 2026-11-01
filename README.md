@@ -1,6 +1,6 @@
 # VORA — projeto local
 
-O jogo está organizado em `C:\Vora`. A referência recebida foi **VORA (17).html**; a cópia original permanece intacta em `backup/VORA-original-17.html`. Nada foi publicado ou enviado ao GitHub.
+O jogo está organizado em `C:\Vora`. A referência recebida foi **VORA (17).html**; a cópia original permanece intacta em `backup/VORA-original-17.html`. As fontes e uma distribuição estão publicadas no repositório [kaykm/VORA](https://github.com/kaykm/VORA).
 
 ## Para jogar
 
@@ -16,6 +16,8 @@ Abra **Carga → Dossiê de itens** para consultar os tipos e seus portes, sem r
 
 O arquivo `dist/VORA.html` contém todo o jogo: código, estilos, shaders, fonte e ícones. Pode ser copiado sozinho para outra pasta ou computador. O progresso fica no navegador; não acompanha o HTML. Antes de mudar o arquivo de lugar, leia [Saves e mudança de caminho](docs/SAVES.md).
 
+`dist/index.html` é uma cópia idêntica gerada para a entrada do site.
+
 Ao abrir, aguarde a tela **Preparando seu parque** chegar ao fim. A porcentagem acompanha etapas reais de preparação. Modelos, caminhos, iluminação e vegetação são preparados em blocos; o jogo mantém um cache limitado e prepara novos detalhes em segundo plano ao explorar. Não é necessário começar uma partida nova. Veja [Carregamento e travamentos de câmera](docs/CARREGAMENTO.md).
 
 Em **Configurações → Imagem**, **Qualidade das sombras** oferece Desligadas, Baixa, Média, Alta e Ultra. O novo ajuste **Distância das sombras** oferece Muito baixo, Baixo, Médio, Alto, Muito alto e Ultra, independentemente da qualidade e da distância de visão. A oclusão de ambiente continua independente, com Desligada, Leve, Equilibrada e Alta. As escolhas ficam salvas. Veja [Sombras e oclusão de ambiente](docs/SOMBRAS-E-OCLUSAO.md) para os perfis, testes e limites.
@@ -28,13 +30,19 @@ Os modelos da área de vendas e das placas receberam ajustes de alinhamento e ac
 
 A área de vendas tem cobertura terracota, estrutura azul-petróleo e madeira quente; o texto **VENDAS foi removido**. O parque mantém verdes mais vivos, flores coloridas e caminhos em arenito quente.
 
+## GitHub Pages
+
+O endereço público é [kaykm.github.io/VORA/](https://kaykm.github.io/VORA/). O Pages publica a raiz de `main`; o `index.html` dessa raiz abre `dist/index.html`, e `.nojekyll` mantém a publicação estática. A configuração é **Deploy from a branch → main → /(root)**.
+
+Para atualizar, execute a verificação, envie as fontes e a distribuição atualizada para `main` quando autorizado e confira a execução **pages build and deployment**. Veja [Publicação no GitHub Pages](docs/GITHUB-PAGES.md).
+
 ## Para gerar depois de uma alteração
 
 1. Edite os arquivos de `src` ou `assets`.
 2. Dê dois cliques em **gerar.cmd**, na raiz da pasta.
 3. Aguarde a mensagem de sucesso. Reabra ou atualize `dist/VORA.html` no navegador.
 
-**Não edite `dist/VORA.html` manualmente:** ele será substituído na próxima geração. Se a validação das fontes falhar, a distribuição anterior é preservada.
+**Não edite `dist/VORA.html` nem `dist/index.html` manualmente:** ambos serão substituídos na próxima geração. Se a validação das fontes falhar, a distribuição anterior é preservada.
 
 A geração usa apenas os módulos que já vêm com Node.js. Este computador possui Node.js **24.22.1** no runtime local do Codex; os comandos procuram `node.exe` no PATH e depois nesse runtime. Não é preciso executar `npm install`. Em outro computador, use Node.js 22 ou superior para desenvolver. O navegador continua suficiente para jogar.
 
@@ -88,4 +96,4 @@ O teste gráfico adicional é opcional: `testar-gpu.cmd` usa Python e uma instal
 
 ## Preparação para GitHub
 
-Fontes, recursos, documentação, scripts, testes e a referência original congelada podem ser versionados. `dist`, resultados temporários, dependências e outros backups ficam fora pelo `.gitignore`. A referência original é incluída deliberadamente para tornar os testes comparativos reproduzíveis. Nenhum recurso necessário à geração depende do backup. A geração não exige conta, repositório remoto ou conexão.
+Fontes, recursos, documentação, scripts, testes e a referência original congelada podem ser versionados. Resultados temporários, dependências e outros backups ficam fora pelo `.gitignore`. A distribuição em `dist/index.html` e seu manifesto já são rastreados; o `.gitignore` não impede sua atualização. A referência original é incluída deliberadamente para tornar os testes comparativos reproduzíveis. Nenhum recurso necessário à geração depende do backup. A geração não exige conta, repositório remoto ou conexão.
