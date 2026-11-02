@@ -1,0 +1,42 @@
+{
+  "baseCommit": "f9fcbccdeaf4fc22f07862eb44f1c7c486926d22",
+  "command": [
+    "C:\\WINDOWS\\system32\\cmd.exe",
+    "/d",
+    "/c",
+    "verificar.cmd",
+    "--sem-pausa"
+  ],
+  "environment": {
+    "node": "v24.22.1",
+    "v8": "13.6.233.17-node.58",
+    "platform": "win32",
+    "arch": "x64",
+    "cpu": "AMD Ryzen 5 5600 6-Core Processor              ",
+    "logicalCpus": 12,
+    "totalMemoryBytes": 17096183808
+  },
+  "concurrency": 2,
+  "result": {
+    "iteration": 1,
+    "startedAt": "2026-11-02T02:05:35.022Z",
+    "wallMs": 204271.69329999998,
+    "exitCode": 0,
+    "signal": null,
+    "error": null,
+    "tests": 108,
+    "pass": 108,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0,
+    "nodeDurationMs": 203933.1756,
+    "passed": true
+  },
+  "scope": "Suíte oficial em Node/DOM simulado/SoftwareGL; não mede navegador ou GPU.",
+  "hashes": {
+    "dist\\index.html": "be742a78fa1a1aabefbe4303132e0245e646edc1c225ea893b9d0af9d6752958",
+    "dist\\VORA.html": "be742a78fa1a1aabefbe4303132e0245e646edc1c225ea893b9d0af9d6752958",
+    "backup\\VORA-original-17.html": "3f1c416c7ad088dd1444b64c7ce7d6e55fde2ea6f2a341f2794b33286f0bc2df"
+  }
+}

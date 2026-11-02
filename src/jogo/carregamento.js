@@ -161,7 +161,9 @@ function startVora() {
      return;
     }
     const deadline = performance.now() + 5;
-    for (let count = 0; count < 64; count++) {
+    // Cheap yields can share a frame; the deadline and GPU waiting flag still
+    // stop this batch before its safety ceiling in normal operation.
+    for (let count = 0; count < 1024; count++) {
      const began = performance.now(), result = iterator.next();
      gameLoading.steps++;
      gameLoading.maxStepMs = Math.max(gameLoading.maxStepMs, performance.now() - began);

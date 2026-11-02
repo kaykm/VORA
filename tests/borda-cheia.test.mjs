@@ -33,7 +33,7 @@ test('pilha apoiada acima da abertura bloqueia coleta e avisa mesmo com litros l
 });
 
 test('objeto entrando, salto transitório e pilha abaixo da calçada não produzem borda cheia',()=>{
- const g=createRuntime(html);
+ const g=createRuntime(html,null,{boot:'manual'});
  g.run(`state.r=5;state.d=5;syncCavityMotion();state.cargo=[0];restoreCargoPhysics();
   globalThis.pile=cargoBodies[0];pile.z=20;pile.contacts=0;pile.fallTime=2;
   updateCargoRim(1);`);

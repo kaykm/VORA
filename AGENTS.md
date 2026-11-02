@@ -37,7 +37,7 @@
 
 ## Verificações antes de entregar
 
-1. Execute `verificar.cmd --sem-pausa` e confirme código de saída zero.
+1. Use validação proporcional à alteração para evitar carregar o mundo inteiro em toda resposta. Em alterações locais, execute os arquivos de teste afetados com `verificar.cmd --sem-pausa --arquivo nome.test.mjs` (repita `--arquivo` quando necessário), além de gerar o HTML. Execute a suíte completa `verificar.cmd --sem-pausa` antes de merge/publicação, ao alterar o carregamento, o harness/executor, geração/manifesto, formato de saves ou sistemas compartilhados com impacto amplo, ou quando não houver seleção segura. Registre quais verificações foram feitas; não apresente uma seleção como suíte completa. Se só documentação mudou, valide os links/comandos pertinentes, sem repetir testes do jogo já aprovados. Não repita uma suíte completa aprovada sem nova alteração relevante, falha ou preocupação pendente.
 2. A geração deve ser determinística e recusar recursos externos, marcadores pendentes, arquivos repetidos e ciclos de inclusão.
 3. Para mudanças de comportamento, acrescente ou adapte testes que validem o resultado relevante. Não use apenas testes que reproduzem a implementação.
 4. Os testes de equivalência garantem preservação desta reorganização. Uma melhoria futura autorizada pode alterar a paridade: descreva a mudança e ajuste a asserção específica, mantendo a referência original intacta e os demais contratos.

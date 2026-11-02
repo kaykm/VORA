@@ -1,5 +1,7 @@
 # VORA — projeto local
 
+O carregamento reutiliza cálculos dos caminhos e aproveita etapas baratas dentro do orçamento por quadro. A validação de mudanças locais pode usar testes selecionados; a suíte completa fica para alterações amplas e integração/publicação. Veja [Carregamento e tempo de resposta](docs/CARREGAMENTO-E-TEMPO-DE-RESPOSTA.md) para as causas, medições e limites.
+
 O jogo está organizado em `C:\Vora`. A referência recebida foi **VORA (17).html**; a cópia original permanece intacta em `backup/VORA-original-17.html`. As fontes e uma distribuição estão publicadas no repositório [kaykm/VORA](https://github.com/kaykm/VORA).
 
 ## Para jogar
@@ -61,6 +63,8 @@ cd C:\Vora
 Com Node no PATH, também pode usar `node scripts/gerar.mjs` e `node scripts/verificar.mjs`. Os `.cmd` funcionam mesmo quando iniciados de outra pasta.
 
 Os testes usam a cópia original como referência e um DOM simulado para executar a lógica real, sem baixar ferramentas. Eles também renderizam a cena com o renderizador por CPU já presente no jogo. Geram `tests/resultados/comparacao.json`, `original-cpu.png` e `vora-cpu.png`. Esses resultados são descartáveis e não precisam ir ao Git.
+
+Durante uma edição, é possível selecionar arquivos: `verificar.cmd --sem-pausa --arquivo piso-loja.test.mjs`. Repita `--arquivo` para selecionar mais de um, ou use `--listar` para conferir a lista sem executar. Sem seleção, o comando continua rodando a suíte inteira. Antes de entregar, use a verificação completa. A análise de custo, cobertura e medições está em [Tempo e cobertura dos testes](docs/TESTES-TEMPO-E-COBERTURA.md). Para medir a suíte com relatório, use `node scripts/medir-testes.mjs --saida minha-medicao`.
 
 ## Onde trabalhar
 

@@ -4,7 +4,7 @@
 export const changedSources = new Map([
  ['src/jogo/spawns.js', 'Índice espacial conservador e integração da reposição/desbloqueio dos recursos com as melhorias.'],
  ['src/mundo/vegetacao.js', 'Templates/staging incrementais; somente a paleta de plantas e flores muda RGB.'],
- ['src/mundo/caminhos.js', 'Reuso das amostras da malha compartilhada; mesmos triângulos e materiais.'],
+ ['src/mundo/caminhos.js', 'Reuso de amostras e cache numérico privado de coordenadas exatas; mesmos bytes, triângulos e materiais.'],
  ['src/fisica/carga.js', 'Broad phase sem autocontatos, corpos de recursos nas dimensões reais, poses compatíveis e reativação quando o fundo muda.'],
  ['src/mundo/base.js', 'Alinhar cobertura, mostrador, bandeja, papel e letreiro da área de vendas.'],
  ['src/mundo/deposito-modelo.js', 'Encaixes da caixa de vendas sem faces superiores sobrepostas; carga preservada.'],

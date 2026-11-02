@@ -25,6 +25,7 @@ test('recursos mantêm o modelo e a escala durante a queda e depois de pousar; p
  assert.equal(g.run('cargoBodies.every(b=>Number.isFinite(b.z)&&b.z+b.half+b.shape.extent>=-cavityDepth())'),true,JSON.stringify(g.json('cargoBodies.map(b=>({z:b.z,half:b.half,extent:b.shape.extent}))')));
  assert.equal(g.run('cargoBodies.every((b,i)=>b.z<falls[i].initial-1)'),true,'gravidade continua depois da coleta');
  g.run(`globalThis.cargoDraws=[];drawMesh=(m,x,y,z,sx,sy,sz)=>cargoDraws.push({m,s:[sx,sy,sz]});drawStored();`);
+ assert.equal(g.run('cargoDraws.length'),g.run('cargoBodies.length'),'cada corpo deve ser desenhado');
  assert.equal(g.run('cargoDraws.every((d,i)=>d.m===cargoBodies[i].shape.visual.mesh&&d.s.every((s,j)=>s===cargoBodies[i].shape.visual.scale[j]))'),true);
  const saved=JSON.parse(g.store.get('vora-v1'));
  assert.equal(saved.cargoPoses.filter(p=>p.resourceId).length,3);
@@ -47,7 +48,7 @@ test('objetos com colisores maiores que a célula antiga ainda colidem entre si'
 });
 
 test('carga adormecida volta à física quando o deslocamento altera a forma do fundo',()=>{
- const g=createRuntime(html);
+ const g=createRuntime(html,null,{boot:'manual'});
  g.run(`state.r=5;state.d=5;syncCavityMotion();state.cargo=[0];restoreCargoPhysics();
   const b=cargoBodies[0];b.sleeping=true;b.quiet=1;
   travelDistance+=1;stepCargoPhysics(1/60);`);

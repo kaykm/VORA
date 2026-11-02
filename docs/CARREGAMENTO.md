@@ -65,3 +65,5 @@ A revisão GPU prepara também os programas especializados de superfícies opaca
 A filtragem conservadora de Alta/Ultra acrescenta um programa pequeno de redução ao carregamento. Seu alvo auxiliar também é alocado nessa fase ou na fila de troca de qualidade; o desenho nunca cria esses recursos. O resumo acompanha o cache do mapa estático e possui fallback para o filtro completo. Consulte [GPU-SOMBRAS-CONSERVADORAS.md](GPU-SOMBRAS-CONSERVADORAS.md).
 
 A revisão visual reutiliza a geometria pronta da vegetação também no passe de sombra e reúne os pedidos iniciais por tile/LOD. Não prepara outra cópia só para sombra; uma troca efetiva de silhueta invalida o mapa em cache. Veja [REVISAO-LUZ-E-MATERIAIS.md](REVISAO-LUZ-E-MATERIAIS.md).
+
+A revisão de preparação reutiliza consultas exatas dos caminhos em um cache privado de 4.096 posições, limpo por linha/conclusão/cancelamento/erro. O driver permite até 1.024 retomadas baratas por callback, mantendo o prazo de 5 ms e a pausa de espera da GPU. Medições, testes e limites estão em [CARREGAMENTO-E-TEMPO-DE-RESPOSTA.md](CARREGAMENTO-E-TEMPO-DE-RESPOSTA.md).

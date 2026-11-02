@@ -45,6 +45,14 @@ test('parecer usa a coleta real: raio, carga total, desbloqueio e reposição',(
  const g=createRuntime(html);
  g.run('refreshDossier();globalThis.canExample=dossierView.catalog[0].samples[0]');
  assert.equal(g.run('dossierAssessment(canExample).ready'),true);
+ // Independent metric boundary: a can is 66 mm across, with 12 mm clearance.
+ const originalRadius=g.run('physicalRadius()');
+ const requiredRadius=(.066/2+.012)*48/.922;
+ g.run('cavityVisual.r='+String(requiredRadius-1e-6));
+ assert.equal(g.run('dossierAssessment(canExample).fits'),false,'abaixo do raio necessário não cabe');
+ g.run('cavityVisual.r='+String(requiredRadius+1e-6));
+ assert.equal(g.run('dossierAssessment(canExample).fits'),true,'acima do raio necessário cabe');
+ g.run('cavityVisual.r='+String(originalRadius));
  g.run('state.cargo=Array(20).fill(0)');
  assert.equal(g.run('canSwallow(canExample)'),true);
  assert.equal(g.run('dossierAssessment(canExample).condition'),'capacity');

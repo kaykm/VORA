@@ -1,0 +1,213 @@
+{
+  "githubCommit": "f9fcbccdeaf4fc22f07862eb44f1c7c486926d22",
+  "node": "v24.22.1",
+  "scope": "Preparação CPU em Node/DOM simulado, processo novo por amostra. Não mede navegação real.",
+  "samples": [
+    {
+      "pair": 1,
+      "version": "github",
+      "kind": "novo",
+      "startupMs": 4751.1176,
+      "memory": {
+        "rss": 186101760,
+        "maxRssKiB": 188476
+      },
+      "steps": 31663,
+      "vertices": "0fa93bb05b691b9a302286d54649257a6814cc18456abb87683a576321cf9426",
+      "snapshot": "42a8f1555cdf4a155d441343fc1565f4c79914b10167bbc03b4e69b008115e6e",
+      "ready": true
+    },
+    {
+      "pair": 1,
+      "version": "local",
+      "kind": "novo",
+      "startupMs": 3791.7129,
+      "memory": {
+        "rss": 181248000,
+        "maxRssKiB": 187720
+      },
+      "steps": 31663,
+      "vertices": "0fa93bb05b691b9a302286d54649257a6814cc18456abb87683a576321cf9426",
+      "snapshot": "42a8f1555cdf4a155d441343fc1565f4c79914b10167bbc03b4e69b008115e6e",
+      "ready": true
+    },
+    {
+      "pair": 2,
+      "version": "local",
+      "kind": "novo",
+      "startupMs": 3652.797,
+      "memory": {
+        "rss": 184606720,
+        "maxRssKiB": 187384
+      },
+      "steps": 31663,
+      "vertices": "0fa93bb05b691b9a302286d54649257a6814cc18456abb87683a576321cf9426",
+      "snapshot": "42a8f1555cdf4a155d441343fc1565f4c79914b10167bbc03b4e69b008115e6e",
+      "ready": true
+    },
+    {
+      "pair": 2,
+      "version": "github",
+      "kind": "novo",
+      "startupMs": 4710.3604000000005,
+      "memory": {
+        "rss": 200814592,
+        "maxRssKiB": 203636
+      },
+      "steps": 31663,
+      "vertices": "0fa93bb05b691b9a302286d54649257a6814cc18456abb87683a576321cf9426",
+      "snapshot": "42a8f1555cdf4a155d441343fc1565f4c79914b10167bbc03b4e69b008115e6e",
+      "ready": true
+    },
+    {
+      "pair": 3,
+      "version": "github",
+      "kind": "novo",
+      "startupMs": 4846.8172,
+      "memory": {
+        "rss": 184238080,
+        "maxRssKiB": 182952
+      },
+      "steps": 31663,
+      "vertices": "0fa93bb05b691b9a302286d54649257a6814cc18456abb87683a576321cf9426",
+      "snapshot": "42a8f1555cdf4a155d441343fc1565f4c79914b10167bbc03b4e69b008115e6e",
+      "ready": true
+    },
+    {
+      "pair": 3,
+      "version": "local",
+      "kind": "novo",
+      "startupMs": 3622.0877,
+      "memory": {
+        "rss": 189554688,
+        "maxRssKiB": 186016
+      },
+      "steps": 31663,
+      "vertices": "0fa93bb05b691b9a302286d54649257a6814cc18456abb87683a576321cf9426",
+      "snapshot": "42a8f1555cdf4a155d441343fc1565f4c79914b10167bbc03b4e69b008115e6e",
+      "ready": true
+    },
+    {
+      "pair": 1,
+      "version": "github",
+      "kind": "avancado",
+      "startupMs": 4936.1208,
+      "memory": {
+        "rss": 196009984,
+        "maxRssKiB": 192804
+      },
+      "steps": 36900,
+      "vertices": "0fa93bb05b691b9a302286d54649257a6814cc18456abb87683a576321cf9426",
+      "snapshot": "4c7cd0684b175a41296e00e9d948a95b7ca2892c8de724a8e040502839de3468",
+      "ready": true
+    },
+    {
+      "pair": 1,
+      "version": "local",
+      "kind": "avancado",
+      "startupMs": 3818.5822,
+      "memory": {
+        "rss": 193474560,
+        "maxRssKiB": 194216
+      },
+      "steps": 36900,
+      "vertices": "0fa93bb05b691b9a302286d54649257a6814cc18456abb87683a576321cf9426",
+      "snapshot": "4c7cd0684b175a41296e00e9d948a95b7ca2892c8de724a8e040502839de3468",
+      "ready": true
+    },
+    {
+      "pair": 2,
+      "version": "local",
+      "kind": "avancado",
+      "startupMs": 3834.7815,
+      "memory": {
+        "rss": 182652928,
+        "maxRssKiB": 209604
+      },
+      "steps": 36900,
+      "vertices": "0fa93bb05b691b9a302286d54649257a6814cc18456abb87683a576321cf9426",
+      "snapshot": "4c7cd0684b175a41296e00e9d948a95b7ca2892c8de724a8e040502839de3468",
+      "ready": true
+    },
+    {
+      "pair": 2,
+      "version": "github",
+      "kind": "avancado",
+      "startupMs": 4943.905699999999,
+      "memory": {
+        "rss": 196120576,
+        "maxRssKiB": 193380
+      },
+      "steps": 36900,
+      "vertices": "0fa93bb05b691b9a302286d54649257a6814cc18456abb87683a576321cf9426",
+      "snapshot": "4c7cd0684b175a41296e00e9d948a95b7ca2892c8de724a8e040502839de3468",
+      "ready": true
+    },
+    {
+      "pair": 3,
+      "version": "github",
+      "kind": "avancado",
+      "startupMs": 4906.1131000000005,
+      "memory": {
+        "rss": 185110528,
+        "maxRssKiB": 208640
+      },
+      "steps": 36900,
+      "vertices": "0fa93bb05b691b9a302286d54649257a6814cc18456abb87683a576321cf9426",
+      "snapshot": "4c7cd0684b175a41296e00e9d948a95b7ca2892c8de724a8e040502839de3468",
+      "ready": true
+    },
+    {
+      "pair": 3,
+      "version": "local",
+      "kind": "avancado",
+      "startupMs": 3831.5346999999997,
+      "memory": {
+        "rss": 182042624,
+        "maxRssKiB": 210096
+      },
+      "steps": 36900,
+      "vertices": "0fa93bb05b691b9a302286d54649257a6814cc18456abb87683a576321cf9426",
+      "snapshot": "4c7cd0684b175a41296e00e9d948a95b7ca2892c8de724a8e040502839de3468",
+      "ready": true
+    }
+  ],
+  "environment": {
+    "node": "v24.22.1",
+    "cpu": "AMD Ryzen 5 5600 6-Core Processor              ",
+    "platform": "win32"
+  },
+  "summary": {
+    "novo": {
+      "githubMedianMs": 4751.1176,
+      "localMedianMs": 3652.797,
+      "reductionPercent": 23.117099858778477,
+      "githubPeakRssMedianMiB": 184.05859375,
+      "localPeakRssMedianMiB": 182.9921875,
+      "peakRssChangePercent": -0.5793841125660615
+    },
+    "avancado": {
+      "githubMedianMs": 4936.1208,
+      "localMedianMs": 3831.5346999999997,
+      "reductionPercent": 22.37761482660635,
+      "githubPeakRssMedianMiB": 188.84765625,
+      "localPeakRssMedianMiB": 204.69140625,
+      "peakRssChangePercent": 8.3896990381632
+    }
+  },
+  "hashes": {
+    "github": "547eebe5bdad827c9a518bc0e415651b54f84dad19f4e9f8a575de858d81d71c",
+    "local": "24744e158fa44c23527a27f24ecb5f58f100ca653064f7da5fc18150518e0f34"
+  },
+  "initialCpuImage": {
+    "scope": "Cena inicial SoftwareGL 320x240, sem DOM sobreposto ou shaders de GPU.",
+    "githubPng": "tests/resultados/comparacao-github-cpu.png",
+    "localPng": "tests/resultados/comparacao-local-cpu.png",
+    "identicalPng": true
+  },
+  "publishedPages": {
+    "httpStatus": 200,
+    "sha256": "547eebe5bdad827c9a518bc0e415651b54f84dad19f4e9f8a575de858d81d71c",
+    "matchesGithub": true
+  }
+}

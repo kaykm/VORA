@@ -23,7 +23,7 @@ test('índice de coleta conserva candidatos e ordem em bordas, tamanhos e altera
 });
 
 test('buraco low poly reduz triângulos e conserva amostras do perfil e o fundo físico',()=>{
- const g=createRuntime(html);
+ const g=createRuntime(html,null,{boot:'manual'});
  const fixtures=[[0,0,0,100,70],[2,3,17.8,-125,30],[8,10,456,380,-150],[20,20,2099,-340,-360]];
  for(const [r,d,travel,x,z]of fixtures){
   g.run(`{state.r=${r};state.d=${d};player.x=${x};player.y=${z};travelDistance=${travel};syncCavityMotion();

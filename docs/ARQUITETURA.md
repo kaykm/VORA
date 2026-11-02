@@ -182,4 +182,6 @@ Os contratos de geometria, física e distribuição são comparados com o origin
 
 ## Oportunidades para outra etapa
 
+As otimizações de preparação foram integradas sobre a refatoração do PR #2. O cache privado em `mundo/caminhos.js` reaproveita coordenadas exatas sem mudar a geometria; `jogo/carregamento.js` preserva os helpers refatorados, o prazo de 5 ms e a espera da GPU, com teto de 1.024 retomadas. `verificar.cmd --arquivo nome.test.mjs` permite verificações dirigidas, mantendo todos os testes por padrão. Estratégia e limites: [CARREGAMENTO-E-TEMPO-DE-RESPOSTA.md](CARREGAMENTO-E-TEMPO-DE-RESPOSTA.md).
+
 Medir FPS e memória num navegador real com save/câmera fixos. Investigar separadamente custo de sombras estáticas/dinâmicas, descarte de tiles de vegetação, rebuild da malha do buraco durante movimento e renderização do interior com muita carga. O código já possui batching, cache, culling, LOD, sleeping e timers; confirme o gargalo antes de alterar essas estratégias. As otimizações já implementadas e seus limites estão no registro específico acima.

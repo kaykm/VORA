@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
+import {createHash} from 'node:crypto';
 import {ROOT,read} from '../scripts/compilar.mjs';
 import {createRuntime} from './ambiente.mjs';
 
@@ -29,9 +30,9 @@ test('boot avança por trabalho real, só conclui em 100% e não salva estado pa
  let previous=0,steps=0;
  for(;;){
   const result=game.nextBoot();
-  const progress=game.run('gameLoading.progress');
+  const {progress,ready}=game.run('({progress:gameLoading.progress,ready:gameLoading.ready})');
   assert.ok(Number.isFinite(progress)&&progress>=previous&&progress<100,'progresso deve ser monotônico e reservado abaixo de 100');
-  assert.equal(game.run('gameLoading.ready'),false);
+  assert.equal(ready,false);
   assert.equal(game.doc.getElementById('loadingScreen').hidden,false);
   assert.equal(game.storageWrites.length,0,'uma etapa não pode publicar um snapshot incompleto');
   previous=progress;
@@ -59,6 +60,10 @@ test('boot avança por trabalho real, só conclui em 100% e não salva estado pa
  assert.deepEqual(restored.cargo,saved.cargo);
  assert.deepEqual(restored.cargoPoses,saved.cargoPoses);
  assert.ok(game.storageWrites.length>0);
+ const expectedWalk=JSON.parse(read('tests/fixtures/caminhos.json')).software;
+ const walkVertices=game.run('walkMesh.buffer.data');
+ assert.equal(createHash('sha256').update(Buffer.from(walkVertices.buffer,walkVertices.byteOffset,walkVertices.byteLength)).digest('hex'),expectedWalk.vertices);
+ assert.equal(createHash('sha256').update(JSON.stringify(game.json('walkMeshStats'))).digest('hex'),expectedWalk.stats);
 
  const directory=path.join(ROOT,'tests/resultados');fs.mkdirSync(directory,{recursive:true});
  const durations=game.bootSteps.map(step=>step.ms).toSorted((a,b)=>a-b);

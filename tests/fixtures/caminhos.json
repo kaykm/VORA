@@ -1,0 +1,31 @@
+{
+  "sourceCommit": "f9fcbccdeaf4fc22f07862eb44f1c7c486926d22",
+  "evidence": "Original audit baseline: boot-prototypes.json and native-walk-validation.json; unchanged source hashes.",
+  "software": {
+    "vertices": "0fa93bb05b691b9a302286d54649257a6814cc18456abb87683a576321cf9426",
+    "stats": "55568f481ecd9fe6d03bbb13313c6ebbbcbee9750fc7a4971bac4ab1a4378c6c"
+  },
+  "native": {
+    "count": 132165,
+    "vertexCount": 132165,
+    "byteLength": 4757940,
+    "vertices": "724d103a6c3d5ea9b2060beff20a3e57ab2cfcc7c33a0047dd35302403864117",
+    "indices": null,
+    "ranges": "9facf463f67d146d338c6bbb68b908ed41c5f1a13f72762d9eca02a48c7052c8",
+    "stats": "55568f481ecd9fe6d03bbb13313c6ebbbcbee9750fc7a4971bac4ab1a4378c6c",
+    "stages": {
+      "walk-samples": 661,
+      "walk-cells": 21025,
+      "walk-junction": 3152,
+      "walk-upload": 1,
+      "partition": 344,
+      "pack": 645,
+      "bounds": 912,
+      "deduplicate": 468,
+      "ready-upload": 1,
+      "allocate": 1,
+      "upload": 37,
+      "ranges": 2
+    }
+  }
+}

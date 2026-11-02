@@ -2,6 +2,8 @@
 
 Este é o registro histórico da reorganização inicial. A atualização de névoa e otimizações, incluindo testes reais de shaders na GPU, está em [NEVOA-E-DESEMPENHO.md](NEVOA-E-DESEMPENHO.md).
 
+O executor atual, a revisão de utilidade das verificações e a redução de preparação repetida estão em [Tempo e cobertura dos testes](TESTES-TEMPO-E-COBERTURA.md). As contagens e tempos desta página são históricos.
+
 Entrega preparada em **28 de outubro de 2026**, no fuso America/Sao_Paulo. O projeto não foi publicado.
 
 ## Referência

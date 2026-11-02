@@ -67,7 +67,7 @@ test('cada predefinição escolhe sombras coerentes sem vincular o ajuste de AO'
 });
 
 test('alvos respeitam orçamento móvel e os limites de textura e depth buffer',()=>{
- const game=createRuntime(html);
+ const game=createRuntime(html,null,{boot:'manual'});
  game.run(`
   gl.MAX_TEXTURE_SIZE=3379;gl.MAX_RENDERBUFFER_SIZE=34024;
   let testTextureLimit=8192,testDepthLimit=8192,testMobile=false;

@@ -1,0 +1,228 @@
+{
+  "scope": "Node/DOM simulado/SoftwareGL, processo novo por amostra; não é tempo percebido em navegador.",
+  "node": "v24.22.1",
+  "environment": {
+    "node": "v24.22.1",
+    "v8": "13.6.233.17-node.58",
+    "platform": "win32",
+    "arch": "x64",
+    "cpu": "AMD Ryzen 5 5600 6-Core Processor              ",
+    "logicalCpus": 12,
+    "totalMemoryBytes": 17096183808
+  },
+  "measuredChanges": [
+    "src/mundo/caminhos.js"
+  ],
+  "note": "O benchmark de preparação precede o novo teto de etapas. Não mede cadência RAF nem tempo percebido no navegador.",
+  "referenceCommit": "ecc7b3b096a0e34a80a93b0c934c3cb066977ab2",
+  "samples": [
+    {
+      "pair": 1,
+      "version": "original",
+      "kind": "novo",
+      "startupMs": 5008.258,
+      "memory": {
+        "rss": 192077824,
+        "maxRssKiB": 187644
+      },
+      "steps": 31663,
+      "vertices": "0fa93bb05b691b9a302286d54649257a6814cc18456abb87683a576321cf9426",
+      "snapshot": "42a8f1555cdf4a155d441343fc1565f4c79914b10167bbc03b4e69b008115e6e",
+      "ready": true
+    },
+    {
+      "pair": 1,
+      "version": "cache",
+      "kind": "novo",
+      "startupMs": 3836.6678,
+      "memory": {
+        "rss": 188710912,
+        "maxRssKiB": 186660
+      },
+      "steps": 31663,
+      "vertices": "0fa93bb05b691b9a302286d54649257a6814cc18456abb87683a576321cf9426",
+      "snapshot": "42a8f1555cdf4a155d441343fc1565f4c79914b10167bbc03b4e69b008115e6e",
+      "ready": true
+    },
+    {
+      "pair": 2,
+      "version": "cache",
+      "kind": "novo",
+      "startupMs": 4237.718500000001,
+      "memory": {
+        "rss": 188616704,
+        "maxRssKiB": 189352
+      },
+      "steps": 31663,
+      "vertices": "0fa93bb05b691b9a302286d54649257a6814cc18456abb87683a576321cf9426",
+      "snapshot": "42a8f1555cdf4a155d441343fc1565f4c79914b10167bbc03b4e69b008115e6e",
+      "ready": true
+    },
+    {
+      "pair": 2,
+      "version": "original",
+      "kind": "novo",
+      "startupMs": 6231.5574,
+      "memory": {
+        "rss": 202821632,
+        "maxRssKiB": 198104
+      },
+      "steps": 31663,
+      "vertices": "0fa93bb05b691b9a302286d54649257a6814cc18456abb87683a576321cf9426",
+      "snapshot": "42a8f1555cdf4a155d441343fc1565f4c79914b10167bbc03b4e69b008115e6e",
+      "ready": true
+    },
+    {
+      "pair": 3,
+      "version": "original",
+      "kind": "novo",
+      "startupMs": 6334.0381,
+      "memory": {
+        "rss": 184635392,
+        "maxRssKiB": 189440
+      },
+      "steps": 31663,
+      "vertices": "0fa93bb05b691b9a302286d54649257a6814cc18456abb87683a576321cf9426",
+      "snapshot": "42a8f1555cdf4a155d441343fc1565f4c79914b10167bbc03b4e69b008115e6e",
+      "ready": true
+    },
+    {
+      "pair": 3,
+      "version": "cache",
+      "kind": "novo",
+      "startupMs": 4650.9284,
+      "memory": {
+        "rss": 176889856,
+        "maxRssKiB": 189572
+      },
+      "steps": 31663,
+      "vertices": "0fa93bb05b691b9a302286d54649257a6814cc18456abb87683a576321cf9426",
+      "snapshot": "42a8f1555cdf4a155d441343fc1565f4c79914b10167bbc03b4e69b008115e6e",
+      "ready": true
+    },
+    {
+      "pair": 1,
+      "version": "original",
+      "kind": "avancado",
+      "startupMs": 6312.204,
+      "memory": {
+        "rss": 202022912,
+        "maxRssKiB": 200392
+      },
+      "steps": 36900,
+      "vertices": "0fa93bb05b691b9a302286d54649257a6814cc18456abb87683a576321cf9426",
+      "snapshot": "4c7cd0684b175a41296e00e9d948a95b7ca2892c8de724a8e040502839de3468",
+      "ready": true
+    },
+    {
+      "pair": 1,
+      "version": "cache",
+      "kind": "avancado",
+      "startupMs": 4783.975100000001,
+      "memory": {
+        "rss": 210513920,
+        "maxRssKiB": 209664
+      },
+      "steps": 36900,
+      "vertices": "0fa93bb05b691b9a302286d54649257a6814cc18456abb87683a576321cf9426",
+      "snapshot": "4c7cd0684b175a41296e00e9d948a95b7ca2892c8de724a8e040502839de3468",
+      "ready": true
+    },
+    {
+      "pair": 2,
+      "version": "cache",
+      "kind": "avancado",
+      "startupMs": 5044.0319,
+      "memory": {
+        "rss": 198668288,
+        "maxRssKiB": 194048
+      },
+      "steps": 36900,
+      "vertices": "0fa93bb05b691b9a302286d54649257a6814cc18456abb87683a576321cf9426",
+      "snapshot": "4c7cd0684b175a41296e00e9d948a95b7ca2892c8de724a8e040502839de3468",
+      "ready": true
+    },
+    {
+      "pair": 2,
+      "version": "original",
+      "kind": "avancado",
+      "startupMs": 6382.8157,
+      "memory": {
+        "rss": 196464640,
+        "maxRssKiB": 193956
+      },
+      "steps": 36900,
+      "vertices": "0fa93bb05b691b9a302286d54649257a6814cc18456abb87683a576321cf9426",
+      "snapshot": "4c7cd0684b175a41296e00e9d948a95b7ca2892c8de724a8e040502839de3468",
+      "ready": true
+    },
+    {
+      "pair": 3,
+      "version": "original",
+      "kind": "avancado",
+      "startupMs": 6531.3795,
+      "memory": {
+        "rss": 195997696,
+        "maxRssKiB": 192696
+      },
+      "steps": 36900,
+      "vertices": "0fa93bb05b691b9a302286d54649257a6814cc18456abb87683a576321cf9426",
+      "snapshot": "4c7cd0684b175a41296e00e9d948a95b7ca2892c8de724a8e040502839de3468",
+      "ready": true
+    },
+    {
+      "pair": 3,
+      "version": "cache",
+      "kind": "avancado",
+      "startupMs": 4983.429,
+      "memory": {
+        "rss": 200126464,
+        "maxRssKiB": 195472
+      },
+      "steps": 36900,
+      "vertices": "0fa93bb05b691b9a302286d54649257a6814cc18456abb87683a576321cf9426",
+      "snapshot": "4c7cd0684b175a41296e00e9d948a95b7ca2892c8de724a8e040502839de3468",
+      "ready": true
+    }
+  ],
+  "medians": {
+    "novo": {
+      "originalMs": 6231.5574,
+      "cacheMs": 4237.718500000001,
+      "reductionPercent": 31.995836225467468,
+      "maxRssOriginalKiB": 189440,
+      "maxRssCacheKiB": 189352,
+      "memoryChangePercent": -0.04645270270270396
+    },
+    "avancado": {
+      "originalMs": 6382.8157,
+      "cacheMs": 4983.429,
+      "reductionPercent": 21.924284920211623,
+      "maxRssOriginalKiB": 193956,
+      "maxRssCacheKiB": 195472,
+      "memoryChangePercent": 0.7816205737383841
+    }
+  },
+  "finalSuite": {
+    "iteration": 1,
+    "startedAt": "2026-11-02T01:48:00.599Z",
+    "wallMs": 252621.49159999998,
+    "exitCode": 0,
+    "signal": null,
+    "error": null,
+    "tests": 101,
+    "pass": 101,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0,
+    "nodeDurationMs": 252189.9951,
+    "passed": true
+  },
+  "hashes": {
+    "src/mundo/caminhos.js": "e09cc46943c53b87e6f755016d52c2a1ef2bd7e2afbf31c7b367715d3e0f9628",
+    "src/jogo/carregamento.js": "97b845f48ad8c8521c13010f04add078416a1e93297455c9c2aafd55e37f2cb9",
+    "dist/VORA.html": "24744e158fa44c23527a27f24ecb5f58f100ca653064f7da5fc18150518e0f34",
+    "backup/VORA-original-17.html": "3f1c416c7ad088dd1444b64c7ce7d6e55fde2ea6f2a341f2794b33286f0bc2df"
+  }
+}

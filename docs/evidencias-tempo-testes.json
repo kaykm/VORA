@@ -1,0 +1,127 @@
+{
+  "scope": "Windows/Node/DOM simulado/SoftwareGL; comparação da suíte, sem medições do jogo/GPU.",
+  "researchCommit": "c79a71ff0e6b7c572a82cc1379a16d714456fafb",
+  "environment": {
+    "node": "v24.22.1",
+    "v8": "13.6.233.17-node.58",
+    "platform": "win32",
+    "arch": "x64",
+    "cpu": "AMD Ryzen 5 5600 6-Core Processor              ",
+    "logicalCpus": 12,
+    "totalMemoryBytes": 17096183808
+  },
+  "concurrency": 2,
+  "baseline": {
+    "wallMs": 210061.4734,
+    "head": "ecc7b3b096a0e34a80a93b0c934c3cb066977ab2",
+    "exitCode": 0,
+    "nodeVersion": "v24.22.1",
+    "tests": 93,
+    "pass": 93,
+    "fail": 0,
+    "skipped": 0,
+    "nodeDurationMs": 209596.8722
+  },
+  "optimized": {
+    "iteration": 1,
+    "startedAt": "2026-11-02T01:10:22.730Z",
+    "wallMs": 195755.99970000001,
+    "exitCode": 0,
+    "signal": null,
+    "error": null,
+    "tests": 97,
+    "pass": 97,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0,
+    "nodeDurationMs": 195455.8786,
+    "passed": true
+  },
+  "fullSuiteReductionPercent": 6.810136798745303,
+  "fullSuiteCaveat": "Uma execução completa de cada versão; não é uma estimativa estatística repetida. Candidato tem quatro testes adicionais.",
+  "subset": {
+    "node": "v24.22.1",
+    "concurrency": 2,
+    "files": [
+      "tests/piso-loja.test.mjs",
+      "tests/sombras.test.mjs",
+      "tests/desempenho-avancado.test.mjs",
+      "tests/borda-cheia.test.mjs",
+      "tests/carga-recursos-fisica.test.mjs"
+    ],
+    "pattern": "^(fundação substitui|alvos respeitam|buraco low poly|objeto entrando|carga adormecida)",
+    "scope": "Cinco cenários selecionados; não é a suíte completa.",
+    "samples": [
+      {
+        "pair": 1,
+        "variant": "baseline",
+        "wallMs": 14657.2233,
+        "exitCode": 0,
+        "pass": 5,
+        "fail": 0,
+        "skipped": 0
+      },
+      {
+        "pair": 1,
+        "variant": "otimizado",
+        "wallMs": 828.0961000000007,
+        "exitCode": 0,
+        "pass": 5,
+        "fail": 0,
+        "skipped": 0
+      },
+      {
+        "pair": 2,
+        "variant": "otimizado",
+        "wallMs": 875.883200000002,
+        "exitCode": 0,
+        "pass": 5,
+        "fail": 0,
+        "skipped": 0
+      },
+      {
+        "pair": 2,
+        "variant": "baseline",
+        "wallMs": 14913.6656,
+        "exitCode": 0,
+        "pass": 5,
+        "fail": 0,
+        "skipped": 0
+      },
+      {
+        "pair": 3,
+        "variant": "baseline",
+        "wallMs": 14714.197199999995,
+        "exitCode": 0,
+        "pass": 5,
+        "fail": 0,
+        "skipped": 0
+      },
+      {
+        "pair": 3,
+        "variant": "otimizado",
+        "wallMs": 813.7318000000014,
+        "exitCode": 0,
+        "pass": 5,
+        "fail": 0,
+        "skipped": 0
+      }
+    ],
+    "beforeMedianMs": 14714.197199999995,
+    "afterMedianMs": 828.0961000000007,
+    "reductionPercent": 94.37212857253266
+  },
+  "integrity": {
+    "harnessOriginal": "b64d481d7a2dafbf51ed510e04dba6db9e4c78b51a900ffd790e3171b4e6146f",
+    "harnessCurrent": "b64d481d7a2dafbf51ed510e04dba6db9e4c78b51a900ffd790e3171b4e6146f",
+    "gameOriginal": "bc16f4af3fe35e26fd0838b9d150ff44d699f77f4210672fc2c82c70d8f15c35",
+    "gameCurrent": "bc16f4af3fe35e26fd0838b9d150ff44d699f77f4210672fc2c82c70d8f15c35",
+    "backup": "3f1c416c7ad088dd1444b64c7ce7d6e55fde2ea6f2a341f2794b33286f0bc2df"
+  },
+  "logs": [
+    "tests/resultados/testes-baseline-atual.log",
+    "tests/resultados/testes-otimizado-atual.log"
+  ],
+  "reproduction": "verificar.cmd --sem-pausa; node scripts/medir-testes.mjs --saida nome-unico; para o subconjunto, executar node --test --test-concurrency=2 --test-name-pattern <subset.pattern> com subset.files em cada versão, alternando a ordem."
+}
